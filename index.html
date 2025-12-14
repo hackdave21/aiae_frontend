@@ -1,497 +1,192 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Africa — Hero interactif (Résidentiel / Tertiaire / Industriel / Agricole)</title>
-  <style>
-    :root{
-      --accent:#0b5b3a;
-      --accent-2:#d3700b;
-      --soft:#e9f3f5;
-      --glass-bg: rgba(255,255,255,0.65);
-      --glass-shadow: 0 6px 18px rgba(3,16,24,0.18);
-      --radius:14px;
-      --max-width:1200px;
-      --nav-height:72px;
-      --fw-heading:700;
-    }
-    *{box-sizing:border-box}
-    body{
-      margin:0;
-      font-family: "Inter", "Segoe UI", system-ui, -apple-system, "Helvetica Neue", Arial;
-      color:#0c2b2a;
-      background:#f6f9fb;
-      -webkit-font-smoothing:antialiased;
-      -moz-osx-font-smoothing:grayscale;
-    }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Afrika – Solutions Durables</title>
 
-    /* NAVBAR */
-    .nav{
-      position:fixed;
-      top:12px;
-      left:12px;
-      right:12px;
-      height:var(--nav-height);
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      z-index:60;
-      gap:1rem;
-      pointer-events:auto;
-    }
-    .nav-inner{
-      width:100%;
-      max-width:var(--max-width);
-      margin:0 auto;
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap:1rem;
-      padding:0 16px;
-      background:linear-gradient(180deg, rgba(255,255,255,0.72), rgba(255,255,255,0.5));
-      border-radius:40px;
-      box-shadow: var(--glass-shadow);
-      padding-inline:18px;
-    }
-    .logo{display:flex;align-items:center;gap:12px}
-    .logo img{height:36px; width:auto}
-    .nav-links{
-      display:flex;
-      gap:10px;
-      align-items:center;
-      margin-left:10px;
-      flex:1;
-      justify-content:center;
-    }
-    .nav-links a{
-      text-decoration:none;
-      padding:10px 16px;
-      border-radius:22px;
-      background:transparent;
-      color:#183033;
-      font-weight:600;
-      opacity:0.95;
-    }
-    .nav-actions{display:flex;gap:10px; align-items:center}
-    .btn{
-      display:inline-flex;align-items:center;gap:8px;
-      padding:10px 16px;border-radius:24px;
-      border:none;cursor:pointer;font-weight:700;
-    }
-    .btn-ghost{background:transparent; border:1px solid rgba(0,0,0,0.06)}
-    .btn-primary{background:var(--accent-2); color:white}
-    .btn-cta{background:var(--accent); color:white}
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
 
-    /* HERO */
-    .hero{
-      margin-top:28px; /* leave space for fixed nav */
-      width:100%;
-      min-height:600px;
-      border-radius:12px;
-      overflow:hidden;
-      position:relative;
-      display:flex;
-      align-items:flex-start;
-      justify-content:center;
-      padding:40px 12px 120px; /* bottom space for control panel */
-    }
-
-    .hero-bg{
-      position:absolute;
-      inset:0;
-      background-size:cover;
-      background-position:center;
-      filter:contrast(0.95) saturate(0.88) brightness(0.9);
-      transform-origin:center;
-      transition:opacity .6s ease, transform .8s ease;
-      z-index:1;
-    }
-
-    .overlay{
-      position:absolute; inset:0;
-      background:linear-gradient(90deg, rgba(10,30,34,0.55) 0%, rgba(10,30,34,0.2) 40%, rgba(255,255,255,0.02) 100%);
-      z-index:2;
-    }
-
-    .hero-content{
-      position:relative;
-      z-index:3;
-      max-width:900px;
-      width:100%;
-      color:white;
-      padding-left:20px;
-      padding-top:50px;
-    }
-    .eyebrow{font-size:14px;opacity:0.95;margin-bottom:6px}
-    h1{
-      font-size:56px;
-      line-height:0.95;
-      margin:0 0 18px 0;
-      font-weight:var(--fw-heading);
-      letter-spacing:-1px;
-      text-shadow:0 6px 18px rgba(0,0,0,0.35);
-    }
-    p.lead{
-      font-size:18px;
-      max-width:600px;
-      margin:0;
-      opacity:0.95;
-    }
-
-    /* bottom control panel (glass) */
-    .controls{
-      position:absolute;
-      left:50%;
-      transform:translateX(-50%);
-      bottom:18px;
-      width:calc(100% - 36px);
-      max-width:1100px;
-      z-index:40;
-      background:var(--glass-bg);
-      border-radius:16px;
-      box-shadow:var(--glass-shadow);
-      padding:16px;
-      display:flex;
-      gap:14px;
-      align-items:center;
-      flex-wrap:wrap;
-    }
-
-    .tab-list{display:flex; gap:10px; align-items:center}
-    .tab{
-      padding:10px 14px;
-      border-radius:12px;
-      background:rgba(255,255,255,0.85);
-      cursor:pointer;
-      font-weight:600;
-      border:1px solid rgba(2,16,20,0.06);
-      min-width:88px;
-      text-align:center;
-    }
-    .tab.active{background:linear-gradient(180deg,#fff,#eef7f6); box-shadow:0 4px 10px rgba(2,16,20,0.06)}
-
-    .spacer{flex:1}
-
-    /* dropdowns */
-    .dropdown{
-      position:relative;
-      min-width:150px;
-    }
-    .dropdown-btn{
-      display:flex;align-items:center;justify-content:space-between;
-      width:100%;
-      background:white;padding:10px 12px;border-radius:12px;border:1px solid rgba(2,16,20,0.06);
-      cursor:pointer;
-    }
-    .dropdown-panel{
-      position:absolute;
-      left:0; top:calc(100% + 10px);
-      background:white;border-radius:10px;padding:10px;box-shadow:0 10px 28px rgba(2,16,20,0.12);
-      min-width:220px; display:none; z-index:80;
-    }
-    .dropdown-panel.show{display:block}
-    .dropdown-panel .row{display:flex;justify-content:space-between;align-items:center;padding:8px 6px;border-radius:8px;}
-    .opt{display:flex;gap:10px;align-items:center}
-
-    /* CTA area in controls */
-    .c-action{display:flex;gap:10px;align-items:center}
-    .cta-btn{padding:12px 18px;border-radius:12px;border:none;cursor:pointer;font-weight:700}
-    .cta-open{background:var(--accent-2); color:white}
-    .cta-go{background:var(--accent); color:white}
-
-    /* small UI inside hero (floating option chips demo) */
-    .chip{
-      position:absolute;
-      background:rgba(255,255,255,0.9);
-      padding:8px 12px;border-radius:10px; font-weight:600;
-      box-shadow:0 6px 18px rgba(0,0,0,0.15);
-      z-index:5;
-    }
-
-    /* responsive */
-    @media (max-width:1024px){
-      h1{font-size:44px}
-      .hero{min-height:520px;padding-bottom:120px}
-    }
-    @media (max-width:768px){
-      .nav-inner{padding-inline:12px}
-      .nav-links{display:none}
-      .menu-toggle{display:flex}
-      .hero{min-height:520px;padding:24px 12px 120px}
-      h1{font-size:36px}
-      .controls{padding:10px; gap:8px}
-      .tab{min-width:72px;padding:8px 10px}
-      .dropdown{min-width:120px}
-    }
-    @media (max-width:480px){
-      h1{font-size:28px}
-      .controls{flex-direction:column;align-items:stretch; padding:12px}
-      .tab-list{flex-wrap:wrap}
-      .spacer{display:none}
-    }
-
-    /* small utility */
-    .hidden{display:none!important}
-  </style>
-</head>
-<body>
-  <header class="nav" role="banner">
-    <div class="nav-inner" role="navigation" aria-label="Navigation principale">
-      <div style="display:flex;align-items:center;gap:12px">
-        <div class="logo" aria-hidden="false">
-          <!-- Remplace le src par ton logo -->
-          <img src="images/logo-placeholder.png" alt="Afrika - logo" onerror="this.style.display='none'"/>
-        </div>
-
-        <nav class="nav-links" aria-label="Liens">
-          <a href="#" class="nav-link">Accueil</a>
-          <a href="#" class="nav-link">À Propos</a>
-          <a href="#" class="nav-link">Nos Divisions</a>
-          <a href="#" class="nav-link">Simulateurs</a>
-          <a href="#" class="nav-link">Projets & Réalisations</a>
-          <a href="#" class="nav-link">FAQ</a>
-        </nav>
-      </div>
-
-      <div class="nav-actions">
-        <button class="btn btn-ghost">FR</button>
-        <button class="btn btn-ghost">Connexion</button>
-        <button class="btn btn-cta">Contact</button>
-        <button class="btn btn-ghost menu-toggle hidden" aria-expanded="false" aria-controls="mobileMenu" id="menuToggle">☰</button>
-      </div>
-    </div>
-  </header>
-
-  <main>
-    <section class="hero" id="hero" aria-label="Section d'introduction">
-      <!-- backgrounds for each tab -->
-      <div class="hero-bg" id="bg-residentiel" style="background-image:url('images/residentiel.jpg');"></div>
-      <div class="hero-bg" id="bg-tertiaire" style="background-image:url('images/tertiaire.jpg'); opacity:0;"></div>
-      <div class="hero-bg" id="bg-industriel" style="background-image:url('images/industriel.jpg'); opacity:0;"></div>
-      <div class="hero-bg" id="bg-agricole" style="background-image:url('images/agricole.jpg'); opacity:0;"></div>
-
-      <div class="overlay" aria-hidden="true"></div>
-
-      <div class="hero-content" id="heroContent">
-        <div class="eyebrow">Transformez Vos Projets</div>
-        <h1 id="heroTitle">Transformez Vos Projets<br/>Avec Des Solutions<br/>Durables Et Innovantes</h1>
-        <p class="lead" id="heroText">
-          Explorez nos solutions de construction, d'énergie renouvelable et de matériaux innovants. Testez notre simulateur 4-en-1 et découvrez immédiatement le potentiel de votre projet.
-        </p>
-      </div>
-
-      <!-- floating chips example (optional visual) -->
-      <div class="chip" style="right:22%; top:42%; display:none" id="floatingChip">Piscine ✓</div>
-
-      <!-- controls (bottom glass) -->
-      <div class="controls" role="region" aria-label="Contrôles du simulateur">
-        <div class="tab-list" role="tablist" aria-label="Types de projet">
-          <div class="tab active" role="tab" tabindex="0" data-key="residentiel" aria-selected="true">Résidentiel</div>
-          <div class="tab" role="tab" tabindex="0" data-key="tertiaire" aria-selected="false">Tertiaire</div>
-          <div class="tab" role="tab" tabindex="0" data-key="industriel" aria-selected="false">Industriel</div>
-          <div class="tab" role="tab" tabindex="0" data-key="agricole" aria-selected="false">Agricole</div>
-        </div>
-
-        <div class="spacer" aria-hidden="true"></div>
-
-        <div class="dropdown" data-dropdown="configuration">
-          <button class="dropdown-btn" aria-haspopup="true" aria-expanded="false">
-            Configuration ▾
-          </button>
-          <div class="dropdown-panel" role="menu">
-            <div class="row"><div>Surface disponible (m²)</div><div class="opt"> <input type="number" min="0" value="120" aria-label="Surface disponible"/> </div></div>
-            <div class="row"><div>Surface bâtie souhaitée (m²)</div><div class="opt"> <input type="number" min="0" value="100" aria-label="Surface bâtie souhaitée"/> </div></div>
-          </div>
-        </div>
-
-        <div class="dropdown" data-dropdown="standing">
-          <button class="dropdown-btn" aria-haspopup="true" aria-expanded="false">Standing ▾</button>
-          <div class="dropdown-panel" role="menu">
-            <div class="row"><div>Standard</div><div class="opt"><input type="radio" name="standing" checked/></div></div>
-            <div class="row"><div>Confort</div><div class="opt"><input type="radio" name="standing"/></div></div>
-            <div class="row"><div>Premium</div><div class="opt"><input type="radio" name="standing"/></div></div>
-          </div>
-        </div>
-
-        <div class="dropdown" data-dropdown="options">
-          <button class="dropdown-btn" aria-haspopup="true" aria-expanded="false">Options ▾</button>
-          <div class="dropdown-panel" role="menu">
-            <div class="row"><div>Forage</div><div class="opt"><input type="checkbox"/></div></div>
-            <div class="row"><div>Domotique</div><div class="opt"><input type="checkbox" checked/></div></div>
-            <div class="row"><div>Piscine</div><div class="opt"><input type="checkbox"/></div></div>
-          </div>
-        </div>
-
-        <div class="c-action" aria-hidden="false">
-          <button class="cta-btn cta-open" id="openCalc">Ouvrir Le Calculateur D'énergies Renouvelables</button>
-          <button class="cta-btn cta-go" id="continueSim">Poursuivre La Simulation</button>
-        </div>
-      </div>
-    </section>
-  </main>
-
+  <!-- Tailwind config -->
   <script>
-    /* --------- Data for each tab (title + text + show/hide chips) ---------- */
-    const TABS = {
-      residentiel: {
-        title: "Transformez Vos Projets\\nAvec Des Solutions\\nDurables Et Innovantes",
-        text: "Explorez nos solutions de construction, d'énergie renouvelable et de matériaux innovants. Testez notre simulateur 4-en-1 et découvrez immédiatement le potentiel de votre projet.",
-        showChip:false
-      },
-      tertiaire:{
-        title: "Solutions Pour Le Tertiaire\\nBureaux, Commerces & Services",
-        text: "Améliorez la performance énergétique de vos bâtiments tertiaires avec des systèmes intelligents et des matériaux durables adaptés à vos besoins.",
-        showChip:false
-      },
-      industriel:{
-        title: "Solutions Industrielles\\nEfficacité, Automatisation, Énergie",
-        text: "Concevez des installations industrielles résilientes et économes en énergie — audit, dimensionnement et solutions sur mesure.",
-        showChip:true
-      },
-      agricole:{
-        title: "Projets Agricoles\\nIrrigation, Énergie Renouvelable, Stockage",
-        text: "Optimisez la production et réduisez les coûts avec des systèmes solaires hybrides, pompages solaires et solutions d'irrigation intelligentes.",
-        showChip:false
-      }
-    };
-
-    /* --- helper to set active tab and update hero --- */
-    const tabs = document.querySelectorAll('.tab');
-    const heroTitle = document.getElementById('heroTitle');
-    const heroText = document.getElementById('heroText');
-    const floatingChip = document.getElementById('floatingChip');
-
-    function setActive(key){
-      // update tab visuals
-      tabs.forEach(t=>{
-        const k = t.dataset.key;
-        if(k === key){
-          t.classList.add('active');
-          t.setAttribute('aria-selected','true');
-          t.focus && t.focus();
-        }else{
-          t.classList.remove('active');
-          t.setAttribute('aria-selected','false');
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#0b5b3a',
+            secondary: '#d97706',
+            glass: 'rgba(255,255,255,0.55)',
+            glassDark: 'rgba(255,255,255,0.35)',
+          }
         }
-      });
-
-      // update backgrounds
-      const keys = ['residentiel','tertiaire','industriel','agricole'];
-      keys.forEach(k=>{
-        const el = document.getElementById('bg-' + k);
-        if(!el) return;
-        if(k === key){
-          el.style.opacity = '1';
-          el.style.transform = 'scale(1)';
-          el.style.zIndex = 1;
-        } else {
-          el.style.opacity = '0';
-          el.style.transform = 'scale(1.03)';
-          el.style.zIndex = 0;
-        }
-      });
-
-      // update texts (allow \n)
-      const data = TABS[key];
-      heroTitle.innerHTML = data.title.replace(/\\n/g,'<br/>');
-      heroText.textContent = data.text;
-
-      // floating chip demo toggle
-      if(data.showChip){
-        floatingChip.style.display = 'block';
-      } else {
-        floatingChip.style.display = 'none';
       }
     }
-
-    // initial
-    setActive('residentiel');
-
-    // wire tab clicks
-    tabs.forEach(t=>{
-      t.addEventListener('click', ()=> setActive(t.dataset.key));
-      t.addEventListener('keydown', (e)=>{
-        if(e.key === 'Enter' || e.key === ' ') { e.preventDefault(); setActive(t.dataset.key); }
-      });
-    });
-
-    /* Dropdown behavior */
-    const dropdowns = document.querySelectorAll('.dropdown');
-    dropdowns.forEach(dd=>{
-      const btn = dd.querySelector('.dropdown-btn');
-      const panel = dd.querySelector('.dropdown-panel');
-      btn.addEventListener('click', (e)=>{
-        const isOpen = panel.classList.contains('show');
-        // close all first
-        document.querySelectorAll('.dropdown-panel.show').forEach(p=>p.classList.remove('show'));
-        document.querySelectorAll('.dropdown-btn[aria-expanded="true"]').forEach(b=>b.setAttribute('aria-expanded','false'));
-        if(!isOpen){
-          panel.classList.add('show');
-          btn.setAttribute('aria-expanded','true');
-        } else {
-          panel.classList.remove('show');
-          btn.setAttribute('aria-expanded','false');
-        }
-      });
-    });
-
-    // close dropdowns on outside click
-    document.addEventListener('click', (e)=>{
-      if(!e.target.closest('.dropdown')){
-        document.querySelectorAll('.dropdown-panel.show').forEach(p=>p.classList.remove('show'));
-        document.querySelectorAll('.dropdown-btn[aria-expanded="true"]').forEach(b=>b.setAttribute('aria-expanded','false'));
-      }
-    });
-
-    // keyboard: close panels with Escape
-    document.addEventListener('keydown', (e)=>{
-      if(e.key === 'Escape'){
-        document.querySelectorAll('.dropdown-panel.show').forEach(p=>p.classList.remove('show'));
-        document.querySelectorAll('.dropdown-btn[aria-expanded="true"]').forEach(b=>b.setAttribute('aria-expanded','false'));
-      }
-    });
-
-    /* CTA actions (placeholders) */
-    document.getElementById('openCalc').addEventListener('click', ()=>{
-      alert('Ouvrir le calculateur d\'énergies renouvelables — raccourci. Ici tu peux ouvrir une modal ou rediriger vers la page du calculateur.');
-    });
-    document.getElementById('continueSim').addEventListener('click', ()=>{
-      alert('Poursuivre la simulation — rediriger vers la page suivante ou ouvrir un panel.');
-    });
-
-    /* Mobile menu toggle (simple) */
-    const menuToggle = document.getElementById('menuToggle');
-    if(menuToggle){
-      menuToggle.addEventListener('click', ()=>{
-        const navLinks = document.querySelector('.nav-links');
-        const opened = navLinks.style.display === 'flex';
-        if(opened){
-          navLinks.style.display = 'none';
-          menuToggle.setAttribute('aria-expanded','false');
-        } else {
-          navLinks.style.display = 'flex';
-          navLinks.style.flexDirection = 'column';
-          navLinks.style.position = 'absolute';
-          navLinks.style.top = '80px';
-          navLinks.style.right = '16px';
-          navLinks.style.background = 'white';
-          navLinks.style.padding = '12px';
-          navLinks.style.borderRadius = '10px';
-          navLinks.style.boxShadow = '0 8px 30px rgba(0,0,0,0.12)';
-          menuToggle.setAttribute('aria-expanded','true');
-        }
-      });
-    }
-
-    /* Optional: adjust hero height on small screens */
-    function resizeHero(){
-      const hero = document.querySelector('.hero');
-      if(window.innerWidth < 480) hero.style.minHeight = '380px';
-      else hero.style.minHeight = '';
-    }
-    window.addEventListener('resize', resizeHero);
-    resizeHero();
   </script>
+
+  <!-- Futura (si tu as les fichiers) -->
+  <!--
+  <style>
+    @font-face {
+      font-family: 'Futura';
+      src: url('/fonts/Futura-Medium.woff2') format('woff2');
+      font-weight: 500;
+    }
+    @font-face {
+      font-family: 'Futura';
+      src: url('/fonts/Futura-Bold.woff2') format('woff2');
+      font-weight: 700;
+    }
+  </style>
+  -->
+</head>
+
+<body class="font-futura bg-gray-100 overflow-x-hidden">
+
+<!-- ================= NAVBAR ================= -->
+<header class="fixed top-6 left-1/2 -translate-x-1/2 z-50 w-[95%] max-w-7xl">
+  <nav class="flex items-center justify-between px-6 py-3">
+
+    <!-- Logo -->
+    <div class="flex items-center gap-2">
+      <img src="Images/logoblanc.png" alt="logoblanc" class="h-8">
+    </div>
+
+    <!-- Menu desktop -->
+    <ul class="hidden lg:flex items-center gap-2 text-sm font-medium text-gray-900">
+      <li class="px-4 py-2 rounded-full bg-white shadow">
+        Accueil
+      </li>
+      <li class="px-4 py-2 rounded-full bg-glassDark backdrop-blur">
+        À propos
+      </li>
+      <li class="px-4 py-2 rounded-full bg-glassDark backdrop-blur">
+        Nos divisions
+      </li>
+      <li class="px-4 py-2 rounded-full bg-glassDark backdrop-blur">
+        Simulateurs
+      </li>
+      <li class="px-4 py-2 rounded-full bg-glassDark backdrop-blur">
+        Projets & Réalisations
+      </li>
+      <li class="px-4 py-2 rounded-full bg-glassDark backdrop-blur">
+        FAQ
+      </li>
+    </ul>
+
+    <!-- Actions -->
+    <div class="flex items-center gap-3">
+      <!-- Connexion -->
+      <button class="w-10 h-10 rounded-full bg-glassDark backdrop-blur flex items-center justify-center">
+        <svg class="w-4 h-4 text-gray-800" fill="none" stroke="currentColor" stroke-width="2"
+             viewBox="0 0 24 24">
+          <path d="M12 12c2.7 0 5-2.3 5-5s-2.3-5-5-5-5 2.3-5 5 2.3 5 5 5z"/>
+          <path d="M20 21c0-4-4-7-8-7s-8 3-8 7"/>
+        </svg>
+      </button>
+
+      <!-- Contact -->
+      <button class="px-6 py-2 rounded-full bg-primary text-white font-semibold">
+        Contact
+      </button>
+
+      <!-- Burger -->
+      <button id="burger" class="lg:hidden text-xl">☰</button>
+    </div>
+  </nav>
+
+  <!-- Menu mobile -->
+  <div id="mobileMenu"
+       class="hidden lg:hidden mt-4 bg-glass backdrop-blur-xl rounded-2xl p-4 shadow-xl space-y-3">
+    <a href="#" class="block px-4 py-2 rounded-lg bg-white">Accueil</a>
+    <a href="#" class="block px-4 py-2 rounded-lg bg-glassDark">À propos</a>
+    <a href="#" class="block px-4 py-2 rounded-lg bg-glassDark">Nos divisions</a>
+    <a href="#" class="block px-4 py-2 rounded-lg bg-glassDark">Simulateurs</a>
+    <a href="#" class="block px-4 py-2 rounded-lg bg-glassDark">Projets & Réalisations</a>
+    <a href="#" class="block px-4 py-2 rounded-lg bg-glassDark">FAQ</a>
+  </div>
+</header>
+
+<!-- ================= HERO ================= -->
+<section class="relative px-1 md:px-4 pt-1">
+  <div class="relative w-full max-w-[1600px] mx-auto rounded-[32px] overflow-hidden shadow-2xl">
+
+    <!-- Image -->
+    <img src="Images/residentiel.png"
+         alt="Projet"
+         class="w-full h-[80vh] object-cover">
+
+    <!-- Overlay flou côté texte -->
+    <div class="absolute inset-0 bg-gradient-to-r from-black/60 via-black/40 to-transparent"></div>
+
+    <!-- Texte -->
+    <div class="absolute left-0 top-1/2 -translate-y-1/2 px-10 max-w-xl text-white">
+      <h1 class="text-2xl md:text-4xl lg:text-5xl font-bold tracking-tight md:tracking-normal leading-tight mb-6">
+  Transformez Vos Projets<br>
+  Avec Des Solutions<br>
+  Durables Et Innovantes
+</h1>
+
+      <p class="text-lg leading-relaxed">
+        Explorez nos solutions de construction, d’énergie renouvelable
+        et de matériaux innovants. Testez notre simulateur 4-en-1
+        et découvrez immédiatement le potentiel de votre projet.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PANNEAU SIMULATEUR ================= -->
+<section class="relative -mt-28 z-10 px-4">
+  <div class="max-w-6xl mx-auto bg-glass backdrop-blur-xl rounded-2xl shadow-xl p-6">
+
+    <!-- Onglets -->
+    <div class="flex flex-wrap gap-2 mb-4">
+      <button class="px-4 py-2 rounded-lg bg-white shadow">Résidentiel</button>
+      <button class="px-4 py-2 rounded-lg bg-glassDark">Tertiaire</button>
+      <button class="px-4 py-2 rounded-lg bg-glassDark">Industriel</button>
+      <button class="px-4 py-2 rounded-lg bg-glassDark">Agricole</button>
+
+       <!-- Actions -->
+    <div class="flex flex-col md:flex-row justify-end gap-4 mt-6">
+      <button class="px-6 py-3 bg-secondary text-white rounded-lg font-semibold">
+        Ouvrir le Calculateur
+      </button>
+      <button class="px-6 py-3 bg-primary text-white rounded-lg font-semibold">
+        Poursuivre la simulation
+      </button>
+    </div> 
+    </div>
+
+    <!-- Champs -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+      <select class="p-3 rounded-lg bg-white">
+        <option>Configuration</option>
+      </select>
+
+      <select class="p-3 rounded-lg bg-white">
+        <option>Standing</option>
+      </select>
+
+      <select class="p-3 rounded-lg bg-white">
+        <option>Options</option>
+      </select>
+    </div>
+
+   
+
+  </div>
+</section>
+
+<!-- ================= JS ================= -->
+<script>
+  const burger = document.getElementById('burger');
+  const mobileMenu = document.getElementById('mobileMenu');
+
+  burger.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hidden');
+  });
+</script>
+
 </body>
 </html>
