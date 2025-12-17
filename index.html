@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Afrika – Solutions Durables</title>
+  <title>AIAE</title>
 
   <!-- Tailwind CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -13,180 +13,200 @@
     tailwind.config = {
       theme: {
         extend: {
+          fontFamily: {
+            futura: ['Futura', 'sans-serif'],
+            futuraCondensed: ['Futura Condensed', 'sans-serif'],
+          },
           colors: {
-            primary: '#0b5b3a',
-            secondary: '#d97706',
-            glass: 'rgba(255,255,255,0.55)',
-            glassDark: 'rgba(255,255,255,0.35)',
-          }
-        }
-      }
-    }
+            primary: "#0b5b3a",
+            secondary: "#d97706",
+            glass: "rgba(255,255,255,0.55)",
+            glassDark: "rgba(255,255,255,0.35)",
+          },
+        },
+      },
+    };
   </script>
 
-  <!-- Futura (si tu as les fichiers) -->
-  <!--
+  <!-- ================= FONTS : FUTURA ================= -->
   <style>
+    /* Futura Light */
     @font-face {
       font-family: 'Futura';
-      src: url('/fonts/Futura-Medium.woff2') format('woff2');
-      font-weight: 500;
+      src: url('/fonts/FuturaStdLight.otf') format('opentype');
+      font-weight: 300;
+      font-style: normal;
+      font-display: swap;
     }
+
+    /* Futura Medium */
     @font-face {
       font-family: 'Futura';
-      src: url('/fonts/Futura-Bold.woff2') format('woff2');
+      src: url('/fonts/FuturaStdMedium.otf') format('opentype');
+      font-weight: 500;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    /* Futura Bold */
+    @font-face {
+      font-family: 'Futura';
+      src: url('/fonts/FuturaStdBold.otf') format('opentype');
       font-weight: 700;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    /* Futura Heavy */
+    @font-face {
+      font-family: 'Futura';
+      src: url('/fonts/FuturaStdHeavy.otf') format('opentype');
+      font-weight: 800;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    /* Futura Condensed */
+    @font-face {
+      font-family: 'Futura Condensed';
+      src: url('/fonts/FuturaStdCondensed.otf') format('opentype');
+      font-weight: 500;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: 'Futura Condensed';
+      src: url('/fonts/FuturaStdCondensedBold.otf') format('opentype');
+      font-weight: 700;
+      font-style: normal;
+      font-display: swap;
     }
   </style>
-  -->
 </head>
 
 <body class="font-futura bg-gray-100 overflow-x-hidden">
 
-<!-- ================= NAVBAR ================= -->
-<header class="fixed top-6 left-1/2 -translate-x-1/2 z-50 w-[95%] max-w-7xl">
-  <nav class="flex items-center justify-between px-6 py-3">
+  <!-- ================= NAVBAR ================= -->
+  <header class="fixed top-6 left-1/2 -translate-x-1/2 z-50 w-[95%] max-w-7xl">
+    <nav class="flex items-center justify-between px-6 py-3">
 
-    <!-- Logo -->
-    <div class="flex items-center gap-2">
-      <img src="Images/logoblanc.png" alt="logoblanc" class="h-8">
+      <!-- Logo -->
+      <div class="flex items-center gap-2">
+        <img src="Images/logoblanc.png" alt="logoblanc" class="h-8" />
+      </div>
+
+      <!-- Menu desktop -->
+      <ul class="hidden lg:flex items-center gap-2 text-sm font-medium text-gray-900 font-futuraCondensed">
+        <li class="px-4 py-2 rounded-full bg-white shadow">Accueil</li>
+        <li class="px-4 py-2 rounded-full bg-glassDark backdrop-blur">À propos</li>
+        <li class="px-4 py-2 rounded-full bg-glassDark backdrop-blur">Nos divisions</li>
+        <li class="px-4 py-2 rounded-full bg-glassDark backdrop-blur">Simulateurs</li>
+        <li class="px-4 py-2 rounded-full bg-glassDark backdrop-blur">Projets & Réalisations</li>
+        <li class="px-4 py-2 rounded-full bg-glassDark backdrop-blur">FAQ</li>
+      </ul>
+
+      <!-- Actions -->
+      <div class="flex items-center gap-3">
+        <!-- Connexion -->
+        <button class="w-10 h-10 rounded-full bg-glassDark backdrop-blur flex items-center justify-center">
+          <svg class="w-4 h-4 text-gray-800" fill="none" stroke="currentColor" stroke-width="2"
+               viewBox="0 0 24 24">
+            <path d="M12 12c2.7 0 5-2.3 5-5s-2.3-5-5-5-5 2.3-5 5 2.3 5 5 5z"/>
+            <path d="M20 21c0-4-4-7-8-7s-8 3-8 7"/>
+          </svg>
+        </button>
+
+        <!-- Contact -->
+        <button class="px-6 py-2 rounded-full bg-primary text-white font-semibold">
+          Contact
+        </button>
+
+        <!-- Burger -->
+        <button id="burger" class="lg:hidden text-xl">☰</button>
+      </div>
+    </nav>
+
+    <!-- Menu mobile -->
+    <div id="mobileMenu"
+         class="hidden lg:hidden mt-4 bg-glass backdrop-blur-xl rounded-2xl p-4 shadow-xl space-y-3">
+      <a href="#" class="block px-4 py-2 rounded-lg bg-white">Accueil</a>
+      <a href="#" class="block px-4 py-2 rounded-lg bg-glassDark">À propos</a>
+      <a href="#" class="block px-4 py-2 rounded-lg bg-glassDark">Nos divisions</a>
+      <a href="#" class="block px-4 py-2 rounded-lg bg-glassDark">Simulateurs</a>
+      <a href="#" class="block px-4 py-2 rounded-lg bg-glassDark">Projets & Réalisations</a>
+      <a href="#" class="block px-4 py-2 rounded-lg bg-glassDark">FAQ</a>
     </div>
+  </header>
 
-    <!-- Menu desktop -->
-    <ul class="hidden lg:flex items-center gap-2 text-sm font-medium text-gray-900">
-      <li class="px-4 py-2 rounded-full bg-white shadow">
-        Accueil
-      </li>
-      <li class="px-4 py-2 rounded-full bg-glassDark backdrop-blur">
-        À propos
-      </li>
-      <li class="px-4 py-2 rounded-full bg-glassDark backdrop-blur">
-        Nos divisions
-      </li>
-      <li class="px-4 py-2 rounded-full bg-glassDark backdrop-blur">
-        Simulateurs
-      </li>
-      <li class="px-4 py-2 rounded-full bg-glassDark backdrop-blur">
-        Projets & Réalisations
-      </li>
-      <li class="px-4 py-2 rounded-full bg-glassDark backdrop-blur">
-        FAQ
-      </li>
-    </ul>
+  <!-- ================= HERO ================= -->
+  <section class="relative px-1 md:px-4">
+    <div class="relative w-full max-w-[1600px] mx-auto rounded-[32px] overflow-hidden shadow-2xl">
 
-    <!-- Actions -->
-    <div class="flex items-center gap-3">
-      <!-- Connexion -->
-      <button class="w-10 h-10 rounded-full bg-glassDark backdrop-blur flex items-center justify-center">
-        <svg class="w-4 h-4 text-gray-800" fill="none" stroke="currentColor" stroke-width="2"
-             viewBox="0 0 24 24">
-          <path d="M12 12c2.7 0 5-2.3 5-5s-2.3-5-5-5-5 2.3-5 5 2.3 5 5 5z"/>
-          <path d="M20 21c0-4-4-7-8-7s-8 3-8 7"/>
-        </svg>
-      </button>
+      <img src="Images/residentiel.png"
+           class="w-full h-[95vh] object-cover"/>
 
-      <!-- Contact -->
-      <button class="px-6 py-2 rounded-full bg-primary text-white font-semibold">
-        Contact
-      </button>
+      <div class="absolute inset-0 bg-gradient-to-r from-black/60 via-black/40 to-transparent"></div>
 
-      <!-- Burger -->
-      <button id="burger" class="lg:hidden text-xl">☰</button>
+      <div class="absolute left-0 top-1/2 -translate-y-1/2 px-10 max-w-xl text-white">
+        <h1 class="text-2xl md:text-4xl lg:text-5xl font-bold leading-tight mb-6">
+          Transformez Vos Projets<br/>
+          Avec Des Solutions<br/>
+          Durables Et Innovantes
+        </h1>
+
+        <p class="text-lg leading-relaxed font-medium">
+          Explorez nos solutions de construction, d’énergie renouvelable
+          et de matériaux innovants. Testez notre simulateur 4-en-1
+          et découvrez immédiatement le potentiel de votre projet.
+        </p>
+      </div>
     </div>
-  </nav>
+  </section>
 
-  <!-- Menu mobile -->
-  <div id="mobileMenu"
-       class="hidden lg:hidden mt-4 bg-glass backdrop-blur-xl rounded-2xl p-4 shadow-xl space-y-3">
-    <a href="#" class="block px-4 py-2 rounded-lg bg-white">Accueil</a>
-    <a href="#" class="block px-4 py-2 rounded-lg bg-glassDark">À propos</a>
-    <a href="#" class="block px-4 py-2 rounded-lg bg-glassDark">Nos divisions</a>
-    <a href="#" class="block px-4 py-2 rounded-lg bg-glassDark">Simulateurs</a>
-    <a href="#" class="block px-4 py-2 rounded-lg bg-glassDark">Projets & Réalisations</a>
-    <a href="#" class="block px-4 py-2 rounded-lg bg-glassDark">FAQ</a>
-  </div>
-</header>
+  <!-- ================= PANNEAU SIMULATEUR ================= -->
+  <section class="relative -mt-20 md:-mt-16 z-10 px-4">
+    <div class="max-w-6xl mx-auto bg-glass backdrop-blur-xl rounded-2xl shadow-xl p-6">
 
-<!-- ================= HERO ================= -->
-<section class="relative px-1 md:px-4 pt-1">
-  <div class="relative w-full max-w-[1600px] mx-auto rounded-[32px] overflow-hidden shadow-2xl">
+      <div class="flex flex-wrap items-center gap-2 mb-4">
+        <button class="px-4 py-2 rounded-lg bg-white shadow">Résidentiel</button>
+        <button class="px-4 py-2 rounded-lg bg-glassDark">Tertiaire</button>
+        <button class="px-4 py-2 rounded-lg bg-glassDark">Industriel</button>
+        <button class="px-4 py-2 rounded-lg bg-glassDark">Agricole</button>
 
-    <!-- Image -->
-    <img src="Images/residentiel.png"
-         alt="Projet"
-         class="w-full h-[80vh] object-cover">
+        <div class="ml-auto flex gap-4">
+          <button class="px-6 py-3 bg-secondary text-white rounded-lg font-semibold">
+            Ouvrir le Calculateur
+          </button>
+          <button class="px-6 py-3 bg-primary text-white rounded-lg font-semibold">
+            Poursuivre la simulation
+          </button>
+        </div>
+      </div>
 
-    <!-- Overlay flou côté texte -->
-    <div class="absolute inset-0 bg-gradient-to-r from-black/60 via-black/40 to-transparent"></div>
-
-    <!-- Texte -->
-    <div class="absolute left-0 top-1/2 -translate-y-1/2 px-10 max-w-xl text-white">
-      <h1 class="text-2xl md:text-4xl lg:text-5xl font-bold tracking-tight md:tracking-normal leading-tight mb-6">
-  Transformez Vos Projets<br>
-  Avec Des Solutions<br>
-  Durables Et Innovantes
-</h1>
-
-      <p class="text-lg leading-relaxed">
-        Explorez nos solutions de construction, d’énergie renouvelable
-        et de matériaux innovants. Testez notre simulateur 4-en-1
-        et découvrez immédiatement le potentiel de votre projet.
-      </p>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <select class="p-3 rounded-lg bg-white">
+          <option>Configuration</option>
+        </select>
+        <select class="p-3 rounded-lg bg-white">
+          <option>Standing</option>
+        </select>
+        <select class="p-3 rounded-lg bg-white">
+          <option>Options</option>
+        </select>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- ================= PANNEAU SIMULATEUR ================= -->
-<section class="relative -mt-28 z-10 px-4">
-  <div class="max-w-6xl mx-auto bg-glass backdrop-blur-xl rounded-2xl shadow-xl p-6">
+  <!-- ================= JS ================= -->
+  <script>
+    const burger = document.getElementById("burger");
+    const mobileMenu = document.getElementById("mobileMenu");
 
-    <!-- Onglets -->
-    <div class="flex flex-wrap gap-2 mb-4">
-      <button class="px-4 py-2 rounded-lg bg-white shadow">Résidentiel</button>
-      <button class="px-4 py-2 rounded-lg bg-glassDark">Tertiaire</button>
-      <button class="px-4 py-2 rounded-lg bg-glassDark">Industriel</button>
-      <button class="px-4 py-2 rounded-lg bg-glassDark">Agricole</button>
-
-       <!-- Actions -->
-    <div class="flex flex-col md:flex-row justify-end gap-4 mt-6">
-      <button class="px-6 py-3 bg-secondary text-white rounded-lg font-semibold">
-        Ouvrir le Calculateur
-      </button>
-      <button class="px-6 py-3 bg-primary text-white rounded-lg font-semibold">
-        Poursuivre la simulation
-      </button>
-    </div> 
-    </div>
-
-    <!-- Champs -->
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-      <select class="p-3 rounded-lg bg-white">
-        <option>Configuration</option>
-      </select>
-
-      <select class="p-3 rounded-lg bg-white">
-        <option>Standing</option>
-      </select>
-
-      <select class="p-3 rounded-lg bg-white">
-        <option>Options</option>
-      </select>
-    </div>
-
-   
-
-  </div>
-</section>
-
-<!-- ================= JS ================= -->
-<script>
-  const burger = document.getElementById('burger');
-  const mobileMenu = document.getElementById('mobileMenu');
-
-  burger.addEventListener('click', () => {
-    mobileMenu.classList.toggle('hidden');
-  });
-</script>
+    burger.addEventListener("click", () => {
+      mobileMenu.classList.toggle("hidden");
+    });
+  </script>
 
 </body>
 </html>
