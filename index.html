@@ -60,6 +60,14 @@
       src: url('/fonts/FuturaStdCondensedBold.otf');
       font-weight: 700;
     }
+     @media (max-width: 640px) {
+    body, html {
+      overflow-x:hidden !important;
+    }
+    section, div, img {
+      max-width:100% !important;
+    }
+  }
   </style>
 </head>
 
@@ -71,21 +79,44 @@
 
     <img src="Images/logoblanc.png" alt="logo" class="h-10 sm:h-12" />
 
-    <ul class="hidden lg:flex items-center gap-2 text-sm font-medium font-futuraCondensed">
-      <li class="px-4 py-2 rounded-full bg-white shadow">Accueil</li>
-      <li class="px-4 py-2 rounded-full bg-glassDark">À propos</li>
-      <li class="px-4 py-2 rounded-full bg-glassDark">Nos divisions</li>
-      <li class="px-4 py-2 rounded-full bg-glassDark">Simulateurs</li>
-      <li class="px-4 py-2 rounded-full bg-glassDark">Espace client</li>
-      <li class="px-4 py-2 rounded-full bg-glassDark">Projets</li>
-      <li class="px-4 py-2 rounded-full bg-glassDark">FAQ</li>
-    </ul>
+     <ul class="hidden lg:flex items-center gap-2 text-sm font-medium font-futuraCondensed">
+  <li>
+    <a href="index.html" class="px-4 py-2 rounded-full bg-white shadow block">Accueil</a>
+  </li>
+
+  <li>
+    <a href="about.html" class="px-4 py-2 rounded-full bg-glassDark block">À propos</a>
+  </li>
+
+  <li>
+    <a href="division.html" class="px-4 py-2 rounded-full bg-glassDark block">Nos divisions</a>
+  </li>
+
+  <li>
+    <a href="simulator.html" class="px-4 py-2 rounded-full bg-glassDark block">Simulateurs</a>
+  </li>
+
+  <li>
+    <a href="clients.html" class="px-4 py-2 rounded-full bg-glassDark block">Espace client</a>
+  </li>
+
+  <li>
+    <a href="projects.html" class="px-4 py-2 rounded-full bg-glassDark block">Projets & Réalisations</a>
+  </li>
+
+  <li>
+    <a href="faq.html" class="px-4 py-2 rounded-full bg-glassDark block">FAQ</a>
+  </li>
+</ul>
 
     <div class="flex items-center gap-2">
       <button class="w-9 h-9 rounded-full bg-glassDark flex items-center justify-center">
-        👤
+        <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18Zm0 0a8.949 8.949 0 0 0 4.951-1.488A3.987 3.987 0 0 0 13 16h-2a3.987 3.987 0 0 0-3.951 3.512A8.948 8.948 0 0 0 12 21Zm3-11a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"/>
+</svg>
+
       </button>
-      <button class="hidden sm:block px-5 py-2 rounded-full bg-primary text-white">
+      <button class="hidden sm:block px-5 py-2 rounded-full bg-white text-black">
         Contact
       </button>
       <button id="burger" class="lg:hidden text-2xl">☰</button>
@@ -95,11 +126,17 @@
   <!-- Menu mobile -->
   <div id="mobileMenu"
        class="hidden lg:hidden mt-3 bg-glass backdrop-blur-xl rounded-2xl p-4 space-y-2 shadow-xl">
+       <button id="closeMobile"
+        class="w-full text-right text-lg font-bold px-2 mb-2">
+  ✕
+</button>
+
     <a class="block px-4 py-2 rounded-lg bg-white">Accueil</a>
     <a class="block px-4 py-2 rounded-lg bg-glassDark">À propos</a>
     <a class="block px-4 py-2 rounded-lg bg-glassDark">Nos divisions</a>
     <a class="block px-4 py-2 rounded-lg bg-glassDark">Simulateurs</a>
-    <a class="block px-4 py-2 rounded-lg bg-glassDark">Projets</a>
+    <a class="block px-4 py-2 rounded-lg bg-glassDark">Espace client</a>
+    <a class="block px-4 py-2 rounded-lg bg-glassDark">Projets & Réalisations</a>
     <a class="block px-4 py-2 rounded-lg bg-glassDark">FAQ</a>
   </div>
 </header>
@@ -108,8 +145,18 @@
 <section class="relative px-1 sm:px-4 pt-5">
   <div class="relative max-w-[1600px] mx-auto rounded-[28px] overflow-hidden shadow-2xl">
 
-    <img src="Images/residentiel.png"
+    <img id="heroImage" src="Images/residentiel.png"
          class="w-full h-[75vh] md:h-[90vh] object-cover" />
+         <!-- Flou moitié gauche -->
+    <!-- Flou progressif gauche -->
+<div class="absolute inset-0 pointer-events-none">
+  <div class="absolute -left-[30%] top-0 bottom-0 w-[70%]
+              backdrop-blur-[4px]
+              bg-gradient-to-r from-black/20 via-black/5 to-transparent">
+  </div>
+</div>
+
+
 
     <div class="absolute inset-0 bg-gradient-to-r from-black/70 via-black/40 to-transparent"></div>
 
@@ -137,16 +184,17 @@
   <div class="max-w-[1200px] mx-auto bg-glass backdrop-blur-xl rounded-2xl shadow-xl p-4">
 
     <!-- Onglets -->
-    <div class="flex flex-wrap items-center gap-2 mb-3">
-      <button class="px-3 py-1.5 rounded-lg bg-white text-xs shadow">Résidentiel</button>
-      <button class="px-3 py-1.5 rounded-lg bg-glassDark text-xs">Tertiaire</button>
-      <button class="px-3 py-1.5 rounded-lg bg-glassDark text-xs">Industriel</button>
-      <button class="px-3 py-1.5 rounded-lg bg-glassDark text-xs">Agricole</button>
+    <div class="flex flex-wrap items-center gap-2 mb-3" id="categoryButtons">
+  <button data-img="Images/residentiel.png" class="tabBtn px-3 py-1.5 rounded-lg bg-white text-xs shadow">Résidentiel</button>
+  <button data-img="Images/tertiaire.png" class="tabBtn px-3 py-1.5 rounded-lg bg-glassDark text-xs">Tertiaire</button>
+  <button data-img="Images/industriel.png" class="tabBtn px-3 py-1.5 rounded-lg bg-glassDark text-xs">Industriel</button>
+  <button data-img="Images/agricole.png" class="tabBtn px-3 py-1.5 rounded-lg bg-glassDark text-xs">Agricole</button>
 
-      <button class="w-full sm:w-auto sm:ml-auto px-4 py-2 bg-secondary text-white rounded-lg text-xs font-semibold">
-        Ouvrir le Calculateur
-      </button>
-    </div>
+  <button class="w-full sm:w-auto sm:ml-auto px-4 py-2 bg-secondary text-white rounded-lg text-xs font-semibold">
+    Ouvrir le Calculateur D'énergies Renouvelables
+  </button>
+</div>
+
 
     <!-- Formulaire -->
     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-12 gap-2">
@@ -170,7 +218,7 @@
       </select>
 
       <button class="col-span-1 md:col-span-2 h-9 bg-primary text-white rounded-lg text-xs font-semibold">
-        Poursuivre
+        Poursuivre la simulation
       </button>
     </div>
 
@@ -183,6 +231,32 @@
   const mobileMenu = document.getElementById("mobileMenu");
   burger.addEventListener("click", () => {
     mobileMenu.classList.toggle("hidden");
+  });
+const closeMobile = document.getElementById("closeMobile");
+
+closeMobile.addEventListener("click", () => {
+  mobileMenu.classList.add("hidden");
+});
+
+   const buttons = document.querySelectorAll(".tabBtn");
+  const hero = document.getElementById("heroImage");
+
+  buttons.forEach(btn=>{
+    btn.addEventListener("click", ()=>{
+      
+      // changer image
+      hero.src = btn.dataset.img;
+
+      // reset styles
+      buttons.forEach(b=>{
+        b.classList.remove("bg-white","shadow");
+        b.classList.add("bg-glassDark");
+      });
+
+      // set actif
+      btn.classList.remove("bg-glassDark");
+      btn.classList.add("bg-white","shadow");
+    });
   });
 </script>
 
