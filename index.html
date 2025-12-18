@@ -119,7 +119,10 @@
       <button class="hidden sm:block px-5 py-2 rounded-full bg-white text-black">
         Contact
       </button>
-      <button id="burger" class="lg:hidden text-2xl">☰</button>
+      <button id="burger" class="lg:hidden text-2xl"><svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+  <path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="M5 7h14M5 12h14M5 17h10"/>
+</svg>
+</button>
     </div>
   </nav>
 
@@ -128,7 +131,10 @@
        class="hidden lg:hidden mt-3 bg-glass backdrop-blur-xl rounded-2xl p-4 space-y-2 shadow-xl">
        <button id="closeMobile"
         class="w-full text-right text-lg font-bold px-2 mb-2">
-  ✕
+  <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18 17.94 6M18 18 6.06 6"/>
+</svg>
+
 </button>
 
     <a class="block px-4 py-2 rounded-lg bg-white">Accueil</a>
@@ -205,17 +211,118 @@
       <input class="col-span-1 md:col-span-2 h-9 px-3 rounded-lg text-xs"
              placeholder="Surface bâtie (m²)" />
 
-      <select class="col-span-1 md:col-span-2 h-9 px-3 rounded-lg text-xs">
-        <option>Configuration</option>
-      </select>
+     <div class="relative col-span-1 md:col-span-2">
+  <button id="openConfig"
+    class="w-full h-9 bg-white text-left px-3 rounded-lg text-xs flex justify-between items-center">
+    Configuration
+    <span>▼</span>
+  </button>
 
-      <select class="col-span-1 md:col-span-2 h-9 px-3 rounded-lg text-xs">
-        <option>Standing</option>
-      </select>
+  <div id="configPanel"
+    class="hidden absolute left-0 right-0 bottom-10 bg-white rounded-xl shadow-lg p-3 space-y-2 z-20">
 
-      <select class="col-span-1 md:col-span-2 h-9 px-3 rounded-lg text-xs">
-        <option>Options</option>
-      </select>
+    <!-- case espaces communs -->
+    <label class="flex justify-between items-center text-xs">
+      Espaces Communs
+      <input type="checkbox" class="ml-2">
+    </label>
+
+    <!-- salles de bain -->
+    <div class="flex justify-between items-center text-xs">
+      Salles De Bain
+      <div class="flex items-center gap-2">
+
+        <button class="minusBath bg-gray-200 rounded-full w-5 h-5 flex items-center justify-center">-</button>
+
+        <span id="bathCount">1</span>
+
+        <button class="plusBath bg-gray-200 rounded-full w-5 h-5 flex items-center justify-center">+</button>
+
+      </div>
+    </div>
+
+    <!-- chambres -->
+    <div class="flex justify-between items-center text-xs">
+      Chambres
+      <div class="flex items-center gap-2">
+
+        <button class="minusBed bg-gray-200 rounded-full w-5 h-5 flex items-center justify-center">-</button>
+
+        <span id="bedCount">1</span>
+
+        <button class="plusBed bg-gray-200 rounded-full w-5 h-5 flex items-center justify-center">+</button>
+
+      </div>
+    </div>
+
+    <button class="w-full bg-primary text-white rounded-lg py-1 text-xs mt-2">
+      Valider
+    </button>
+    
+  </div>
+</div>
+
+
+      <div class="relative col-span-1 md:col-span-2">
+  <button id="openStand"
+    class="w-full h-9 bg-white text-left px-3 rounded-lg text-xs flex justify-between items-center">
+    Standing
+    <span>▼</span>
+  </button>
+
+  <div id="standPanel"
+    class="hidden absolute left-0 right-0 bottom-10 bg-white rounded-xl shadow-lg p-3 space-y-1 z-20 text-xs">
+
+    <button class="block w-full text-left hover:bg-gray-100 rounded-lg px-2 py-1">Prestige</button>
+    <button class="block w-full text-left hover:bg-gray-100 rounded-lg px-2 py-1">Premium</button>
+    <button class="block w-full text-left hover:bg-gray-100 rounded-lg px-2 py-1">Confort</button>
+    <button class="block w-full text-left hover:bg-gray-100 rounded-lg px-2 py-1">Standard</button>
+
+  </div>
+</div>
+
+
+      <div class="relative col-span-1 md:col-span-2">
+  <button id="openOptions"
+    class="w-full h-9 bg-white text-left px-3 rounded-lg text-xs flex justify-between items-center">
+    Options
+    <span>▼</span>
+  </button>
+
+  <div id="optionsPanel"
+    class="hidden absolute left-0 right-0 bottom-10 bg-white rounded-xl shadow-lg p-3 space-y-2 z-20">
+
+    <label class="flex justify-between text-xs">
+      Forage <input type="checkbox">
+    </label>
+
+    <label class="flex justify-between text-xs">
+      Clôture <input type="checkbox">
+    </label>
+
+    <label class="flex justify-between text-xs">
+      Aménagement Paysager <input type="checkbox">
+    </label>
+
+    <label class="flex justify-between text-xs">
+      Domotique <input type="checkbox">
+    </label>
+
+    <label class="flex justify-between text-xs">
+      Solaire <input type="checkbox">
+    </label>
+
+    <label class="flex justify-between text-xs">
+      Piscine <input type="checkbox">
+    </label>
+
+    <button class="w-full bg-primary text-white rounded-lg py-1 text-xs mt-2">
+      Valider
+    </button>
+    
+  </div>
+</div>
+
 
       <button class="col-span-1 md:col-span-2 h-9 bg-primary text-white rounded-lg text-xs font-semibold">
         Poursuivre la simulation
@@ -258,6 +365,29 @@ closeMobile.addEventListener("click", () => {
       btn.classList.add("bg-white","shadow");
     });
   });
+  // ---------------- CONFIG DROPDOWN ------------------
+openConfig.onclick = ()=> configPanel.classList.toggle("hidden");
+openStand.onclick = ()=> standPanel.classList.toggle("hidden");
+openOptions.onclick = ()=> optionsPanel.classList.toggle("hidden");
+
+// Salles de bain counter
+document.querySelector(".plusBath").onclick = ()=>{
+  bathCount.textContent = Number(bathCount.textContent)+1;
+}
+document.querySelector(".minusBath").onclick = ()=>{
+  if(Number(bathCount.textContent)>0)
+  bathCount.textContent = Number(bathCount.textContent)-1;
+}
+
+// Chambres counter
+document.querySelector(".plusBed").onclick = ()=>{
+  bedCount.textContent = Number(bedCount.textContent)+1;
+}
+document.querySelector(".minusBed").onclick = ()=>{
+  if(Number(bedCount.textContent)>0)
+  bedCount.textContent = Number(bedCount.textContent)-1;
+}
+
 </script>
 
 </body>
