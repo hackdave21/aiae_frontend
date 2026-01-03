@@ -68,13 +68,25 @@
       max-width:100% !important;
     }
   }
+ .nav-scrolled{
+  backdrop-filter: blur(18px);
+  background: rgba(255,255,255,0.20);
+}
+.nav-scrolled::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  backdrop-filter:blur(18px);
+}
+
   </style>
 </head>
 
 <body class="font-futura bg-gray-100 overflow-x-hidden">
 
 <!-- ================= NAVBAR ================= -->
-<header class="fixed top-4 left-1/2 -translate-x-1/2 z-50 w-[95%] max-w-7xl">
+<header id="navBar"
+class="fixed top-4 left-1/2 -translate-x-1/2 z-50 w-[95%] max-w-7xl rounded-[28px] overflow-hidden transition-all duration-300">
   <nav class="flex items-center justify-between px-4 sm:px-6 py-3">
 
     <img src="Images/logoblanc.png" alt="logo" class="h-10 sm:h-12" />
@@ -325,6 +337,81 @@
   </div>
 </section>
 
+<!-- ================= SECTION BIENVENUE ================= -->
+<section class="relative max-w-[1600px] mx-auto px-3 sm:px-6 pb-16">
+
+  <!-- container -->
+  <div class="bg-white rounded-3xl shadow-xl overflow-hidden">
+
+    <!-- titre -->
+    <div class="text-center pt-10 pb-4 px-4">
+      <h2 class="font-bold text-xl sm:text-2xl md:text-3xl text-primary tracking-wide">
+        BIENVENUE SUR LE SITE WEB D'AIAE
+      </h2>
+
+      <p class="text-gray-600 mt-2 text-xs sm:text-sm md:text-base max-w-2xl mx-auto leading-relaxed">
+        Votre partenaire privilégié pour des solutions 4-en-1 innovantes, alliant construction durable, 
+        énergies renouvelables, sécurité de haut niveau et matériaux innovants.
+      </p>
+    </div>
+
+    <!-- middle card -->
+    <div class="px-4 pb-6">
+      
+
+        <!-- left text -->
+        <div class="flex-1 text-left">
+          <p class="text-lg sm:text-xl md:text-2xl font-semibold leading-snug mb-3 text-black">
+            Essayez notre simulateur maintenant &<br>
+            Obtenez un devis personnalisé !
+          </p>
+
+          <p class="text-center block lg:hidden mt-2 text-xs opacity-70">
+            Cliquez <span class="font-bold underline">Simulation</span> & simulez votre projet en 2 minutes !
+          </p>
+        </div>
+
+        <!-- image -->
+        <div class="flex-1">
+          <img src="Images/simulateurBanner.png" class="w-full object-cover" />
+        </div>
+
+        <!-- right text list -->
+        <div class="flex-1 hidden lg:block">
+          <ul class="space-y-3 text-sm leading-relaxed">
+            <li class="flex gap-2 items-start">
+              <span class="text-secondary text-lg">●</span>
+              <span><strong>La construction durable :</strong> projets sur mesure, du résidentiel à l’industriel.</span>
+            </li>
+
+            <li class="flex gap-2 items-start">
+              <span class="text-secondary text-lg">●</span>
+              <span><strong>Les énergies renouvelables :</strong> solaire, éolien & biogaz adaptés à vos besoins.</span>
+            </li>
+
+            <li class="flex gap-2 items-start">
+              <span class="text-secondary text-lg">●</span>
+              <span><strong>La sécurité haute performance :</strong> coffres certifiés, panic rooms, vidéo sécurité.</span>
+            </li>
+
+            <li class="flex gap-2 items-start">
+              <span class="text-secondary text-lg">●</span>
+              <span><strong>Matériaux innovants :</strong> briques écologiques, structures préfabriquées.</span>
+            </li>
+          </ul>
+        </div>
+
+    </div>
+
+    <!-- petite phrase bas -->
+    <p class="text-center pb-8 text-xs sm:text-sm text-gray-600">
+      Cliquez <span class="font-bold underline">Simulation</span> & simulez votre projet en 2 minutes !
+    </p>
+
+  </div>
+
+</section>
+
 <!-- ================= JS ================= -->
 <script>
   // Menu burger en mobile
@@ -378,6 +465,15 @@ document.querySelector(".minusBed").onclick = ()=>{
   if(Number(bedCount.textContent)>0)
   bedCount.textContent = Number(bedCount.textContent)-1;
 }
+const navBar = document.getElementById("navBar");
+
+window.addEventListener("scroll", () => {
+  if(window.scrollY > 30){
+    navBar.classList.add("nav-scrolled");
+  } else {
+    navBar.classList.remove("nav-scrolled");
+  }
+});
 
 </script>
 
