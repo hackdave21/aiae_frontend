@@ -88,14 +88,11 @@
 <header id="navBar"
 class="fixed top-4 left-1/2 -translate-x-1/2 z-50 w-[95%] max-w-7xl rounded-[28px] overflow-hidden transition-all duration-300">
   <nav class="flex items-center justify-between px-4 sm:px-6 py-3">
-
-   <img 
+<img 
   src="Images/logos/LOGO AIAE BLANC.png" 
   alt="logo"
-  class="h-25 sm:h-14 md:h-16 w-auto object-contain"
+  class="h-10 sm:h-12 md:h-14 lg:h-16 w-auto object-contain"
 />
-
-
      <ul class="hidden lg:flex items-center gap-2 text-sm font-medium font-FuturaStdLight">
   <li>
     <a href="index.html" class="px-4 py-2 rounded-full bg-white shadow block whitespace-nowrap">Accueil</a>
@@ -133,7 +130,7 @@ class="fixed top-4 left-1/2 -translate-x-1/2 z-50 w-[95%] max-w-7xl rounded-[28p
       <button class="hidden sm:block px-5 py-2 rounded-full bg-white text-black">
         Contact
       </button>
-      <button id="burger" class="lg:hidden text-2xl"><svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+      <button id="burger" class="lg:hidden text-2xl rounded-full bg-glassDark p-2"><svg class="w-6 h-6 text-white dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
   <path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="M5 7h14M5 12h14M5 17h10"/>
 </svg>
 </button>
@@ -429,7 +426,7 @@ class="fixed top-4 left-1/2 -translate-x-1/2 z-50 w-[95%] max-w-7xl rounded-[28p
 
         <!-- flèche gauche (on garde exactement sa position) -->
         <button class="hidden lg:flex absolute -left-16 top-1/2 -translate-y-1/2
-                       w-12 h-12 rounded-full bg-white/90 items-center justify-center shadow">
+                       w-12 h-12 rounded-full bg-white/90 items-center justify-center shadow-lg">
           <img src="Images/CaretLeft.svg" alt="fleche gauche">
         </button>
 
@@ -455,7 +452,7 @@ class="fixed top-4 left-1/2 -translate-x-1/2 z-50 w-[95%] max-w-7xl rounded-[28p
 
         <!-- flèche droite (on garde exactement sa position) -->
         <button class="hidden lg:flex absolute -right-16 top-1/2 -translate-y-1/2
-                       w-12 h-12 rounded-full bg-white/90 items-center justify-center shadow">
+                       w-12 h-12 rounded-full bg-white/90 items-center justify-center shadow-lg">
           <img src="Images/CaretRight.svg" alt="fleche droite">
         </button>
 
@@ -503,7 +500,7 @@ class="fixed top-4 left-1/2 -translate-x-1/2 z-50 w-[95%] max-w-7xl rounded-[28p
 </section>
 
 <!-- ================= ANALYSE DE VOTRE PROJET ================= -->
-<section class="bg-[#f4f5f7] py-20">
+<section class="bg-[#f4f5f7]">
   <div class="max-w-7xl mx-auto px-6">
 
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -519,11 +516,14 @@ class="fixed top-4 left-1/2 -translate-x-1/2 z-50 w-[95%] max-w-7xl rounded-[28p
       </div>
       <!-- TEXTE GAUCHE -->
       <div>
-        <h2 class="text-primary font-[Futura\ Condensed] font-bold
-           text-[64px] leading-[1] tracking-wide">
+      <h2 class="text-primary font-[Futura\ Condensed] font-bold
+           text-[28px] sm:text-[36px] md:text-[48px] lg:text-[64px]
+           leading-[1] tracking-wide break-words
+           py-4 sm:py-0">
   ANALYSE DE<br>
   VOTRE PROJET
 </h2>
+
 
         <p class="text-gray-700 text-sm sm:text-base leading-relaxed max-w-xl pt-2">
           Nous commençons par une <strong>écoute attentive</strong> de vos besoins spécifiques.<br>
@@ -544,29 +544,32 @@ class="fixed top-4 left-1/2 -translate-x-1/2 z-50 w-[95%] max-w-7xl rounded-[28p
 
 <!-- ================= ÉTAPE 02 : SIMULATION ================= -->
 <section class="bg-[#f4f5f7]">
-  <div class="max-w-7xl mx-auto px-2">
+  <div class="max-w-7xl mx-auto px-6">
 
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
 
       <!-- TEXTE GAUCHE -->
-      <div>
-        <h2 class="text-[#0a1745] font-[Futura\ Condensed] font-bold
-           text-[64px] leading-[1] tracking-wide">
-          SIMULATION<br>INSTANTANÉE
-        </h2>
+<div class="ml-auto max-w-xl text-right">
+  <h2 class="text-[#0a1745] font-[Futura\ Condensed] font-bold
+           text-3xl sm:text-4xl md:text-5xl lg:text-[64px]
+           leading-[1] tracking-wide text-right py-3 sm:py-0">
+  SIMULATION<br>INSTANTANÉE
+</h2>
 
-        <p class="text-gray-700 text-sm sm:text-base leading-relaxed max-w-xl pt-2">
-          Après avoir défini vos besoins, vous <strong>accédez à notre simulateur 4-en-1</strong>.
-          Cet outil interactif vous permet de calculer instantanément les coûts estimés,
-          la durée du projet ainsi que les économies potentielles en matière d’énergie.
-          <br><br>
-          En quelques clics, obtenez une <strong>estimation précise et personnalisée</strong>,
-          vous donnant une vision claire et rapide de votre projet.
-        </p>
-      </div>
+
+  <p class="text-gray-700 text-sm sm:text-base leading-relaxed pt-4">
+    Après avoir défini vos besoins, vous <strong>accédez à notre simulateur 4-en-1.<br>
+    Cet outil interactif vous permet de calculer instantanément les coûts<br> estimés,
+    la durée du projet ainsi que les économies potentielles en<br> matière d’énergie.</strong> Le simulateur est adapté à 
+    chaque secteur, qu'il<br> s'agisse de la construction, des énergies renouvellables, de la sécurité ou<br>
+    de la préfabrication des matériaux.
+    <strong>En quelques clics, obtenez une<br> estimation précise et personnalisée,
+    vous donnant une vision claire et rapide de votre projet.</strong>
+  </p>
+</div>
 
       <!-- IMAGE DROITE -->
-
+      <div class="flex justify-start">
         <img
           src="Images/etape2.png"
           alt="Simulation instantanée"
@@ -580,7 +583,7 @@ class="fixed top-4 left-1/2 -translate-x-1/2 z-50 w-[95%] max-w-7xl rounded-[28p
 </section>
 
 <!-- ================= ÉTAPE 03 : DEVIS ================= -->
-<section class="bg-[#f4f5f7] py-20">
+<section class="bg-[#f4f5f7]">
   <div class="max-w-7xl mx-auto px-6">
 
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -603,7 +606,9 @@ class="fixed top-4 left-1/2 -translate-x-1/2 z-50 w-[95%] max-w-7xl rounded-[28p
       <!-- TEXTE DROITE -->
       <div>
         <h2 class="text-primary font-[Futura\ Condensed] font-bold
-           text-[64px] leading-[1] tracking-wide">
+           text-[28px] sm:text-[36px] md:text-[48px] lg:text-[64px]
+           leading-[1] tracking-wide break-words
+           py-4 sm:py-0">
           DEVIS PERSONNALISÉ<br>
           ET LANCEMENT
         </h2>
@@ -705,87 +710,96 @@ class="fixed top-4 left-1/2 -translate-x-1/2 z-50 w-[95%] max-w-7xl rounded-[28p
   <!-- CONTENU -->
   <div class="relative z-10 max-w-7xl mx-auto px-6 py-20">
 
-    <div class="grid grid-cols-1 md:grid-cols-[1.3fr_1fr_1.3fr] gap-16">
+   <div class="grid grid-cols-1 md:grid-cols-[1.3fr_1fr_1.3fr] gap-12 text-center md:text-left">
 
-      <!-- CONTACTS -->
-      <div class="pr-6">
-        <h3 class="text-xl font-semibold mb-4">Contacts</h3>
+  <!-- CONTACTS -->
+  <div class="md:pr-6 flex flex-col items-center md:items-start">
+    <h3 class="text-xl font-semibold mb-4">Contacts</h3>
 
-        <p class="text-sm opacity-80 mb-4">
-          Écrivez nous ou appelez nous pour toutes<br> informations supplémentaires !
-        </p>
+    <p class="text-sm opacity-80 mb-4">
+      Écrivez nous ou appelez nous pour toutes<br> informations supplémentaires !
+    </p>
 
-        <p class="text-sm opacity-80 mb-6">
-          Suivez nos pages pour ne rien manquer
-        </p>
+    <p class="text-sm opacity-80 mb-6">
+      Suivez nos pages pour ne rien manquer
+    </p>
 
-        <p class="text-sm mb-2">Afrika228@gmail.com</p>
-        <p class="text-sm mb-6">+228 9X 8X 7X 6X / 7X 8X 7X 6X</p>
+    <p class="text-sm mb-2">Afrika228@gmail.com</p>
+    <p class="text-sm mb-6">+228 9X 8X 7X 6X / 7X 8X 7X 6X</p>
 
-        <!-- RÉSEAUX -->
-        <div class="flex gap-4">
-
-          <!-- TikTok -->
-         <a href="#" aria-label="TikTok">
-          <img src="Images/TiktokLogo.svg" alt="TikTok" height="30" width="30">
-        </a>
-
-          <!-- Instagram -->
-          <a href="#" aria-label="Instagram">
-          <img src="Images/InstagramLogo.svg" alt="TikTok" height="30" width="30">
-        </a>
-
-          <!-- Facebook -->
-          <a href="#" aria-label="Facebook">
-          <img src="Images/FacebookLogo.svg" alt="TikTok" height="30" width="30">
-        </a>
-
-          <!-- YouTube -->
-          <a href="#" aria-label="Youtube">
-          <img src="Images/YoutubeLogo.svg" alt="TikTok" height="30" width="30">
-        </a>
-
-        </div>
-      </div>
-
-      <!-- MENU -->
-      <div class="pl-6">
-        <h3 class="text-xl font-semibold mb-4">Menu</h3>
-
-        <ul class="space-y-2 text-sm opacity-90">
-          <li>Accueil</li>
-          <li>À Propos</li>
-          <li>Nos Divisions</li>
-          <li>Simulateurs</li>
-          <li>Espace Client</li>
-          <li>Projets & Réalisations</li>
-          <li>FAQ</li>
-        </ul>
-      </div>
-
-      <!-- NEWSLETTER -->
-      <div class="pl-6">
-        <h3 class="text-xl font-semibold mb-4">Nouvelles</h3>
-
-        <div class="flex items-center bg-white/10 rounded-lg overflow-hidden mb-4">
-          <input
-            type="email"
-            placeholder="Ton Mail..."
-            class="bg-transparent px-4 py-3 text-sm w-full outline-none placeholder-white/70"
-          />
-
-          <!-- BOUTON SVG -->
-          <button class="px-4">
-            <img src="Images/SendIcon.svg" alt="">
-          </button>
-        </div>
-
-        <p class="text-sm opacity-80">
-          Inscris ton mail pour être au courant de nos dernières promotions et offres en temps réel
-        </p>
-      </div>
-
+    <div class="flex gap-4 justify-center md:justify-start">
+      <a href="#"><img src="Images/TiktokLogo.svg" class="w-8 h-8"></a>
+      <a href="#"><img src="Images/InstagramLogo.svg" class="w-8 h-8"></a>
+      <a href="#"><img src="Images/FacebookLogo.svg" class="w-8 h-8"></a>
+      <a href="#"><img src="Images/YoutubeLogo.svg" class="w-8 h-8"></a>
     </div>
+  </div>
+
+ <!-- MENU -->
+<div class="md:pl-6 flex flex-col items-center md:items-start">
+  <h3 class="text-xl font-semibold mb-4">Menu</h3>
+
+  <ul class="space-y-2 text-sm opacity-90">
+    <li>
+      <a href="index.html" class="hover:underline hover:text-white transition">
+        Accueil
+      </a>
+    </li>
+    <li>
+      <a href="about.html" class="hover:underline hover:text-white transition">
+        À Propos
+      </a>
+    </li>
+    <li>
+      <a href="division.html" class="hover:underline hover:text-white transition">
+        Nos Divisions
+      </a>
+    </li>
+    <li>
+      <a href="simulator.html" class="hover:underline hover:text-white transition">
+        Simulateurs
+      </a>
+    </li>
+    <li>
+      <a href="clients.html" class="hover:underline hover:text-white transition">
+        Espace Client
+      </a>
+    </li>
+    <li>
+      <a href="projects.html" class="hover:underline hover:text-white transition">
+        Projets & Réalisations
+      </a>
+    </li>
+    <li>
+      <a href="faq.html" class="hover:underline hover:text-white transition">
+        FAQ
+      </a>
+    </li>
+  </ul>
+</div>
+
+
+  <!-- NEWSLETTER -->
+  <div class="md:pl-6 flex flex-col items-center md:items-start">
+    <h3 class="text-xl font-semibold mb-4">Nouvelles</h3>
+
+    <div class="flex items-center w-full max-w-sm bg-white/10 rounded-lg overflow-hidden mb-4">
+      <input
+        type="email"
+        placeholder="Ton Mail..."
+        class="bg-transparent px-4 py-3 text-sm w-full outline-none placeholder-white/70"
+      />
+      <button class="px-4">
+        <img src="Images/SendIcon.svg" alt="">
+      </button>
+    </div>
+
+    <p class="text-sm opacity-80">
+      Inscris ton mail pour être au courant de nos dernières promotions et offres en temps réel
+    </p>
+  </div>
+
+</div>
 
   </div>
 
