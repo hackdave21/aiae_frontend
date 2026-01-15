@@ -30,36 +30,43 @@
 
   <!-- ================= FONTS ================= -->
   <style>
-    @font-face {
+      @font-face {
       font-family: 'Futura';
       src: url('/fonts/FuturaStdLight.otf');
       font-weight: 300;
     }
+
     @font-face {
       font-family: 'Futura';
       src: url('/fonts/FuturaStdMedium.otf');
       font-weight: 500;
     }
+
     @font-face {
       font-family: 'Futura';
       src: url('/fonts/FuturaStdBold.otf');
       font-weight: 700;
     }
+
     @font-face {
       font-family: 'Futura';
       src: url('/fonts/FuturaStdHeavy.otf');
       font-weight: 800;
     }
+
+    /* Condensed */
     @font-face {
       font-family: 'Futura Condensed';
       src: url('/fonts/FuturaStdCondensed.otf');
       font-weight: 500;
     }
+
     @font-face {
       font-family: 'Futura Condensed';
       src: url('/fonts/FuturaStdCondensedBold.otf');
       font-weight: 700;
     }
+
      @media (max-width: 640px) {
     body, html {
       overflow-x:hidden !important;
@@ -413,18 +420,15 @@ class="fixed top-4 left-1/2 -translate-x-1/2 z-50 w-[95%] max-w-7xl rounded-[28p
 </section>
 
 <!-- ================= SECTION POURQUOI AIAE ================= -->
-<section class="relative w-full bg-[#05482C] overflow-hidden mt-20">
-
-  <!-- CONTENEUR -->
-  <div class="max-w-[1600px] mx-auto px-6 py-16">
-
+<section class="relative w-full bg-[#05482C] overflow-hidden mt-6">
+  <div class="max-w-[1600px] mx-auto px-6 pt-6">
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center text-center lg:text-left">
 
       <!-- GAUCHE : TEXTE -->
       <div class="text-white relative mx-auto lg:ml-20 max-w-xl">
 
         <!-- flèche gauche (on garde exactement sa position) -->
-        <button class="hidden lg:flex absolute -left-24 top-1/2 -translate-y-1/2
+        <button class="hidden lg:flex absolute -left-16 top-1/2 -translate-y-1/2
                        w-12 h-12 rounded-full bg-white/90 items-center justify-center shadow">
           <img src="Images/CaretLeft.svg" alt="fleche gauche">
         </button>
@@ -450,7 +454,7 @@ class="fixed top-4 left-1/2 -translate-x-1/2 z-50 w-[95%] max-w-7xl rounded-[28p
         />
 
         <!-- flèche droite (on garde exactement sa position) -->
-        <button class="hidden lg:flex absolute -right-24 top-1/2 -translate-y-1/2
+        <button class="hidden lg:flex absolute -right-16 top-1/2 -translate-y-1/2
                        w-12 h-12 rounded-full bg-white/90 items-center justify-center shadow">
           <img src="Images/CaretRight.svg" alt="fleche droite">
         </button>
@@ -515,22 +519,20 @@ class="fixed top-4 left-1/2 -translate-x-1/2 z-50 w-[95%] max-w-7xl rounded-[28p
       </div>
       <!-- TEXTE GAUCHE -->
       <div>
-        <h2 class="text-primary font-extrabold leading-tight
-                   text-3xl sm:text-4xl md:text-5xl mb-6">
-          ANALYSE DE<br>
-          VOTRE PROJET
-        </h2>
+        <h2 class="text-primary font-[Futura\ Condensed] font-bold
+           text-[64px] leading-[1] tracking-wide">
+  ANALYSE DE<br>
+  VOTRE PROJET
+</h2>
 
-        <p class="text-gray-700 text-sm sm:text-base leading-relaxed max-w-xl">
-          Nous commençons par une <strong>écoute attentive</strong> de vos besoins spécifiques.
+        <p class="text-gray-700 text-sm sm:text-base leading-relaxed max-w-xl pt-2">
+          Nous commençons par une <strong>écoute attentive</strong> de vos besoins spécifiques.<br>
           Que vous ayez un projet résidentiel, industriel, agricole ou commercial,
-          <strong>nous vous apportons une expertise approfondie</strong> pour identifier la meilleure approche.
-          <br><br>
-          En prenant en compte vos objectifs, contraintes budgétaires et préférences,
-          nous vous guidons vers la <strong>solution la plus optimisée et durable</strong>.
-          <br><br>
+          <strong>nous<br> vous apportons une expertise approfondie</strong> pour identifier la meilleure<br> approche.
+          En prenant en compte vos objectifs, contraintes budgétaires et<br> préférences,
+          nous vous guidons vers la <strong>solution la plus optimisée et durable</strong>.<br>
           <strong>Cette étape est essentielle</strong> pour poser les bases solides de votre projet,
-          en veillant à ce qu’il soit à la fois réalisable et performant.
+          en<br> veillant à ce qu'il soit à la fois réalisable et performant.
         </p>
       </div>
 
@@ -541,19 +543,19 @@ class="fixed top-4 left-1/2 -translate-x-1/2 z-50 w-[95%] max-w-7xl rounded-[28p
 </section>
 
 <!-- ================= ÉTAPE 02 : SIMULATION ================= -->
-<section class="bg-[#f4f5f7] ">
-  <div class="max-w-7xl mx-auto px-6">
+<section class="bg-[#f4f5f7]">
+  <div class="max-w-7xl mx-auto px-2">
 
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
 
       <!-- TEXTE GAUCHE -->
       <div>
-        <h2 class="text-[#0a1745] font-extrabold uppercase leading-tight
-                   text-3xl sm:text-4xl md:text-5xl mb-6">
+        <h2 class="text-[#0a1745] font-[Futura\ Condensed] font-bold
+           text-[64px] leading-[1] tracking-wide">
           SIMULATION<br>INSTANTANÉE
         </h2>
 
-        <p class="text-gray-700 text-sm sm:text-base leading-relaxed max-w-xl">
+        <p class="text-gray-700 text-sm sm:text-base leading-relaxed max-w-xl pt-2">
           Après avoir défini vos besoins, vous <strong>accédez à notre simulateur 4-en-1</strong>.
           Cet outil interactif vous permet de calculer instantanément les coûts estimés,
           la durée du projet ainsi que les économies potentielles en matière d’énergie.
@@ -600,20 +602,18 @@ class="fixed top-4 left-1/2 -translate-x-1/2 z-50 w-[95%] max-w-7xl rounded-[28p
 
       <!-- TEXTE DROITE -->
       <div>
-        <h2 class="text-primary font-extrabold uppercase leading-tight
-                   text-3xl sm:text-4xl md:text-5xl mb-6">
+        <h2 class="text-primary font-[Futura\ Condensed] font-bold
+           text-[64px] leading-[1] tracking-wide">
           DEVIS PERSONNALISÉ<br>
           ET LANCEMENT
         </h2>
 
-        <p class="text-gray-700 text-sm sm:text-base leading-relaxed max-w-xl">
+        <p class="text-gray-700 text-sm sm:text-base leading-relaxed max-w-xl pt-2">
           Une fois la simulation effectuée, nous vous envoyons un
           <strong>devis détaillé</strong>, basé sur les paramètres de votre projet.
-          <br><br>
           Après validation, nous passons à la <strong>planification et à la mise en œuvre</strong>.
           Nos experts vous accompagnent à chaque étape pour garantir
           un projet réalisé dans les délais et selon les standards de qualité les plus élevés.
-          <br><br>
           Nous intégrons des <strong>solutions innovantes et durables</strong> à chaque phase.
         </p>
       </div>
