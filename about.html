@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AIAE</title>
+  <style>
+      @font-face {
+      font-family: 'Futura';
+      src: url('/fonts/FuturaStdLight.otf');
+      font-weight: 300;
+    }
+
+    @font-face {
+      font-family: 'Futura';
+      src: url('/fonts/FuturaStdMedium.otf');
+      font-weight: 500;
+    }
+
+    @font-face {
+      font-family: 'Futura';
+      src: url('/fonts/FuturaStdBold.otf');
+      font-weight: 700;
+    }
+
+    @font-face {
+      font-family: 'Futura';
+      src: url('/fonts/FuturaStdHeavy.otf');
+      font-weight: 800;
+    }
+
+    /* Condensed */
+    @font-face {
+      font-family: 'Futura Condensed';
+      src: url('/fonts/FuturaStdCondensed.otf');
+      font-weight: 500;
+    }
+
+    @font-face {
+      font-family: 'Futura Condensed';
+      src: url('/fonts/FuturaStdCondensedBold.otf');
+      font-weight: 700;
+    }
+
+     @media (max-width: 640px) {
+    body, html {
+      overflow-x:hidden !important;
+    }
+    section, div, img {
+      max-width:100% !important;
+    }
+  }
+.nav-scrolled{
+  background: rgba(255, 255, 255, 0.25); /* transparence obligatoire */
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border: 1px solid rgba(255,255,255,0.3);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.15);
+}
+
+  </style>
+</head>
+
+<body class="font-futura bg-gray-100 overflow-x-hidden">
+
+<!-- ================= NAVBAR ================= -->
+<header id="navBar"
+class="fixed top-4 left-1/2 -translate-x-1/2 z-50 w-[95%] max-w-7xl 
+rounded-[28px] overflow-hidden transition-all duration-300
+bg-white/10 backdrop-blur-sm">
+
+  <nav class="flex items-center justify-between px-4 sm:px-6 py-3">
+<img 
+  src="Images/logos/LOGO AIAE BLANC.png" 
+  alt="logo"
+  class="h-10 sm:h-12 md:h-14 lg:h-16 w-auto object-contain"
+/>
+     <ul class="hidden lg:flex items-center gap-2 text-sm font-medium font-FuturaStdLight">
+  <li>
+    <a href="index.html" class="px-4 py-2 rounded-full bg-glassDark text-white block whitespace-nowrap">Accueil</a>
+  </li>
+
+  <li>
+    <a href="about.html" class="px-4 py-2 rounded-full bg-white shadow block whitespace-nowrap">À propos</a>
+  </li>
+
+  <li>
+    <a href="division.html" class="px-4 py-2 rounded-full bg-glassDark text-white block whitespace-nowrap">Nos divisions</a>
+  </li>
+
+  <li>
+    <a href="simulator.html" class="px-4 py-2 rounded-full bg-glassDark text-white block whitespace-nowrap">Simulateurs</a>
+  </li>
+
+  <li>
+    <a href="clients.html" class="px-4 py-2 rounded-full bg-glassDark text-white block whitespace-nowrap">Espace client</a>
+  </li>
+
+  <li>
+    <a href="projects.html" class="px-4 py-2 rounded-full bg-glassDark text-white block whitespace-nowrap">Projets & Réalisations</a>
+  </li>
+
+  <li>
+    <a href="faq.html" class="px-4 py-2 rounded-full bg-glassDark text-white block whitespace-nowrap">FAQ</a>
+  </li>
+</ul>
+
+    <div class="flex items-center gap-2">
+      <button class="w-11 h-11 rounded-full bg-glassDark flex items-center justify-center">
+       <img src="Images/Contact blanc.svg" alt="" height="25" width="25">
+      </button>
+      <button class="hidden sm:block px-5 py-2 rounded-full bg-white text-black">
+        Contact
+      </button>
+      <button id="burger" class="lg:hidden text-2xl rounded-full bg-glassDark p-2"><svg class="w-6 h-6 text-white dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+  <path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="M5 7h14M5 12h14M5 17h10"/>
+</svg>
+</button>
+    </div>
+  </nav>
+
+  <!-- Menu mobile -->
+  <div id="mobileMenu"
+       class="hidden lg:hidden mt-3 bg-glass backdrop-blur-xl rounded-2xl p-4 space-y-2 shadow-xl">
+       <button id="closeMobile"
+        class="w-full text-right text-lg font-bold px-2 mb-2">
+  <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18 17.94 6M18 18 6.06 6"/>
+</svg>
+
+</button>
+
+    <a href="index.html" class="block px-4 py-2 rounded-lg bg-white">Accueil</a>
+    <a href="about.html" class="block px-4 py-2 rounded-lg bg-glassDark">À propos</a>
+    <a href="division.html" class="block px-4 py-2 rounded-lg bg-glassDark">Nos divisions</a>
+    <a href="simulator.html" class="block px-4 py-2 rounded-lg bg-glassDark">Simulateurs</a>
+    <a href="clients.html" class="block px-4 py-2 rounded-lg bg-glassDark">Espace client</a>
+    <a href="projects.html" class="block px-4 py-2 rounded-lg bg-glassDark">Projets & Réalisations</a>
+    <a href="faq.html" class="block px-4 py-2 rounded-lg bg-glassDark">FAQ</a>
+  </div>
+</header>
+
+<!-- ================= HERO ================= -->
+<section class="relative px-1 sm:px-1 pt-1">
+  <div class="relative max-w-[1600px] mx-auto rounded-[15px] overflow-hidden shadow-2xl">
+
+    <img id="heroImage" src="Images/residentiel.png" class="w-full h-[75vh] md:h-[90vh] object-cover" />
+
+<div class="absolute inset-0 pointer-events-none">
+  <div class="absolute -left-[30%] top-0 bottom-0 w-[70%]">
+  </div>
+</div>
+    <div class="absolute inset-0 bg-gradient-to-r from-black/70 via-black/40 to-transparent"></div>
+
+    <div class="absolute inset-x-0 top-1/2 -translate-y-1/2 px-4 sm:px-6 md:px-10 max-w-full md:max-w-xl text-white">
+      <h1 class="text-lg sm:text-2xl md:text-3xl lg:text-4xl font-bold leading-tight mb-4">
+        Transformez Vos Projets<br>
+        Avec Des Solutions<br>
+        Durables Et Innovantes
+      </h1>
+
+      <p class="text-sm sm:text-base md:text-lg leading-relaxed">
+        Explorez nos solutions de construction, d'énergie renouvelable <br>
+        et de matériaux innovants. Testez notre simulateur 4-en-1
+        et découvrez immédiatement le potentiel de votre projet.
+      </p>
+    </div>
+  </div>
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+<footer class="relative text-white">
+
+  <!-- BACKGROUND IMAGE -->
+  <div class="absolute inset-0 bg-cover bg-center"
+       style="background-image:url('Images/footer.png');"></div>
+
+  <!-- OVERLAY -->
+  <div class="absolute inset-0 bg-[#0a1745]/50"></div>
+
+  <!-- CONTENU -->
+  <div class="relative z-10 max-w-7xl mx-auto px-6 py-20">
+
+   <div class="grid grid-cols-1 md:grid-cols-[1.3fr_1fr_1.3fr] gap-12 text-center md:text-left">
+
+  <!-- CONTACTS -->
+  <div class="md:pr-6 flex flex-col items-center md:items-start">
+    <h3 class="text-xl font-semibold mb-4">Contacts</h3>
+
+    <p class="text-sm opacity-80 mb-4">
+      Écrivez nous ou appelez nous pour toutes<br> informations supplémentaires !
+    </p>
+
+    <p class="text-sm opacity-80 mb-6">
+      Suivez nos pages pour ne rien manquer
+    </p>
+
+    <p class="text-sm mb-2">Afrika228@gmail.com</p>
+    <p class="text-sm mb-6">+228 9X 8X 7X 6X / 7X 8X 7X 6X</p>
+
+    <div class="flex gap-4 justify-center md:justify-start">
+      <a href="#"><img src="Images/TiktokLogo.svg" class="w-8 h-8"></a>
+      <a href="#"><img src="Images/InstagramLogo.svg" class="w-8 h-8"></a>
+      <a href="#"><img src="Images/FacebookLogo.svg" class="w-8 h-8"></a>
+      <a href="#"><img src="Images/YoutubeLogo.svg" class="w-8 h-8"></a>
+    </div>
+  </div>
+
+ <!-- MENU -->
+<div class="md:pl-6 flex flex-col items-center md:items-start">
+  <h3 class="text-xl font-semibold mb-4">Menu</h3>
+
+  <ul class="space-y-2 text-sm opacity-90">
+    <li>
+      <a href="index.html" class="hover:underline hover:text-white transition">
+        Accueil
+      </a>
+    </li>
+    <li>
+      <a href="about.html" class="hover:underline hover:text-white transition">
+        À Propos
+      </a>
+    </li>
+    <li>
+      <a href="division.html" class="hover:underline hover:text-white transition">
+        Nos Divisions
+      </a>
+    </li>
+    <li>
+      <a href="simulator.html" class="hover:underline hover:text-white transition">
+        Simulateurs
+      </a>
+    </li>
+    <li>
+      <a href="clients.html" class="hover:underline hover:text-white transition">
+        Espace Client
+      </a>
+    </li>
+    <li>
+      <a href="projects.html" class="hover:underline hover:text-white transition">
+        Projets & Réalisations
+      </a>
+    </li>
+    <li>
+      <a href="faq.html" class="hover:underline hover:text-white transition">
+        FAQ
+      </a>
+    </li>
+  </ul>
+</div>
+
+
+  <!-- NEWSLETTER -->
+  <div class="md:pl-6 flex flex-col items-center md:items-start">
+    <h3 class="text-xl font-semibold mb-4">Nouvelles</h3>
+
+    <div class="flex items-center w-full max-w-sm bg-white/10 rounded-lg overflow-hidden mb-4">
+      <input
+        type="email"
+        placeholder="Ton Mail..."
+        class="bg-transparent px-4 py-3 text-sm w-full outline-none placeholder-white/70"
+      />
+      <button class="px-4">
+        <img src="Images/SendIcon.svg" alt="">
+      </button>
+    </div>
+
+    <p class="text-sm opacity-80">
+      Inscris ton mail pour être au courant de nos dernières promotions et offres en temps réel
+    </p>
+  </div>
+
+</div>
+
+  </div>
+
+  <!-- BARRE BAS -->
+  <div class="relative z-10 bg-[#0b4a2b] text-center py-4 text-sm">
+    © Afrika Infrastructure, Automation & Energy - By Jean ADZINDA
+  </div>
+
+</footer>
+
+<!-- ================= JS ================= -->
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Tailwind config -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            futura: ['Futura', 'sans-serif'],
+            futuraCondensed: ['Futura Condensed', 'sans-serif'],
+          },
+          colors: {
+            primary: "#0b5b3a",
+            secondary: "#d97706",
+            glass: "rgba(255,255,255,0.55)",
+            glassDark: "rgba(255,255,255,0.35)",
+          },
+        },
+      },
+    };
+  </script>
+<script>
+  // Menu burger en mobile
+  const burger = document.getElementById("burger");
+  const mobileMenu = document.getElementById("mobileMenu");
+  burger.addEventListener("click", () => {
+    mobileMenu.classList.toggle("hidden");
+  });
+const closeMobile = document.getElementById("closeMobile");
+
+closeMobile.addEventListener("click", () => {
+  mobileMenu.classList.add("hidden");
+});
+
+// changement d'image dans le hero 
+   const buttons = document.querySelectorAll(".tabBtn");
+  const hero = document.getElementById("heroImage");
+
+  buttons.forEach(btn=>{
+    btn.addEventListener("click", ()=>{
+  
+      hero.src = btn.dataset.img;
+
+      buttons.forEach(b=>{
+        b.classList.remove("bg-white","shadow");
+        b.classList.add("bg-glassDark");
+      });
+      btn.classList.remove("bg-glassDark");
+      btn.classList.add("bg-white","shadow");
+    });
+  });
+  // ---------------- CONFIG DROPDOWN ------------------
+openConfig.onclick = ()=> configPanel.classList.toggle("hidden");
+openStand.onclick = ()=> standPanel.classList.toggle("hidden");
+openOptions.onclick = ()=> optionsPanel.classList.toggle("hidden");
+
+// Salles de bain counter
+document.querySelector(".plusBath").onclick = ()=>{
+  bathCount.textContent = Number(bathCount.textContent)+1;
+}
+document.querySelector(".minusBath").onclick = ()=>{
+  if(Number(bathCount.textContent)>0)
+  bathCount.textContent = Number(bathCount.textContent)-1;
+}
+
+// Chambres counter
+document.querySelector(".plusBed").onclick = ()=>{
+  bedCount.textContent = Number(bedCount.textContent)+1;
+}
+document.querySelector(".minusBed").onclick = ()=>{
+  if(Number(bedCount.textContent)>0)
+  bedCount.textContent = Number(bedCount.textContent)-1;
+}
+const navBar = document.getElementById("navBar");
+
+window.addEventListener("scroll", () => {
+  if(window.scrollY > 30){
+    navBar.classList.add("nav-scrolled");
+  } else {
+    navBar.classList.remove("nav-scrolled");
+  }
+});
+function togglePanel(button, panel) {
+  panel.classList.toggle("hidden");
+  const arrow = button.querySelector(".arrow");
+  arrow.classList.toggle("rotate-180");
+}
+
+openConfig.onclick = () => togglePanel(openConfig, configPanel);
+openStand.onclick = () => togglePanel(openStand, standPanel);
+openOptions.onclick = () => togglePanel(openOptions, optionsPanel);
+
+</script>
+
+</body>
+</html>
