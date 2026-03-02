@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -30,7 +31,7 @@
 
   <!-- ================= FONTS ================= -->
   <style>
-      @font-face {
+    @font-face {
       font-family: 'Futura';
       src: url('/fonts/FuturaStdLight.otf');
       font-weight: 300;
@@ -67,810 +68,794 @@
       font-weight: 700;
     }
 
-     @media (max-width: 640px) {
-    body, html {
-      overflow-x:hidden !important;
+    @media (max-width: 640px) {
+
+      body,
+      html {
+        overflow-x: hidden !important;
+      }
+
+      section,
+      div,
+      img {
+        max-width: 100% !important;
+      }
     }
-    section, div, img {
-      max-width:100% !important;
+
+    .nav-scrolled {
+      backdrop-filter: blur(18px);
+      background: rgba(22, 32, 100, 0.2);
     }
-  }
-.nav-scrolled{
-  backdrop-filter: blur(18px);
-  background: rgba(22, 32, 100, 0.2);
-}
   </style>
 </head>
 
 <body class="font-futura bg-gray-100 overflow-x-hidden">
 
-<!-- ================= NAVBAR ================= -->
-<header id="navBar"
-class="fixed top-4 left-1/2 -translate-x-1/2 z-50 w-[95%] max-w-7xl rounded-[28px] overflow-hidden transition-all duration-300">
-  <nav class="flex items-center justify-between px-4 sm:px-6 py-3">
-<img 
-  src="Images/logos/LOGO AIAE BLANC.png" 
-  alt="logo"
-  class="h-10 sm:h-12 md:h-14 lg:h-16 w-auto object-contain"
-/>
-     <ul class="hidden lg:flex items-center gap-2 text-sm font-medium font-FuturaStdLight">
-  <li>
-    <a href="index.html" class="px-4 py-2 rounded-full bg-white shadow block whitespace-nowrap">Accueil</a>
-  </li>
+  <!-- ================= NAVBAR ================= -->
+  <header id="navBar"
+    class="fixed top-4 left-1/2 -translate-x-1/2 z-50 w-[95%] max-w-7xl rounded-[28px] overflow-hidden transition-all duration-300">
+    <nav class="flex items-center justify-between px-4 sm:px-6 py-3">
+      <img src="Images/logos/LOGO AIAE BLANC.png" alt="logo"
+        class="h-10 sm:h-12 md:h-14 lg:h-16 w-auto object-contain" />
+      <ul class="hidden lg:flex items-center gap-2 text-sm font-medium font-FuturaStdLight">
+        <li>
+          <a href="index.html" class="px-4 py-2 rounded-full bg-white shadow block whitespace-nowrap">Accueil</a>
+        </li>
 
-  <li>
-    <a href="about.html" class="px-4 py-2 rounded-full bg-glassDark text-white block whitespace-nowrap">À propos</a>
-  </li>
+        <li>
+          <a href="about.html" class="px-4 py-2 rounded-full bg-glassDark text-white block whitespace-nowrap">À
+            propos</a>
+        </li>
 
-  <li>
-    <a href="division.html" class="px-4 py-2 rounded-full bg-glassDark text-white block whitespace-nowrap">Nos divisions</a>
-  </li>
+        <li>
+          <a href="division.html" class="px-4 py-2 rounded-full bg-glassDark text-white block whitespace-nowrap">Nos
+            divisions</a>
+        </li>
 
-  <li>
-    <a href="simulator.html" class="px-4 py-2 rounded-full bg-glassDark text-white block whitespace-nowrap">Simulateurs</a>
-  </li>
+        <li>
+          <a href="simulator.html"
+            class="px-4 py-2 rounded-full bg-glassDark text-white block whitespace-nowrap">Simulateurs</a>
+        </li>
 
-  <li>
-    <a href="clients.html" class="px-4 py-2 rounded-full bg-glassDark text-white block whitespace-nowrap">Espace client</a>
-  </li>
+        <li>
+          <a href="clients.html" class="px-4 py-2 rounded-full bg-glassDark text-white block whitespace-nowrap">Espace
+            client</a>
+        </li>
 
-  <li>
-    <a href="projects.html" class="px-4 py-2 rounded-full bg-glassDark text-white block whitespace-nowrap">Projets & Réalisations</a>
-  </li>
+        <li>
+          <a href="projects.html" class="px-4 py-2 rounded-full bg-glassDark text-white block whitespace-nowrap">Projets
+            & Réalisations</a>
+        </li>
 
-  <li>
-    <a href="faq.html" class="px-4 py-2 rounded-full bg-glassDark text-white block whitespace-nowrap">FAQ</a>
-  </li>
-</ul>
+        <li>
+          <a href="faq.html" class="px-4 py-2 rounded-full bg-glassDark text-white block whitespace-nowrap">FAQ</a>
+        </li>
+      </ul>
 
-    <div class="flex items-center gap-2">
-      <button class="w-11 h-11 rounded-full bg-glassDark flex items-center justify-center">
-       <img src="Images/Contact blanc.svg" alt="" height="25" width="25">
-      </button>
-      <button class="hidden sm:block px-5 py-2 rounded-full bg-white text-black">
-        Contact
-      </button>
-      <button id="burger" class="lg:hidden text-2xl rounded-full bg-glassDark p-2"><svg class="w-6 h-6 text-white dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-  <path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="M5 7h14M5 12h14M5 17h10"/>
-</svg>
-</button>
-    </div>
-  </nav>
-
-  <!-- Menu mobile -->
-  <div id="mobileMenu"
-       class="hidden lg:hidden mt-3 bg-glass backdrop-blur-xl rounded-2xl p-4 space-y-2 shadow-xl">
-       <button id="closeMobile"
-        class="w-full text-right text-lg font-bold px-2 mb-2">
-  <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18 17.94 6M18 18 6.06 6"/>
-</svg>
-
-</button>
-
-    <a href="index.html" class="block px-4 py-2 rounded-lg bg-white">Accueil</a>
-    <a href="about.html" class="block px-4 py-2 rounded-lg bg-glassDark">À propos</a>
-    <a href="division.html" class="block px-4 py-2 rounded-lg bg-glassDark">Nos divisions</a>
-    <a href="simulator.html" class="block px-4 py-2 rounded-lg bg-glassDark">Simulateurs</a>
-    <a href="clients.html" class="block px-4 py-2 rounded-lg bg-glassDark">Espace client</a>
-    <a href="projects.html" class="block px-4 py-2 rounded-lg bg-glassDark">Projets & Réalisations</a>
-    <a href="faq.html" class="block px-4 py-2 rounded-lg bg-glassDark">FAQ</a>
-  </div>
-</header>
-
-<!-- ================= HERO ================= -->
-<section class="relative px-1 sm:px-1 pt-1">
-  <div class="relative max-w-[1600px] mx-auto rounded-[15px] overflow-hidden shadow-2xl">
-
-    <img id="heroImage" src="Images/residentiel.png" class="w-full h-[75vh] md:h-[90vh] object-cover" />
-
-<div class="absolute inset-0 pointer-events-none">
-  <div class="absolute -left-[30%] top-0 bottom-0 w-[70%]">
-  </div>
-</div>
-    <div class="absolute inset-0 bg-gradient-to-r from-black/70 via-black/40 to-transparent"></div>
-
-    <div class="absolute inset-x-0 top-1/2 -translate-y-1/2 px-4 sm:px-6 md:px-10 max-w-full md:max-w-xl text-white">
-      <h1 class="text-lg sm:text-2xl md:text-3xl lg:text-4xl font-bold leading-tight mb-4">
-        Transformez Vos Projets<br>
-        Avec Des Solutions<br>
-        Durables Et Innovantes
-      </h1>
-
-      <p class="text-sm sm:text-base md:text-lg leading-relaxed">
-        Explorez nos solutions de construction, d'énergie renouvelable <br>
-        et de matériaux innovants. Testez notre simulateur 4-en-1
-        et découvrez immédiatement le potentiel de votre projet.
-      </p>
-    </div>
-  </div>
-</section>
-
-<!-- ================= PANNEAU SIMULATEUR ================= -->
-<section class="relative -mt-16 md:-mt-20 z-10 px-2 sm:px-4">
-  <div class="w-full max-w-[92%] sm:max-w-[640px] md:max-w-[820px] lg:max-w-[900px] xl:max-w-[990px] mx-auto bg-glass backdrop-blur-xl rounded-2xl shadow-xl p-4 sm:p-5">
-    <!-- Onglets -->
-    <div class="flex flex-col sm:flex-row sm:flex-wrap items-stretch sm:items-center gap-2 mb-4" id="categoryButtons">
-
-      <div class="flex flex-wrap gap-2">
-        <button data-img="Images/residentiel.png"
-          class="tabBtn px-3 py-2 rounded-lg bg-white text-xs sm:text-sm shadow">
-          Résidentiel
+      <div class="flex items-center gap-2">
+        <button class="w-11 h-11 rounded-full bg-glassDark flex items-center justify-center">
+          <img src="Images/Contact blanc.svg" alt="" height="25" width="25">
         </button>
-
-        <button data-img="Images/tertiaire.png"
-          class="tabBtn px-3 py-2 rounded-lg bg-glassDark text-xs sm:text-sm">
-          Tertiaire
+        <button class="hidden sm:block px-5 py-2 rounded-full bg-white text-black">
+          Contact
         </button>
-
-        <button data-img="Images/industriel.png"
-          class="tabBtn px-3 py-2 rounded-lg bg-glassDark text-xs sm:text-sm">
-          Industriel
-        </button>
-
-        <button data-img="Images/agricole.png"
-          class="tabBtn px-3 py-2 rounded-lg bg-glassDark text-xs sm:text-sm">
-          Agricole
+        <button id="burger" class="lg:hidden text-2xl rounded-full bg-glassDark p-2"><svg
+            class="w-6 h-6 text-white dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24"
+            height="24" fill="none" viewBox="0 0 24 24">
+            <path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="M5 7h14M5 12h14M5 17h10" />
+          </svg>
         </button>
       </div>
+    </nav>
 
-      <button
-        class="w-full sm:w-auto sm:ml-auto px-4 py-2 bg-secondary text-white rounded-lg text-xs sm:text-sm">
-        Ouvrir le Calculateur d'Énergies Renouvelables
+    <!-- Menu mobile -->
+    <div id="mobileMenu" class="hidden lg:hidden mt-3 bg-glass backdrop-blur-xl rounded-2xl p-4 space-y-2 shadow-xl">
+      <button id="closeMobile" class="w-full text-right text-lg font-bold px-2 mb-2">
+        <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+          width="24" height="24" fill="none" viewBox="0 0 24 24">
+          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M6 18 17.94 6M18 18 6.06 6" />
+        </svg>
+
       </button>
+
+      <a href="index.html" class="block px-4 py-2 rounded-lg bg-white">Accueil</a>
+      <a href="about.html" class="block px-4 py-2 rounded-lg bg-glassDark">À propos</a>
+      <a href="division.html" class="block px-4 py-2 rounded-lg bg-glassDark">Nos divisions</a>
+      <a href="simulator.html" class="block px-4 py-2 rounded-lg bg-glassDark">Simulateurs</a>
+      <a href="clients.html" class="block px-4 py-2 rounded-lg bg-glassDark">Espace client</a>
+      <a href="projects.html" class="block px-4 py-2 rounded-lg bg-glassDark">Projets & Réalisations</a>
+      <a href="faq.html" class="block px-4 py-2 rounded-lg bg-glassDark">FAQ</a>
     </div>
+  </header>
 
-    <!-- Formulaire -->
-    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-12 gap-3">
+  <!-- ================= HERO ================= -->
+  <section class="relative px-1 sm:px-1 pt-1">
+    <div class="relative max-w-[1600px] mx-auto rounded-[15px] overflow-hidden shadow-2xl">
 
-      <input
-        class="col-span-1 sm:col-span-1 md:col-span-2 h-10 px-3 rounded-lg text-xs sm:text-sm"
-        placeholder="Surface dispo (m²)" />
+      <img id="heroImage" src="Images/residentiel.png" class="w-full h-[75vh] md:h-[90vh] object-cover" />
 
-      <input
-        class="col-span-1 sm:col-span-1 md:col-span-2 h-10 px-3 rounded-lg text-xs sm:text-sm"
-        placeholder="Surface bâtie (m²)" />
+      <div class="absolute inset-0 pointer-events-none">
+        <div class="absolute -left-[30%] top-0 bottom-0 w-[70%]">
+        </div>
+      </div>
+      <div class="absolute inset-0 bg-gradient-to-r from-black/70 via-black/40 to-transparent"></div>
 
-      <!-- CONFIGURATION -->
-      <div class="relative col-span-1 sm:col-span-2 md:col-span-2">
-        <button id="openConfig"
-          class="w-full h-10 bg-white text-left px-3 rounded-lg text-xs sm:text-sm flex justify-between items-center">
-          Configuration <span><img src="Images/Flèche haut.svg" class="arrow transition-transform duration-200" alt=""></span>
-        </button>
+      <div class="absolute inset-x-0 top-1/2 -translate-y-1/2 px-4 sm:px-6 md:px-10 max-w-full md:max-w-xl text-white">
+        <h1 class="text-lg sm:text-2xl md:text-3xl lg:text-4xl font-bold leading-tight mb-4">
+          Transformez Vos Projets<br>
+          Avec Des Solutions<br>
+          Durables Et Innovantes
+        </h1>
 
-        <div id="configPanel"
-          class="hidden absolute left-0 right-0 bottom-full mb-2 bg-white rounded-xl shadow-lg p-3 space-y-2 z-20">
+        <p class="text-sm sm:text-base md:text-lg leading-relaxed">
+          Explorez nos solutions de construction, d'énergie renouvelable <br>
+          et de matériaux innovants. Testez notre simulateur 4-en-1
+          et découvrez immédiatement le potentiel de votre projet.
+        </p>
 
-          <label class="flex justify-between items-center text-xs sm:text-sm">
-            Espaces Communs <input type="checkbox">
-          </label>
+        <div class="mt-8 inline-block px-6 py-3 bg-secondary rounded-full shadow-lg">
+          <p class="text-sm sm:text-base font-bold text-white tracking-wide">
+            À partir de 180 000 FCFA/m² (Standing Standard)
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-          <div class="flex justify-between items-center text-xs sm:text-sm">
-            Salles De Bain
-            <div class="flex items-center gap-2">
-              <button class="minusBath bg-gray-200 rounded-full w-6 h-6">-</button>
-              <span id="bathCount">1</span>
-              <button class="plusBath bg-gray-200 rounded-full w-6 h-6">+</button>
-            </div>
-          </div>
+  <!-- ================= PANNEAU SIMULATEUR ================= -->
+  <section class="relative -mt-16 md:-mt-20 z-10 px-2 sm:px-4">
+    <div
+      class="w-full max-w-[92%] sm:max-w-[640px] md:max-w-[820px] lg:max-w-[900px] xl:max-w-[990px] mx-auto bg-glass backdrop-blur-xl rounded-2xl shadow-xl p-4 sm:p-5">
+      <!-- Onglets -->
+      <div class="flex flex-col sm:flex-row sm:flex-wrap items-stretch sm:items-center gap-2 mb-4" id="categoryButtons">
 
-          <div class="flex justify-between items-center text-xs sm:text-sm">
-            Chambres
-            <div class="flex items-center gap-2">
-              <button class="minusBed bg-gray-200 rounded-full w-6 h-6">-</button>
-              <span id="bedCount">1</span>
-              <button class="plusBed bg-gray-200 rounded-full w-6 h-6">+</button>
-            </div>
-          </div>
+        <div class="flex flex-wrap gap-2">
+          <button data-img="Images/residentiel.png"
+            class="tabBtn px-3 py-2 rounded-lg bg-white text-xs sm:text-sm shadow">
+            Résidentiel
+          </button>
 
-          <button class="w-full bg-[#05482C] text-white rounded-lg py-2 text-xs sm:text-sm">
-            Valider
+          <button data-img="Images/tertiaire.png" class="tabBtn px-3 py-2 rounded-lg bg-glassDark text-xs sm:text-sm">
+            Tertiaire
+          </button>
+
+          <button data-img="Images/industriel.png" class="tabBtn px-3 py-2 rounded-lg bg-glassDark text-xs sm:text-sm">
+            Industriel
+          </button>
+
+          <button data-img="Images/agricole.png" class="tabBtn px-3 py-2 rounded-lg bg-glassDark text-xs sm:text-sm">
+            Agricole
           </button>
         </div>
+
+        <button class="w-full sm:w-auto sm:ml-auto px-4 py-2 bg-secondary text-white rounded-lg text-xs sm:text-sm">
+          Ouvrir le Calculateur d'Énergies Renouvelables
+        </button>
       </div>
 
-      <!-- STANDING -->
-      <div class="relative col-span-1 sm:col-span-1 md:col-span-2">
-        <button id="openStand"
-          class="w-full h-10 bg-white text-left px-3 rounded-lg text-xs sm:text-sm flex justify-between items-center">
-          Standing <span><img src="Images/Flèche haut.svg" class="arrow transition-transform duration-200" alt=""></span>
-        </button>
+      <!-- Formulaire -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-12 gap-3">
 
-        <div id="standPanel"
-          class="hidden absolute left-0 right-0 bottom-full mb-2 bg-white rounded-xl shadow-lg p-3 space-y-1 z-20">
-          <button class="block w-full text-left hover:bg-gray-100 rounded-lg px-2 py-1">Prestige</button>
-          <button class="block w-full text-left hover:bg-gray-100 rounded-lg px-2 py-1">Premium</button>
-          <button class="block w-full text-left hover:bg-gray-100 rounded-lg px-2 py-1">Confort</button>
-          <button class="block w-full text-left hover:bg-gray-100 rounded-lg px-2 py-1">Standard</button>
-        </div>
-      </div>
+        <input class="col-span-1 sm:col-span-1 md:col-span-2 h-10 px-3 rounded-lg text-xs sm:text-sm"
+          placeholder="Surface dispo (m²)" />
 
-      <!-- OPTIONS -->
-      <div class="relative col-span-1 sm:col-span-1 md:col-span-2">
-        <button id="openOptions"
-          class="w-full h-10 bg-white text-left px-3 rounded-lg text-xs sm:text-sm flex justify-between items-center">
-          Options <span><img src="Images/Flèche haut.svg" class="arrow transition-transform duration-200" alt=""></span>
-        </button>
+        <input class="col-span-1 sm:col-span-1 md:col-span-2 h-10 px-3 rounded-lg text-xs sm:text-sm"
+          placeholder="Surface bâtie (m²)" />
 
-        <div id="optionsPanel"
-          class="hidden absolute left-0 right-0 bottom-full mb-2 bg-white rounded-xl shadow-lg p-3 space-y-2 z-20">
-
-          <label class="flex justify-between text-xs sm:text-sm">Forage <input type="checkbox"></label>
-          <label class="flex justify-between text-xs sm:text-sm">Clôture <input type="checkbox"></label>
-          <label class="flex justify-between text-xs sm:text-sm">Aménagement Paysager <input type="checkbox"></label>
-          <label class="flex justify-between text-xs sm:text-sm">Domotique <input type="checkbox"></label>
-          <label class="flex justify-between text-xs sm:text-sm">Solaire <input type="checkbox"></label>
-          <label class="flex justify-between text-xs sm:text-sm">Piscine <input type="checkbox"></label>
-
-          <button class="w-full bg-[#05482C] text-white rounded-lg py-2 text-xs sm:text-sm">
-            Valider
+        <!-- CONFIGURATION -->
+        <div class="relative col-span-1 sm:col-span-2 md:col-span-2">
+          <button id="openConfig"
+            class="w-full h-10 bg-white text-left px-3 rounded-lg text-xs sm:text-sm flex justify-between items-center">
+            Configuration <span><img src="Images/Flèche haut.svg" class="arrow transition-transform duration-200"
+                alt=""></span>
           </button>
-        </div>
-      </div>
 
-      <!-- BOUTON FINAL -->
-      <button
-        class="col-span-1 sm:col-span-2 md:col-span-2 h-10 bg-[#05482C] text-white rounded-lg text-xs sm:text-sm whitespace-nowrap">
-        Poursuivre la simulation
-      </button>
+          <div id="configPanel"
+            class="hidden absolute left-0 right-0 bottom-full mb-2 bg-white rounded-xl shadow-lg p-3 space-y-2 z-20">
+
+            <label class="flex justify-between items-center text-xs sm:text-sm">
+              Espaces Communs <input type="checkbox">
+            </label>
+
+            <div class="flex justify-between items-center text-xs sm:text-sm">
+              Salles De Bain
+              <div class="flex items-center gap-2">
+                <button class="minusBath bg-gray-200 rounded-full w-6 h-6">-</button>
+                <span id="bathCount">1</span>
+                <button class="plusBath bg-gray-200 rounded-full w-6 h-6">+</button>
+              </div>
+            </div>
+
+            <div class="flex justify-between items-center text-xs sm:text-sm">
+              Chambres
+              <div class="flex items-center gap-2">
+                <button class="minusBed bg-gray-200 rounded-full w-6 h-6">-</button>
+                <span id="bedCount">1</span>
+                <button class="plusBed bg-gray-200 rounded-full w-6 h-6">+</button>
+              </div>
+            </div>
+
+            <button class="w-full bg-[#05482C] text-white rounded-lg py-2 text-xs sm:text-sm">
+              Valider
+            </button>
+          </div>
+        </div>
+
+        <!-- STANDING -->
+        <div class="relative col-span-1 sm:col-span-1 md:col-span-2">
+          <button id="openStand"
+            class="w-full h-10 bg-white text-left px-3 rounded-lg text-xs sm:text-sm flex justify-between items-center">
+            Standing <span><img src="Images/Flèche haut.svg" class="arrow transition-transform duration-200"
+                alt=""></span>
+          </button>
+
+          <div id="standPanel"
+            class="hidden absolute left-0 right-0 bottom-full mb-2 bg-white rounded-xl shadow-lg p-3 space-y-1 z-20">
+            <button class="block w-full text-left hover:bg-gray-100 rounded-lg px-2 py-1">Prestige</button>
+            <button class="block w-full text-left hover:bg-gray-100 rounded-lg px-2 py-1">Premium</button>
+            <button class="block w-full text-left hover:bg-gray-100 rounded-lg px-2 py-1">Confort</button>
+            <button class="block w-full text-left hover:bg-gray-100 rounded-lg px-2 py-1">Standard</button>
+          </div>
+        </div>
+
+        <!-- OPTIONS -->
+        <div class="relative col-span-1 sm:col-span-1 md:col-span-2">
+          <button id="openOptions"
+            class="w-full h-10 bg-white text-left px-3 rounded-lg text-xs sm:text-sm flex justify-between items-center">
+            Options <span><img src="Images/Flèche haut.svg" class="arrow transition-transform duration-200"
+                alt=""></span>
+          </button>
+
+          <div id="optionsPanel"
+            class="hidden absolute left-0 right-0 bottom-full mb-2 bg-white rounded-xl shadow-lg p-3 space-y-2 z-20">
+
+            <label class="flex justify-between text-xs sm:text-sm">Forage <input type="checkbox"></label>
+            <label class="flex justify-between text-xs sm:text-sm">Clôture <input type="checkbox"></label>
+            <label class="flex justify-between text-xs sm:text-sm">Aménagement Paysager <input type="checkbox"></label>
+            <label class="flex justify-between text-xs sm:text-sm">Domotique <input type="checkbox"></label>
+            <label class="flex justify-between text-xs sm:text-sm">Solaire <input type="checkbox"></label>
+            <label class="flex justify-between text-xs sm:text-sm">Piscine <input type="checkbox"></label>
+
+            <button class="w-full bg-[#05482C] text-white rounded-lg py-2 text-xs sm:text-sm">
+              Valider
+            </button>
+          </div>
+        </div>
+
+        <!-- BOUTON FINAL -->
+        <button
+          class="col-span-1 sm:col-span-2 md:col-span-2 h-10 bg-[#05482C] text-white rounded-lg text-xs sm:text-sm whitespace-nowrap">
+          Poursuivre la simulation
+        </button>
+
+      </div>
 
     </div>
+  </section>
 
-  </div>
-</section>
+  <!-- ================= SECTION BIENVENUE ================= -->
+  <section class="relative pb-5">
+    <div class="absolute inset-x-0 bottom-0 h-[540px] bg-[#162064]"></div>
 
-<!-- ================= SECTION BIENVENUE ================= -->
-<section class="relative pb-5">
-<div class="absolute inset-x-0 bottom-0 h-[540px] bg-[#162064]"></div>
+    <!-- CONTENU CENTRÉ -->
+    <div class="relative max-w-[1600px] mx-auto px-3 sm:px-6 mt-6">
 
-  <!-- CONTENU CENTRÉ -->
-<div class="relative max-w-[1600px] mx-auto px-3 sm:px-6 mt-6">
-
-  <!-- CARTE GRISE -->
-  <div class="relative z-20 bg-[#f3f3f3] rounded-xl 
+      <!-- CARTE GRISE -->
+      <div class="relative z-20 bg-[#f3f3f3] rounded-xl 
               shadow-[0_35px_80px_rgba(0,0,0,0.55)] 
               p-6">
 
-    <!-- TITRE -->
-    <div class="text-center">
-      <h2 class="font-bold text-xl sm:text-2xl md:text-3xl text-[#162064] tracking-wide">
-        BIENVENUE SUR LE SITE WEB D'AIAE
-      </h2>
-      <p class="text-gray-600 mt-2 text-xs sm:text-sm md:text-base max-w-2xl mx-auto">
-        Votre partenaire privilégié pour des solutions 4-en-1 innovantes, alliant construction durable,
-        énergies renouvelables, sécurité de haut niveau et matériaux innovants.
-      </p>
+        <!-- TITRE -->
+        <div class="text-center">
+          <h2 class="font-bold text-xl sm:text-2xl md:text-3xl text-[#162064] tracking-wide">
+            BIENVENUE SUR LE SITE WEB D'AIAE
+          </h2>
+          <p class="text-gray-600 mt-2 text-xs sm:text-sm md:text-base max-w-2xl mx-auto">
+            Votre partenaire privilégié pour des solutions 4-en-1 innovantes, alliant construction durable,
+            énergies renouvelables, sécurité de haut niveau et matériaux innovants.
+          </p>
+        </div>
+
+        <img src="Images/bienvenur.png" alt="" class="block mx-auto mt-6 mb-3" />
+
+        <!-- TEXTE SOUS BLOC -->
+        <p class="text-center text-xs sm:text-sm text-gray-600">
+          Cliquez <span class="font-bold underline">Simulation</span> & simulez votre projet en 2 minutes !
+        </p>
+
+      </div>
     </div>
 
-    <img 
-      src="Images/bienvenur.png" 
-      alt=""
-      class="block mx-auto mt-6 mb-3"
-    />
+    <!-- CONTENU SUR LE FOND BLEU (VISIBLE EN BAS) -->
+    <div class="relative z-10 max-w-[1600px] mx-auto px-4 sm:px-6 min-h-[260px] pt-7 text-white">
 
-    <!-- TEXTE SOUS BLOC -->
-    <p class="text-center text-xs sm:text-sm text-gray-600">
-      Cliquez <span class="font-bold underline">Simulation</span> & simulez votre projet en 2 minutes !
-    </p>
-
-  </div>
-</div>
-
-  <!-- CONTENU SUR LE FOND BLEU (VISIBLE EN BAS) -->
-<div class="relative z-10 max-w-[1600px] mx-auto px-4 sm:px-6 min-h-[260px] pt-7 text-white">
-
-<div class="max-w-[1600px] mx-auto px-6 mt-16">
-  <div class="grid grid-cols-1 lg:grid-cols-[1fr_auto_auto] 
+      <div class="max-w-[1600px] mx-auto px-6 mt-16">
+        <div class="grid grid-cols-1 lg:grid-cols-[1fr_auto_auto] 
             gap-10 lg:gap-20 text-white font-[Futura]">
 
-    <!-- Colonne gauche -->
-    <div class="space-y-4 text-center lg:text-left">
-  <p class="text-sm opacity-80">
-    En partenariat avec les meilleures compagnies
-  </p>
+          <!-- Colonne gauche -->
+          <div class="space-y-4 text-center lg:text-left">
+            <p class="text-sm opacity-80">
+              En partenariat avec les meilleures compagnies
+            </p>
 
-  <div class="flex flex-wrap lg:flex-nowrap 
+            <div class="flex flex-wrap lg:flex-nowrap 
               justify-center lg:justify-start 
               items-center gap-4 text-lg lg:text-2xl opacity-80">
-    <span>grandeur</span>
-    <span>● élipsse</span>
-    <span>★ étoileS</span>
-    <span>▲ PICa</span>
-    <span>■ Stable</span>
-  </div>
-</div>
+              <span>grandeur</span>
+              <span>● élipsse</span>
+              <span>★ étoileS</span>
+              <span>▲ PICa</span>
+              <span>■ Stable</span>
+            </div>
+          </div>
 
 
-    <!-- Stat 15k+ -->
-    <div class="text-center lg:text-left">
-  <p class="font-extrabold text-[42px] sm:text-[56px] md:text-[64px] lg:text-[110px] leading-none">
-    15k+
-  </p>
-  <p class="text-xs opacity-80 max-w-xs mx-auto lg:mx-0 mt-2">
-    Explorez nos solutions de construction,
-    d'énergie renouvelable et de matériaux innovants.
-  </p>
-</div>
+          <!-- Stat 15k+ -->
+          <div class="text-center lg:text-left">
+            <p class="font-extrabold text-[42px] sm:text-[56px] md:text-[64px] lg:text-[110px] leading-none">
+              15k+
+            </p>
+            <p class="text-xs opacity-80 max-w-xs mx-auto lg:mx-0 mt-2">
+              Explorez nos solutions de construction,
+              d'énergie renouvelable et de matériaux innovants.
+            </p>
+          </div>
 
 
-    <!-- Stat 09 -->
-    <div class="text-center lg:text-left">
-  <p class="font-extrabold text-[42px] sm:text-[56px] md:text-[64px] lg:text-[110px] leading-none">
-    09
-  </p>
-  <p class="text-xs opacity-80 max-w-xs mx-auto lg:mx-0 mt-2">
-    Solutions majeures intégrées.
-  </p>
-</div>
+          <!-- Stat 09 -->
+          <div class="text-center lg:text-left">
+            <p class="font-extrabold text-[42px] sm:text-[56px] md:text-[64px] lg:text-[110px] leading-none">
+              09
+            </p>
+            <p class="text-xs opacity-80 max-w-xs mx-auto lg:mx-0 mt-2">
+              Solutions majeures intégrées.
+            </p>
+          </div>
 
 
-  </div>
-</div>
-
-</div>
-</section>
-
-<!-- ================= SECTION POURQUOI AIAE ================= -->
-<section class="relative w-full bg-[#05482C] overflow-hidden mt-6">
-  <div class="max-w-[1600px] mx-auto px-6 pt-6">
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center text-center lg:text-left">
-
-      <!-- GAUCHE : TEXTE -->
-      <div class="text-white relative mx-auto lg:ml-20 max-w-xl">
-
-        <!-- flèche gauche (on garde exactement sa position) -->
-        <button class="hidden lg:flex absolute -left-16 top-1/2 -translate-y-1/2
-                       w-12 h-12 rounded-full bg-white/90 items-center justify-center shadow-lg">
-          <img src="Images/CaretLeft.svg" alt="fleche gauche">
-        </button>
-
-        <h2 class="text-5xl sm:text-4xl md:text-5xl font-extrabold leading-tight mb-10 text-center lg:text-left">
-          Pourquoi Nous<br>
-          Faire Confiance &<br>
-          Choisir AIAE ?
-        </h2>
-
-        <p class="text-sm sm:text-base opacity-90 max-w-md mx-auto lg:mx-0">
-          Défilez pour découvrir plus en détails pourquoi AIAE est votre
-          meilleur choix pour des projets durables et innovants.
-        </p>
+        </div>
       </div>
 
-      <!-- DROITE : IMAGE -->
-      <div class="relative lg:mr-20 flex justify-center">
-        <img 
-          src="Images/Défile.png" 
-          alt="bloc glass"
-          class="ml-20"
-        />
+    </div>
+  </section>
 
-        <!-- flèche droite (on garde exactement sa position) -->
-        <button class="hidden lg:flex absolute -right-16 top-1/2 -translate-y-1/2
+  <!-- ================= SECTION POURQUOI AIAE ================= -->
+  <section class="relative w-full bg-[#05482C] overflow-hidden mt-6">
+    <div class="max-w-[1600px] mx-auto px-6 pt-6">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center text-center lg:text-left">
+
+        <!-- GAUCHE : TEXTE -->
+        <div class="text-white relative mx-auto lg:ml-20 max-w-xl">
+
+          <!-- flèche gauche (on garde exactement sa position) -->
+          <button class="hidden lg:flex absolute -left-16 top-1/2 -translate-y-1/2
                        w-12 h-12 rounded-full bg-white/90 items-center justify-center shadow-lg">
-          <img src="Images/CaretRight.svg" alt="fleche droite">
-        </button>
+            <img src="Images/CaretLeft.svg" alt="fleche gauche">
+          </button>
+
+          <h2 class="text-5xl sm:text-4xl md:text-5xl font-extrabold leading-tight mb-10 text-center lg:text-left">
+            Pourquoi Nous<br>
+            Faire Confiance &<br>
+            Choisir AIAE ?
+          </h2>
+
+          <p class="text-sm sm:text-base opacity-90 max-w-md mx-auto lg:mx-0">
+            Défilez pour découvrir plus en détails pourquoi AIAE est votre
+            meilleur choix pour des projets durables et innovants.
+          </p>
+        </div>
+
+        <!-- DROITE : IMAGE -->
+        <div class="relative lg:mr-20 flex justify-center">
+          <img src="Images/Défile.png" alt="bloc glass" class="ml-20" />
+
+          <!-- flèche droite (on garde exactement sa position) -->
+          <button class="hidden lg:flex absolute -right-16 top-1/2 -translate-y-1/2
+                       w-12 h-12 rounded-full bg-white/90 items-center justify-center shadow-lg">
+            <img src="Images/CaretRight.svg" alt="fleche droite">
+          </button>
+
+        </div>
 
       </div>
 
     </div>
+  </section>
 
-  </div>
-</section>
+  <!-- ================= PROCESSUS ================= -->
+  <section class="relative overflow-hidden bg-[#f4f5f7]">
 
-<!-- ================= PROCESSUS ================= -->
-<section class="relative overflow-hidden bg-[#f4f5f7]">
-
-  <!-- IMAGE GAUCHE -->
-  <img 
-    src="Images/Gauche.png" 
-    alt="Forme gauche"
-    class="absolute left-0 top-1/2 -translate-y-1/2 
+    <!-- IMAGE GAUCHE -->
+    <img src="Images/Gauche.png" alt="Forme gauche" class="absolute left-0 top-1/2 -translate-y-1/2 
            w-[180px] sm:w-[220px] md:w-[300px] lg:w-[360px] 
-           object-contain"
-  />
+           object-contain" />
 
-  <!-- IMAGE DROITE -->
-  <img 
-    src="Images/Droit.png" 
-    alt="Forme droite"
-    class="absolute right-0 top-1/2 -translate-y-1/2 
+    <!-- IMAGE DROITE -->
+    <img src="Images/Droit.png" alt="Forme droite" class="absolute right-0 top-1/2 -translate-y-1/2 
            w-[180px] sm:w-[220px] md:w-[300px] lg:w-[360px] 
-           object-contain"
-  />
+           object-contain" />
 
-  <!-- CONTENU CENTRAL -->
-  <div class="relative z-10 max-w-5xl mx-auto flex justify-center px-6">
+    <!-- CONTENU CENTRAL -->
+    <div class="relative z-10 max-w-5xl mx-auto flex justify-center px-6">
 
-    <!-- IMAGE CENTRALE (texte inclus dans l’image) -->
-    <img 
-      src="Images/03Etapes.png" 
-      alt="Notre processus en 3 étapes"
-      class="w-[220px] sm:w-[300px] md:w-[420px] lg:w-[520px] 
-             object-contain"
-    />
+      <!-- IMAGE CENTRALE (texte inclus dans l’image) -->
+      <img src="Images/03Etapes.png" alt="Notre processus en 3 étapes" class="w-[220px] sm:w-[300px] md:w-[420px] lg:w-[520px] 
+             object-contain" />
 
-  </div>
+    </div>
 
-</section>
+  </section>
 
-<!-- ================= ANALYSE DE VOTRE PROJET ================= -->
-<section class="bg-[#f4f5f7]">
-  <div class="max-w-7xl mx-auto px-6">
+  <!-- ================= ANALYSE DE VOTRE PROJET ================= -->
+  <section class="bg-[#f4f5f7]">
+    <div class="max-w-7xl mx-auto px-6">
 
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
 
-      
-      <!-- IMAGE DROITE -->
-      <div class="flex justify-center lg:justify-end">
-        <img
-          src="Images/etape1.png"
-          alt="Analyse de projet"
-          class=" w-full max-w-md object-cover"
-        />
-      </div>
-      <!-- TEXTE GAUCHE -->
-      <div>
-      <h2 class="text-primary font-[Futura\ Condensed] font-bold
+
+        <!-- IMAGE DROITE -->
+        <div class="flex justify-center lg:justify-end">
+          <img src="Images/etape1.png" alt="Analyse de projet" class=" w-full max-w-md object-cover" />
+        </div>
+        <!-- TEXTE GAUCHE -->
+        <div>
+          <h2 class="text-primary font-[Futura\ Condensed] font-bold
            text-[28px] sm:text-[36px] md:text-[48px] lg:text-[64px]
            leading-[1] tracking-wide break-words
            py-4 sm:py-0">
-  ANALYSE DE<br>
-  VOTRE PROJET
-</h2>
+            ANALYSE DE<br>
+            VOTRE PROJET
+          </h2>
 
 
-        <p class="text-gray-700 text-sm sm:text-base leading-relaxed max-w-xl pt-2">
-          Nous commençons par une <strong>écoute attentive</strong> de vos besoins spécifiques.<br>
-          Que vous ayez un projet résidentiel, industriel, agricole ou commercial,
-          <strong>nous<br> vous apportons une expertise approfondie</strong> pour identifier la meilleure<br> approche.
-          En prenant en compte vos objectifs, contraintes budgétaires et<br> préférences,
-          nous vous guidons vers la <strong>solution la plus optimisée et durable</strong>.<br>
-          <strong>Cette étape est essentielle</strong> pour poser les bases solides de votre projet,
-          en<br> veillant à ce qu'il soit à la fois réalisable et performant.
-        </p>
+          <p class="text-gray-700 text-sm sm:text-base leading-relaxed max-w-xl pt-2">
+            Nous commençons par une <strong>écoute attentive</strong> de vos besoins spécifiques.<br>
+            Que vous ayez un projet résidentiel, industriel, agricole ou commercial,
+            <strong>nous<br> vous apportons une expertise approfondie</strong> pour identifier la meilleure<br>
+            approche.
+            En prenant en compte vos objectifs, contraintes budgétaires et<br> préférences,
+            nous vous guidons vers la <strong>solution la plus optimisée et durable</strong>.<br>
+            <strong>Cette étape est essentielle</strong> pour poser les bases solides de votre projet,
+            en<br> veillant à ce qu'il soit à la fois réalisable et performant.
+          </p>
+        </div>
+
+
       </div>
 
-
     </div>
+  </section>
 
-  </div>
-</section>
+  <!-- ================= ÉTAPE 02 : SIMULATION ================= -->
+  <section class="bg-[#f4f5f7]">
+    <div class="max-w-7xl mx-auto px-6">
 
-<!-- ================= ÉTAPE 02 : SIMULATION ================= -->
-<section class="bg-[#f4f5f7]">
-  <div class="max-w-7xl mx-auto px-6">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
 
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-
-      <!-- TEXTE GAUCHE -->
-<div class="ml-auto max-w-xl text-right">
-  <h2 class="text-[#0a1745] font-[Futura\ Condensed] font-bold
+        <!-- TEXTE GAUCHE -->
+        <div class="ml-auto max-w-xl text-right">
+          <h2 class="text-[#0a1745] font-[Futura\ Condensed] font-bold
            text-3xl sm:text-4xl md:text-5xl lg:text-[64px]
            leading-[1] tracking-wide text-right py-3 sm:py-0">
-  SIMULATION<br>INSTANTANÉE
-</h2>
+            SIMULATION<br>INSTANTANÉE
+          </h2>
 
 
-  <p class="text-gray-700 text-sm sm:text-base leading-relaxed pt-4">
-    Après avoir défini vos besoins, vous <strong>accédez à notre simulateur 4-en-1.<br>
-    Cet outil interactif vous permet de calculer instantanément les coûts<br> estimés,
-    la durée du projet ainsi que les économies potentielles en<br> matière d’énergie.</strong> Le simulateur est adapté à 
-    chaque secteur, qu'il<br> s'agisse de la construction, des énergies renouvellables, de la sécurité ou<br>
-    de la préfabrication des matériaux.
-    <strong>En quelques clics, obtenez une<br> estimation précise et personnalisée,
-    vous donnant une vision claire et rapide de votre projet.</strong>
-  </p>
-</div>
+          <p class="text-gray-700 text-sm sm:text-base leading-relaxed pt-4">
+            Après avoir défini vos besoins, vous <strong>accédez à notre simulateur 4-en-1.<br>
+              Cet outil interactif vous permet de calculer instantanément les coûts<br> estimés,
+              la durée du projet ainsi que les économies potentielles en<br> matière d’énergie.</strong> Le simulateur
+            est adapté à
+            chaque secteur, qu'il<br> s'agisse de la construction, des énergies renouvellables, de la sécurité ou<br>
+            de la préfabrication des matériaux.
+            <strong>En quelques clics, obtenez une<br> estimation précise et personnalisée,
+              vous donnant une vision claire et rapide de votre projet.</strong>
+          </p>
+        </div>
 
-      <!-- IMAGE DROITE -->
-      <div class="flex justify-start">
-        <img
-          src="Images/etape2.png"
-          alt="Simulation instantanée"
-          class="relative z-10 w-full max-w-md object-cover"
-        />
+        <!-- IMAGE DROITE -->
+        <div class="flex justify-start">
+          <img src="Images/etape2.png" alt="Simulation instantanée"
+            class="relative z-10 w-full max-w-md object-cover" />
+        </div>
+
       </div>
 
     </div>
+  </section>
 
-  </div>
-</section>
+  <!-- ================= ÉTAPE 03 : DEVIS ================= -->
+  <section class="bg-[#f4f5f7] flex items-center">
+    <div class="max-w-7xl mx-auto px-6 ">
 
-<!-- ================= ÉTAPE 03 : DEVIS ================= -->
-<section class="bg-[#f4f5f7] flex items-center">
-  <div class="max-w-7xl mx-auto px-6 ">
+      <div class="flex flex-col lg:flex-row items-center lg:items-stretch lg:gap-8">
 
-    <div class="flex flex-col lg:flex-row items-center lg:items-stretch lg:gap-8">
-
-      <!-- IMAGE GAUCHE -->
-<div class="relative flex justify-center lg:justify-start lg:w-[420px] h-[420px] shrink-0">
-  <img
-    src="Images/Montage étape 03 1.png"
-    alt="Devis personnalisé"
-    class="w-full h-full object-cover rounded-xl"
-  />
-</div>
+        <!-- IMAGE GAUCHE -->
+        <div class="relative flex justify-center lg:justify-start lg:w-[420px] h-[420px] shrink-0">
+          <img src="Images/Montage étape 03 1.png" alt="Devis personnalisé"
+            class="w-full h-full object-cover rounded-xl" />
+        </div>
 
 
-      <!-- TEXTE DROITE -->
-      <div class="max-w-[620px] h-[420px] flex flex-col justify-center">
-       <h2 class="text-primary font-[Futura\ Condensed] font-bold
+        <!-- TEXTE DROITE -->
+        <div class="max-w-[620px] h-[420px] flex flex-col justify-center">
+          <h2 class="text-primary font-[Futura\ Condensed] font-bold
    text-[28px] sm:text-[36px] md:text-[48px] lg:text-[64px]
    leading-[1] tracking-wide break-words
    py-4 sm:py-0">DEVIS PERSONNALISÉ<br>
-          ET LANCEMENT
-        </h2>
+            ET LANCEMENT
+          </h2>
 
-        <p class="text-gray-700 text-sm sm:text-base leading-relaxed max-w-lg pt-2">
-          Une fois la simulation effectuée, nous vous envoyons un
-          <strong>devis détaillé</strong>, basé sur les paramètres de votre projet.
-          Après validation, nous passons à la <strong>planification et à la mise en œuvre</strong>.
-          Nos experts vous accompagnent à chaque étape pour garantir
-          un projet réalisé dans les délais et selon les standards de qualité les plus élevés.
-          Nous intégrons des <strong>solutions innovantes et durables</strong> à chaque phase.
-        </p>
+          <p class="text-gray-700 text-sm sm:text-base leading-relaxed max-w-lg pt-2">
+            Une fois la simulation effectuée, nous vous envoyons un
+            <strong>devis détaillé</strong>, basé sur les paramètres de votre projet.
+            Après validation, nous passons à la <strong>planification et à la mise en œuvre</strong>.
+            Nos experts vous accompagnent à chaque étape pour garantir
+            un projet réalisé dans les délais et selon les standards de qualité les plus élevés.
+            Nous intégrons des <strong>solutions innovantes et durables</strong> à chaque phase.
+          </p>
+        </div>
+
       </div>
 
     </div>
+  </section>
 
-  </div>
-</section>
+  <!-- ================= RÉSEAUX SOCIAUX ================= -->
+  <section class="w-full">
 
-<!-- ================= RÉSEAUX SOCIAUX ================= -->
-<section class="w-full">
-
-  <!-- BARRE VERTE -->
-  <div class="bg-[#0b4a2b] text-white py-6">
-    <div class="max-w-7xl mx-auto px-6
+    <!-- BARRE VERTE -->
+    <div class="bg-[#0b4a2b] text-white py-6">
+      <div class="max-w-7xl mx-auto px-6
                 flex flex-col md:flex-row items-center
                 justify-center gap-6">
 
-      <!-- ICÔNES -->
-      <div class="flex items-center gap-6">
+        <!-- ICÔNES -->
+        <div class="flex items-center gap-6">
 
-        <!-- TikTok -->
-        <a href="#" aria-label="TikTok">
-          <img src="Images/TiktokLogo.svg" alt="TikTok" class="h-16 w-16">
-        </a>
+          <!-- TikTok -->
+          <a href="#" aria-label="TikTok">
+            <img src="Images/TiktokLogo.svg" alt="TikTok" class="h-16 w-16">
+          </a>
 
-        <!-- Instagram -->
-        <a href="#" aria-label="Instagram">
-         <img src="Images/InstagramLogo.svg" alt="TikTok" class="h-16 w-16">
-        </a>
+          <!-- Instagram -->
+          <a href="#" aria-label="Instagram">
+            <img src="Images/InstagramLogo.svg" alt="TikTok" class="h-16 w-16">
+          </a>
 
-        <!-- Facebook -->
-        <a href="#" aria-label="Facebook">
-          <img src="Images/FacebookLogo.svg" alt="TikTok" class="h-16 w-16">
-        </a>
+          <!-- Facebook -->
+          <a href="#" aria-label="Facebook">
+            <img src="Images/FacebookLogo.svg" alt="TikTok" class="h-16 w-16">
+          </a>
 
-        <!-- YouTube -->
-        <a href="#" aria-label="YouTube">
-          <img src="Images/YoutubeLogo.svg" alt="TikTok" class="h-16 w-16">
-        </a>
+          <!-- YouTube -->
+          <a href="#" aria-label="YouTube">
+            <img src="Images/YoutubeLogo.svg" alt="TikTok" class="h-16 w-16">
+          </a>
+
+        </div>
+
+        <!-- TEXTE DROIT -->
+        <div class="flex flex-col items-start">
+          <p class="text-4xl font-bold">@Afrika_AIAE</p>
+          <p class="text-sm opacity-80">
+            Suivez nous, <span class="font-bold">Abonnez vous</span> &
+            <span class="font-bold">Likez nos post</span>
+          </p>
+        </div>
+
 
       </div>
-
-      <!-- TEXTE DROIT -->
-     <div class="flex flex-col items-start">
-  <p class="text-4xl font-bold">@Afrika_AIAE</p>
-  <p class="text-sm opacity-80">
-    Suivez nous, <span class="font-bold">Abonnez vous</span> & 
-    <span class="font-bold">Likez nos post</span>
-  </p>
-</div>
-
-
     </div>
-  </div>
 
-  <!-- BARRE CLAIRE -->
-  <div class="bg-[#f4f5f7] py-6">
-    <div class="max-w-7xl mx-auto px-6
+    <!-- BARRE CLAIRE -->
+    <div class="bg-[#f4f5f7] py-6">
+      <div class="max-w-7xl mx-auto px-6
                 flex flex-col md:flex-row items-center
                 justify-center gap-4 text-[#0b4a2b]">
 
-      <!-- WhatsApp Icon -->
-      <img src="Images/WhatsappLogo.svg" alt="" class="h-12 w-12">
+        <!-- WhatsApp Icon -->
+        <img src="Images/WhatsappLogo.svg" alt="" class="h-12 w-12">
 
-      <p class="text-3xl">
-        +228 <span class="font-bold">9X 8X 7X 6X</span>
-      </p>
+        <p class="text-3xl">
+          +228 <span class="font-bold">9X 8X 7X 6X</span>
+        </p>
 
-      <p class="text-sm">
-        <span class="font-extrabold">Écrivez nous</span> pour toutes<br> <span class="font-extrabold">informations</span> supplémentaires
-      </p>
+        <p class="text-sm">
+          <span class="font-extrabold">Écrivez nous</span> pour toutes<br> <span
+            class="font-extrabold">informations</span> supplémentaires
+        </p>
 
-    </div>
-  </div>
-
-</section>
-
-<!-- ================= FOOTER ================= -->
-<footer class="relative text-white">
-
-  <!-- BACKGROUND IMAGE -->
-  <div class="absolute inset-0 bg-cover bg-center"
-       style="background-image:url('Images/footer.png');"></div>
-
-  <!-- OVERLAY -->
-  <div class="absolute inset-0 bg-[#0a1745]/50"></div>
-
-  <!-- CONTENU -->
-  <div class="relative z-10 max-w-7xl mx-auto px-6 py-20">
-
-   <div class="grid grid-cols-1 md:grid-cols-[1.3fr_1fr_1.3fr] gap-12 text-center md:text-left">
-
-  <!-- CONTACTS -->
-  <div class="md:pr-6 flex flex-col items-center md:items-start">
-    <h3 class="text-xl font-semibold mb-4">Contacts</h3>
-
-    <p class="text-sm opacity-80 mb-4">
-      Écrivez nous ou appelez nous pour toutes<br> informations supplémentaires !
-    </p>
-
-    <p class="text-sm opacity-80 mb-6">
-      Suivez nos pages pour ne rien manquer
-    </p>
-
-    <p class="text-sm mb-2">Afrika228@gmail.com</p>
-    <p class="text-sm mb-6">+228 9X 8X 7X 6X / 7X 8X 7X 6X</p>
-
-    <div class="flex gap-4 justify-center md:justify-start">
-      <a href="#"><img src="Images/TiktokLogo.svg" class="w-8 h-8"></a>
-      <a href="#"><img src="Images/InstagramLogo.svg" class="w-8 h-8"></a>
-      <a href="#"><img src="Images/FacebookLogo.svg" class="w-8 h-8"></a>
-      <a href="#"><img src="Images/YoutubeLogo.svg" class="w-8 h-8"></a>
-    </div>
-  </div>
-
- <!-- MENU -->
-<div class="md:pl-6 flex flex-col items-center md:items-start">
-  <h3 class="text-xl font-semibold mb-4">Menu</h3>
-
-  <ul class="space-y-2 text-sm opacity-90">
-    <li>
-      <a href="index.html" class="hover:underline hover:text-white transition">
-        Accueil
-      </a>
-    </li>
-    <li>
-      <a href="about.html" class="hover:underline hover:text-white transition">
-        À Propos
-      </a>
-    </li>
-    <li>
-      <a href="division.html" class="hover:underline hover:text-white transition">
-        Nos Divisions
-      </a>
-    </li>
-    <li>
-      <a href="simulator.html" class="hover:underline hover:text-white transition">
-        Simulateurs
-      </a>
-    </li>
-    <li>
-      <a href="clients.html" class="hover:underline hover:text-white transition">
-        Espace Client
-      </a>
-    </li>
-    <li>
-      <a href="projects.html" class="hover:underline hover:text-white transition">
-        Projets & Réalisations
-      </a>
-    </li>
-    <li>
-      <a href="faq.html" class="hover:underline hover:text-white transition">
-        FAQ
-      </a>
-    </li>
-  </ul>
-</div>
-
-
-  <!-- NEWSLETTER -->
-  <div class="md:pl-6 flex flex-col items-center md:items-start">
-    <h3 class="text-xl font-semibold mb-4">Nouvelles</h3>
-
-    <div class="flex items-center w-full max-w-sm bg-white/10 rounded-lg overflow-hidden mb-4">
-      <input
-        type="email"
-        placeholder="Ton Mail..."
-        class="bg-transparent px-4 py-3 text-sm w-full outline-none placeholder-white/70"
-      />
-      <button class="px-4">
-        <img src="Images/SendIcon.svg" alt="">
-      </button>
+      </div>
     </div>
 
-    <p class="text-sm opacity-80">
-      Inscris ton mail pour être au courant de nos dernières promotions et offres en temps réel
-    </p>
-  </div>
+  </section>
 
-</div>
+  <!-- ================= FOOTER ================= -->
+  <footer class="relative text-white">
 
-  </div>
+    <!-- BACKGROUND IMAGE -->
+    <div class="absolute inset-0 bg-cover bg-center" style="background-image:url('Images/footer.png');"></div>
 
-  <!-- BARRE BAS -->
-  <div class="relative z-10 bg-[#0b4a2b] text-center py-4 text-sm">
-    © Afrika Infrastructure, Automation & Energy - By Jean ADZINDA
-  </div>
+    <!-- OVERLAY -->
+    <div class="absolute inset-0 bg-[#0a1745]/50"></div>
 
-</footer>
+    <!-- CONTENU -->
+    <div class="relative z-10 max-w-7xl mx-auto px-6 py-20">
 
-<!-- ================= JS ================= -->
-<script>
-  // Menu burger en mobile
-  const burger = document.getElementById("burger");
-  const mobileMenu = document.getElementById("mobileMenu");
-  burger.addEventListener("click", () => {
-    mobileMenu.classList.toggle("hidden");
-  });
-const closeMobile = document.getElementById("closeMobile");
+      <div class="grid grid-cols-1 md:grid-cols-[1.3fr_1fr_1.3fr] gap-12 text-center md:text-left">
 
-closeMobile.addEventListener("click", () => {
-  mobileMenu.classList.add("hidden");
-});
+        <!-- CONTACTS -->
+        <div class="md:pr-6 flex flex-col items-center md:items-start">
+          <h3 class="text-xl font-semibold mb-4">Contacts</h3>
 
-// changement d'image dans le hero 
-   const buttons = document.querySelectorAll(".tabBtn");
-  const hero = document.getElementById("heroImage");
+          <p class="text-sm opacity-80 mb-4">
+            Écrivez nous ou appelez nous pour toutes<br> informations supplémentaires !
+          </p>
 
-  buttons.forEach(btn=>{
-    btn.addEventListener("click", ()=>{
-  
-      hero.src = btn.dataset.img;
+          <p class="text-sm opacity-80 mb-6">
+            Suivez nos pages pour ne rien manquer
+          </p>
 
-      buttons.forEach(b=>{
-        b.classList.remove("bg-white","shadow");
-        b.classList.add("bg-glassDark");
-      });
-      btn.classList.remove("bg-glassDark");
-      btn.classList.add("bg-white","shadow");
+          <p class="text-sm mb-2">Afrika228@gmail.com</p>
+          <p class="text-sm mb-6">+228 9X 8X 7X 6X / 7X 8X 7X 6X</p>
+
+          <div class="flex gap-4 justify-center md:justify-start">
+            <a href="#"><img src="Images/TiktokLogo.svg" class="w-8 h-8"></a>
+            <a href="#"><img src="Images/InstagramLogo.svg" class="w-8 h-8"></a>
+            <a href="#"><img src="Images/FacebookLogo.svg" class="w-8 h-8"></a>
+            <a href="#"><img src="Images/YoutubeLogo.svg" class="w-8 h-8"></a>
+          </div>
+        </div>
+
+        <!-- MENU -->
+        <div class="md:pl-6 flex flex-col items-center md:items-start">
+          <h3 class="text-xl font-semibold mb-4">Menu</h3>
+
+          <ul class="space-y-2 text-sm opacity-90">
+            <li>
+              <a href="index.html" class="hover:underline hover:text-white transition">
+                Accueil
+              </a>
+            </li>
+            <li>
+              <a href="about.html" class="hover:underline hover:text-white transition">
+                À Propos
+              </a>
+            </li>
+            <li>
+              <a href="division.html" class="hover:underline hover:text-white transition">
+                Nos Divisions
+              </a>
+            </li>
+            <li>
+              <a href="simulator.html" class="hover:underline hover:text-white transition">
+                Simulateurs
+              </a>
+            </li>
+            <li>
+              <a href="clients.html" class="hover:underline hover:text-white transition">
+                Espace Client
+              </a>
+            </li>
+            <li>
+              <a href="projects.html" class="hover:underline hover:text-white transition">
+                Projets & Réalisations
+              </a>
+            </li>
+            <li>
+              <a href="faq.html" class="hover:underline hover:text-white transition">
+                FAQ
+              </a>
+            </li>
+          </ul>
+        </div>
+
+
+        <!-- NEWSLETTER -->
+        <div class="md:pl-6 flex flex-col items-center md:items-start">
+          <h3 class="text-xl font-semibold mb-4">Nouvelles</h3>
+
+          <div class="flex items-center w-full max-w-sm bg-white/10 rounded-lg overflow-hidden mb-4">
+            <input type="email" placeholder="Ton Mail..."
+              class="bg-transparent px-4 py-3 text-sm w-full outline-none placeholder-white/70" />
+            <button class="px-4">
+              <img src="Images/SendIcon.svg" alt="">
+            </button>
+          </div>
+
+          <p class="text-sm opacity-80">
+            Inscris ton mail pour être au courant de nos dernières promotions et offres en temps réel
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- BARRE BAS -->
+    <div class="relative z-10 bg-[#0b4a2b] text-center py-4 text-sm">
+      © Afrika Infrastructure, Automation & Energy - By Jean ADZINDA
+    </div>
+
+  </footer>
+
+  <!-- ================= JS ================= -->
+  <script>
+    // Menu burger en mobile
+    const burger = document.getElementById("burger");
+    const mobileMenu = document.getElementById("mobileMenu");
+    burger.addEventListener("click", () => {
+      mobileMenu.classList.toggle("hidden");
     });
-  });
-  // ---------------- CONFIG DROPDOWN ------------------
-openConfig.onclick = ()=> configPanel.classList.toggle("hidden");
-openStand.onclick = ()=> standPanel.classList.toggle("hidden");
-openOptions.onclick = ()=> optionsPanel.classList.toggle("hidden");
+    const closeMobile = document.getElementById("closeMobile");
 
-// Salles de bain counter
-document.querySelector(".plusBath").onclick = ()=>{
-  bathCount.textContent = Number(bathCount.textContent)+1;
-}
-document.querySelector(".minusBath").onclick = ()=>{
-  if(Number(bathCount.textContent)>0)
-  bathCount.textContent = Number(bathCount.textContent)-1;
-}
+    closeMobile.addEventListener("click", () => {
+      mobileMenu.classList.add("hidden");
+    });
 
-// Chambres counter
-document.querySelector(".plusBed").onclick = ()=>{
-  bedCount.textContent = Number(bedCount.textContent)+1;
-}
-document.querySelector(".minusBed").onclick = ()=>{
-  if(Number(bedCount.textContent)>0)
-  bedCount.textContent = Number(bedCount.textContent)-1;
-}
-const navBar = document.getElementById("navBar");
+    // changement d'image dans le hero 
+    const buttons = document.querySelectorAll(".tabBtn");
+    const hero = document.getElementById("heroImage");
 
-window.addEventListener("scroll", () => {
-  if(window.scrollY > 30){
-    navBar.classList.add("nav-scrolled");
-  } else {
-    navBar.classList.remove("nav-scrolled");
-  }
-});
-function togglePanel(button, panel) {
-  panel.classList.toggle("hidden");
-  const arrow = button.querySelector(".arrow");
-  arrow.classList.toggle("rotate-180");
-}
+    buttons.forEach(btn => {
+      btn.addEventListener("click", () => {
 
-openConfig.onclick = () => togglePanel(openConfig, configPanel);
-openStand.onclick = () => togglePanel(openStand, standPanel);
-openOptions.onclick = () => togglePanel(openOptions, optionsPanel);
+        hero.src = btn.dataset.img;
 
-</script>
+        buttons.forEach(b => {
+          b.classList.remove("bg-white", "shadow");
+          b.classList.add("bg-glassDark");
+        });
+        btn.classList.remove("bg-glassDark");
+        btn.classList.add("bg-white", "shadow");
+      });
+    });
+    // ---------------- CONFIG DROPDOWN ------------------
+    openConfig.onclick = () => configPanel.classList.toggle("hidden");
+    openStand.onclick = () => standPanel.classList.toggle("hidden");
+    openOptions.onclick = () => optionsPanel.classList.toggle("hidden");
+
+    // Salles de bain counter
+    document.querySelector(".plusBath").onclick = () => {
+      bathCount.textContent = Number(bathCount.textContent) + 1;
+    }
+    document.querySelector(".minusBath").onclick = () => {
+      if (Number(bathCount.textContent) > 0)
+        bathCount.textContent = Number(bathCount.textContent) - 1;
+    }
+
+    // Chambres counter
+    document.querySelector(".plusBed").onclick = () => {
+      bedCount.textContent = Number(bedCount.textContent) + 1;
+    }
+    document.querySelector(".minusBed").onclick = () => {
+      if (Number(bedCount.textContent) > 0)
+        bedCount.textContent = Number(bedCount.textContent) - 1;
+    }
+    const navBar = document.getElementById("navBar");
+
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 30) {
+        navBar.classList.add("nav-scrolled");
+      } else {
+        navBar.classList.remove("nav-scrolled");
+      }
+    });
+    function togglePanel(button, panel) {
+      panel.classList.toggle("hidden");
+      const arrow = button.querySelector(".arrow");
+      arrow.classList.toggle("rotate-180");
+    }
+
+    openConfig.onclick = () => togglePanel(openConfig, configPanel);
+    openStand.onclick = () => togglePanel(openStand, standPanel);
+    openOptions.onclick = () => togglePanel(openOptions, optionsPanel);
+
+  </script>
 
 </body>
+
 </html>
