@@ -89,10 +89,8 @@
 
   <body class="font-futura bg-gray-100 overflow-x-hidden">
     <!-- ================= NAVBAR ================= -->
-    <header
-      id="navBar"
-      class="fixed top-4 left-1/2 -translate-x-1/2 z-50 w-[95%] max-w-7xl rounded-[28px] overflow-hidden transition-all duration-300"
-    >
+    <header id="navBar"
+      class="fixed top-4 left-1/2 -translate-x-1/2 z-50 w-[95%] max-w-7xl rounded-[28px] overflow-hidden transition-all duration-300">
       <nav class="flex items-center justify-between px-4 sm:px-6 py-3">
         <img
           src="Images/logos/LOGO AIAE BLANC.png"
@@ -332,7 +330,8 @@
     </section>
 
     <!-- ================= PANNEAU SIMULATEUR ================= -->
-    <section class="relative -mt-16 md:-mt-20 z-10 px-2 sm:px-4">+
+    <section class="relative -mt-16 md:-mt-20 z-10 px-2 sm:px-4">
+      +
       <div
         class="w-full max-w-[92%] sm:max-w-[640px] md:max-w-[820px] lg:max-w-[900px] xl:max-w-[990px] mx-auto bg-glass backdrop-blur-xl rounded-2xl shadow-xl p-4 sm:p-5"
       >
@@ -655,56 +654,318 @@
       </div>
     </section>
 
-<!-- ================= SECTION CIBLES ================= -->
-<section class="relative py-16 bg-[#f2f2f2] overflow-hidden">
+    <!-- ================= SECTION CIBLES ================= -->
+    <section class="relative pt-16 bg-[#f2f2f2] overflow-hidden">
+      <!-- forme décorative -->
+      <div
+        class="absolute -top-32 -left-32 w-[520px] h-[520px] bg-gray-200 rounded-full opacity-70"
+      ></div>
 
-  <!-- forme décorative -->
-  <div class="absolute -top-32 -left-32 w-[520px] h-[520px] bg-gray-200 rounded-full opacity-70"></div>
+      <div class="relative max-w-[1200px] mx-auto px-6">
+        <!-- Titre -->
+        <h2 class="text-[#162064] font-bold text-2xl md:text-3xl mb-8">
+          À QUI S'ADRESSE AIAE ?
+        </h2>
 
-  <div class="relative max-w-[1200px] mx-auto px-6">
+        <!-- GRID -->
+        <div class="grid grid-cols-2 rounded-xl overflow-hidden">
+          <!-- PARTICULIERS -->
+          <div class="relative group">
+            <img src="Images/familles.png" class="w-full h-full object-cover" />
 
-    <!-- Titre -->
-    <h2 class="text-[#162064] font-bold text-2xl md:text-3xl mb-8">
-      À QUI S'ADRESSE AIAE ?
-    </h2>
+            <button
+              class="absolute bottom-6 right-6 bg-white/20 backdrop-blur text-white text-xs px-4 py-1 rounded-full"
+            >
+              Contactez-nous
+            </button>
+          </div>
 
-    <!-- GRID -->
-    <div class="grid grid-cols-2 rounded-xl overflow-hidden">
+          <!-- DIASPORA -->
+          <div class="relative group">
+            <img src="Images/diaspora.png" class="w-full h-full object-cover" />
 
-      <!-- PARTICULIERS -->
-      <div class="relative group">
-        <img src="Images/familles.png" class="w-full h-full object-cover">
+            <button
+              class="absolute bottom-6 right-6 bg-white/20 backdrop-blur text-white text-xs px-4 py-1 rounded-full"
+            >
+              Contactez-nous
+            </button>
+          </div>
 
-        <button class="absolute bottom-6 right-6 bg-white/20 backdrop-blur text-white text-xs px-4 py-1 rounded-full">
-          Contactez-nous
-        </button>
+          <!-- ENTREPRISES -->
+          <div class="relative group">
+            <img
+              src="Images/entreprises.png"
+              class="w-full h-full object-cover"
+            />
+
+            <button
+              class="absolute bottom-6 right-6 bg-white/20 backdrop-blur text-white text-xs px-4 py-1 rounded-full"
+            >
+              Contactez-nous
+            </button>
+          </div>
+
+          <!-- INSTITUTIONS -->
+          <div class="relative group">
+            <img
+              src="Images/institutions.png"
+              class="w-full h-full object-cover"
+            />
+
+            <button
+              class="absolute bottom-6 right-6 bg-white/20 backdrop-blur text-white text-xs px-4 py-1 rounded-full"
+            >
+              Contactez-nous
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= SECTION NOS DIVISIONS ================= -->
+<section class="relative py-24 bg-[#f3f3f3] overflow-hidden">
+
+  <!-- forme cercle décorative -->
+  <div class="absolute top-1/2 left-1/2 
+              w-[650px] h-[650px] 
+              bg-gray-200 rounded-full 
+              -translate-x-1/2 -translate-y-1/2">
+  </div>
+
+  <!-- image décorative gauche -->
+  <img src="Images/Gauche.png"
+       class="absolute left-0 top-1/2 -translate-y-1/2 w-[480px]">
+
+  <!-- image décorative droite -->
+  <img src="Images/Droit.png"
+       class="absolute right-0 top-1/2 -translate-y-1/2 w-[480px]">
+
+  <div class="relative max-w-[900px] mx-auto text-center px-6">
+
+    <!-- TITRE -->
+   <h2 class="text-[#162064] font-black text-[60px] md:text-[90px] leading-[1.05]">
+  NOS <span class="text-[#0b5b3a]">04</span><br>
+  DIVISIONS
+</h2>
+
+    <!-- TEXTE -->
+    <p class="mt-6 text-sm md:text-base text-gray-700 max-w-[520px] mx-auto leading-relaxed">
+
+      AIAE STRUCTURE SON DÉVELOPPEMENT AUTOUR DE<br>
+
+      <span class="font-bold">QUATRE DIVISIONS COMPLÉMENTAIRES</span>, ENSEMBLE,<br>
+
+      ELLES FORMENT UN <span class="font-bold">ÉCOSYSTÈME INÉDIT SUR LE</span><br>
+
+      <span class="font-bold">MARCHÉ OUEST-AFRICAIN.</span>
+
+    </p>
+
+  </div>
+
+</section>
+
+<!-- ================= SECTION DIVISIONS ================= -->
+<section class="py-20 bg-[#f3f3f3]">
+
+  <div class="max-w-[1100px] mx-auto px-6">
+
+    <!-- Ligne 1 -->
+
+    <div class="grid md:grid-cols-2 gap-12 items-stretch">
+
+  <!-- Image -->
+  <img src="Images/Construction.png"
+       class="rounded-xl w-full h-full object-cover">
+
+  <!-- Texte -->
+  <div class="flex flex-col justify-between h-full">
+
+    <div>
+      <h3 class="text-[#0b5b3a] font-extrabold text-5xl mb-4">
+        CONSTRUCTION
+      </h3>
+
+      <p class="text-gray-700 leading-relaxed text-[24px]">
+        Notre cœur de métier. Nous concevons et réalisons des 
+          <strong>infrastructures durables</strong> : villas résidentielles,
+          bâtiments commerciaux, ouvrages d’art et infrastructures techniques.
+          <strong>Conception architecturale et structurelle.</strong>
+          Construction tous standings (Standard à Prestige).
+          Ouvrages d’art (<strong>ponts, murs de soutènement, etc.</strong>).
+          <strong>Réhabilitation et extension</strong> de bâtiments existants.
+      </p>
+    </div>
+
+    <p class="text-[#0b5b3a] mt-6 text-[24px]">
+      À partir de <span class="font-semibold">330 000 FCFA/m²</span> 
+    </p>
+
+  </div>
+
+</div>
+
+    <!-- Séparateur -->
+    <div class="border-t border-gray-300 my-16"></div>
+
+    <!-- Ligne 2 -->
+    <div class="grid md:grid-cols-2 gap-12 items-center">
+
+      <!-- Texte énergie -->
+      <div class="text-right">
+        <h3 class="text-[#d86d00] font-extrabold text-5xl mb-4">
+          ÉNERGIE
+        </h3>
+
+        <p class="text-gray-700 leading-relaxed text-[24px]">
+          Solutions d’autonomie énergétique pour vos installations.
+          Nous dimensionnons et installons des 
+          <strong>systèmes solaires adaptés aux besoins des entreprises</strong>
+          et exploitations agricoles.
+          <strong class="text-[#d86d00]">Solaire C&I</strong> (commercial et industriel).
+          <strong class="text-[#d86d00]">Systèmes hybrides</strong> avec stockage par batteries.
+          Solutions pour sites isolés ou sans raccordement.
+          <strong>Maintenance et optimisation</strong> des installations.
+        </p>
+
+        <p class="mt-3 text-gray-600 text-[24px]">
+          Lancement <span class="font-semibold">2026</span>
+        </p>
       </div>
 
-      <!-- DIASPORA -->
-      <div class="relative group">
-        <img src="Images/diaspora.png" class="w-full h-full object-cover">
+      <!-- Image énergie -->
+      <img src="Images/Energie.png"
+           class="rounded-xl w-full object-cover">
 
-        <button class="absolute bottom-6 right-6 bg-white/20 backdrop-blur text-white text-xs px-4 py-1 rounded-full">
-          Contactez-nous
-        </button>
+    </div>
+
+    <!-- Séparateur -->
+    <div class="border-t border-gray-300 my-16"></div>
+
+    <!-- Ligne 3 -->
+    <div class="grid md:grid-cols-2 gap-12 items-center">
+
+      <!-- Image sécurité -->
+      <img src="Images/Sécurité.png"
+           class="rounded-xl w-full object-cover">
+
+      <!-- Texte sécurité -->
+      <div>
+        <h3 class="text-[#0b5b3a] font-extrabold text-5xl mb-4">
+          SÉCURITÉ
+        </h3>
+
+        <p class="text-gray-700 leading-relaxed text-[24px]">
+          Protection haute performance pour vos biens et vos personnes.
+          Nous concevons et installons des solutions de sécurité physique
+          répondant aux normes européennes.
+          <strong>Chambres fortes et coffres certifiés</strong> (banques, entreprises).
+          <strong>Safe rooms</strong>, salles de repli sécurisées.
+          Armureries et locaux de stockage sensible.
+          Systèmes de contrôle d’accès.
+        </p>
+
+        <p class="mt-3 text-[#0b5b3a] text-[24px]">
+          Prochainement
+        </p>
       </div>
 
-      <!-- ENTREPRISES -->
-      <div class="relative group">
-        <img src="Images/entreprises.png" class="w-full h-full object-cover">
+    </div>
 
-        <button class="absolute bottom-6 right-6 bg-white/20 backdrop-blur text-white text-xs px-4 py-1 rounded-full">
-          Contactez-nous
-        </button>
+    <!-- Séparateur -->
+    <div class="border-t border-gray-300 my-16"></div>
+
+    <!-- Ligne 4 -->
+    <div class="grid md:grid-cols-2 gap-12 items-center">
+
+      <!-- Texte prefabrication -->
+      <div class="text-right">
+        <h3 class="text-[#d86d00] font-extrabold text-5xl mb-4">
+          PRÉFABRICATION
+        </h3>
+
+        <p class="text-gray-700 leading-relaxed text-[24px]">
+          Production industrielle d’éléments de construction pour
+          des chantiers plus rapides et économiques.
+          <strong>BTC (briques de terre compressée)</strong>,
+          matériau écologique local.
+          Éléments en <strong>béton précontraint</strong> (portées longues,
+          résistance accrue).
+          Nervures et poutrelles pour planchers.
+          Éléments pour ponts et ouvrages d’art.
+        </p>
+
+        <p class="mt-3 text-[#d86d00] text-[24px]">
+          Prochainement
+        </p>
       </div>
 
-      <!-- INSTITUTIONS -->
-      <div class="relative group">
-        <img src="Images/institutions.png" class="w-full h-full object-cover">
+      <!-- Image prefabrication -->
+      <img src="Images/Préfabrication.png"
+           class="rounded-xl w-full object-cover">
 
-        <button class="absolute bottom-6 right-6 bg-white/20 backdrop-blur text-white text-xs px-4 py-1 rounded-full">
-          Contactez-nous
-        </button>
+    </div>
+
+  </div>
+
+</section>
+
+<!-- ================= BARRE ACTIONS ================= -->
+<div class="w-full bg-[#e9e9e9] py-4">
+
+  <div class="max-w-[1100px] mx-auto flex items-center justify-between px-16">
+
+    <!-- Bouton RDV -->
+    <button class="bg-[#0b5b3a] text-white px-10 py-3 rounded-lg text-sm font-medium hover:opacity-90 transition">
+      Prendre rendez-vous maintenant
+    </button>
+
+    <!-- Bouton devis -->
+    <button class="flex items-center bg-[#ffffff] gap-3 border border-black px-10 py-3 rounded-full text-sm font-medium hover:bg-gray-100 transition">
+
+      Demander un devis gratuit
+
+      <span class="flex items-center justify-center w-7 h-7 border border-black rounded-full">
+        <img src="Images/envoi.png" class="w-3">
+      </span>
+
+    </button>
+
+  </div>
+
+</div>
+
+
+<!-- ================= SECTION POURQUOI AIAE ================= -->
+<section class="relative w-full bg-[#05482C] overflow-hidden">
+
+  <div class="max-w-[1600px] mx-auto px-6 pt-10 pb-16">
+
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center text-center lg:text-left">
+
+      <!-- GAUCHE : TEXTE -->
+      <div class="text-white relative mx-auto lg:ml-20 max-w-xl">
+
+        <h2 class="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight mb-10 text-center lg:text-left">
+          Pourquoi Nous<br>
+          Faire Confiance &<br>
+          Choisir AIAE ?
+        </h2>
+
+        <p class="text-sm sm:text-base opacity-90 max-w-md mx-auto lg:mx-0">
+          Défilez pour découvrir plus en détails pourquoi AIAE est votre
+          meilleur choix pour des projets durables et innovants.
+        </p>
+
+      </div>
+
+      <!-- DROITE : IMAGE -->
+      <div class="relative lg:mr-20 flex justify-center">
+
+        <img src="Images/Défile.png" 
+             alt="bloc glass"
+             class="ml-20">
+
       </div>
 
     </div>
@@ -712,210 +973,6 @@
   </div>
 
 </section>
-    <!-- ================= SECTION POURQUOI AIAE ================= -->
-    <section class="relative w-full bg-[#05482C] overflow-hidden mt-6">
-      <div class="max-w-[1600px] mx-auto px-6 pt-6">
-        <div
-          class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center text-center lg:text-left"
-        >
-          <!-- GAUCHE : TEXTE -->
-          <div class="text-white relative mx-auto lg:ml-20 max-w-xl">
-            <!-- flèche gauche (on garde exactement sa position) -->
-            <button
-              class="hidden lg:flex absolute -left-16 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-white/90 items-center justify-center shadow-lg"
-            >
-              <img src="Images/CaretLeft.svg" alt="fleche gauche" />
-            </button>
-
-            <h2
-              class="text-5xl sm:text-4xl md:text-5xl font-extrabold leading-tight mb-10 text-center lg:text-left"
-            >
-              Pourquoi Nous<br />
-              Faire Confiance &<br />
-              Choisir AIAE ?
-            </h2>
-
-            <p class="text-sm sm:text-base opacity-90 max-w-md mx-auto lg:mx-0">
-              Défilez pour découvrir plus en détails pourquoi AIAE est votre
-              meilleur choix pour des projets durables et innovants.
-            </p>
-          </div>
-
-          <!-- DROITE : IMAGE -->
-          <div class="relative lg:mr-20 flex justify-center">
-            <img src="Images/Défile.png" alt="bloc glass" class="ml-20" />
-
-            <!-- flèche droite (on garde exactement sa position) -->
-            <button
-              class="hidden lg:flex absolute -right-16 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-white/90 items-center justify-center shadow-lg"
-            >
-              <img src="Images/CaretRight.svg" alt="fleche droite" />
-            </button>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ================= PROCESSUS ================= -->
-    <section class="relative overflow-hidden bg-[#f4f5f7]">
-      <!-- IMAGE GAUCHE -->
-      <img
-        src="Images/Gauche.png"
-        alt="Forme gauche"
-        class="absolute left-0 top-1/2 -translate-y-1/2 w-[180px] sm:w-[220px] md:w-[300px] lg:w-[360px] object-contain"
-      />
-
-      <!-- IMAGE DROITE -->
-      <img
-        src="Images/Droit.png"
-        alt="Forme droite"
-        class="absolute right-0 top-1/2 -translate-y-1/2 w-[180px] sm:w-[220px] md:w-[300px] lg:w-[360px] object-contain"
-      />
-
-      <!-- CONTENU CENTRAL -->
-      <div class="relative z-10 max-w-5xl mx-auto flex justify-center px-6">
-        <!-- IMAGE CENTRALE (texte inclus dans l’image) -->
-        <img
-          src="Images/03Etapes.png"
-          alt="Notre processus en 3 étapes"
-          class="w-[220px] sm:w-[300px] md:w-[420px] lg:w-[520px] object-contain"
-        />
-      </div>
-    </section>
-
-    <!-- ================= ANALYSE DE VOTRE PROJET ================= -->
-    <section class="bg-[#f4f5f7]">
-      <div class="max-w-7xl mx-auto px-6">
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          <!-- IMAGE DROITE -->
-          <div class="flex justify-center lg:justify-end">
-            <img
-              src="Images/etape1.png"
-              alt="Analyse de projet"
-              class="w-full max-w-md object-cover"
-            />
-          </div>
-          <!-- TEXTE GAUCHE -->
-          <div>
-            <h2
-              class="text-primary font-[Futura\ Condensed] font-bold text-[28px] sm:text-[36px] md:text-[48px] lg:text-[64px] leading-[1] tracking-wide break-words py-4 sm:py-0"
-            >
-              ANALYSE DE<br />
-              VOTRE PROJET
-            </h2>
-
-            <p class="text-gray-700 text-sm sm:text-base leading-relaxed max-w-xl pt-2">
-              Nous commençons par une <strong>écoute attentive</strong> de vos
-              besoins spécifiques.<br />
-              Que vous ayez un projet résidentiel, industriel, agricole ou
-              commercial,
-              <strong
-                >nous<br />
-                vous apportons une expertise approfondie</strong
-              >
-              pour identifier la meilleure<br />
-              approche. En prenant en compte vos objectifs, contraintes
-              budgétaires et<br />
-              préférences, nous vous guidons vers la
-              <strong>solution la plus optimisée et durable</strong>.<br />
-              <strong>Cette étape est essentielle</strong> pour poser les bases
-              solides de votre projet, en<br />
-              veillant à ce qu'il soit à la fois réalisable et performant.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ================= ÉTAPE 02 : SIMULATION ================= -->
-    <section class="bg-[#f4f5f7]">
-      <div class="max-w-7xl mx-auto px-6">
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          <!-- TEXTE GAUCHE -->
-          <div class="ml-auto max-w-xl text-right">
-            <h2
-              class="text-[#0a1745] font-[Futura\ Condensed] font-bold text-3xl sm:text-4xl md:text-5xl lg:text-[64px] leading-[1] tracking-wide text-right py-3 sm:py-0"
-            >
-              SIMULATION<br />INSTANTANÉE
-            </h2>
-
-            <p class="text-gray-700 text-sm sm:text-base leading-relaxed pt-4">
-              Après avoir défini vos besoins, vous
-              <strong
-                >accédez à notre simulateur 4-en-1.<br />
-                Cet outil interactif vous permet de calculer instantanément les
-                coûts<br />
-                estimés, la durée du projet ainsi que les économies potentielles
-                en<br />
-                matière d’énergie.</strong
-              >
-              Le simulateur est adapté à chaque secteur, qu'il<br />
-              s'agisse de la construction, des énergies renouvellables, de la
-              sécurité ou<br />
-              de la préfabrication des matériaux.
-              <strong
-                >En quelques clics, obtenez une<br />
-                estimation précise et personnalisée, vous donnant une vision
-                claire et rapide de votre projet.</strong
-              >
-            </p>
-          </div>
-
-          <!-- IMAGE DROITE -->
-          <div class="flex justify-start">
-            <img
-              src="Images/etape2.png"
-              alt="Simulation instantanée"
-              class="relative z-10 w-full max-w-md object-cover"
-            />
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ================= ÉTAPE 03 : DEVIS ================= -->
-    <section class="bg-[#f4f5f7] flex items-center">
-      <div class="max-w-7xl mx-auto px-6">
-        <div
-          class="flex flex-col lg:flex-row items-center lg:items-stretch lg:gap-8"
-        >
-          <!-- IMAGE GAUCHE -->
-          <div
-            class="relative flex justify-center lg:justify-start lg:w-[420px] h-[420px] shrink-0"
-          >
-            <img
-              src="Images/Montage étape 03 1.png"
-              alt="Devis personnalisé"
-              class="w-full h-full object-cover rounded-xl"
-            />
-          </div>
-
-          <!-- TEXTE DROITE -->
-          <div class="max-w-[620px] h-[420px] flex flex-col justify-center">
-            <h2
-              class="text-primary font-[Futura\ Condensed] font-bold text-[28px] sm:text-[36px] md:text-[48px] lg:text-[64px] leading-[1] tracking-wide break-words py-4 sm:py-0"
-            >
-              DEVIS PERSONNALISÉ<br />
-              ET LANCEMENT
-            </h2>
-
-            <p
-              class="text-gray-700 text-sm sm:text-base leading-relaxed max-w-lg pt-2"
-            >
-              Une fois la simulation effectuée, nous vous envoyons un
-              <strong>devis détaillé</strong>, basé sur les paramètres de votre
-              projet. Après validation, nous passons à la
-              <strong>planification et à la mise en œuvre</strong>. Nos experts
-              vous accompagnent à chaque étape pour garantir un projet réalisé
-              dans les délais et selon les standards de qualité les plus élevés.
-              Nous intégrons des
-              <strong>solutions innovantes et durables</strong> à chaque phase.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
     <!-- ================= RÉSEAUX SOCIAUX ================= -->
     <section class="w-full">
       <!-- BARRE VERTE -->
