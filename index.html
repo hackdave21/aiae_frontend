@@ -173,34 +173,84 @@
   <section class="relative px-1 sm:px-1 pt-1">
     <div class="relative max-w-[1600px] mx-auto rounded-[15px] overflow-hidden shadow-2xl">
 
-      <img id="heroImage" src="Images/residentiel.png" class="w-full h-[75vh] md:h-[90vh] object-cover" />
+    <img id="heroImage" src="Images/home.png" class="w-full h-[75vh] md:h-[90vh] object-cover" />
 
-      <div class="absolute inset-0 pointer-events-none">
-        <div class="absolute -left-[30%] top-0 bottom-0 w-[70%]">
-        </div>
+    <!-- overlay -->
+    <div class="absolute inset-0 bg-gradient-to-r from-black/70 via-black/40 to-transparent"></div>
+
+    <!-- contenu -->
+   <div class="absolute inset-x-0 top-1/2 -translate-y-1/2 px-10 md:px-16 max-w-7xl  text-white">
+
+  <!-- TITRE -->
+  <h1 class="text-2xl sm:text-3xl md:text-4xl lg:text-[44px] font-bold whitespace-nowrap mb-6">
+    De La Conception À La Réalisation
+  </h1>
+
+  <!-- TEXTE -->
+  <p class="text-sm sm:text-base md:text-lg leading-relaxed mb-8 max-w-xl">
+    Construction, énergie solaire, sécurité haute performance et préfabrication industrielle :
+    AIAE réunit toutes les compétences pour mener votre projet de A à Z.
+    <br><br>
+    <span class="font-semibold">
+      Un interlocuteur unique, des engagements tenus.
+    </span>
+  </p>
+
+  <!-- BOUTONS -->
+<div class="grid grid-cols-3 items-center w-full mt-8">
+
+  <!-- BOUTON GAUCHE -->
+  <div class="flex justify-start">
+    <button class="bg-primary text-white px-6 py-3 rounded-full text-sm shadow-lg whitespace-nowrap">
+      Prendre rendez-vous maintenant
+    </button>
+  </div>
+
+  <!-- BOUTON MILIEU -->
+  <div class="flex justify-center">
+
+    <div class="flex items-center bg-white rounded-full shadow-lg">
+
+      <span class="px-10 py-3 text-black text-sm whitespace-nowrap">
+        Demander un devis gratuit
+      </span>
+
+      <div class="w-12 h-12 flex items-center justify-center bg-white rounded-full">
+
+        <svg width="20" height="20" viewBox="0 0 24 24"
+          fill="none" stroke="black" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round">
+
+          <path d="M5 12h14"></path>
+          <path d="M13 5l7 7-7 7"></path>
+
+        </svg>
+
       </div>
-      <div class="absolute inset-0 bg-gradient-to-r from-black/70 via-black/40 to-transparent"></div>
 
-      <div class="absolute inset-x-0 top-1/2 -translate-y-1/2 px-4 sm:px-6 md:px-10 max-w-full md:max-w-xl text-white">
-        <h1 class="text-lg sm:text-2xl md:text-3xl lg:text-4xl font-bold leading-tight mb-4">
-          Transformez Vos Projets<br>
-          Avec Des Solutions<br>
-          Durables Et Innovantes
-        </h1>
-
-        <p class="text-sm sm:text-base md:text-lg leading-relaxed">
-          Explorez nos solutions de construction, d'énergie renouvelable <br>
-          et de matériaux innovants. Testez notre simulateur 4-en-1
-          et découvrez immédiatement le potentiel de votre projet.
-        </p>
-
-        <div class="mt-8 inline-block px-6 py-3 bg-secondary rounded-full shadow-lg">
-          <p class="text-sm sm:text-base font-bold text-white tracking-wide">
-            À partir de 180 000 FCFA/m² (Standing Standard)
-          </p>
-        </div>
-      </div>
     </div>
+
+  </div>
+
+  <!-- TEXTE DROITE -->
+<div class="flex justify-end items-start text-white">
+
+  <img 
+    src="Images/Arrow4Expertises.svg"
+    class="w-6 mt-[2px] mr-2 shrink-0"
+  >
+
+  <p class="text-sm md:text-base font-medium text-right leading-[1.2]">
+    Un partenaire. Quatre<br>
+    expertises. Zéro compromis.
+  </p>
+
+</div>
+
+</div>
+</div>
+
+  </div>
   </section>
 
   <!-- ================= PANNEAU SIMULATEUR ================= -->
