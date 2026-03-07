@@ -1,416 +1,348 @@
 <!doctype html>
 <html lang="fr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>AIAE</title>
 
-    <!-- Tailwind CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://unpkg.com/heroicons@2.0.18/24/outline/index.js"></script>
-    <!-- Tailwind config -->
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            fontFamily: {
-              futura: ["Futura", "sans-serif"],
-              futuraCondensed: ["Futura Condensed", "sans-serif"],
-            },
-            colors: {
-              primary: "#0b5b3a",
-              secondary: "#d97706",
-              glass: "rgba(255,255,255,0.55)",
-              glassDark: "rgba(255,255,255,0.35)",
-            },
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AIAE</title>
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/heroicons@2.0.18/24/outline/index.js"></script>
+  <!-- Tailwind config -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            futura: ["Futura", "sans-serif"],
+            futuraCondensed: ["Futura Condensed", "sans-serif"],
+          },
+          colors: {
+            primary: "#0b5b3a",
+            secondary: "#d97706",
+            glass: "rgba(255,255,255,0.55)",
+            glassDark: "rgba(255,255,255,0.35)",
           },
         },
-      };
-    </script>
+      },
+    };
+  </script>
 
-    <!-- ================= FONTS ================= -->
-    <style>
-      @font-face {
-        font-family: "Futura";
-        src: url("/fonts/FuturaStdLight.otf");
-        font-weight: 300;
+  <!-- ================= FONTS ================= -->
+  <style>
+    @font-face {
+      font-family: "Futura";
+      src: url("/fonts/FuturaStdLight.otf");
+      font-weight: 300;
+    }
+
+    @font-face {
+      font-family: "Futura";
+      src: url("/fonts/FuturaStdMedium.otf");
+      font-weight: 500;
+    }
+
+    @font-face {
+      font-family: "Futura";
+      src: url("/fonts/FuturaStdBold.otf");
+      font-weight: 700;
+    }
+
+    @font-face {
+      font-family: "Futura";
+      src: url("/fonts/FuturaStdHeavy.otf");
+      font-weight: 800;
+    }
+
+    /* Condensed */
+    @font-face {
+      font-family: "Futura Condensed";
+      src: url("/fonts/FuturaStdCondensed.otf");
+      font-weight: 500;
+    }
+
+    @font-face {
+      font-family: "Futura Condensed";
+      src: url("/fonts/FuturaStdCondensedBold.otf");
+      font-weight: 700;
+    }
+
+    @media (max-width: 640px) {
+
+      body,
+      html {
+        overflow-x: hidden !important;
       }
 
-      @font-face {
-        font-family: "Futura";
-        src: url("/fonts/FuturaStdMedium.otf");
-        font-weight: 500;
+      section,
+      div,
+      img {
+        max-width: 100% !important;
       }
+    }
 
-      @font-face {
-        font-family: "Futura";
-        src: url("/fonts/FuturaStdBold.otf");
-        font-weight: 700;
-      }
+    .nav-scrolled {
+      backdrop-filter: blur(18px);
+      background: rgba(22, 32, 100, 0.2);
+    }
+  </style>
+</head>
 
-      @font-face {
-        font-family: "Futura";
-        src: url("/fonts/FuturaStdHeavy.otf");
-        font-weight: 800;
-      }
+<body class="font-futura bg-gray-100 overflow-x-hidden">
+  <!-- ================= NAVBAR ================= -->
+  <header id="navBar"
+    class="fixed top-4 left-1/2 -translate-x-1/2 z-50 w-[95%] max-w-7xl rounded-[28px] overflow-hidden transition-all duration-300">
+    <nav class="flex items-center justify-between px-4 sm:px-6 py-3">
+      <img src="Images/logos/LOGO AIAE BLANC.png" alt="logo"
+        class="h-10 sm:h-12 md:h-14 lg:h-16 w-auto object-contain" />
+      <ul class="hidden lg:flex items-center gap-2 text-sm font-medium font-FuturaStdLight">
+        <li>
+          <a href="index.html"
+            class="px-4 py-2 rounded-full bg-glassDark text-white  block whitespace-nowrap">Accueil</a>
+        </li>
 
-      /* Condensed */
-      @font-face {
-        font-family: "Futura Condensed";
-        src: url("/fonts/FuturaStdCondensed.otf");
-        font-weight: 500;
-      }
+        <li>
+          <a href="about.html" class="px-4 py-2 rounded-full bg-glassDark text-white block whitespace-nowrap">À
+            propos</a>
+        </li>
 
-      @font-face {
-        font-family: "Futura Condensed";
-        src: url("/fonts/FuturaStdCondensedBold.otf");
-        font-weight: 700;
-      }
+        <li>
+          <a href="division.html" class="px-4 py-2 rounded-full bg-glassDark text-white block whitespace-nowrap">Nos
+            divisions</a>
+        </li>
 
-      @media (max-width: 640px) {
-        body,
-        html {
-          overflow-x: hidden !important;
-        }
+        <li>
+          <a href="simulator.html"
+            class="px-4 py-2 rounded-full  bg-white shadow block whitespace-nowrap">Simulateurs</a>
+        </li>
 
-        section,
-        div,
-        img {
-          max-width: 100% !important;
-        }
-      }
+        <li>
+          <a href="clients.html" class="px-4 py-2 rounded-full bg-glassDark text-white block whitespace-nowrap">Espace
+            client</a>
+        </li>
 
-      .nav-scrolled {
-        backdrop-filter: blur(18px);
-        background: rgba(22, 32, 100, 0.2);
-      }
-    </style>
-  </head>
+        <li>
+          <a href="projects.html" class="px-4 py-2 rounded-full bg-glassDark text-white block whitespace-nowrap">Projets
+            & Réalisations</a>
+        </li>
 
-  <body class="font-futura bg-gray-100 overflow-x-hidden">
-    <!-- ================= NAVBAR ================= -->
-    <header id="navBar"
-      class="fixed top-4 left-1/2 -translate-x-1/2 z-50 w-[95%] max-w-7xl rounded-[28px] overflow-hidden transition-all duration-300">
-      <nav class="flex items-center justify-between px-4 sm:px-6 py-3">
-        <img
-          src="Images/logos/LOGO AIAE BLANC.png"
-          alt="logo"
-          class="h-10 sm:h-12 md:h-14 lg:h-16 w-auto object-contain"
-        />
-        <ul
-          class="hidden lg:flex items-center gap-2 text-sm font-medium font-FuturaStdLight"
-        >
-          <li>
-            <a
-              href="index.html"
-              class="px-4 py-2 rounded-full bg-glassDark text-white  block whitespace-nowrap"
-              >Accueil</a
-            >
-          </li>
+        <li>
+          <a href="faq.html" class="px-4 py-2 rounded-full bg-glassDark text-white block whitespace-nowrap">FAQ</a>
+        </li>
+      </ul>
 
-          <li>
-            <a
-              href="about.html"
-                class="px-4 py-2 rounded-full bg-glassDark text-white block whitespace-nowrap"
-              >À propos</a
-            >
-          </li>
-
-          <li>
-            <a
-              href="division.html"
-              class="px-4 py-2 rounded-full bg-glassDark text-white block whitespace-nowrap"
-              >Nos divisions</a
-            >
-          </li>
-
-          <li>
-            <a
-              href="simulator.html"
-              class="px-4 py-2 rounded-full  bg-white shadow block whitespace-nowrap"
-              >Simulateurs</a
-            >
-          </li>
-
-          <li>
-            <a
-              href="clients.html"
-              class="px-4 py-2 rounded-full bg-glassDark text-white block whitespace-nowrap"
-              >Espace client</a
-            >
-          </li>
-
-          <li>
-            <a
-              href="projects.html"
-              class="px-4 py-2 rounded-full bg-glassDark text-white block whitespace-nowrap"
-              >Projets & Réalisations</a
-            >
-          </li>
-
-          <li>
-            <a
-              href="faq.html"
-              class="px-4 py-2 rounded-full bg-glassDark text-white block whitespace-nowrap"
-              >FAQ</a
-            >
-          </li>
-        </ul>
-
-        <div class="flex items-center gap-2">
-          <button
-            class="w-11 h-11 rounded-full bg-glassDark flex items-center justify-center"
-          >
-            <img src="Images/Contact blanc.svg" alt="" height="25" width="25" />
-          </button>
-          <button
-            class="hidden sm:block px-5 py-2 rounded-full bg-white text-black"
-          >
-            Contact
-          </button>
-          <button
-            id="burger"
-            class="lg:hidden text-2xl rounded-full bg-glassDark p-2"
-          >
-            <svg
-              class="w-6 h-6 text-white dark:text-white"
-              aria-hidden="true"
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              fill="none"
-              viewBox="0 0 24 24"
-            >
-              <path
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-width="2"
-                d="M5 7h14M5 12h14M5 17h10"
-              />
-            </svg>
-          </button>
-        </div>
-      </nav>
-
-      <!-- Menu mobile -->
-      <div
-        id="mobileMenu"
-        class="hidden lg:hidden mt-3 bg-glass backdrop-blur-xl rounded-2xl p-4 space-y-2 shadow-xl"
-      >
-        <button
-          id="closeMobile"
-          class="w-full text-right text-lg font-bold px-2 mb-2"
-        >
-          <svg
-            class="w-6 h-6 text-gray-800 dark:text-white"
-            aria-hidden="true"
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            fill="none"
-            viewBox="0 0 24 24"
-          >
-            <path
-              stroke="currentColor"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M6 18 17.94 6M18 18 6.06 6"
-            />
+      <div class="flex items-center gap-2">
+        <button class="w-11 h-11 rounded-full bg-glassDark flex items-center justify-center">
+          <img src="Images/Contact blanc.svg" alt="" height="25" width="25" />
+        </button>
+        <button class="hidden sm:block px-5 py-2 rounded-full bg-white text-black">
+          Contact
+        </button>
+        <button id="burger" class="lg:hidden text-2xl rounded-full bg-glassDark p-2">
+          <svg class="w-6 h-6 text-white dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+            width="24" height="24" fill="none" viewBox="0 0 24 24">
+            <path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="M5 7h14M5 12h14M5 17h10" />
           </svg>
         </button>
-
-        <a href="index.html" class="block px-4 py-2 rounded-lg bg-white"
-          >Accueil</a
-        >
-        <a href="about.html" class="block px-4 py-2 rounded-lg bg-glassDark"
-          >À propos</a
-        >
-        <a href="division.html" class="block px-4 py-2 rounded-lg bg-glassDark"
-          >Nos divisions</a
-        >
-        <a href="simulator.html" class="block px-4 py-2 rounded-lg bg-glassDark"
-          >Simulateurs</a
-        >
-        <a href="clients.html" class="block px-4 py-2 rounded-lg bg-glassDark"
-          >Espace client</a
-        >
-        <a href="projects.html" class="block px-4 py-2 rounded-lg bg-glassDark"
-          >Projets & Réalisations</a
-        >
-        <a href="faq.html" class="block px-4 py-2 rounded-lg bg-glassDark"
-          >FAQ</a
-        >
       </div>
-    </header>
+    </nav>
 
-<!-- ================= HERO SIMULATEUR ================= -->
-<section class="min-h-screen pt-24 pb-10 text-white relative overflow-hidden"
-style="background-image:url('Images/sim1.png'); background-size:cover; background-position:center;">
+    <!-- Menu mobile -->
+    <div id="mobileMenu" class="hidden lg:hidden mt-3 bg-glass backdrop-blur-xl rounded-2xl p-4 space-y-2 shadow-xl">
+      <button id="closeMobile" class="w-full text-right text-lg font-bold px-2 mb-2">
+        <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+          width="24" height="24" fill="none" viewBox="0 0 24 24">
+          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M6 18 17.94 6M18 18 6.06 6" />
+        </svg>
+      </button>
 
-<div class="max-w-6xl mx-auto px-6 text-center">
+      <a href="index.html" class="block px-4 py-2 rounded-lg bg-white">Accueil</a>
+      <a href="about.html" class="block px-4 py-2 rounded-lg bg-glassDark">À propos</a>
+      <a href="division.html" class="block px-4 py-2 rounded-lg bg-glassDark">Nos divisions</a>
+      <a href="simulator.html" class="block px-4 py-2 rounded-lg bg-glassDark">Simulateurs</a>
+      <a href="clients.html" class="block px-4 py-2 rounded-lg bg-glassDark">Espace client</a>
+      <a href="projects.html" class="block px-4 py-2 rounded-lg bg-glassDark">Projets & Réalisations</a>
+      <a href="faq.html" class="block px-4 py-2 rounded-lg bg-glassDark">FAQ</a>
+    </div>
+  </header>
 
-<h1 class="text-4xl md:text-5xl font-bold mb-3">
-Simulateur d'Estimation
-</h1>
+  <!-- ================= HERO SIMULATEUR ================= -->
+  <section class="min-h-screen pt-24 pb-10 text-white relative overflow-hidden"
+    style="background-image:url('Images/sim1.png'); background-size:cover; background-position:center;">
 
-<p class="text-base opacity-80 mb-10 tracking-wide">
-AFRIKA INFRASTRUCTURE AND EQUIPEMENTS
-</p>
+    <div class="max-w-6xl mx-auto px-6 text-center">
 
-<!-- CARD -->
-<div class="relative max-w-5xl mx-auto bg-[#8c93a9]/60 backdrop-blur-md rounded-[36px] p-6 md:p-8">
+      <h1 class="text-4xl md:text-5xl font-bold mb-3">
+        Simulateur d'Estimation
+      </h1>
 
-<div class="absolute -top-4 left-6 bg-white text-black px-5 py-1.5 rounded-full text-xs">
-Sélectionnez votre secteur
-</div>
+      <p class="text-base opacity-80 mb-10 tracking-wide">
+        AFRIKA INFRASTRUCTURE AND EQUIPEMENTS
+      </p>
 
-<div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+      <!-- CARD -->
+      <div class="relative max-w-5xl mx-auto bg-[#8c93a9]/60 backdrop-blur-md rounded-[36px] p-6 md:p-8">
 
-<!-- RESIDENTIEL -->
-<div class="bg-white text-black rounded-2xl p-6 text-center cursor-pointer hover:scale-105 transition">
+        <div class="absolute -top-4 left-6 bg-white text-black px-5 py-1.5 rounded-full text-xs">
+          Sélectionnez votre secteur
+        </div>
 
-<svg xmlns="http://www.w3.org/2000/svg" class="w-10 h-10 mx-auto mb-3 text-[#1a1f4d]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
-d="M3 10l9-7 9 7v10a2 2 0 01-2 2h-4a2 2 0 01-2-2V12H9v8a2 2 0 01-2 2H3z"/>
-</svg>
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
 
-<h3 class="text-lg font-semibold">Résidentiel</h3>
-<p class="text-xs text-gray-500">Villas, immeubles</p>
+          <!-- RESIDENTIEL -->
+          <a href="simulateur_aiae_v8_1_ultimate.html?secteur=residentiel"
+            class="bg-white text-black rounded-2xl p-6 text-center cursor-pointer hover:scale-105 transition block">
 
-</div>
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-10 h-10 mx-auto mb-3 text-[#1a1f4d]" fill="none"
+              viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                d="M3 10l9-7 9 7v10a2 2 0 01-2 2h-4a2 2 0 01-2-2V12H9v8a2 2 0 01-2 2H3z" />
+            </svg>
 
-<!-- TERTIAIRE -->
-<div class="bg-white text-black rounded-2xl p-6 text-center cursor-pointer hover:scale-105 transition">
+            <h3 class="text-lg font-semibold">Résidentiel</h3>
+            <p class="text-xs text-gray-500">Villas, immeubles</p>
 
-<svg xmlns="http://www.w3.org/2000/svg" class="w-10 h-10 mx-auto mb-3 text-[#1a1f4d]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
-d="M4 3h16v18H4zM9 21V9h6v12"/>
-</svg>
+          </a>
 
-<h3 class="text-lg font-semibold">Tertiaire</h3>
-<p class="text-xs text-gray-500">Bureaux, hôtels</p>
+          <!-- TERTIAIRE -->
+          <a href="simulateur_aiae_v8_1_ultimate.html?secteur=tertiaire"
+            class="bg-white text-black rounded-2xl p-6 text-center cursor-pointer hover:scale-105 transition block">
 
-</div>
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-10 h-10 mx-auto mb-3 text-[#1a1f4d]" fill="none"
+              viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 3h16v18H4zM9 21V9h6v12" />
+            </svg>
 
-<!-- INDUSTRIEL -->
-<div class="bg-white text-black rounded-2xl p-6 text-center cursor-pointer hover:scale-105 transition">
+            <h3 class="text-lg font-semibold">Tertiaire</h3>
+            <p class="text-xs text-gray-500">Bureaux, hôtels</p>
 
-<svg xmlns="http://www.w3.org/2000/svg" class="w-10 h-10 mx-auto mb-3 text-[#1a1f4d]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
-d="M3 21h18M5 21V8l7-4v17M19 21V10l-6-3"/>
-</svg>
+          </a>
 
-<h3 class="text-lg font-semibold">Industriel</h3>
-<p class="text-xs text-gray-500">Usines, entrepôts</p>
+          <!-- INDUSTRIEL -->
+          <a href="simulateur_aiae_v8_1_ultimate.html?secteur=industriel"
+            class="bg-white text-black rounded-2xl p-6 text-center cursor-pointer hover:scale-105 transition block">
 
-</div>
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-10 h-10 mx-auto mb-3 text-[#1a1f4d]" fill="none"
+              viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                d="M3 21h18M5 21V8l7-4v17M19 21V10l-6-3" />
+            </svg>
 
-<!-- AGRICOLE -->
-<div class="bg-white text-black rounded-2xl p-6 text-center cursor-pointer hover:scale-105 transition">
+            <h3 class="text-lg font-semibold">Industriel</h3>
+            <p class="text-xs text-gray-500">Usines, entrepôts</p>
 
-<svg xmlns="http://www.w3.org/2000/svg" class="w-10 h-10 mx-auto mb-3 text-[#1a1f4d]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
-d="M12 3v18M6 7c2 2 2 6 0 8M18 7c-2 2-2 6 0 8"/>
-</svg>
+          </a>
 
-<h3 class="text-lg font-semibold">Agricole</h3>
-<p class="text-xs text-gray-500">Élevage, stockage</p>
+          <!-- AGRICOLE -->
+          <a href="simulateur_aiae_v8_1_ultimate.html?secteur=agricole"
+            class="bg-white text-black rounded-2xl p-6 text-center cursor-pointer hover:scale-105 transition block">
 
-</div>
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-10 h-10 mx-auto mb-3 text-[#1a1f4d]" fill="none"
+              viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                d="M12 3v18M6 7c2 2 2 6 0 8M18 7c-2 2-2 6 0 8" />
+            </svg>
 
-</div>
-</div>
+            <h3 class="text-lg font-semibold">Agricole</h3>
+            <p class="text-xs text-gray-500">Élevage, stockage</p>
 
-<!-- BOUTON -->
-<div class="mt-10 flex justify-center">
+          </a>
 
-<a href="#"
-class="bg-[#f78b0c] hover:bg-orange-600 transition text-white text-lg font-semibold px-8 py-4 rounded-full flex items-center gap-3">
+        </div>
+      </div>
 
-Ouvrir Le Calculateur d’énergies Renouvelables
+      <!-- BOUTON -->
+      <div class="mt-10 flex justify-center">
 
-<span class="bg-white text-orange-500 rounded-full w-8 h-8 flex items-center justify-center text-sm">
-➤
-</span>
+        <a href="#"
+          class="bg-[#f78b0c] hover:bg-orange-600 transition text-white text-lg font-semibold px-8 py-4 rounded-full flex items-center gap-3">
 
-</a>
+          Ouvrir Le Calculateur d’énergies Renouvelables
 
-</div>
+          <span class="bg-white text-orange-500 rounded-full w-8 h-8 flex items-center justify-center text-sm">
+            ➤
+          </span>
 
-</div>
-</section>
+        </a>
 
-    <!-- ================= JS ================= -->
-    <script>
-      // Menu burger en mobile
-      const burger = document.getElementById("burger");
-      const mobileMenu = document.getElementById("mobileMenu");
-      burger.addEventListener("click", () => {
-        mobileMenu.classList.toggle("hidden");
-      });
-      const closeMobile = document.getElementById("closeMobile");
+      </div>
 
-      closeMobile.addEventListener("click", () => {
-        mobileMenu.classList.add("hidden");
-      });
+    </div>
+  </section>
 
-      // changement d'image dans le hero
-      const buttons = document.querySelectorAll(".tabBtn");
-      const hero = document.getElementById("heroImage");
+  <!-- ================= JS ================= -->
+  <script>
+    // Menu burger en mobile
+    const burger = document.getElementById("burger");
+    const mobileMenu = document.getElementById("mobileMenu");
+    burger.addEventListener("click", () => {
+      mobileMenu.classList.toggle("hidden");
+    });
+    const closeMobile = document.getElementById("closeMobile");
 
-      buttons.forEach((btn) => {
-        btn.addEventListener("click", () => {
-          hero.src = btn.dataset.img;
+    closeMobile.addEventListener("click", () => {
+      mobileMenu.classList.add("hidden");
+    });
 
-          buttons.forEach((b) => {
-            b.classList.remove("bg-white", "shadow");
-            b.classList.add("bg-glassDark");
-          });
-          btn.classList.remove("bg-glassDark");
-          btn.classList.add("bg-white", "shadow");
+    // changement d'image dans le hero
+    const buttons = document.querySelectorAll(".tabBtn");
+    const hero = document.getElementById("heroImage");
+
+    buttons.forEach((btn) => {
+      btn.addEventListener("click", () => {
+        hero.src = btn.dataset.img;
+
+        buttons.forEach((b) => {
+          b.classList.remove("bg-white", "shadow");
+          b.classList.add("bg-glassDark");
         });
+        btn.classList.remove("bg-glassDark");
+        btn.classList.add("bg-white", "shadow");
       });
-      // ---------------- CONFIG DROPDOWN ------------------
-      openConfig.onclick = () => configPanel.classList.toggle("hidden");
-      openStand.onclick = () => standPanel.classList.toggle("hidden");
-      openOptions.onclick = () => optionsPanel.classList.toggle("hidden");
+    });
+    // ---------------- CONFIG DROPDOWN ------------------
+    openConfig.onclick = () => configPanel.classList.toggle("hidden");
+    openStand.onclick = () => standPanel.classList.toggle("hidden");
+    openOptions.onclick = () => optionsPanel.classList.toggle("hidden");
 
-      // Salles de bain counter
-      document.querySelector(".plusBath").onclick = () => {
-        bathCount.textContent = Number(bathCount.textContent) + 1;
-      };
-      document.querySelector(".minusBath").onclick = () => {
-        if (Number(bathCount.textContent) > 0)
-          bathCount.textContent = Number(bathCount.textContent) - 1;
-      };
+    // Salles de bain counter
+    document.querySelector(".plusBath").onclick = () => {
+      bathCount.textContent = Number(bathCount.textContent) + 1;
+    };
+    document.querySelector(".minusBath").onclick = () => {
+      if (Number(bathCount.textContent) > 0)
+        bathCount.textContent = Number(bathCount.textContent) - 1;
+    };
 
-      // Chambres counter
-      document.querySelector(".plusBed").onclick = () => {
-        bedCount.textContent = Number(bedCount.textContent) + 1;
-      };
-      document.querySelector(".minusBed").onclick = () => {
-        if (Number(bedCount.textContent) > 0)
-          bedCount.textContent = Number(bedCount.textContent) - 1;
-      };
-      const navBar = document.getElementById("navBar");
+    // Chambres counter
+    document.querySelector(".plusBed").onclick = () => {
+      bedCount.textContent = Number(bedCount.textContent) + 1;
+    };
+    document.querySelector(".minusBed").onclick = () => {
+      if (Number(bedCount.textContent) > 0)
+        bedCount.textContent = Number(bedCount.textContent) - 1;
+    };
+    const navBar = document.getElementById("navBar");
 
-      window.addEventListener("scroll", () => {
-        if (window.scrollY > 30) {
-          navBar.classList.add("nav-scrolled");
-        } else {
-          navBar.classList.remove("nav-scrolled");
-        }
-      });
-      function togglePanel(button, panel) {
-        panel.classList.toggle("hidden");
-        const arrow = button.querySelector(".arrow");
-        arrow.classList.toggle("rotate-180");
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 30) {
+        navBar.classList.add("nav-scrolled");
+      } else {
+        navBar.classList.remove("nav-scrolled");
       }
+    });
+    function togglePanel(button, panel) {
+      panel.classList.toggle("hidden");
+      const arrow = button.querySelector(".arrow");
+      arrow.classList.toggle("rotate-180");
+    }
 
-      openConfig.onclick = () => togglePanel(openConfig, configPanel);
-      openStand.onclick = () => togglePanel(openStand, standPanel);
-      openOptions.onclick = () => togglePanel(openOptions, optionsPanel);
-    </script>
-  </body>
+    openConfig.onclick = () => togglePanel(openConfig, configPanel);
+    openStand.onclick = () => togglePanel(openStand, standPanel);
+    openOptions.onclick = () => togglePanel(openOptions, optionsPanel);
+  </script>
+</body>
+
 </html>
