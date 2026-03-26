@@ -1,0 +1,504 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>À propos - AIAE</title>
+  <link rel="icon" type="image/png" href="Images/logos/Symbole AIAE FINAL.png">
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Tailwind config -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            futura: ["Futura", "sans-serif"],
+            futuraCondensed: ["Futura Condensed", "sans-serif"],
+          },
+          colors: {
+            primary: "#0b5b3a",
+            secondary: "#d97706",
+            glass: "rgba(255,255,255,0.55)",
+            glassDark: "rgba(255,255,255,0.35)",
+          },
+        },
+      },
+    };
+  </script>
+
+  <!-- ================= FONTS ================= -->
+  <style>
+    @font-face {
+      font-family: "Futura";
+      src: url("/fonts/FuturaStdLight.otf");
+      font-weight: 300;
+    }
+
+    @font-face {
+      font-family: "Futura";
+      src: url("/fonts/FuturaStdMedium.otf");
+      font-weight: 500;
+    }
+
+    @font-face {
+      font-family: "Futura";
+      src: url("/fonts/FuturaStdBold.otf");
+      font-weight: 700;
+    }
+
+    @font-face {
+      font-family: "Futura";
+      src: url("/fonts/FuturaStdHeavy.otf");
+      font-weight: 900;
+    }
+
+    /* Condensed */
+    @font-face {
+      font-family: "Futura Condensed";
+      src: url("/fonts/FuturaStdCondensed.otf");
+      font-weight: 500;
+    }
+
+    @font-face {
+      font-family: "Futura Condensed";
+      src: url("/fonts/FuturaStdCondensedBold.otf");
+      font-weight: 700;
+    }
+
+    @media (max-width: 640px) {
+      body,
+      html {
+        overflow-x: hidden !important;
+      }
+      section,
+      div,
+      img {
+        max-width: 100% !important;
+      }
+    }
+
+    .nav-scrolled {
+      backdrop-filter: blur(18px);
+      background: rgba(22, 32, 100, 0.2);
+    }
+
+    /* Animations */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(40px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeInLeft {
+      from {
+        opacity: 0;
+        transform: translateX(-40px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    @keyframes fadeInRight {
+      from {
+        opacity: 0;
+        transform: translateX(40px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    @keyframes scaleIn {
+      from {
+        opacity: 0;
+        transform: scale(0.9);
+      }
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    @keyframes float {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-10px);
+      }
+    }
+
+    .animate-fade-up {
+      animation: fadeInUp 0.8s ease-out forwards;
+    }
+
+    .animate-fade-left {
+      animation: fadeInLeft 0.8s ease-out forwards;
+    }
+
+    .animate-fade-right {
+      animation: fadeInRight 0.8s ease-out forwards;
+    }
+
+    .animate-scale {
+      animation: scaleIn 0.6s ease-out forwards;
+    }
+
+    .animate-float {
+      animation: float 4s ease-in-out infinite;
+    }
+
+    .delay-100 { animation-delay: 0.1s; }
+    .delay-200 { animation-delay: 0.2s; }
+    .delay-300 { animation-delay: 0.3s; }
+    .delay-400 { animation-delay: 0.4s; }
+    .delay-500 { animation-delay: 0.5s; }
+    .delay-600 { animation-delay: 0.6s; }
+    .delay-700 { animation-delay: 0.7s; }
+    .delay-800 { animation-delay: 0.8s; }
+
+    .opacity-0-init {
+      opacity: 0;
+    }
+
+    /* Hover effects */
+    .hover-lift {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .hover-lift:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    }
+
+    .hover-scale {
+      transition: transform 0.3s ease;
+    }
+
+    .hover-scale:hover {
+      transform: scale(1.05);
+    }
+
+    /* Background pattern */
+    .pattern-bg {
+      background-image: radial-gradient(circle at 20% 80%, rgba(11, 91, 58, 0.05) 0%, transparent 50%),
+                        radial-gradient(circle at 80% 20%, rgba(26, 31, 77, 0.05) 0%, transparent 50%);
+    }
+
+    /* Divider */
+    .divider-green {
+      width: 80px;
+      height: 4px;
+      background: linear-gradient(90deg, #0b5b3a, #0a4f2c);
+    }
+
+    .divider-orange {
+      width: 80px;
+      height: 4px;
+      background: linear-gradient(90deg, #d97706, #f59e0b);
+    }
+  </style>
+</head>
+
+<body class="font-futura bg-gray-100 overflow-x-hidden">
+
+  <!-- ================= NAVBAR ================= -->
+ <header class="fixed top-0 left-0 w-full z-50 bg-[#1a1f4d]">
+  <nav class="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
+
+    <!-- LOGO -->
+    <img src="Images/logos/LOGO AIAE BLANC.png" class="h-10" />
+
+    <!-- MENU -->
+    <ul class="hidden lg:flex items-center gap-3 text-sm font-medium">
+
+      <li><a href="#" class="px-4 py-2 text-white/80">Accueil</a></li>
+
+      <li>
+        <a href="#"
+          class="px-5 py-2 rounded-full bg-white text-[#1a1f4d] font-semibold">
+          À propos
+        </a>
+      </li>
+
+      <li><a href="#" class="px-4 py-2 text-white/80">Nos Divisions</a></li>
+      <li><a href="#" class="px-4 py-2 text-white/80">Simulateurs</a></li>
+      <li><a href="#" class="px-4 py-2 text-white/80">Diaspora</a></li>
+      <li><a href="#" class="px-4 py-2 text-white/80">FAQ</a></li>
+
+    </ul>
+
+    <!-- CONTACT -->
+    <button class="px-5 py-2 rounded-full bg-white text-[#1a1f4d] font-semibold">
+      Contact
+    </button>
+
+  </nav>
+</header>
+
+<section class="pt-28 pb-20 bg-[#f3f3f3]">
+  <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-stretch">
+
+    <!-- TEXTE -->
+    <div class="flex flex-col justify-between h-full">
+
+      <div>
+        <!-- TITRE -->
+        <h1 class="text-xl md:text-5xl font-black text-black leading-tight tracking-tight">
+  UNE EXPERTISE NÉE D’UN CONSTAT
+</h1>
+
+        <!-- TEXTE -->
+        <p class="text-gray-700 text-lg leading-relaxed mb-6">
+          AIAE est née d’une observation simple : <strong>en Afrique de l’Ouest, le client qui souhaite construire doit coordonner lui-même une multitude d’intervenants</strong> architecte, bureau d’études, maçon, électricien, plombier <strong>sans garantie de cohérence ni de respect des engagements.</strong>
+        </p>
+
+        <p class="text-gray-700 text-lg leading-relaxed mb-6">
+          Fort de <strong>plus de 15 années d’expérience en génie civil,</strong> d’un parcours d’<strong>enseignant-chercheur</strong> et d’une solide <strong>formation en administration des entreprises, le fondateur d’AIAE a décidé de proposer</strong> un modèle différent : <strong>une entreprise qui maîtrise l’intégralité de la chaîne, de la conception à la réalisation.</strong>
+        </p>
+
+        <p class="text-gray-700 text-lg leading-relaxed">
+          <strong>Basée à Lomé,</strong> AIAE SARL porte une ambition claire : devenir la référence en Afrique de l’Ouest pour les </strong>solutions intégrées de construction, d’énergie, de sécurité et de préfabrication.</strong>
+        </p>
+      </div>
+
+    </div>
+
+    <!-- IMAGE -->
+    <div class="h-full">
+      <img src="Images/about.png"
+        class="w-full h-full object-cover rounded-2xl shadow-lg" />
+    </div>
+
+  </div>
+</section>
+  <!-- ================= SECTION CTA ================= -->
+  <section class="bg-[#f3f3f3] py-10">
+    <div class="max-w-[900px] mx-auto text-center px-6">
+      <h2 class="text-4xl font-bold mb-6">
+        Prêt À Concrétiser Votre Projet ?
+      </h2>
+      <p class="text-gray-600 leading-relaxed mb-10 text-[24px]">
+        Vous êtes un particulier souhaitant construire votre résidence ?
+        Une entreprise cherchant l'autonomie énergétique ?
+        Une institution nécessitant des infrastructures sécurisées ?
+        Nos équipes sont à votre écoute.
+      </p>
+      <div class="flex flex-col md:flex-row justify-center">
+        <a href="#" class="bg-[#1a1f4d] text-white px-10 py-5 text-center font-semibold">
+          DEMANDER UN DEVIS GRATUIT
+          <span class="block text-sm font-normal opacity-80">
+            Réponse sous 48h
+          </span>
+        </a>
+        <a href="#" class="bg-[#0a4f2c] text-white px-10 py-5 text-center font-semibold">
+          PRENDRE RENDEZ-VOUS
+          <span class="block text-sm font-normal opacity-80">
+            En personne ou en visio
+          </span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= RÉSEAUX SOCIAUX ================= -->
+  <section class="w-full">
+    <div class="bg-[#0b4a2b] text-white py-6">
+      <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-center gap-6">
+        <div class="flex items-center gap-6">
+          <a href="#" aria-label="TikTok">
+            <img src="Images/TiktokLogo.svg" alt="TikTok" class="h-16 w-16" />
+          </a>
+          <a href="#" aria-label="Instagram">
+            <img src="Images/InstagramLogo.svg" alt="Instagram" class="h-16 w-16" />
+          </a>
+          <a href="#" aria-label="Facebook">
+            <img src="Images/FacebookLogo.svg" alt="Facebook" class="h-16 w-16" />
+          </a>
+          <a href="#" aria-label="YouTube">
+            <img src="Images/YoutubeLogo.svg" alt="YouTube" class="h-16 w-16" />
+          </a>
+        </div>
+        <div class="flex flex-col items-start">
+          <p class="text-4xl font-bold">@Afrika_AIAE</p>
+          <p class="text-sm opacity-80">
+            Suivez nous, <span class="font-bold">Abonnez vous</span> &
+            <span class="font-bold">Likez nos post</span>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="bg-[#f4f5f7] py-6">
+      <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-center gap-4 text-[#0b4a2b]">
+        <img src="Images/WhatsappLogo.svg" alt="" class="h-12 w-12" />
+        <p class="text-3xl">
+          +228 <span class="font-bold">9X 8X 7X 6X</span>
+        </p>
+        <p class="text-sm">
+          <span class="font-extrabold">Écrivez nous</span> pour toutes<br />
+          <span class="font-extrabold">informations</span> supplémentaires
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="bg-[#f3f3f3] pt-20">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid grid-cols-1 md:grid-cols-[1.6fr_1fr_1fr_1fr] gap-16">
+        <div>
+          <img src="Images/logos/LOGO AIAE FINAL - Copie.png" class="w-64 pb-5" alt="AIAE Logo">
+          <p class="text-[#1a1f4d] text-[22px] leading-relaxed max-w-md">
+            <strong>AIAE : Afrika Infrastructures And Equipments.</strong>
+            De la conception à la réalisation.
+          </p>
+        </div>
+
+        <div>
+          <h3 class="text-[22px] font-semibold mb-6 text-[#1a1f4d]">
+            Nos divisions
+          </h3>
+          <ul class="space-y-2 text-gray-600 text-[16px]">
+            <li>Construction</li>
+            <li>Énergie</li>
+            <li>Sécurité</li>
+            <li>Préfabrication</li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="text-[22px] font-semibold mb-6 text-[#1a1f4d]">
+            Contact
+          </h3>
+          <ul class="space-y-2 text-gray-600 text-[16px]">
+            <li>Lomé, Togo</li>
+            <li>Interventions sur tout le territoire</li>
+            <li>+228 XX XX XX XX</li>
+            <li>contact@aiae.services</li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="text-[22px] font-semibold mb-6 text-[#1a1f4d]">
+            Accéder à
+          </h3>
+          <ul class="space-y-2 text-gray-600 text-[16px]">
+            <li>
+              <a href="#" class="hover:text-[#1a1f4d] transition">
+                Demander un devis
+              </a>
+            </li>
+            <li>
+              <a href="#" class="hover:text-[#1a1f4d] transition">
+                Prendre rendez-vous
+              </a>
+            </li>
+            <li>
+              <a href="#" class="hover:text-[#1a1f4d] transition">
+                FAQ
+              </a>
+            </li>
+            <li>
+              <a href="#" class="hover:text-[#1a1f4d] transition">
+                Mentions légales
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="bg-[#1a1f4d] text-white text-center mt-20 py-2 text-sm">
+      Copyright — © 2025-2026 AIAE SARL. Tous Droits Réservés.
+    </div>
+  </footer>
+
+  <!-- ================= JS ================= -->
+  <script>
+    // Menu burger en mobile
+    const burger = document.getElementById("burger");
+    const mobileMenu = document.getElementById("mobileMenu");
+    burger.addEventListener("click", () => {
+      mobileMenu.classList.toggle("hidden");
+    });
+    const closeMobile = document.getElementById("closeMobile");
+    closeMobile.addEventListener("click", () => {
+      mobileMenu.classList.add("hidden");
+    });
+
+    // Navbar scroll effect
+    const navBar = document.getElementById("navBar");
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 30) {
+        navBar.classList.add("nav-scrolled");
+      } else {
+        navBar.classList.remove("nav-scrolled");
+      }
+    });
+
+    // Intersection Observer for animations
+    const observerOptions = {
+      root: null,
+      rootMargin: '0px',
+      threshold: 0.1
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity = '1';
+          
+          // Counter animation
+          if (entry.target.querySelector('[data-count]')) {
+            const counter = entry.target.querySelector('[data-count]');
+            const target = parseInt(counter.dataset.count);
+            animateCounter(counter, target);
+          }
+        }
+      });
+    }, observerOptions);
+
+    document.querySelectorAll('[data-animate]').forEach(el => {
+      observer.observe(el);
+    });
+
+    // Counter animation function
+    function animateCounter(element, target) {
+      let current = 0;
+      const increment = target / 50;
+      const timer = setInterval(() => {
+        current += increment;
+        if (current >= target) {
+          element.textContent = target + '+';
+          clearInterval(timer);
+        } else {
+          element.textContent = Math.floor(current);
+        }
+      }, 30);
+    }
+
+    // Parallax effect for hero
+    window.addEventListener('scroll', () => {
+      const hero = document.querySelector('section:first-of-type');
+      if (hero) {
+        const scrolled = window.scrollY;
+        hero.style.backgroundPositionY = scrolled * 0.5 + 'px';
+      }
+    });
+  </script>
+</body>
+
+</html>
