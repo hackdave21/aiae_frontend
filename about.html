@@ -196,7 +196,10 @@
       background-image: radial-gradient(circle at 20% 80%, rgba(11, 91, 58, 0.05) 0%, transparent 50%),
                         radial-gradient(circle at 80% 20%, rgba(26, 31, 77, 0.05) 0%, transparent 50%);
     }
-
+strong {
+  font-weight: 600;
+  color: #1d1d1b;
+}
     /* Divider */
     .divider-green {
       width: 80px;
@@ -222,21 +225,21 @@
     <img src="Images/logos/LOGO AIAE BLANC.png" class="h-10" />
 
     <!-- MENU -->
-    <ul class="hidden lg:flex items-center gap-3 text-sm font-medium">
+    <ul class="hidden lg:flex items-center gap-2 text-sm font-medium font-FuturaStdLight">
 
-      <li><a href="#" class="px-4 py-2 text-white/80">Accueil</a></li>
+      <li><a href="index.html" class="px-4 py-2 rounded-full bg-glassDark text-white block whitespace-nowrap hover:bg-white hover:text-[#1a1f4d] transition-colors">Accueil</a></li>
 
       <li>
-        <a href="#"
-          class="px-5 py-2 rounded-full bg-white text-[#1a1f4d] font-semibold">
+        <a href="about.html"
+          class="px-4 py-2 rounded-full bg-white text-[#1a1f4d] block whitespace-nowrap shadow font-semibold">
           À propos
         </a>
       </li>
 
-      <li><a href="#" class="px-4 py-2 text-white/80">Nos Divisions</a></li>
-      <li><a href="#" class="px-4 py-2 text-white/80">Simulateurs</a></li>
-      <li><a href="#" class="px-4 py-2 text-white/80">Diaspora</a></li>
-      <li><a href="#" class="px-4 py-2 text-white/80">FAQ</a></li>
+      <li><a href="division.html" class="px-4 py-2 rounded-full bg-glassDark text-white block whitespace-nowrap hover:bg-white hover:text-[#1a1f4d] transition-colors">Nos Divisions</a></li>
+      <li><a href="simulator.html" class="px-4 py-2 rounded-full bg-glassDark text-white block whitespace-nowrap hover:bg-white hover:text-[#1a1f4d] transition-colors">Simulateurs</a></li>
+      <li><a href="diaspora.html" class="px-4 py-2 rounded-full bg-glassDark text-white block whitespace-nowrap hover:bg-white hover:text-[#1a1f4d] transition-colors">Diaspora</a></li>
+      <li><a href="faq.html" class="px-4 py-2 rounded-full bg-glassDark text-white block whitespace-nowrap hover:bg-white hover:text-[#1a1f4d] transition-colors">FAQ</a></li>
 
     </ul>
 
@@ -249,41 +252,52 @@
 </header>
 
 <section class="pt-28 pb-20 bg-[#f3f3f3]">
-  <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-stretch">
+  <div class="max-w-[1300px] mx-auto px-6 grid md:grid-cols-[1.1fr_0.9fr] gap-8 lg:gap-14 items-stretch">
 
     <!-- TEXTE -->
-    <div class="flex flex-col justify-between h-full">
+    <div class="flex flex-col justify-center  h-full">
 
-      <div>
+      <div class="mt-4">
         <!-- TITRE -->
-        <h1 class="text-xl md:text-5xl font-black text-black leading-tight tracking-tight">
+        <h1 class="text-[34px] md:text-[38px] font-extrabold text-[#1d1d1b] uppercase tracking-[1px] leading-[1.2] mb-5">
   UNE EXPERTISE NÉE D’UN CONSTAT
 </h1>
 
         <!-- TEXTE -->
-        <p class="text-gray-700 text-lg leading-relaxed mb-6">
-          AIAE est née d’une observation simple : <strong>en Afrique de l’Ouest, le client qui souhaite construire doit coordonner lui-même une multitude d’intervenants</strong> architecte, bureau d’études, maçon, électricien, plombier <strong>sans garantie de cohérence ni de respect des engagements.</strong>
+      <p class="text-[#555] text-[16px] leading-[1.6] mb-4">
+          AIAE est née d’une observation simple : <strong>en Afrique de l’Ouest, le client qui
+          souhaite construire doit coordonner lui-même une multitude d’intervenants</strong>
+          architecte, bureau d’études, maçon, électricien, plombier <strong>sans garantie de
+          cohérence ni de respect des engagements.</strong>
         </p>
 
-        <p class="text-gray-700 text-lg leading-relaxed mb-6">
-          Fort de <strong>plus de 15 années d’expérience en génie civil,</strong> d’un parcours d’<strong>enseignant-chercheur</strong> et d’une solide <strong>formation en administration des entreprises, le fondateur d’AIAE a décidé de proposer</strong> un modèle différent : <strong>une entreprise qui maîtrise l’intégralité de la chaîne, de la conception à la réalisation.</strong>
+      <p class="text-[#555] text-[16px] leading-[1.6] mb-4">
+          Fort de <strong>plus de 18 années d’expérience en génie civil</strong>, d’un parcours
+          d’<strong>enseignant-chercheur</strong> et d’une solide <strong>formation en administration des
+          entreprises, le fondateur d’AIAE a décidé de proposer</strong> un modèle différent :
+          <strong>une entreprise qui maîtrise l’intégralité de la chaîne, de la conception à la
+          réalisation.</strong>
         </p>
 
-        <p class="text-gray-700 text-lg leading-relaxed">
-          <strong>Basée à Lomé,</strong> AIAE SARL porte une ambition claire : devenir la référence en Afrique de l’Ouest pour les </strong>solutions intégrées de construction, d’énergie, de sécurité et de préfabrication.</strong>
+       <p class="text-[#555] text-[16px] leading-[1.6] mb-4">
+          <strong>Basée à Lomé</strong>, AIAE SARL porte une ambition claire : devenir la référence en
+          Afrique de l’Ouest pour les <strong>solutions intégrées de construction, d’énergie, de
+          sécurité et de préfabrication.</strong>
         </p>
       </div>
 
     </div>
 
     <!-- IMAGE -->
-    <div class="h-full">
-      <img src="Images/about.png"
-        class="w-full h-full object-cover rounded-2xl shadow-lg" />
-    </div>
+  <div class="w-full rounded-[18px] overflow-hidden ">
+    <img src="Images/about.png"
+      class="w-full h-auto object-cover" />
+  </div>
+
 
   </div>
 </section>
+
   <!-- ================= SECTION CTA ================= -->
   <section class="bg-[#f3f3f3] py-10">
     <div class="max-w-[900px] mx-auto text-center px-6">
