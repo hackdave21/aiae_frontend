@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>À propos - AIAE</title>
+  <title>Nos Disions - AIAE</title>
   <link rel="icon" type="image/png" href="Images/logos/Symbole AIAE FINAL.png">
 
   <!-- Tailwind CDN -->
@@ -253,10 +253,12 @@ strong {
 
   <!-- ================= NAVBAR ================= -->
  <header class="fixed top-0 left-0 w-full z-50 bg-[#1a1f4d]">
-  <nav class="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
+  <nav class="max-w-7xl mx-auto flex items-center justify-between px-6 py-auto">
 
     <!-- LOGO -->
-    <img src="Images/logos/LOGO AIAE BLANC.png" class="h-10" />
+    <a href="index.html">
+      <img src="Images/logos/LOGO AIAE BLANC.png" class="h-10 sm:h-20 w-auto" />
+    </a>
 
     <!-- MENU -->
     <ul class="hidden lg:flex items-center gap-2 text-sm font-medium font-FuturaStdLight">
@@ -277,9 +279,9 @@ strong {
     </ul>
 
     <!-- CONTACT -->
-    <button class="px-5 py-2 rounded-full bg-white text-[#1a1f4d] font-semibold">
+    <a href="contact.html" class="px-5 py-2 rounded-full bg-white text-[#1a1f4d] font-semibold">
       Contact
-    </button>
+    </a>
 
   </nav>
 </header>
