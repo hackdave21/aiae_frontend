@@ -212,6 +212,40 @@ strong {
       height: 4px;
       background: linear-gradient(90deg, #d97706, #f59e0b);
     }
+  /* Animation du panneau */
+  #details-panel {
+    animation: slideDown 0.4s ease-out;
+  }
+  
+  @keyframes slideDown {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Carte active */
+  .standing-card.active {
+    opacity: 1 !important;
+    transform: scale(1.02);
+    box-shadow: 0 10px 30px rgba(17, 29, 74, 0.2);
+  }
+
+  /* Rotation icône */
+  #details-icon.rotate {
+    transform: rotate(180deg);
+  }
+
+  /* Bouton actif */
+  .standing-btn.active {
+    background: #1a1f4d !important;
+    color: white !important;
+    border-color: #1a1f4d !important;
+  }
   </style>
 </head>
 
@@ -524,6 +558,137 @@ strong {
   </div>
 
 </section>
+
+<!-- ================= STANDINGS ================= -->
+<section class="bg-[#f3f3f3] py-12">
+  <div class="max-w-[1100px] mx-auto px-6">
+    
+    <div class="w-full max-w-5xl mx-auto flex rounded-xl overflow-hidden shadow-md">
+
+  <!-- Plus de détails -->
+  <button id="toggleDetails"
+    class="flex items-center gap-2 px-6 py-3 bg-orange-500 text-white font-semibold">
+    <img src="Images/plus.png" alt="">
+    Plus de détails
+  </button>
+
+  <!-- Tabs -->
+  <button class="flex-1 py-3 bg-[#0f1740] text-white font-semibold border-l border-white/20">
+    STANDARD
+  </button>
+  <button class="flex-1 py-3 bg-[#0f1740] text-white font-semibold border-l border-white/20">
+    CONFORT
+  </button>
+  <button class="flex-1 py-3 bg-[#0f1740] text-white font-semibold border-l border-white/20">
+    PREMIUM
+  </button>
+  <button class="flex-1 py-3 bg-[#0f1740] text-white font-semibold border-l border-white/20">
+    PRESTIGE
+  </button>
+
+</div>
+
+    <!-- PANNEAU DÉTAILS (caché par défaut) -->
+    <div id="details-panel" class="hidden mt-8">
+      
+      <!-- En-tête panneau -->
+      <div class="bg-[#111d4a] rounded-t-[20px] px-8 py-6">
+        <h3 class="text-white text-[28px] font-bold">Détail par standing</h3>
+      </div>
+
+      <!-- Contenu panneau -->
+      <div class="bg-[#111d4a] rounded-b-[20px] px-6 pb-8 pt-4">
+        
+        <!-- Grille des cartes -->
+        <div class="grid md:grid-cols-2 gap-6">
+          
+          <!-- CARTE STANDARD -->
+          <div id="card-standard" class="standing-card bg-white rounded-[12px] border-2 border-[#1a1f4d] p-6 opacity-50">
+            <h4 class="text-[#1a1f4d] text-[20px] font-bold mb-2">STANDARD</h4>
+            <p class="text-[#0b5b3a] text-[14px] font-semibold mb-4">Conception économique et fonctionnelle</p>
+            <ul class="text-gray-700 text-[14px] space-y-2">
+              <li><strong class="text-[#1a1f4d]">Matériaux :</strong> Toiture tuiles 15cm, briques standards</li>
+              <li><strong class="text-[#1a1f4d]">Menuiseries :</strong> Aluminium standard simple vitrage</li>
+              <li><strong class="text-[#1a1f4d]">Sols :</strong> Carrelage 40×40 cm</li>
+              <li><strong class="text-[#1a1f4d]">Sanitaires :</strong> Gamme économique</li>
+              <li><strong class="text-[#1a1f4d]">Électricité :</strong> Installation de base conforme</li>
+              <li><strong class="text-[#1a1f4d]">Cuisine :</strong> Meubles basiques fonctionnels</li>
+            </ul>
+          </div>
+
+          <!-- CARTE CONFORT -->
+          <div id="card-confort" class="standing-card bg-white rounded-[12px] border-2 border-[#1a1f4d] p-6 opacity-50">
+            <h4 class="text-[#1a1f4d] text-[20px] font-bold mb-2">CONFORT</h4>
+            <p class="text-[#d97706] text-[14px] font-semibold mb-4">Équilibre qualité-prix optimal</p>
+            <ul class="text-gray-700 text-[14px] space-y-2">
+              <li><strong class="text-[#1a1f4d]">Matériaux :</strong> Toiture tuiles 20cm, briques de qualité</li>
+              <li><strong class="text-[#1a1f4d]">Menuiseries :</strong> Aluminium laqué double vitrage</li>
+              <li><strong class="text-[#1a1f4d]">Sols :</strong> Carrelage 60×60 cm premium</li>
+              <li><strong class="text-[#1a1f4d]">Sanitaires :</strong> Gamme de qualité supérieure</li>
+              <li><strong class="text-[#1a1f4d]">Électricité :</strong> Installation intelligente optimisée</li>
+              <li><strong class="text-[#1a1f4d]">Cuisine :</strong> Équipée haut de gamme</li>
+            </ul>
+          </div>
+
+          <!-- CARTE PREMIUM -->
+          <div id="card-premium" class="standing-card bg-white rounded-[12px] border-2 border-[#1a1f4d] p-6 opacity-50">
+            <h4 class="text-[#1a1f4d] text-[20px] font-bold mb-2">PREMIUM</h4>
+            <p class="text-[#0b5b3a] text-[14px] font-semibold mb-4">Excellence et personnalisation</p>
+            <ul class="text-gray-700 text-[14px] space-y-2">
+              <li><strong class="text-[#1a1f4d]">Matériaux :</strong> Toiture premium, isolation supérieure</li>
+              <li><strong class="text-[#1a1f4d]">Menuiseries :</strong> Aluminium performant avec rupture thermique</li>
+              <li><strong class="text-[#1a1f4d]">Sols :</strong> Marbre ou granit au choix</li>
+              <li><strong class="text-[#1a1f4d]">Sanitaires :</strong> Gamme prestige design</li>
+              <li><strong class="text-[#1a1f4d]">Électricité :</strong> Domotique intégrée</li>
+              <li><strong class="text-[#1a1f4d]">Piscine :</strong> Option disponible</li>
+              <li><strong class="text-[#1a1f4d]">Cuisine :</strong> Sur mesure équipée</li>
+            </ul>
+          </div>
+
+          <!-- CARTE PRESTIGE -->
+          <div id="card-prestige" class="standing-card bg-white rounded-[12px] border-2 border-[#1a1f4d] p-6 opacity-50">
+            <h4 class="text-[#1a1f4d] text-[20px] font-bold mb-2">PRESTIGE</h4>
+            <p class="text-[#d97706] text-[14px] font-semibold mb-4">Luxe et exclusivité sans compromis</p>
+            <ul class="text-gray-700 text-[14px] space-y-2">
+              <li><strong class="text-[#1a1f4d]">Matériaux :</strong> Toiture haut de gamme, matériaux d'exception</li>
+              <li><strong class="text-[#1a1f4d]">Menuiseries :</strong> Sur mesure, bois exotique possible</li>
+              <li><strong class="text-[#1a1f4d]">Sols :</strong> Marbre importé, parquet noble</li>
+              <li><strong class="text-[#1a1f4d]">Sanitaires :</strong> Gamme luxe internationale</li>
+              <li><strong class="text-[#1a1f4d]">Électricité :</strong> Domotique complète connectée</li>
+              <li><strong class="text-[#1a1f4d]">Piscine :</strong> Incluse avec plage</li>
+              <li><strong class="text-[#1a1f4d]">Sécurité :</strong> Système avancé intégré</li>
+              <li><strong class="text-[#1a1f4d]">Cuisine :</strong> Équipement premium sur mesure</li>
+            </ul>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+
+    <!-- RÉSUMÉ MOBILE (visible par défaut sur mobile) -->
+    <div class="md:hidden mt-6 space-y-4">
+      <div class="bg-white rounded-[12px] border border-gray-200 p-5">
+        <h4 class="text-[#1a1f4d] text-[18px] font-bold">STANDARD</h4>
+        <p class="text-gray-600 text-[13px] mt-2">Conception économique et fonctionnelle pour les projets à budget maîtrisé.</p>
+      </div>
+      <div class="bg-white rounded-[12px] border border-gray-200 p-5">
+        <h4 class="text-[#1a1f4d] text-[18px] font-bold">CONFORT</h4>
+        <p class="text-gray-600 text-[13px] mt-2">Équilibre optimal entre qualité et prix pour un habitat agréable.</p>
+      </div>
+      <div class="bg-white rounded-[12px] border border-gray-200 p-5">
+        <h4 class="text-[#1a1f4d] text-[18px] font-bold">PREMIUM</h4>
+        <p class="text-gray-600 text-[13px] mt-2">Excellence et personnalisation pour des réalisations d'exception.</p>
+      </div>
+      <div class="bg-white rounded-[12px] border border-gray-200 p-5">
+        <h4 class="text-[#1a1f4d] text-[18px] font-bold">PRESTIGE</h4>
+        <p class="text-gray-600 text-[13px] mt-2">Luxe sans compromis pour des villas d'exception.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
   <!-- ================= SECTION CTA ================= -->
   <section class="bg-[#e5e5e5] py-10">
     <div class="max-w-[900px] mx-auto text-center px-6">
@@ -737,6 +902,19 @@ strong {
         hero.style.backgroundPositionY = scrolled * 0.5 + 'px';
       }
     });
+// plus de details 
+  const btn = document.getElementById("toggleDetails");
+  const section = document.getElementById("detailsSection");
+
+  btn.addEventListener("click", () => {
+    if (section.classList.contains("max-h-0")) {
+      section.classList.remove("max-h-0");
+      section.classList.add("max-h-[1000px]");
+    } else {
+      section.classList.add("max-h-0");
+      section.classList.remove("max-h-[1000px]");
+    }
+  });
   </script>
 </body>
 
