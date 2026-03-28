@@ -301,7 +301,7 @@ strong {
   </section>
 
   <!-- ================= SECTION FORMULAIRE ================= -->
-  <section class="bg-[#f4f5f7] py-16 w-full">
+  <section class="bg-[#f4f5f7] py-5 w-full">
     <div class="max-w-[750px] mx-auto px-6">
       <form class="space-y-6">
 
@@ -468,6 +468,84 @@ strong {
     </div>
   </section>
 
+
+  <!-- ================= SECTION COORDONNÉES ================= -->
+  <section class="bg-white py-20 w-full">
+    <div class="max-w-[1150px] mx-auto px-6 relative">
+      
+      <!-- Badge Titre -->
+      <div class="absolute -top-7 left-1/2 -translate-x-1/2 bg-[#f28c06] text-[#0b4a2b] px-12 py-2.5 rounded-2xl text-[28px] md:text-[32px] font-bold border-4 border-[#0b4a2b] shadow-lg z-10 text-center uppercase tracking-wide">
+        Nos Coordonnées
+      </div>
+
+      <!-- Encadré vert -->
+      <div class="bg-[#0e4e32] rounded-[24px] pt-16 pb-12 px-6 sm:px-16 text-white text-[18px] md:text-[22px] shadow-2xl relative">
+        
+        <!-- Ligne du haut : Siège/Email VS Tél/WhatsApp -->
+        <div class="grid md:grid-cols-2 gap-8 md:gap-4 mb-14 text-center md:text-left">
+          
+          <div class="flex flex-col gap-6 md:pl-10">
+            <div class="flex items-center justify-center md:justify-start gap-4">
+              <img src="Images/localisation.png" alt="Localisation" class="w-6 h-8 object-contain" />
+              <p><strong class="font-bold text-white">Siège social :</strong> Lomé, Togo</p>
+            </div>
+            <div class="flex items-center justify-center md:justify-start gap-4">
+              <img src="Images/mail.png" alt="Email" class="w-7 h-5 object-contain" />
+              <p><strong class="font-bold text-white">Email :</strong> contact@aiae.tg</p>
+            </div>
+          </div>
+
+          <div class="flex flex-col gap-6 md:pl-10">
+            <div class="flex items-center justify-center md:justify-start gap-4">
+              <img src="Images/telephone.png" alt="Téléphone" class="w-6 h-6 object-contain" />
+              <p><strong class="font-bold text-white">Téléphone :</strong> +228 XX XX XX XX</p>
+            </div>
+            <div class="flex items-center justify-center md:justify-start gap-4">
+              <img src="Images/Whatsapp.png" alt="WhatsApp" class="w-7 h-7 object-contain" />
+              <p><strong class="font-bold text-white">WhatsApp :</strong> +228 XX XX XX XX</p>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Ligne du bas : Horaires -->
+        <div class="text-center font-light leading-[1.8]">
+          <div class="flex items-center justify-center gap-4 mb-4">
+            <img src="Images/heure.png" alt="Horaires" class="w-7 h-7 object-contain" />
+            <h3 class="font-bold text-[24px] tracking-wide">Horaires :</h3>
+          </div>
+          
+          <p><strong class="font-bold tracking-wide text-white">Lundi à Vendredi :</strong> 8h00 — 18h00 (GMT+0)</p>
+          <p><strong class="font-bold tracking-wide text-white">Samedi :</strong> 8h00 — 13h00</p>
+          <p><strong class="font-bold tracking-wide text-white">Dimanche :</strong> Fermé (urgences par téléphone uniquement)</p>
+          <p><strong class="font-bold tracking-wide text-white">Diaspora :</strong> RDV en soirée et week-end sur demande (visioconférence)</p>
+        </div>
+
+      </div>
+      
+    </div>
+  </section>
+
+  <!-- ================= SECTION CARTE (GOOGLE MAPS) ================= -->
+  <section class="bg-white pb-24 w-full">
+    <div class="max-w-[1250px] mx-auto px-6">
+      <!-- Fond gris avec arrondi comme sur la maquette -->
+      <div class="w-full bg-[#f4f5f7] p-3 md:p-4 rounded-[28px]">
+        <div class="w-full h-[350px] md:h-[450px] rounded-2xl overflow-hidden">
+          <!-- TODO : Remplacer l'URL dans 'src' par votre lien d'intégration Google Maps ('Intégrer une carte' -> src="...") -->
+          <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15865.114755106674!2d1.218559092496791!3d6.136014230182603!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1023e1fc8cf441ef%3A0xe5a228c2c7f8a7!2zTG9tw6ksIFRvZ28!5e0!3m2!1sfr!2sfr!4v1700000000000!5m2!1sfr!2sfr" 
+            width="100%" 
+            height="100%" 
+            style="border:0;" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <!-- ================= RÉSEAUX SOCIAUX ================= -->
   <section class="w-full">
