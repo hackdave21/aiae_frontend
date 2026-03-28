@@ -568,7 +568,7 @@ strong {
   <!-- Plus de détails -->
   <button id="toggleDetails"
     class="flex items-center gap-2 px-6 py-3 bg-orange-500 text-white font-semibold">
-    <img src="Images/plus.png" alt="">
+    <img src="Images/plus.png" alt="" id="details-icon" class="transition-transform duration-300">
     Plus de détails
   </button>
 
@@ -603,62 +603,84 @@ strong {
         <div class="grid md:grid-cols-2 gap-6">
           
           <!-- CARTE STANDARD -->
-          <div id="card-standard" class="standing-card bg-white rounded-[12px] border-2 border-[#1a1f4d] p-6 opacity-50">
-            <h4 class="text-[#1a1f4d] text-[20px] font-bold mb-2">STANDARD</h4>
-            <p class="text-[#0b5b3a] text-[14px] font-semibold mb-4">Conception économique et fonctionnelle</p>
-            <ul class="text-gray-700 text-[14px] space-y-2">
-              <li><strong class="text-[#1a1f4d]">Matériaux :</strong> Toiture tuiles 15cm, briques standards</li>
-              <li><strong class="text-[#1a1f4d]">Menuiseries :</strong> Aluminium standard simple vitrage</li>
-              <li><strong class="text-[#1a1f4d]">Sols :</strong> Carrelage 40×40 cm</li>
-              <li><strong class="text-[#1a1f4d]">Sanitaires :</strong> Gamme économique</li>
-              <li><strong class="text-[#1a1f4d]">Électricité :</strong> Installation de base conforme</li>
-              <li><strong class="text-[#1a1f4d]">Cuisine :</strong> Meubles basiques fonctionnels</li>
-            </ul>
+          <div id="card-standard" class="standing-card bg-white rounded-[20px] overflow-hidden opacity-100 flex flex-col shadow-lg border border-gray-100">
+            <div class="bg-[#1a1f4d] px-6 py-5 text-white">
+              <h4 class="text-[24px] leading-snug"><span class="font-bold">STANDARD</span> : <span class="font-light">Conception<br>économique et fonctionnelle</span></h4>
+            </div>
+            <div class="p-6 text-gray-800 text-[14px] flex-1">
+              <p class="mb-5 leading-relaxed">
+                Le standing Standard offre un logement <strong>fonctionnel et durable à prix optimisé</strong>. Idéal pour un premier investissement immobilier ou un projet locatif.
+              </p>
+              <ul class="space-y-2 list-disc pl-5">
+                <li><strong>Matériaux</strong> : Parpaings 15 cm, dalles 16+4, enduit lissé, peinture économique</li>
+                <li><strong>Menuiseries</strong> : Aluminium anodisé standard, simple vitrage</li>
+                <li><strong>Sols</strong> : Carrelage 40x40 cm standard</li>
+                <li><strong>Sanitaires</strong> : Gamme économique, robinetterie chrome</li>
+                <li><strong>Électricité</strong> : Installation standard, tableau 1 rangée</li>
+                <li><strong>Cuisine</strong> : Plan de travail carrelé, meubles basiques</li>
+              </ul>
+            </div>
           </div>
 
           <!-- CARTE CONFORT -->
-          <div id="card-confort" class="standing-card bg-white rounded-[12px] border-2 border-[#1a1f4d] p-6 opacity-50">
-            <h4 class="text-[#1a1f4d] text-[20px] font-bold mb-2">CONFORT</h4>
-            <p class="text-[#d97706] text-[14px] font-semibold mb-4">Équilibre qualité-prix optimal</p>
-            <ul class="text-gray-700 text-[14px] space-y-2">
-              <li><strong class="text-[#1a1f4d]">Matériaux :</strong> Toiture tuiles 20cm, briques de qualité</li>
-              <li><strong class="text-[#1a1f4d]">Menuiseries :</strong> Aluminium laqué double vitrage</li>
-              <li><strong class="text-[#1a1f4d]">Sols :</strong> Carrelage 60×60 cm premium</li>
-              <li><strong class="text-[#1a1f4d]">Sanitaires :</strong> Gamme de qualité supérieure</li>
-              <li><strong class="text-[#1a1f4d]">Électricité :</strong> Installation intelligente optimisée</li>
-              <li><strong class="text-[#1a1f4d]">Cuisine :</strong> Équipée haut de gamme</li>
-            </ul>
+          <div id="card-confort" class="standing-card bg-white rounded-[20px] overflow-hidden opacity-100 flex flex-col shadow-lg border border-gray-100">
+            <div class="bg-[#1a1f4d] px-6 py-5 text-white">
+              <h4 class="text-[24px] leading-snug"><span class="font-bold">CONFORT</span> : <span class="font-light">Équilibre<br>qualité-prix optimal</span></h4>
+            </div>
+            <div class="p-6 text-gray-800 text-[14px] flex-1">
+              <p class="mb-5 leading-relaxed">
+                Le standing Confort constitue le <strong>meilleur rapport qualité-prix</strong>.<br>Finitions soignées, espaces généreux, équipements complets.
+              </p>
+              <ul class="space-y-2 list-disc pl-5">
+                <li><strong>Matériaux</strong> : Parpaings 20 cm, dalles 20+5, enduit gratté, peinture qualité</li>
+                <li><strong>Menuiseries</strong> : Aluminium laqué, double vitrage zones exposées</li>
+                <li><strong>Sols</strong> : Carrelage grès cérame 60x60</li>
+                <li><strong>Sanitaires</strong> : Gamme design, robinetterie qualité, eau chaude</li>
+                <li><strong>Électricité</strong> : Tableau 2 rangées, prises RJ45, pré-câblage domotique</li>
+                <li><strong>Cuisine</strong> : Plan granit/quartz, meubles MDF stratifié</li>
+              </ul>
+            </div>
           </div>
 
           <!-- CARTE PREMIUM -->
-          <div id="card-premium" class="standing-card bg-white rounded-[12px] border-2 border-[#1a1f4d] p-6 opacity-50">
-            <h4 class="text-[#1a1f4d] text-[20px] font-bold mb-2">PREMIUM</h4>
-            <p class="text-[#0b5b3a] text-[14px] font-semibold mb-4">Excellence et personnalisation</p>
-            <ul class="text-gray-700 text-[14px] space-y-2">
-              <li><strong class="text-[#1a1f4d]">Matériaux :</strong> Toiture premium, isolation supérieure</li>
-              <li><strong class="text-[#1a1f4d]">Menuiseries :</strong> Aluminium performant avec rupture thermique</li>
-              <li><strong class="text-[#1a1f4d]">Sols :</strong> Marbre ou granit au choix</li>
-              <li><strong class="text-[#1a1f4d]">Sanitaires :</strong> Gamme prestige design</li>
-              <li><strong class="text-[#1a1f4d]">Électricité :</strong> Domotique intégrée</li>
-              <li><strong class="text-[#1a1f4d]">Piscine :</strong> Option disponible</li>
-              <li><strong class="text-[#1a1f4d]">Cuisine :</strong> Sur mesure équipée</li>
-            </ul>
+          <div id="card-premium" class="standing-card bg-white rounded-[20px] overflow-hidden opacity-100 flex flex-col shadow-lg border border-gray-100">
+            <div class="bg-[#1a1f4d] px-6 py-5 text-white">
+              <h4 class="text-[24px] leading-snug"><span class="font-bold">PREMIUM</span> : <span class="font-light">Excellence et<br>personnalisation</span></h4>
+            </div>
+            <div class="p-6 text-gray-800 text-[14px] flex-1">
+              <p class="mb-5 leading-relaxed">
+                Le standing Premium offre des prestations <strong>haut de gamme avec personnalisation poussée</strong>. Piscine incluse, garage 2 véhicules, bureau et salle multimédia.
+              </p>
+              <ul class="space-y-2 list-disc pl-5">
+                <li><strong>Matériaux</strong> : Béton banché ou agglos 20 cm, isolation thermique, enduit décoratif</li>
+                <li><strong>Menuiseries</strong> : Aluminium à rupture thermique, double vitrage intégral</li>
+                <li><strong>Sols</strong> : Carrelage rectifié haut de gamme, parquet chambres</li>
+                <li><strong>Sanitaires</strong> : Baignoire + douche suite, double vasque, robinetterie design</li>
+                <li><strong>Électricité</strong> : Domotique partielle, éclairage architectural, parafoudre</li>
+                <li><strong>Piscine</strong> : 8x4 m minimum, local technique, pool house 20-25 m²</li>
+              </ul>
+            </div>
           </div>
 
           <!-- CARTE PRESTIGE -->
-          <div id="card-prestige" class="standing-card bg-white rounded-[12px] border-2 border-[#1a1f4d] p-6 opacity-50">
-            <h4 class="text-[#1a1f4d] text-[20px] font-bold mb-2">PRESTIGE</h4>
-            <p class="text-[#d97706] text-[14px] font-semibold mb-4">Luxe et exclusivité sans compromis</p>
-            <ul class="text-gray-700 text-[14px] space-y-2">
-              <li><strong class="text-[#1a1f4d]">Matériaux :</strong> Toiture haut de gamme, matériaux d'exception</li>
-              <li><strong class="text-[#1a1f4d]">Menuiseries :</strong> Sur mesure, bois exotique possible</li>
-              <li><strong class="text-[#1a1f4d]">Sols :</strong> Marbre importé, parquet noble</li>
-              <li><strong class="text-[#1a1f4d]">Sanitaires :</strong> Gamme luxe internationale</li>
-              <li><strong class="text-[#1a1f4d]">Électricité :</strong> Domotique complète connectée</li>
-              <li><strong class="text-[#1a1f4d]">Piscine :</strong> Incluse avec plage</li>
-              <li><strong class="text-[#1a1f4d]">Sécurité :</strong> Système avancé intégré</li>
-              <li><strong class="text-[#1a1f4d]">Cuisine :</strong> Équipement premium sur mesure</li>
-            </ul>
+          <div id="card-prestige" class="standing-card bg-white rounded-[20px] overflow-hidden opacity-100 flex flex-col shadow-lg border border-gray-100">
+            <div class="bg-[#1a1f4d] px-6 py-5 text-white">
+              <h4 class="text-[24px] leading-snug"><span class="font-bold">PRESTIGE</span> : <span class="font-light">Luxe et<br>exclusivité sans compromis</span></h4>
+            </div>
+            <div class="p-6 text-gray-800 text-[14px] flex-1">
+              <p class="mb-5 leading-relaxed">
+                Le standing Prestige représente l'<strong>excellence absolue</strong>. Villa d'architecte avec des matériaux d'exception, domotique complète et équipements de luxe.
+              </p>
+              <ul class="space-y-2 list-disc pl-5">
+                <li><strong>Matériaux</strong> : Béton architectonique, pierre naturelle, isolation haute performance</li>
+                <li><strong>Menuiseries</strong> : Sur mesure importées, triple vitrage, motorisées</li>
+                <li><strong>Sols</strong> : Marbre, travertin ou parquet massif importé</li>
+                <li><strong>Sanitaires</strong> : Marques designer, robinetterie prestige, spa privatif</li>
+                <li><strong>Électricité</strong> : Domotique complète (KNX/Loxone), groupe électrogène intégré</li>
+                <li><strong>Piscine</strong> : 12x5 m à débordement, chauffée, pool house bar</li>
+                <li><strong>Sécurité</strong> : Vidéosurveillance 16 caméras, alarme périmétrique, safe room optionnelle (Division Sécurité).</li>
+              </ul>
+            </div>
           </div>
 
         </div>
@@ -668,21 +690,21 @@ strong {
 
     <!-- RÉSUMÉ MOBILE (visible par défaut sur mobile) -->
     <div class="md:hidden mt-6 space-y-4">
-      <div class="bg-white rounded-[12px] border border-gray-200 p-5">
+      <div class="bg-white rounded-[12px] border border-gray-200 p-5 shadow-sm">
         <h4 class="text-[#1a1f4d] text-[18px] font-bold">STANDARD</h4>
-        <p class="text-gray-600 text-[13px] mt-2">Conception économique et fonctionnelle pour les projets à budget maîtrisé.</p>
+        <p class="text-gray-600 text-[13px] mt-2">Le standing Standard offre un logement fonctionnel et durable à prix optimisé.</p>
       </div>
-      <div class="bg-white rounded-[12px] border border-gray-200 p-5">
+      <div class="bg-white rounded-[12px] border border-gray-200 p-5 shadow-sm">
         <h4 class="text-[#1a1f4d] text-[18px] font-bold">CONFORT</h4>
-        <p class="text-gray-600 text-[13px] mt-2">Équilibre optimal entre qualité et prix pour un habitat agréable.</p>
+        <p class="text-gray-600 text-[13px] mt-2">Le standing Confort constitue le meilleur rapport qualité-prix. Finitions soignées et équipements complets.</p>
       </div>
-      <div class="bg-white rounded-[12px] border border-gray-200 p-5">
+      <div class="bg-white rounded-[12px] border border-gray-200 p-5 shadow-sm">
         <h4 class="text-[#1a1f4d] text-[18px] font-bold">PREMIUM</h4>
-        <p class="text-gray-600 text-[13px] mt-2">Excellence et personnalisation pour des réalisations d'exception.</p>
+        <p class="text-gray-600 text-[13px] mt-2">Le standing Premium offre des prestations haut de gamme avec personnalisation poussée.</p>
       </div>
-      <div class="bg-white rounded-[12px] border border-gray-200 p-5">
+      <div class="bg-white rounded-[12px] border border-gray-200 p-5 shadow-sm">
         <h4 class="text-[#1a1f4d] text-[18px] font-bold">PRESTIGE</h4>
-        <p class="text-gray-600 text-[13px] mt-2">Luxe sans compromis pour des villas d'exception.</p>
+        <p class="text-gray-600 text-[13px] mt-2">Le standing Prestige représente l'excellence absolue. Villa d'architecte avec des matériaux d'exception.</p>
       </div>
     </div>
 
@@ -835,23 +857,29 @@ strong {
     // Menu burger en mobile
     const burger = document.getElementById("burger");
     const mobileMenu = document.getElementById("mobileMenu");
-    burger.addEventListener("click", () => {
-      mobileMenu.classList.toggle("hidden");
-    });
+    if (burger && mobileMenu) {
+      burger.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+      });
+    }
     const closeMobile = document.getElementById("closeMobile");
-    closeMobile.addEventListener("click", () => {
-      mobileMenu.classList.add("hidden");
-    });
+    if (closeMobile && mobileMenu) {
+      closeMobile.addEventListener("click", () => {
+        mobileMenu.classList.add("hidden");
+      });
+    }
 
     // Navbar scroll effect
     const navBar = document.getElementById("navBar");
-    window.addEventListener("scroll", () => {
-      if (window.scrollY > 30) {
-        navBar.classList.add("nav-scrolled");
-      } else {
-        navBar.classList.remove("nav-scrolled");
-      }
-    });
+    if (navBar) {
+      window.addEventListener("scroll", () => {
+        if (window.scrollY > 30) {
+          navBar.classList.add("nav-scrolled");
+        } else {
+          navBar.classList.remove("nav-scrolled");
+        }
+      });
+    }
 
     // Intersection Observer for animations
     const observerOptions = {
@@ -904,17 +932,15 @@ strong {
     });
 // plus de details 
   const btn = document.getElementById("toggleDetails");
-  const section = document.getElementById("detailsSection");
+  const panel = document.getElementById("details-panel");
+  const icon = document.getElementById("details-icon");
 
-  btn.addEventListener("click", () => {
-    if (section.classList.contains("max-h-0")) {
-      section.classList.remove("max-h-0");
-      section.classList.add("max-h-[1000px]");
-    } else {
-      section.classList.add("max-h-0");
-      section.classList.remove("max-h-[1000px]");
-    }
-  });
+  if (btn && panel && icon) {
+    btn.addEventListener("click", () => {
+      panel.classList.toggle("hidden");
+      icon.classList.toggle("rotate");
+    });
+  }
   </script>
 </body>
 
