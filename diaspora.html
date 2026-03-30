@@ -1,0 +1,604 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Diaspora - AIAE</title>
+  <link rel="icon" type="image/png" href="Images/logos/Symbole AIAE FINAL.png">
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Tailwind config -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            futura: ["Futura", "sans-serif"],
+            futuraCondensed: ["Futura Condensed", "sans-serif"],
+          },
+          colors: {
+            primary: "#0b5b3a",
+            secondary: "#d97706",
+            glass: "rgba(255,255,255,0.55)",
+            glassDark: "rgba(255,255,255,0.35)",
+          },
+        },
+      },
+    };
+  </script>
+
+  <!-- ================= FONTS ================= -->
+  <style>
+    @font-face {
+      font-family: "Futura";
+      src: url("/fonts/FuturaStdLight.otf");
+      font-weight: 300;
+    }
+
+    @font-face {
+      font-family: "Futura";
+      src: url("/fonts/FuturaStdMedium.otf");
+      font-weight: 500;
+    }
+
+    @font-face {
+      font-family: "Futura";
+      src: url("/fonts/FuturaStdBold.otf");
+      font-weight: 700;
+    }
+
+    @font-face {
+      font-family: "Futura";
+      src: url("/fonts/FuturaStdHeavy.otf");
+      font-weight: 900;
+    }
+
+    /* Condensed */
+    @font-face {
+      font-family: "Futura Condensed";
+      src: url("/fonts/FuturaStdCondensed.otf");
+      font-weight: 500;
+    }
+
+    @font-face {
+      font-family: "Futura Condensed";
+      src: url("/fonts/FuturaStdCondensedBold.otf");
+      font-weight: 700;
+    }
+
+    @media (max-width: 640px) {
+      body,
+      html {
+        overflow-x: hidden !important;
+      }
+      section,
+      div,
+      img {
+        max-width: 100% !important;
+      }
+    }
+
+    .nav-scrolled {
+      backdrop-filter: blur(18px);
+      background: rgba(22, 32, 100, 0.2);
+    }
+
+    /* Animations */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(40px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeInLeft {
+      from {
+        opacity: 0;
+        transform: translateX(-40px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    @keyframes fadeInRight {
+      from {
+        opacity: 0;
+        transform: translateX(40px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    @keyframes scaleIn {
+      from {
+        opacity: 0;
+        transform: scale(0.9);
+      }
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    @keyframes float {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-10px);
+      }
+    }
+
+    .animate-fade-up {
+      animation: fadeInUp 0.8s ease-out forwards;
+    }
+
+    .animate-fade-left {
+      animation: fadeInLeft 0.8s ease-out forwards;
+    }
+
+    .animate-fade-right {
+      animation: fadeInRight 0.8s ease-out forwards;
+    }
+
+    .animate-scale {
+      animation: scaleIn 0.6s ease-out forwards;
+    }
+
+    .animate-float {
+      animation: float 4s ease-in-out infinite;
+    }
+
+    .delay-100 { animation-delay: 0.1s; }
+    .delay-200 { animation-delay: 0.2s; }
+    .delay-300 { animation-delay: 0.3s; }
+    .delay-400 { animation-delay: 0.4s; }
+    .delay-500 { animation-delay: 0.5s; }
+    .delay-600 { animation-delay: 0.6s; }
+    .delay-700 { animation-delay: 0.7s; }
+    .delay-800 { animation-delay: 0.8s; }
+
+    .opacity-0-init {
+      opacity: 0;
+    }
+
+    /* Hover effects */
+    .hover-lift {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .hover-lift:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    }
+
+    .hover-scale {
+      transition: transform 0.3s ease;
+    }
+
+    .hover-scale:hover {
+      transform: scale(1.05);
+    }
+
+    /* Background pattern */
+    .pattern-bg {
+      background-image: radial-gradient(circle at 20% 80%, rgba(11, 91, 58, 0.05) 0%, transparent 50%),
+                        radial-gradient(circle at 80% 20%, rgba(26, 31, 77, 0.05) 0%, transparent 50%);
+    }
+strong {
+  font-weight: 600;
+  color: #1d1d1b;
+}
+    /* Divider */
+    .divider-green {
+      width: 80px;
+      height: 4px;
+      background: linear-gradient(90deg, #0b5b3a, #0a4f2c);
+    }
+
+    .divider-orange {
+      width: 80px;
+      height: 4px;
+      background: linear-gradient(90deg, #d97706, #f59e0b);
+    }
+  /* Animation du panneau */
+  #details-panel {
+    animation: slideDown 0.4s ease-out;
+  }
+  
+  @keyframes slideDown {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Carte active */
+  .standing-card.active {
+    opacity: 1 !important;
+    transform: scale(1.02);
+    box-shadow: 0 10px 30px rgba(17, 29, 74, 0.2);
+  }
+
+  /* Rotation icône */
+  #details-icon.rotate {
+    transform: rotate(180deg);
+  }
+
+  /* Bouton actif */
+  .standing-btn.active {
+    background: #1a1f4d !important;
+    color: white !important;
+    border-color: #1a1f4d !important;
+  }
+  </style>
+</head>
+
+<body class="font-futura bg-gray-100 overflow-x-hidden">
+
+  <!-- ================= NAVBAR ================= -->
+ <header class="fixed top-0 left-0 w-full z-50 bg-[#05482c]">
+  <nav class="max-w-7xl mx-auto flex items-center justify-between px-6 py-auto">
+
+    <!-- LOGO -->
+    <a href="index.html">
+      <img src="Images/logos/LOGO AIAE BLANC.png" class="h-10 sm:h-20 w-auto" />
+    </a>
+
+    <!-- MENU -->
+    <ul class="hidden lg:flex items-center gap-2 text-sm font-medium font-FuturaStdLight">
+
+      <li><a href="index.html" class="px-4 py-2 rounded-full bg-glassDark text-white block whitespace-nowrap hover:bg-white hover:text-[#0b5b3a] transition-colors">Accueil</a></li>
+      <li><a href="about.html" class="px-4 py-2 rounded-full bg-glassDark text-white block whitespace-nowrap hover:bg-white hover:text-[#0b5b3a] transition-colors">À propos</a></li>
+      <li><a href="division.html" class="px-4 py-2 rounded-full bg-glassDark text-white block whitespace-nowrap hover:bg-white hover:text-[#0b5b3a] transition-colors">Nos Divisions</a></li>
+      <li><a href="simulator.html" class="px-4 py-2 rounded-full bg-glassDark text-white block whitespace-nowrap hover:bg-white hover:text-[#0b5b3a] transition-colors">Simulateurs</a></li>
+      <li><a href="diaspora.html" class="px-4 py-2 rounded-full bg-white text-[#05482c] block whitespace-nowrap shadow">Diaspora</a></li>
+      <li><a href="faq.html" class="px-4 py-2 rounded-full bg-glassDark text-white block whitespace-nowrap hover:bg-white hover:text-[#0b5b3a] transition-colors">FAQ</a></li>
+
+    </ul>
+
+    <!-- CONTACT -->
+    <div class="flex items-center gap-3">
+      <button class="w-10 h-10 rounded-full bg-glassDark flex items-center justify-center">
+         <img src="Images/Contact blanc.svg" alt="" class="h-5 w-5" />
+      </button>
+      <a href="contact.html" class="px-5 py-2 rounded-full bg-white text-[#05482c] shadow">
+        Contact
+      </a>
+    </div>
+
+  </nav>
+</header>
+
+<!-- ================= HERO DIASPORA ================= -->
+<section class="pt-24 pb-5 bg-[#e6e6e6]">
+
+  <div class="max-w-[99%] mx-auto px-2">
+
+    <div class="relative rounded-[25px] overflow-hidden ">
+
+      <!-- IMAGE -->
+      <img src="Images/home.png"
+        class="w-full h-[420px] md:h-[520px] object-cover">
+
+      <!-- OVERLAY -->
+      <div class="absolute inset-0 bg-black/70"></div>
+
+      <!-- CONTENU WRAPPER -->
+      <div class="absolute inset-0 z-10 flex flex-col md:flex-row items-center justify-between p-6 md:p-12 gap-8">
+
+        <!-- TEXTE (GAUCHE) -->
+        <div class="max-w-[850px] text-white self-center">
+          <h1 class="mb-4 uppercase text-[32px] md:text-[55px] leading-tight font-light">
+              CONSTRUIRE AU TOGO DEPUIS <br class="hidden md:block">
+              <span class="font-bold text-white">L'ÉTRANGER</span>, C’EST POSSIBLE.
+          </h1>
+
+          <p class="text-[18px] md:text-[25px] font-medium mb-6 opacity-95">
+            Et c’est serein avec AIAE.
+          </p>
+
+          <div class="text-[14px] md:text-[16px] leading-relaxed font-light max-w-2xl bg-black/30 p-4 rounded-2xl">
+            <p>
+              Vous vivez en France, au Canada, aux États-Unis, en Allemagne ou ailleurs ? <br class="hidden md:block">
+              Vous rêvez de <strong class="font-bold text-white">construire votre maison</strong>, votre <strong class="font-bold text-white">résidence secondaire</strong> ou un <br class="hidden md:block">
+              <strong class="font-bold text-white">investissement locatif au Togo</strong> ? AIAE a été conçue pour vous accompagner à <br class="hidden md:block">
+              chaque étape, <strong class="font-bold text-white">de la première visioconférence à la remise de vos clés.</strong>
+            </p>
+          </div>
+        </div>
+
+        <!-- BOUTONS (DROITE) -->
+        <div class="flex flex-col gap-7 w-full md:w-auto self-end md:self-center">
+          
+          <a href="contact.html" class="bg-[#05482c] hover:bg-[#043b24] text-white px-10 py-2 rounded-full flex flex-col items-center text-center transition-all hover:scale-105 shadow-xl">
+            <span class="text-[15px] md:text-[19px]">Prendre rdv en visio <span class="text-[13px]">(fuseau adapté)</span></span>
+          </a>
+
+          <a href="contact.html" class="bg-[#05482c] hover:bg-[#043b24] text-white px-10 py-2 rounded-full flex items-center justify-between gap-4 transition-all hover:scale-105 shadow-xl min-w-[300px]">
+            <span class="text-[15px] md:text-[19px] text-left leading-tight">Prendre rendez-vous maintenant</span>
+            <img src="Images/envoiblanc.png" alt="icon" class="w-7 h-7 object-contain" />
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+  <!-- ================= SECTION CTA (Prenez Rendez-Vous) ================= -->
+  <section class="bg-[#f2f3f5] py-10 w-full">
+    <div class="max-w-[1000px] mx-auto text-center px-6">
+      
+      <h2 class="text-[40px] md:text-[55px] font-bold text-[#1a1f4d] mb-4 leading-tight">
+        Prenez Rendez-Vous
+      </h2>
+      <p class="text-[20px] md:text-[24px] text-[#4a4a4a] font-light mb-12">
+        Deux modalités proposées au visiteur
+      </p>
+
+      <div class="flex flex-col md:flex-row justify-center w-full max-w-[950px] mx-auto shadow-lg">
+        
+        <!-- Bloc Gauche (Orange) -->
+        <a href="#" class="flex-1 bg-[#d97706] text-white px-6 md:px-8 py-4 md:py-5 text-center transition-colors duration-300 hover:bg-[#c96c05]">
+          <span class="block text-[20px] md:text-[22px] font-bold tracking-wide mb-1 uppercase">
+            Rendez-vous sur place
+          </span>
+          <span class="block text-[14px] md:text-[15px] font-light text-white/95 leading-relaxed">
+            Visitez notre siège à Lomé pour discuter de votre projet.
+          </span>
+        </a>
+
+        <!-- Bloc Droit (Vert) -->
+        <a href="#" class="flex-1 bg-[#0b4a2b] text-white px-6 md:px-8 py-4 md:py-5 text-center transition-colors duration-300 hover:bg-[#093c23]">
+          <span class="block text-[20px] md:text-[22px] font-bold tracking-wide mb-1 uppercase">
+            Rendez-vous en ligne
+          </span>
+          <span class="block text-[14px] md:text-[15px] font-light text-white/95 leading-relaxed">
+            Pour la diaspora ou contraintes de temps, nous<br class="hidden md:block">
+            proposons des visioconférences.
+          </span>
+        </a>
+
+      </div>
+      
+    </div>
+  </section>
+
+  <!-- ================= RÉSEAUX SOCIAUX ================= -->
+  <section class="w-full">
+    <div class="bg-[#0b4a2b] text-white py-6">
+      <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-center gap-6">
+        <div class="flex items-center gap-6">
+          <a href="#" aria-label="TikTok">
+            <img src="Images/TiktokLogo.svg" alt="TikTok" class="h-16 w-16" />
+          </a>
+          <a href="#" aria-label="Instagram">
+            <img src="Images/InstagramLogo.svg" alt="Instagram" class="h-16 w-16" />
+          </a>
+          <a href="#" aria-label="Facebook">
+            <img src="Images/FacebookLogo.svg" alt="Facebook" class="h-16 w-16" />
+          </a>
+          <a href="#" aria-label="YouTube">
+            <img src="Images/YoutubeLogo.svg" alt="YouTube" class="h-16 w-16" />
+          </a>
+        </div>
+        <div class="flex flex-col items-start">
+          <p class="text-4xl font-bold">@Afrika_AIAE</p>
+          <p class="text-sm opacity-80">
+            Suivez nous, <span class="font-bold">Abonnez vous</span> &
+            <span class="font-bold">Likez nos post</span>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="bg-[#f4f5f7] py-6">
+      <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-center gap-4 text-[#0b4a2b]">
+        <img src="Images/WhatsappLogo.svg" alt="" class="h-12 w-12" />
+        <p class="text-3xl">
+          +228 <span class="font-bold">9X 8X 7X 6X</span>
+        </p>
+        <p class="text-sm">
+          <span class="font-extrabold">Écrivez nous</span> pour toutes<br />
+          <span class="font-extrabold">informations</span> supplémentaires
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="bg-[#e6e6e6] pt-20">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid grid-cols-1 md:grid-cols-[1.6fr_1fr_1fr_1fr] gap-16">
+        <div>
+          <img src="Images/logos/LOGO AIAE FINAL - Copie.png" class="w-64 pb-5" alt="AIAE Logo">
+          <p class="text-[#1a1f4d] text-[22px] leading-relaxed max-w-md">
+            <strong>AIAE : Afrika Infrastructures And Equipments.</strong>
+            De la conception à la réalisation.
+          </p>
+        </div>
+
+        <div>
+          <h3 class="text-[22px] font-semibold mb-6 text-[#1a1f4d]">
+            Nos divisions
+          </h3>
+          <ul class="space-y-2 text-gray-600 text-[24px]">
+            <li>Construction</li>
+            <li>Énergie</li>
+            <li>Sécurité</li>
+            <li>Préfabrication</li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="text-[22px] font-semibold mb-6 text-[#1a1f4d]">
+            Contact
+          </h3>
+          <ul class="space-y-2 text-gray-600 text-[24px]">
+            <li>Lomé, Togo</li>
+            <li>Interventions sur tout le territoire</li>
+            <li>+228 XX XX XX XX</li>
+            <li>contact@aiae.services</li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="text-[22px] font-semibold mb-6 text-[#1a1f4d]">
+            Accéder à
+          </h3>
+          <ul class="space-y-2 text-gray-600 text-[24px]">
+            <li>
+              <a href="#" class="hover:text-[#1a1f4d] transition">
+                Demander un devis
+              </a>
+            </li>
+            <li>
+              <a href="#" class="hover:text-[#1a1f4d] transition">
+                Prendre rendez-vous
+              </a>
+            </li>
+            <li>
+              <a href="#" class="hover:text-[#1a1f4d] transition">
+                FAQ
+              </a>
+            </li>
+            <li>
+              <a href="#" class="hover:text-[#1a1f4d] transition">
+                Mentions légales
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="bg-[#1a1f4d] text-white text-center mt-20 py-2 text-sm">
+      Copyright — © 2025-2026 AIAE SARL. Tous Droits Réservés.
+    </div>
+  </footer>
+
+  <!-- ================= JS ================= -->
+  <script>
+    // Menu burger en mobile
+    const burger = document.getElementById("burger");
+    const mobileMenu = document.getElementById("mobileMenu");
+    if (burger && mobileMenu) {
+      burger.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+      });
+    }
+    const closeMobile = document.getElementById("closeMobile");
+    if (closeMobile && mobileMenu) {
+      closeMobile.addEventListener("click", () => {
+        mobileMenu.classList.add("hidden");
+      });
+    }
+
+    // Navbar scroll effect
+    const navBar = document.getElementById("navBar");
+    if (navBar) {
+      window.addEventListener("scroll", () => {
+        if (window.scrollY > 30) {
+          navBar.classList.add("nav-scrolled");
+        } else {
+          navBar.classList.remove("nav-scrolled");
+        }
+      });
+    }
+
+    // Intersection Observer for animations
+    const observerOptions = {
+      root: null,
+      rootMargin: '0px',
+      threshold: 0.1
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity = '1';
+          
+          // Counter animation
+          if (entry.target.querySelector('[data-count]')) {
+            const counter = entry.target.querySelector('[data-count]');
+            const target = parseInt(counter.dataset.count);
+            animateCounter(counter, target);
+          }
+        }
+      });
+    }, observerOptions);
+
+    document.querySelectorAll('[data-animate]').forEach(el => {
+      observer.observe(el);
+    });
+
+    // Counter animation function
+    function animateCounter(element, target) {
+      let current = 0;
+      const increment = target / 50;
+      const timer = setInterval(() => {
+        current += increment;
+        if (current >= target) {
+          element.textContent = target + '+';
+          clearInterval(timer);
+        } else {
+          element.textContent = Math.floor(current);
+        }
+      }, 30);
+    }
+
+    // Parallax effect for hero
+    window.addEventListener('scroll', () => {
+      const hero = document.querySelector('section:first-of-type');
+      if (hero) {
+        const scrolled = window.scrollY;
+        hero.style.backgroundPositionY = scrolled * 0.5 + 'px';
+      }
+    });
+// plus de details 
+  const btn = document.getElementById("toggleDetails");
+  const panel = document.getElementById("details-panel");
+  const icon = document.getElementById("details-icon");
+
+  if (btn && panel && icon) {
+    btn.addEventListener("click", () => {
+      panel.classList.toggle("hidden");
+      icon.classList.toggle("rotate");
+    });
+  }
+
+  // plus de details pour les étapes
+  const btnSteps = document.getElementById("toggleStepsDetails");
+  const panelSteps = document.getElementById("steps-panel");
+  const iconSteps = document.getElementById("steps-icon");
+
+  if (btnSteps && panelSteps && iconSteps) {
+    btnSteps.addEventListener("click", () => {
+      panelSteps.classList.toggle("hidden");
+      iconSteps.classList.toggle("rotate-180");
+    });
+  }
+  </script>
+</body>
+
+</html>
