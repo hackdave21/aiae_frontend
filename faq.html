@@ -1,0 +1,1304 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Foire Aux Questions - AIAE</title>
+  <link rel="icon" type="image/png" href="Images/logos/Symbole AIAE FINAL.png">
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Tailwind config -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            futura: ["Futura", "sans-serif"],
+            futuraCondensed: ["Futura Condensed", "sans-serif"],
+          },
+          colors: {
+            primary: "#0b5b3a",
+            secondary: "#d97706",
+            glass: "rgba(255,255,255,0.55)",
+            glassDark: "rgba(255,255,255,0.35)",
+          },
+        },
+      },
+    };
+  </script>
+
+  <!-- ================= FONTS ================= -->
+  <style>
+    @font-face {
+      font-family: "Futura";
+      src: url("/fonts/FuturaStdLight.otf");
+      font-weight: 300;
+    }
+
+    @font-face {
+      font-family: "Futura";
+      src: url("/fonts/FuturaStdMedium.otf");
+      font-weight: 500;
+    }
+
+    @font-face {
+      font-family: "Futura";
+      src: url("/fonts/FuturaStdBold.otf");
+      font-weight: 700;
+    }
+
+    @font-face {
+      font-family: "Futura";
+      src: url("/fonts/FuturaStdHeavy.otf");
+      font-weight: 900;
+    }
+
+    /* Condensed */
+    @font-face {
+      font-family: "Futura Condensed";
+      src: url("/fonts/FuturaStdCondensed.otf");
+      font-weight: 500;
+    }
+
+    @font-face {
+      font-family: "Futura Condensed";
+      src: url("/fonts/FuturaStdCondensedBold.otf");
+      font-weight: 700;
+    }
+
+    @media (max-width: 640px) {
+      body,
+      html {
+        overflow-x: hidden !important;
+      }
+      section,
+      div,
+      img {
+        max-width: 100% !important;
+      }
+    }
+
+    .nav-scrolled {
+      backdrop-filter: blur(18px);
+      background: rgba(22, 32, 100, 0.2);
+    }
+
+    /* Animations */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(40px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeInLeft {
+      from {
+        opacity: 0;
+        transform: translateX(-40px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    @keyframes fadeInRight {
+      from {
+        opacity: 0;
+        transform: translateX(40px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    @keyframes scaleIn {
+      from {
+        opacity: 0;
+        transform: scale(0.9);
+      }
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    @keyframes float {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-10px);
+      }
+    }
+
+    .animate-fade-up {
+      animation: fadeInUp 0.8s ease-out forwards;
+    }
+
+    .animate-fade-left {
+      animation: fadeInLeft 0.8s ease-out forwards;
+    }
+
+    .animate-fade-right {
+      animation: fadeInRight 0.8s ease-out forwards;
+    }
+
+    .animate-scale {
+      animation: scaleIn 0.6s ease-out forwards;
+    }
+
+    .animate-float {
+      animation: float 4s ease-in-out infinite;
+    }
+
+    .delay-100 { animation-delay: 0.1s; }
+    .delay-200 { animation-delay: 0.2s; }
+    .delay-300 { animation-delay: 0.3s; }
+    .delay-400 { animation-delay: 0.4s; }
+    .delay-500 { animation-delay: 0.5s; }
+    .delay-600 { animation-delay: 0.6s; }
+    .delay-700 { animation-delay: 0.7s; }
+    .delay-800 { animation-delay: 0.8s; }
+
+    .opacity-0-init {
+      opacity: 0;
+    }
+
+    /* Hover effects */
+    .hover-lift {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .hover-lift:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    }
+
+    .hover-scale {
+      transition: transform 0.3s ease;
+    }
+
+    .hover-scale:hover {
+      transform: scale(1.05);
+    }
+
+    /* Background pattern */
+    .pattern-bg {
+      background-image: radial-gradient(circle at 20% 80%, rgba(11, 91, 58, 0.05) 0%, transparent 50%),
+                        radial-gradient(circle at 80% 20%, rgba(26, 31, 77, 0.05) 0%, transparent 50%);
+    }
+strong {
+  font-weight: 600;
+  color: #1d1d1b;
+}
+    /* Divider */
+    .divider-green {
+      width: 80px;
+      height: 4px;
+      background: linear-gradient(90deg, #0b5b3a, #0a4f2c);
+    }
+
+    .divider-orange {
+      width: 80px;
+      height: 4px;
+      background: linear-gradient(90deg, #d97706, #f59e0b);
+    }
+  /* Animation du panneau */
+  #details-panel {
+    animation: slideDown 0.4s ease-out;
+  }
+  
+  @keyframes slideDown {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Carte active */
+  .standing-card.active {
+    opacity: 1 !important;
+    transform: scale(1.02);
+    box-shadow: 0 10px 30px rgba(17, 29, 74, 0.2);
+  }
+
+  /* Rotation icône */
+  #details-icon.rotate {
+    transform: rotate(180deg);
+  }
+
+  /* Bouton actif */
+  .standing-btn.active {
+    background: #1a1f4d !important;
+    color: white !important;
+    border-color: #1a1f4d !important;
+  }
+  </style>
+</head>
+
+<body class="font-futura bg-gray-100 overflow-x-hidden">
+
+  <!-- ================= NAVBAR ================= -->
+ <header class="fixed top-0 left-0 w-full z-50 bg-[#161c42] shadow-sm">
+  <nav class="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
+
+    <!-- LOGO -->
+    <a href="index.html">
+      <img src="Images/logos/LOGO AIAE BLANC.png" class="h-8 sm:h-12 w-auto" />
+    </a>
+
+    <!-- MENU -->
+    <ul class="hidden lg:flex items-center gap-2 text-[15px] font-medium font-futura">
+
+      <li><a href="index.html" class="px-5 py-2 rounded-full bg-white/20 text-white block whitespace-nowrap hover:bg-white hover:text-[#1a1f4d] transition-colors shadow-sm">Accueil</a></li>
+      <li><a href="about.html" class="px-5 py-2 rounded-full bg-white/20 text-white block whitespace-nowrap hover:bg-white hover:text-[#1a1f4d] transition-colors shadow-sm">À Propos</a></li>
+      <li><a href="division.html" class="px-5 py-2 rounded-full bg-white/20 text-white block whitespace-nowrap hover:bg-white hover:text-[#1a1f4d] transition-colors shadow-sm">Nos Divisions</a></li>
+      <li><a href="simulator.html" class="px-5 py-2 rounded-full bg-white/20 text-white block whitespace-nowrap hover:bg-white hover:text-[#1a1f4d] transition-colors shadow-sm">Simulateurs</a></li>
+      <li><a href="diaspora.html" class="px-5 py-2 rounded-full bg-white/20 text-white block whitespace-nowrap hover:bg-white hover:text-[#1a1f4d] transition-colors shadow-sm">Diaspora</a></li>
+      <li><a href="faq.html" class="px-5 py-2 rounded-full bg-white text-[#1a1f4d] font-bold block whitespace-nowrap shadow-md">FAQ</a></li>
+
+    </ul>
+
+    <!-- CONTACT -->
+    <div class="flex items-center gap-4">
+      <button class="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center hover:bg-white/30 transition-colors">
+         <img src="Images/Contact blanc.svg" alt="" class="h-5 w-5" />
+      </button>
+      <a href="contact.html" class="px-7 py-2.5 rounded-full bg-white text-[#1a1f4d] font-bold shadow-lg hover:bg-gray-100 transition-colors">
+        Contact
+      </a>
+    </div>
+
+  </nav>
+</header>
+
+ 
+  <!-- ================= SECTION TITRE HERO ================= -->
+  <section class="bg-[#161c42] pt-20 pb-5 w-full text-center">
+    <h1 class="text-white text-[45px] md:text-[65px] font-extrabold tracking-wide uppercase">
+      Construction & Prix
+    </h1>
+  </section>
+
+  <!-- ================= SECTION FAQ ACCORDIONS ================= -->
+  <section class="bg-[#f2f3f5] pt-20 pb-10 w-full">
+    <div class="max-w-[1100px] mx-auto px-6 space-y-4">
+      
+      <!-- QUESTION 01 -->
+      <details class="group bg-white border border-[#1a1f4d]/40 rounded-xl overflow-hidden shadow-sm" open>
+        <summary class="flex items-center justify-between p-5 md:p-6 cursor-pointer list-none !outline-none">
+          <div class="flex items-center gap-5">
+            <span class="bg-[#10143a] text-white w-[42px] h-[42px] flex items-center justify-center rounded-full text-[17px] font-bold shrink-0">
+              01
+            </span>
+            <p class="font-bold text-[#1a1f4d] text-[18px] md:text-[20px] select-none">
+              Combien coûte la construction d'une maison au Togo ?
+            </p>
+          </div>
+          <img src="Images/bfaq.png" alt="icon" class="w-7 h-7 transition-transform duration-300 group-open:rotate-180 shrink-0 ml-4" />
+        </summary>
+        <div class="mx-6 border-t border-[#1a1f4d]/20 transition-opacity duration-300"></div>
+        <div class="px-6 md:px-[86px] pb-8 pt-6 text-[#3a3939] text-[16px] leading-relaxed">
+           <p class="mb-6">Le coût dépend du standing choisi et de la surface. Nos fourchettes de prix de base au mètre carré sont :</p>
+           
+           <ul class="space-y-1 mb-6">
+             <li><strong class="font-bold text-[#1a1f4d]">Standard : </strong> 180 000 - 250 000 FCFA</li>
+             <li><strong class="font-bold text-[#1a1f4d]">Confort : </strong> 280 000 - 380 000 FCFA</li>
+             <li><strong class="font-bold text-[#1a1f4d]">Premium : </strong> 420 000 - 550 000 FCFA</li>
+             <li><strong class="font-bold text-[#1a1f4d]">Prestige : </strong> 600 000 - 900 000 FCFA</li>
+           </ul>
+           
+           <p class="text-[12px] italic text-gray-500 mb-6">
+             * Prix de base hors coefficients géographiques, géotechniques et hors frais d'études. L'estimation réelle de votre projet est obtenue via le simulateur en ligne ou par devis détaillé.
+           </p>
+
+           <p>
+             <strong class="font-bold text-[#1a1f4d]">Ces prix couvrent le bâtiment</strong> (gros œuvre + finitions). <strong class="font-bold text-[#1a1f4d]">Les équipements</strong> (solaire, forage, piscine, etc.) <strong class="font-bold text-[#1a1f4d]">sont chiffrés séparément</strong>. Utilisez notre simulateur en ligne pour une estimation personnalisée, ou demandez un devis gratuit.
+           </p>
+        </div>
+      </details>
+
+      <!-- QUESTION 02 -->
+      <details class="group bg-white border border-[#1a1f4d]/40 rounded-xl overflow-hidden shadow-sm">
+        <summary class="flex items-center justify-between p-5 md:p-6 cursor-pointer list-none !outline-none">
+          <div class="flex items-center gap-5">
+            <span class="bg-[#10143a] text-white w-[42px] h-[42px] flex items-center justify-center rounded-full text-[17px] font-bold shrink-0">
+              02
+            </span>
+            <p class="font-bold text-[#1a1f4d] text-[18px] md:text-[20px] select-none">
+              Quels sont les délais de construction ?
+            </p>
+          </div>
+          <img src="Images/bfaq.png" alt="icon" class="w-7 h-7 transition-transform duration-300 group-open:rotate-180 shrink-0 ml-4" />
+        </summary>
+        <div class="mx-6 border-t border-[#1a1f4d]/20 transition-opacity duration-300 hidden group-open:block"></div>
+        <div class="px-6 md:px-[86px] pb-8 pt-6 text-[#3a3939] text-[16px] leading-relaxed hidden group-open:block">
+           <p>Les délais varient en fonction de la taille et de la complexité du projet. En général, comptez entre 6 à 12 mois. Un échéancier précis vous sera fourni lors de l'étude de votre projet.</p>
+        </div>
+      </details>
+
+      <!-- QUESTION 03 -->
+      <details class="group bg-white border border-[#1a1f4d]/40 rounded-xl overflow-hidden shadow-sm">
+        <summary class="flex items-center justify-between p-5 md:p-6 cursor-pointer list-none !outline-none">
+          <div class="flex items-center gap-5">
+            <span class="bg-[#10143a] text-white w-[42px] h-[42px] flex items-center justify-center rounded-full text-[17px] font-bold shrink-0">
+              03
+            </span>
+            <p class="font-bold text-[#1a1f4d] text-[18px] md:text-[20px] select-none">
+              Intervenez-vous en dehors de Lomé ?
+            </p>
+          </div>
+          <img src="Images/bfaq.png" alt="icon" class="w-7 h-7 transition-transform duration-300 group-open:rotate-180 shrink-0 ml-4" />
+        </summary>
+        <div class="mx-6 border-t border-[#1a1f4d]/20 transition-opacity duration-300 hidden group-open:block"></div>
+        <div class="px-6 md:px-[86px] pb-8 pt-6 text-[#3a3939] text-[16px] leading-relaxed hidden group-open:block">
+           <p>Oui, nous intervenons sur tout le territoire togolais. Des frais de déplacement et de logistique peuvent s'appliquer selon la zone géographique.</p>
+        </div>
+      </details>
+
+      <!-- QUESTION 04 -->
+      <details class="group bg-white border border-[#1a1f4d]/40 rounded-xl overflow-hidden shadow-sm">
+        <summary class="flex items-center justify-between p-5 md:p-6 cursor-pointer list-none !outline-none">
+          <div class="flex items-center gap-5">
+            <span class="bg-[#10143a] text-white w-[42px] h-[42px] flex items-center justify-center rounded-full text-[17px] font-bold shrink-0">
+              04
+            </span>
+            <p class="font-bold text-[#1a1f4d] text-[18px] md:text-[20px] select-none">
+              Quelle est la différence entre les standings ?
+            </p>
+          </div>
+          <img src="Images/bfaq.png" alt="icon" class="w-7 h-7 transition-transform duration-300 group-open:rotate-180 shrink-0 ml-4" />
+        </summary>
+        <div class="mx-6 border-t border-[#1a1f4d]/20 transition-opacity duration-300 hidden group-open:block"></div>
+        <div class="px-6 md:px-[86px] pb-8 pt-6 text-[#3a3939] text-[16px] leading-relaxed hidden group-open:block">
+           <p>Oui. Le paiement se fait par étapes, au fur et à mesure de l'avancement des travaux. L'échéancier est défini ensemble avant le démarrage du chantier.</p>
+        </div>
+      </details>
+
+      <!-- QUESTION 05 -->
+      <details class="group bg-white border border-[#1a1f4d]/40 rounded-xl overflow-hidden shadow-sm">
+        <summary class="flex items-center justify-between p-5 md:p-6 cursor-pointer list-none !outline-none">
+          <div class="flex items-center gap-5">
+            <span class="bg-[#10143a] text-white w-[42px] h-[42px] flex items-center justify-center rounded-full text-[17px] font-bold shrink-0">
+              05
+            </span>
+            <p class="font-bold text-[#1a1f4d] text-[18px] md:text-[20px] select-none">
+              Proposez-vous des facilités de paiement ?
+            </p>
+          </div>
+          <img src="Images/bfaq.png" alt="icon" class="w-7 h-7 transition-transform duration-300 group-open:rotate-180 shrink-0 ml-4" />
+        </summary>
+        <div class="mx-6 border-t border-[#1a1f4d]/20 transition-opacity duration-300 hidden group-open:block"></div>
+        <div class="px-6 md:px-[86px] pb-8 pt-6 text-[#3a3939] text-[16px] leading-relaxed hidden group-open:block">
+           <p>Absolument. Selon l'ampleur de votre projet, nous pouvons discuter d'un plan de financement ou d'un calendrier de paiement échelonné adapté à votre budget.</p>
+        </div>
+      </details>
+
+      <!-- QUESTION 06 -->
+      <details class="group bg-white border border-[#1a1f4d]/40 rounded-xl overflow-hidden shadow-sm">
+        <summary class="flex items-center justify-between p-5 md:p-6 cursor-pointer list-none !outline-none">
+          <div class="flex items-center gap-5">
+            <span class="bg-[#10143a] text-white w-[42px] h-[42px] flex items-center justify-center rounded-full text-[17px] font-bold shrink-0">
+              06
+            </span>
+            <p class="font-bold text-[#1a1f4d] text-[18px] md:text-[20px] select-none">
+              Quelles garanties offrez-vous ?
+            </p>
+          </div>
+          <img src="Images/bfaq.png" alt="icon" class="w-7 h-7 transition-transform duration-300 group-open:rotate-180 shrink-0 ml-4" />
+        </summary>
+        <div class="mx-6 border-t border-[#1a1f4d]/20 transition-opacity duration-300 hidden group-open:block"></div>
+        <div class="px-6 md:px-[86px] pb-8 pt-6 text-[#3a3939] text-[16px] leading-relaxed hidden group-open:block">
+           <p>Nous offrons des garanties décennales sur le gros œuvre, ainsi que des garanties spécifiques pour les finitions et les équipements qui respectent les normes en vigueur.</p>
+        </div>
+      </details>
+
+      <!-- QUESTION 07 -->
+      <details class="group bg-white border border-[#1a1f4d]/40 rounded-xl overflow-hidden shadow-sm">
+        <summary class="flex items-center justify-between p-5 md:p-6 cursor-pointer list-none !outline-none">
+          <div class="flex items-center gap-5">
+            <span class="bg-[#10143a] text-white w-[42px] h-[42px] flex items-center justify-center rounded-full text-[17px] font-bold shrink-0">
+              07
+            </span>
+            <p class="font-bold text-[#1a1f4d] text-[18px] md:text-[20px] select-none">
+              Le terrain est-il inclus dans le prix ?
+            </p>
+          </div>
+          <img src="Images/bfaq.png" alt="icon" class="w-7 h-7 transition-transform duration-300 group-open:rotate-180 shrink-0 ml-4" />
+        </summary>
+        <div class="mx-6 border-t border-[#1a1f4d]/20 transition-opacity duration-300 hidden group-open:block"></div>
+        <div class="px-6 md:px-[86px] pb-8 pt-6 text-[#3a3939] text-[16px] leading-relaxed hidden group-open:block">
+           <p>Non, l'estimation des coûts via le simulateur concerne uniquement la construction. L'acquisition du terrain est une étape préalable distincte à la charge du client.</p>
+        </div>
+      </details>
+
+      <!-- QUESTION 08 -->
+      <details class="group bg-white border border-[#1a1f4d]/40 rounded-xl overflow-hidden shadow-sm">
+        <summary class="flex items-center justify-between p-5 md:p-6 cursor-pointer list-none !outline-none">
+          <div class="flex items-center gap-5">
+            <span class="bg-[#10143a] text-white w-[42px] h-[42px] flex items-center justify-center rounded-full text-[17px] font-bold shrink-0">
+              08
+            </span>
+            <p class="font-bold text-[#1a1f4d] text-[18px] md:text-[20px] select-none">
+              Construisez-vous aussi des bâtiments commerciaux ou industriels ?
+            </p>
+          </div>
+          <img src="Images/bfaq.png" alt="icon" class="w-7 h-7 transition-transform duration-300 group-open:rotate-180 shrink-0 ml-4" />
+        </summary>
+        <div class="mx-6 border-t border-[#1a1f4d]/20 transition-opacity duration-300 hidden group-open:block"></div>
+        <div class="px-6 md:px-[86px] pb-8 pt-6 text-[#3a3939] text-[16px] leading-relaxed hidden group-open:block">
+           <p>Oui, AIAE s'occupe de tous types de projets incluant les espaces commerciaux, industriels, les bâtiments publics ou agricoles selon vos besoins techniques.</p>
+        </div>
+      </details>
+
+    </div>
+  </section>
+
+  <!-- ================= SECTION TITRE DIASPORA ================= -->
+  <section class="bg-[#c26102] py-6 md:py-8 w-full text-center">
+    <h2 class="text-white text-[45px] md:text-[50px] font-extrabold tracking-wide uppercase">
+      Diaspora
+    </h2>
+  </section>
+
+  <!-- ================= SECTION FAQ DIASPORA ================= -->
+  <section class="bg-[#f2f3f5] py-10 pb-20 w-full">
+    <div class="max-w-[1100px] mx-auto px-6 space-y-4">
+      
+      <!-- QUESTION 01 DIASPORA -->
+      <details class="group bg-[#f8f8f8] border border-[#d97706]/50 rounded-xl overflow-hidden shadow-sm">
+        <summary class="flex items-center justify-between p-5 md:p-6 cursor-pointer list-none !outline-none">
+          <div class="flex items-center gap-5">
+            <span class="bg-[#d97706] text-white w-[42px] h-[42px] flex items-center justify-center rounded-full text-[17px] font-bold shrink-0">
+              01
+            </span>
+            <p class="font-bold text-[#d97706] text-[18px] md:text-[20px] select-none">
+              Puis-je lancer un projet sans être au Togo ?
+            </p>
+          </div>
+          <svg class="w-7 h-7 transition-transform duration-300 group-open:rotate-180 shrink-0 ml-4" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="12" cy="12" r="12" fill="#d97706"/>
+            <path d="M8 10L12 14L16 10" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </summary>
+        <div class="mx-6 border-t border-[#d97706]/30 transition-opacity duration-300 hidden group-open:block"></div>
+        <div class="px-6 md:px-[86px] pb-8 pt-6 text-[#3a3939] text-[16px] leading-relaxed hidden group-open:block bg-white">
+           <p>Oui. Nous proposons un accompagnement complet à distance, incluant le suivi vidéo et des rapports réguliers pour que vous puissiez suivre le projet sereinement depuis l'étranger.</p>
+        </div>
+      </details>
+
+      <!-- QUESTION 02 DIASPORA -->
+      <details class="group bg-[#f8f8f8] border border-[#d97706]/50 rounded-xl overflow-hidden shadow-sm">
+        <summary class="flex items-center justify-between p-5 md:p-6 cursor-pointer list-none !outline-none">
+          <div class="flex items-center gap-5">
+            <span class="bg-[#d97706] text-white w-[42px] h-[42px] flex items-center justify-center rounded-full text-[17px] font-bold shrink-0">
+              02
+            </span>
+            <p class="font-bold text-[#d97706] text-[18px] md:text-[20px] select-none">
+              Comment suivre mon chantier depuis l'étranger ?
+            </p>
+          </div>
+          <svg class="w-7 h-7 transition-transform duration-300 group-open:rotate-180 shrink-0 ml-4" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="12" cy="12" r="12" fill="#d97706"/>
+            <path d="M8 10L12 14L16 10" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </summary>
+        <div class="mx-6 border-t border-[#d97706]/30 transition-opacity duration-300 hidden group-open:block"></div>
+        <div class="px-6 md:px-[86px] pb-8 pt-6 text-[#3a3939] text-[16px] leading-relaxed hidden group-open:block bg-white">
+           <p>Nous fournissons des rapports de progression hebdomadaires ou bi-mensuels, incluant photos et vidéos de l'avancement. Vous aurez un contact dédié joignable via WhatsApp, email ou visioconférence.</p>
+        </div>
+      </details>
+
+      <!-- QUESTION 03 DIASPORA -->
+      <details class="group bg-[#f8f8f8] border border-[#d97706]/50 rounded-xl overflow-hidden shadow-sm">
+        <summary class="flex items-center justify-between p-5 md:p-6 cursor-pointer list-none !outline-none">
+          <div class="flex items-center gap-5">
+            <span class="bg-[#d97706] text-white w-[42px] h-[42px] flex items-center justify-center rounded-full text-[17px] font-bold shrink-0">
+              03
+            </span>
+            <p class="font-bold text-[#d97706] text-[18px] md:text-[20px] select-none">
+              Quel budget minimum pour un projet diaspora ?
+            </p>
+          </div>
+          <svg class="w-7 h-7 transition-transform duration-300 group-open:rotate-180 shrink-0 ml-4" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="12" cy="12" r="12" fill="#d97706"/>
+            <path d="M8 10L12 14L16 10" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </summary>
+        <div class="mx-6 border-t border-[#d97706]/30 transition-opacity duration-300 hidden group-open:block"></div>
+        <div class="px-6 md:px-[86px] pb-8 pt-6 text-[#3a3939] text-[16px] leading-relaxed hidden group-open:block bg-white">
+           <p>Il n'y a pas de budget imposé. Votre projet est dimensionné selon vos capacités financières et nous pouvons l'établir par tranches, selon le rythme de vos apports au fil du temps.</p>
+        </div>
+      </details>
+
+      <!-- QUESTION 04 DIASPORA -->
+      <details class="group bg-[#f8f8f8] border border-[#d97706]/50 rounded-xl overflow-hidden shadow-sm" open>
+        <summary class="flex items-center justify-between p-5 md:p-6 cursor-pointer list-none !outline-none">
+          <div class="flex items-center gap-5">
+            <span class="bg-[#d97706] text-white w-[42px] h-[42px] flex items-center justify-center rounded-full text-[17px] font-bold shrink-0">
+              04
+            </span>
+            <p class="font-bold text-[#d97706] text-[18px] md:text-[20px] select-none">
+              Les paiements sont-ils sécurisés ?
+            </p>
+          </div>
+          <svg class="w-7 h-7 transition-transform duration-300 group-open:rotate-180 shrink-0 ml-4" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="12" cy="12" r="12" fill="#d97706"/>
+            <path d="M8 10L12 14L16 10" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </summary>
+        <div class="mx-6 border-t border-[#d97706]/30 transition-opacity duration-300"></div>
+        <div class="px-6 md:px-[86px] pb-8 pt-6 text-[#3a3939] text-[16px] leading-relaxed bg-white">
+           <p>Oui. Virements internationaux vers le compte bancaire vérifié de AIAE SARL. Reçu émis pour chaque versement. Paiement par étapes sur constat d'avancement. Contrat signable devant notaire pour une sécurité juridique maximale.</p>
+        </div>
+      </details>
+
+      <!-- QUESTION 05 DIASPORA -->
+      <details class="group bg-[#f8f8f8] border border-[#d97706]/50 rounded-xl overflow-hidden shadow-sm">
+        <summary class="flex items-center justify-between p-5 md:p-6 cursor-pointer list-none !outline-none">
+          <div class="flex items-center gap-5">
+            <span class="bg-[#d97706] text-white w-[42px] h-[42px] flex items-center justify-center rounded-full text-[17px] font-bold shrink-0">
+              05
+            </span>
+            <p class="font-bold text-[#d97706] text-[18px] md:text-[20px] select-none">
+              Puis-je combiner construction et énergie solaire ?
+            </p>
+          </div>
+          <svg class="w-7 h-7 transition-transform duration-300 group-open:rotate-180 shrink-0 ml-4" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="12" cy="12" r="12" fill="#d97706"/>
+            <path d="M8 10L12 14L16 10" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </summary>
+        <div class="mx-6 border-t border-[#d97706]/30 transition-opacity duration-300 hidden group-open:block"></div>
+        <div class="px-6 md:px-[86px] pb-8 pt-6 text-[#3a3939] text-[16px] leading-relaxed hidden group-open:block bg-white">
+           <p>Absolument, notre Division Énergie se coordonne dès la phase de conception avec l'équipe de construction pour vous bâtir une maison performante et autonome en électricité (panneaux solaires et batteries intégrés).</p>
+        </div>
+      </details>
+
+      <!-- QUESTION 06 DIASPORA -->
+      <details class="group bg-[#f8f8f8] border border-[#d97706]/50 rounded-xl overflow-hidden shadow-sm">
+        <summary class="flex items-center justify-between p-5 md:p-6 cursor-pointer list-none !outline-none">
+          <div class="flex items-center gap-5">
+            <span class="bg-[#d97706] text-white w-[42px] h-[42px] flex items-center justify-center rounded-full text-[17px] font-bold shrink-0">
+              06
+            </span>
+            <p class="font-bold text-[#d97706] text-[18px] md:text-[20px] select-none">
+              Avez-vous un bureau en France / Europe ?
+            </p>
+          </div>
+          <svg class="w-7 h-7 transition-transform duration-300 group-open:rotate-180 shrink-0 ml-4" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="12" cy="12" r="12" fill="#d97706"/>
+            <path d="M8 10L12 14L16 10" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </summary>
+        <div class="mx-6 border-t border-[#d97706]/30 transition-opacity duration-300 hidden group-open:block"></div>
+        <div class="px-6 md:px-[86px] pb-8 pt-6 text-[#3a3939] text-[16px] leading-relaxed hidden group-open:block bg-white">
+           <p>Notre siège physique exclusif demeure à Lomé, mais nous avons mis en place des processus digitalisés avancés (réunions visio, validations documentaires sécurisées) qui rendent notre présence européenne équivalente à une relation de proximité.</p>
+        </div>
+      </details>
+
+    </div>
+  </section>
+
+  
+  <!-- ================= SECTION TITRE SIMULATEUR EN LIGNE ================= -->
+  <section class="bg-[#084c2e] py-6 md:py-8 w-full text-center">
+    <h2 class="text-white text-[45px] md:text-[50px] font-extrabold tracking-wide uppercase">
+      SIMULATEUR EN LIGNE
+    </h2>
+  </section>
+
+  <!-- ================= SECTION FAQ SIMULATEUR EN LIGNE ================= -->
+  <section class="bg-[#f2f3f5] py-10 pb-20 w-full">
+    <div class="max-w-[1100px] mx-auto px-6 space-y-4">
+      
+      <!-- QUESTION 01 SIMULATEUR EN LIGNE -->
+      <details class="group bg-[#f8f8f8] border border-[#0b5b3a]/50 rounded-xl overflow-hidden shadow-sm">
+        <summary class="flex items-center justify-between p-5 md:p-6 cursor-pointer list-none !outline-none">
+          <div class="flex items-center gap-5">
+            <span class="bg-[#0b5b3a] text-white w-[42px] h-[42px] flex items-center justify-center rounded-full text-[17px] font-bold shrink-0">
+              01
+            </span>
+            <p class="font-bold text-[#0b5b3a] text-[18px] md:text-[20px] select-none text-left">
+              Le résultat du simulateur est-il un devis ?
+            </p>
+          </div>
+          <svg class="w-7 h-7 transition-transform duration-300 group-open:rotate-180 shrink-0 ml-4" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="12" cy="12" r="12" fill="#0b5b3a"/>
+            <path d="M8 10L12 14L16 10" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </summary>
+        <div class="mx-6 border-t border-[#0b5b3a]/30 transition-opacity duration-300 hidden group-open:block"></div>
+        <div class="px-6 md:px-[86px] pb-8 pt-6 text-[#3a3939] text-[16px] leading-relaxed hidden group-open:block bg-white">
+           <p>Non, le résultat est une estimation qui doit être affinée par une étude technique personnalisée.</p>
+        </div>
+      </details>
+      
+      <!-- QUESTION 02 SIMULATEUR EN LIGNE -->
+      <details class="group bg-[#f8f8f8] border border-[#0b5b3a]/50 rounded-xl overflow-hidden shadow-sm">
+        <summary class="flex items-center justify-between p-5 md:p-6 cursor-pointer list-none !outline-none">
+          <div class="flex items-center gap-5">
+            <span class="bg-[#0b5b3a] text-white w-[42px] h-[42px] flex items-center justify-center rounded-full text-[17px] font-bold shrink-0">
+              02
+            </span>
+            <p class="font-bold text-[#0b5b3a] text-[18px] md:text-[20px] select-none text-left">
+              Comment est calculée l'estimation ?
+            </p>
+          </div>
+          <svg class="w-7 h-7 transition-transform duration-300 group-open:rotate-180 shrink-0 ml-4" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="12" cy="12" r="12" fill="#0b5b3a"/>
+            <path d="M8 10L12 14L16 10" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </summary>
+        <div class="mx-6 border-t border-[#0b5b3a]/30 transition-opacity duration-300 hidden group-open:block"></div>
+        <div class="px-6 md:px-[86px] pb-8 pt-6 text-[#3a3939] text-[16px] leading-relaxed hidden group-open:block bg-white">
+           <p>L'estimation est calculée grâce à notre base de données interne réactualisée selon les prix du marché togolais.</p>
+        </div>
+      </details>
+      
+      <!-- QUESTION 03 SIMULATEUR EN LIGNE -->
+      <details class="group bg-[#f8f8f8] border border-[#0b5b3a]/50 rounded-xl overflow-hidden shadow-sm">
+        <summary class="flex items-center justify-between p-5 md:p-6 cursor-pointer list-none !outline-none">
+          <div class="flex items-center gap-5">
+            <span class="bg-[#0b5b3a] text-white w-[42px] h-[42px] flex items-center justify-center rounded-full text-[17px] font-bold shrink-0">
+              03
+            </span>
+            <p class="font-bold text-[#0b5b3a] text-[18px] md:text-[20px] select-none text-left">
+              Puis-je sauvegarder ma simulation ?
+            </p>
+          </div>
+          <svg class="w-7 h-7 transition-transform duration-300 group-open:rotate-180 shrink-0 ml-4" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="12" cy="12" r="12" fill="#0b5b3a"/>
+            <path d="M8 10L12 14L16 10" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </summary>
+        <div class="mx-6 border-t border-[#0b5b3a]/30 transition-opacity duration-300 hidden group-open:block"></div>
+        <div class="px-6 md:px-[86px] pb-8 pt-6 text-[#3a3939] text-[16px] leading-relaxed hidden group-open:block bg-white">
+           <p>Oui, vous pouvez recevoir votre estimation par email au format PDF pour la consulter ultérieurement.</p>
+        </div>
+      </details>
+      
+      <!-- QUESTION 04 SIMULATEUR EN LIGNE -->
+      <details class="group bg-[#f8f8f8] border border-[#0b5b3a]/50 rounded-xl overflow-hidden shadow-sm" open>
+        <summary class="flex items-center justify-between p-5 md:p-6 cursor-pointer list-none !outline-none">
+          <div class="flex items-center gap-5">
+            <span class="bg-[#0b5b3a] text-white w-[42px] h-[42px] flex items-center justify-center rounded-full text-[17px] font-bold shrink-0">
+              04
+            </span>
+            <p class="font-bold text-[#0b5b3a] text-[18px] md:text-[20px] select-none text-left">
+              Pourquoi le résultat est-il une fourchette et non un prix fixe ?
+            </p>
+          </div>
+          <svg class="w-7 h-7 transition-transform duration-300 group-open:rotate-180 shrink-0 ml-4" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="12" cy="12" r="12" fill="#0b5b3a"/>
+            <path d="M8 10L12 14L16 10" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </summary>
+        <div class="mx-6 border-t border-[#0b5b3a]/30 transition-opacity duration-300"></div>
+        <div class="px-6 md:px-[86px] pb-8 pt-6 text-[#3a3939] text-[16px] leading-relaxed bg-white">
+           <p>Parce que le coût réel dépend de choix de matériaux, de la complexité architecturale et des conditions du marché. La fourchette vous donne un cadre budgétaire réaliste : le minimum correspond à des choix économiques, le maximum à des choix haut de gamme au sein du standing choisi.</p>
+        </div>
+      </details>
+      
+      <!-- QUESTION 05 SIMULATEUR EN LIGNE -->
+      <details class="group bg-[#f8f8f8] border border-[#0b5b3a]/50 rounded-xl overflow-hidden shadow-sm">
+        <summary class="flex items-center justify-between p-5 md:p-6 cursor-pointer list-none !outline-none">
+          <div class="flex items-center gap-5">
+            <span class="bg-[#0b5b3a] text-white w-[42px] h-[42px] flex items-center justify-center rounded-full text-[17px] font-bold shrink-0">
+              05
+            </span>
+            <p class="font-bold text-[#0b5b3a] text-[18px] md:text-[20px] select-none text-left">
+              Le simulateur couvre-t-il les bâtiments non résidentiels ?
+            </p>
+          </div>
+          <svg class="w-7 h-7 transition-transform duration-300 group-open:rotate-180 shrink-0 ml-4" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="12" cy="12" r="12" fill="#0b5b3a"/>
+            <path d="M8 10L12 14L16 10" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </summary>
+        <div class="mx-6 border-t border-[#0b5b3a]/30 transition-opacity duration-300 hidden group-open:block"></div>
+        <div class="px-6 md:px-[86px] pb-8 pt-6 text-[#3a3939] text-[16px] leading-relaxed hidden group-open:block bg-white">
+           <p>Notre simulateur actuel est optimisé pour les projets résidentiels, mais restez à l'écoute des prochaines versions.</p>
+        </div>
+      </details>
+    </div>
+  </section>
+
+  <!-- ================= SECTION TITRE ÉNERGIE & ÉQUIPEMENTS ================= -->
+  <section class="bg-[#111536] py-6 md:py-8 w-full text-center">
+    <h2 class="text-white text-[45px] md:text-[50px] font-extrabold tracking-wide uppercase">
+      ÉNERGIE & ÉQUIPEMENTS
+    </h2>
+  </section>
+
+  <!-- ================= SECTION FAQ ÉNERGIE & ÉQUIPEMENTS ================= -->
+  <section class="bg-[#f2f3f5] py-10 pb-20 w-full">
+    <div class="max-w-[1100px] mx-auto px-6 space-y-4">
+      
+      <!-- QUESTION 01 ÉNERGIE & ÉQUIPEMENTS -->
+      <details class="group bg-[#f8f8f8] border border-[#1a1f4d]/50 rounded-xl overflow-hidden shadow-sm">
+        <summary class="flex items-center justify-between p-5 md:p-6 cursor-pointer list-none !outline-none">
+          <div class="flex items-center gap-5">
+            <span class="bg-[#1a1f4d] text-white w-[42px] h-[42px] flex items-center justify-center rounded-full text-[17px] font-bold shrink-0">
+              01
+            </span>
+            <p class="font-bold text-[#1a1f4d] text-[18px] md:text-[20px] select-none text-left">
+              Proposez-vous des installations solaires ?
+            </p>
+          </div>
+          <svg class="w-7 h-7 transition-transform duration-300 group-open:rotate-180 shrink-0 ml-4" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="12" cy="12" r="12" fill="#1a1f4d"/>
+            <path d="M8 10L12 14L16 10" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </summary>
+        <div class="mx-6 border-t border-[#1a1f4d]/30 transition-opacity duration-300 hidden group-open:block"></div>
+        <div class="px-6 md:px-[86px] pb-8 pt-6 text-[#3a3939] text-[16px] leading-relaxed hidden group-open:block bg-white">
+           <p>Oui, nous concevons des installations solaires intégrées à vos projets dès la phase de construction.</p>
+        </div>
+      </details>
+      
+      <!-- QUESTION 02 ÉNERGIE & ÉQUIPEMENTS -->
+      <details class="group bg-[#f8f8f8] border border-[#1a1f4d]/50 rounded-xl overflow-hidden shadow-sm">
+        <summary class="flex items-center justify-between p-5 md:p-6 cursor-pointer list-none !outline-none">
+          <div class="flex items-center gap-5">
+            <span class="bg-[#1a1f4d] text-white w-[42px] h-[42px] flex items-center justify-center rounded-full text-[17px] font-bold shrink-0">
+              02
+            </span>
+            <p class="font-bold text-[#1a1f4d] text-[18px] md:text-[20px] select-none text-left">
+              Pouvez-vous installer un forage ?
+            </p>
+          </div>
+          <svg class="w-7 h-7 transition-transform duration-300 group-open:rotate-180 shrink-0 ml-4" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="12" cy="12" r="12" fill="#1a1f4d"/>
+            <path d="M8 10L12 14L16 10" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </summary>
+        <div class="mx-6 border-t border-[#1a1f4d]/30 transition-opacity duration-300 hidden group-open:block"></div>
+        <div class="px-6 md:px-[86px] pb-8 pt-6 text-[#3a3939] text-[16px] leading-relaxed hidden group-open:block bg-white">
+           <p>Oui, la création d'un forage autonome fait partie des options que nous pouvons prendre en charge.</p>
+        </div>
+      </details>
+      
+      <!-- QUESTION 03 ÉNERGIE & ÉQUIPEMENTS -->
+      <details class="group bg-[#f8f8f8] border border-[#1a1f4d]/50 rounded-xl overflow-hidden shadow-sm">
+        <summary class="flex items-center justify-between p-5 md:p-6 cursor-pointer list-none !outline-none">
+          <div class="flex items-center gap-5">
+            <span class="bg-[#1a1f4d] text-white w-[42px] h-[42px] flex items-center justify-center rounded-full text-[17px] font-bold shrink-0">
+              03
+            </span>
+            <p class="font-bold text-[#1a1f4d] text-[18px] md:text-[20px] select-none text-left">
+              Quels équipements optionnels proposez-vous ?
+            </p>
+          </div>
+          <svg class="w-7 h-7 transition-transform duration-300 group-open:rotate-180 shrink-0 ml-4" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="12" cy="12" r="12" fill="#1a1f4d"/>
+            <path d="M8 10L12 14L16 10" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </summary>
+        <div class="mx-6 border-t border-[#1a1f4d]/30 transition-opacity duration-300 hidden group-open:block"></div>
+        <div class="px-6 md:px-[86px] pb-8 pt-6 text-[#3a3939] text-[16px] leading-relaxed hidden group-open:block bg-white">
+           <p>Nous proposons : piscines, domotique, systèmes de sécurité avancés et aménagements paysagers spécifiques.</p>
+        </div>
+      </details>
+      
+      <!-- QUESTION 04 ÉNERGIE & ÉQUIPEMENTS -->
+      <details class="group bg-[#f8f8f8] border border-[#1a1f4d]/50 rounded-xl overflow-hidden shadow-sm" open>
+        <summary class="flex items-center justify-between p-5 md:p-6 cursor-pointer list-none !outline-none">
+          <div class="flex items-center gap-5">
+            <span class="bg-[#1a1f4d] text-white w-[42px] h-[42px] flex items-center justify-center rounded-full text-[17px] font-bold shrink-0">
+              04
+            </span>
+            <p class="font-bold text-[#1a1f4d] text-[18px] md:text-[20px] select-none text-left">
+              Les équipements sont-ils inclus dans le prix au m² ?
+            </p>
+          </div>
+          <svg class="w-7 h-7 transition-transform duration-300 group-open:rotate-180 shrink-0 ml-4" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="12" cy="12" r="12" fill="#1a1f4d"/>
+            <path d="M8 10L12 14L16 10" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </summary>
+        <div class="mx-6 border-t border-[#1a1f4d]/30 transition-opacity duration-300"></div>
+        <div class="px-6 md:px-[86px] pb-8 pt-6 text-[#3a3939] text-[16px] leading-relaxed bg-white">
+           <p>Non. Le prix au m² couvre la construction du bâtiment (gros œuvre + second œuvre + finitions). Tous les équipements sont des options chiffrées séparément avec des fourchettes de prix transparentes. Vous composez votre projet à la carte.</p>
+        </div>
+      </details>
+    </div>
+  </section>
+
+  <!-- ================= SECTION TITRE PROCESSUS & CONTRAT ================= -->
+  <section class="bg-[#c26102] py-6 md:py-8 w-full text-center">
+    <h2 class="text-white text-[45px] md:text-[50px] font-extrabold tracking-wide uppercase">
+      PROCESSUS & CONTRAT
+    </h2>
+  </section>
+
+  <!-- ================= SECTION FAQ PROCESSUS & CONTRAT ================= -->
+  <section class="bg-[#f2f3f5] py-10 pb-20 w-full">
+    <div class="max-w-[1100px] mx-auto px-6 space-y-4">
+      
+      <!-- QUESTION 01 PROCESSUS & CONTRAT -->
+      <details class="group bg-[#f8f8f8] border border-[#d97706]/50 rounded-xl overflow-hidden shadow-sm">
+        <summary class="flex items-center justify-between p-5 md:p-6 cursor-pointer list-none !outline-none">
+          <div class="flex items-center gap-5">
+            <span class="bg-[#d97706] text-white w-[42px] h-[42px] flex items-center justify-center rounded-full text-[17px] font-bold shrink-0">
+              01
+            </span>
+            <p class="font-bold text-[#d97706] text-[18px] md:text-[20px] select-none text-left">
+              Comment se déroule un projet avec AIAE ?
+            </p>
+          </div>
+          <svg class="w-7 h-7 transition-transform duration-300 group-open:rotate-180 shrink-0 ml-4" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="12" cy="12" r="12" fill="#d97706"/>
+            <path d="M8 10L12 14L16 10" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </summary>
+        <div class="mx-6 border-t border-[#d97706]/30 transition-opacity duration-300 hidden group-open:block"></div>
+        <div class="px-6 md:px-[86px] pb-8 pt-6 text-[#3a3939] text-[16px] leading-relaxed hidden group-open:block bg-white">
+           <p>De la première prise de contact à la remise des clés, nous vous accompagnons à chaque étape avec transparence.</p>
+        </div>
+      </details>
+      
+      <!-- QUESTION 02 PROCESSUS & CONTRAT -->
+      <details class="group bg-[#f8f8f8] border border-[#d97706]/50 rounded-xl overflow-hidden shadow-sm">
+        <summary class="flex items-center justify-between p-5 md:p-6 cursor-pointer list-none !outline-none">
+          <div class="flex items-center gap-5">
+            <span class="bg-[#d97706] text-white w-[42px] h-[42px] flex items-center justify-center rounded-full text-[17px] font-bold shrink-0">
+              02
+            </span>
+            <p class="font-bold text-[#d97706] text-[18px] md:text-[20px] select-none text-left">
+              Puis-je voir des exemples de vos réalisations ?
+            </p>
+          </div>
+          <svg class="w-7 h-7 transition-transform duration-300 group-open:rotate-180 shrink-0 ml-4" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="12" cy="12" r="12" fill="#d97706"/>
+            <path d="M8 10L12 14L16 10" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </summary>
+        <div class="mx-6 border-t border-[#d97706]/30 transition-opacity duration-300 hidden group-open:block"></div>
+        <div class="px-6 md:px-[86px] pb-8 pt-6 text-[#3a3939] text-[16px] leading-relaxed hidden group-open:block bg-white">
+           <p>Oui, nous vous invitons à consulter la rubrique réalisations ou à visiter nos chantiers en cours sur demande.</p>
+        </div>
+      </details>
+      
+      <!-- QUESTION 03 PROCESSUS & CONTRAT -->
+      <details class="group bg-[#f8f8f8] border border-[#d97706]/50 rounded-xl overflow-hidden shadow-sm">
+        <summary class="flex items-center justify-between p-5 md:p-6 cursor-pointer list-none !outline-none">
+          <div class="flex items-center gap-5">
+            <span class="bg-[#d97706] text-white w-[42px] h-[42px] flex items-center justify-center rounded-full text-[17px] font-bold shrink-0">
+              03
+            </span>
+            <p class="font-bold text-[#d97706] text-[18px] md:text-[20px] select-none text-left">
+              Fournissez-vous les plans architecturaux ?
+            </p>
+          </div>
+          <svg class="w-7 h-7 transition-transform duration-300 group-open:rotate-180 shrink-0 ml-4" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="12" cy="12" r="12" fill="#d97706"/>
+            <path d="M8 10L12 14L16 10" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </summary>
+        <div class="mx-6 border-t border-[#d97706]/30 transition-opacity duration-300 hidden group-open:block"></div>
+        <div class="px-6 md:px-[86px] pb-8 pt-6 text-[#3a3939] text-[16px] leading-relaxed hidden group-open:block bg-white">
+           <p>Nous pouvons réaliser vos plans grâce à notre bureau d'études partenaire ou travailler à partir de vos propres plans.</p>
+        </div>
+      </details>
+      
+      <!-- QUESTION 04 PROCESSUS & CONTRAT -->
+      <details class="group bg-[#f8f8f8] border border-[#d97706]/50 rounded-xl overflow-hidden shadow-sm" open>
+        <summary class="flex items-center justify-between p-5 md:p-6 cursor-pointer list-none !outline-none">
+          <div class="flex items-center gap-5">
+            <span class="bg-[#d97706] text-white w-[42px] h-[42px] flex items-center justify-center rounded-full text-[17px] font-bold shrink-0">
+              04
+            </span>
+            <p class="font-bold text-[#d97706] text-[18px] md:text-[20px] select-none text-left">
+              Le contrat peut-il être signé devant notaire ?
+            </p>
+          </div>
+          <svg class="w-7 h-7 transition-transform duration-300 group-open:rotate-180 shrink-0 ml-4" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="12" cy="12" r="12" fill="#d97706"/>
+            <path d="M8 10L12 14L16 10" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </summary>
+        <div class="mx-6 border-t border-[#d97706]/30 transition-opacity duration-300"></div>
+        <div class="px-6 md:px-[86px] pb-8 pt-6 text-[#3a3939] text-[16px] leading-relaxed bg-white">
+           <p>Oui. Virements internationaux vers le compte bancaire vérifié de AIAE SARL. Reçu émis pour chaque versement. Paiement par étapes sur constat d'avancement. Contrat signable devant notaire pour une sécurité juridique maximale.</p>
+        </div>
+      </details>
+      
+      <!-- QUESTION 05 PROCESSUS & CONTRAT -->
+      <details class="group bg-[#f8f8f8] border border-[#d97706]/50 rounded-xl overflow-hidden shadow-sm">
+        <summary class="flex items-center justify-between p-5 md:p-6 cursor-pointer list-none !outline-none">
+          <div class="flex items-center gap-5">
+            <span class="bg-[#d97706] text-white w-[42px] h-[42px] flex items-center justify-center rounded-full text-[17px] font-bold shrink-0">
+              05
+            </span>
+            <p class="font-bold text-[#d97706] text-[18px] md:text-[20px] select-none text-left">
+              Que se passe-t-il en cas de retard ?
+            </p>
+          </div>
+          <svg class="w-7 h-7 transition-transform duration-300 group-open:rotate-180 shrink-0 ml-4" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="12" cy="12" r="12" fill="#d97706"/>
+            <path d="M8 10L12 14L16 10" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </summary>
+        <div class="mx-6 border-t border-[#d97706]/30 transition-opacity duration-300 hidden group-open:block"></div>
+        <div class="px-6 md:px-[86px] pb-8 pt-6 text-[#3a3939] text-[16px] leading-relaxed hidden group-open:block bg-white">
+           <p>Des pénalités de retard sont prévues contractuellement pour vous garantir nos engagements de délais.</p>
+        </div>
+      </details>
+      
+      <!-- QUESTION 06 PROCESSUS & CONTRAT -->
+      <details class="group bg-[#f8f8f8] border border-[#d97706]/50 rounded-xl overflow-hidden shadow-sm">
+        <summary class="flex items-center justify-between p-5 md:p-6 cursor-pointer list-none !outline-none">
+          <div class="flex items-center gap-5">
+            <span class="bg-[#d97706] text-white w-[42px] h-[42px] flex items-center justify-center rounded-full text-[17px] font-bold shrink-0">
+              06
+            </span>
+            <p class="font-bold text-[#d97706] text-[18px] md:text-[20px] select-none text-left">
+              AIAE est-elle assurée ?
+            </p>
+          </div>
+          <svg class="w-7 h-7 transition-transform duration-300 group-open:rotate-180 shrink-0 ml-4" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="12" cy="12" r="12" fill="#d97706"/>
+            <path d="M8 10L12 14L16 10" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </summary>
+        <div class="mx-6 border-t border-[#d97706]/30 transition-opacity duration-300 hidden group-open:block"></div>
+        <div class="px-6 md:px-[86px] pb-8 pt-6 text-[#3a3939] text-[16px] leading-relaxed hidden group-open:block bg-white">
+           <p>Oui, AIAE dispose de toutes les garanties et assurances professionnelles, y compris la garantie décennale.</p>
+        </div>
+      </details>
+    </div>
+  </section>
+
+  <!-- ================= SECTION TITRE À PROPOS D'AIAE ================= -->
+  <section class="bg-[#084c2e] py-6 md:py-8 w-full text-center">
+    <h2 class="text-white text-[45px] md:text-[50px] font-extrabold tracking-wide uppercase">
+      À PROPOS D'AIAE
+    </h2>
+  </section>
+
+  <!-- ================= SECTION FAQ À PROPOS D'AIAE ================= -->
+  <section class="bg-[#f2f3f5] py-10 pb-20 w-full">
+    <div class="max-w-[1100px] mx-auto px-6 space-y-4">
+      
+      <!-- QUESTION 01 À PROPOS D'AIAE -->
+      <details class="group bg-[#f8f8f8] border border-[#0b5b3a]/50 rounded-xl overflow-hidden shadow-sm">
+        <summary class="flex items-center justify-between p-5 md:p-6 cursor-pointer list-none !outline-none">
+          <div class="flex items-center gap-5">
+            <span class="bg-[#0b5b3a] text-white w-[42px] h-[42px] flex items-center justify-center rounded-full text-[17px] font-bold shrink-0">
+              01
+            </span>
+            <p class="font-bold text-[#0b5b3a] text-[18px] md:text-[20px] select-none text-left">
+              Comment AIAE se compare-t-elle aux grandes entreprises étrangères ?
+            </p>
+          </div>
+          <svg class="w-7 h-7 transition-transform duration-300 group-open:rotate-180 shrink-0 ml-4" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="12" cy="12" r="12" fill="#0b5b3a"/>
+            <path d="M8 10L12 14L16 10" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </summary>
+        <div class="mx-6 border-t border-[#0b5b3a]/30 transition-opacity duration-300 hidden group-open:block"></div>
+        <div class="px-6 md:px-[86px] pb-8 pt-6 text-[#3a3939] text-[16px] leading-relaxed hidden group-open:block bg-white">
+           <p>Nous offrons l'expertise et la rigueur d'une grande entreprise internationale avec une parfaite maîtrise du marché local ouest-africain.</p>
+        </div>
+      </details>
+      
+      <!-- QUESTION 02 À PROPOS D'AIAE -->
+      <details class="group bg-[#f8f8f8] border border-[#0b5b3a]/50 rounded-xl overflow-hidden shadow-sm">
+        <summary class="flex items-center justify-between p-5 md:p-6 cursor-pointer list-none !outline-none">
+          <div class="flex items-center gap-5">
+            <span class="bg-[#0b5b3a] text-white w-[42px] h-[42px] flex items-center justify-center rounded-full text-[17px] font-bold shrink-0">
+              02
+            </span>
+            <p class="font-bold text-[#0b5b3a] text-[18px] md:text-[20px] select-none text-left">
+              AIAE est-elle une entreprise récente ?
+            </p>
+          </div>
+          <svg class="w-7 h-7 transition-transform duration-300 group-open:rotate-180 shrink-0 ml-4" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="12" cy="12" r="12" fill="#0b5b3a"/>
+            <path d="M8 10L12 14L16 10" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </summary>
+        <div class="mx-6 border-t border-[#0b5b3a]/30 transition-opacity duration-300 hidden group-open:block"></div>
+        <div class="px-6 md:px-[86px] pb-8 pt-6 text-[#3a3939] text-[16px] leading-relaxed hidden group-open:block bg-white">
+           <p>AIAE cumule les expertises de ses fondateurs avec plusieurs années d'expérience consolidée sur le terrain.</p>
+        </div>
+      </details>
+      
+      <!-- QUESTION 03 À PROPOS D'AIAE -->
+      <details class="group bg-[#f8f8f8] border border-[#0b5b3a]/50 rounded-xl overflow-hidden shadow-sm">
+        <summary class="flex items-center justify-between p-5 md:p-6 cursor-pointer list-none !outline-none">
+          <div class="flex items-center gap-5">
+            <span class="bg-[#0b5b3a] text-white w-[42px] h-[42px] flex items-center justify-center rounded-full text-[17px] font-bold shrink-0">
+              03
+            </span>
+            <p class="font-bold text-[#0b5b3a] text-[18px] md:text-[20px] select-none text-left">
+              Quelles sont vos valeurs ?
+            </p>
+          </div>
+          <svg class="w-7 h-7 transition-transform duration-300 group-open:rotate-180 shrink-0 ml-4" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="12" cy="12" r="12" fill="#0b5b3a"/>
+            <path d="M8 10L12 14L16 10" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </summary>
+        <div class="mx-6 border-t border-[#0b5b3a]/30 transition-opacity duration-300 hidden group-open:block"></div>
+        <div class="px-6 md:px-[86px] pb-8 pt-6 text-[#3a3939] text-[16px] leading-relaxed hidden group-open:block bg-white">
+           <p>Transparence absolue, respect strict des engagements, écoute active et excellence dans la réalisation environnementale.</p>
+        </div>
+      </details>
+      
+      <!-- QUESTION 04 À PROPOS D'AIAE -->
+      <details class="group bg-[#f8f8f8] border border-[#0b5b3a]/50 rounded-xl overflow-hidden shadow-sm" open>
+        <summary class="flex items-center justify-between p-5 md:p-6 cursor-pointer list-none !outline-none">
+          <div class="flex items-center gap-5">
+            <span class="bg-[#0b5b3a] text-white w-[42px] h-[42px] flex items-center justify-center rounded-full text-[17px] font-bold shrink-0">
+              04
+            </span>
+            <p class="font-bold text-[#0b5b3a] text-[18px] md:text-[20px] select-none text-left">
+              Quelles sont les divisions de AIAE ?
+            </p>
+          </div>
+          <svg class="w-7 h-7 transition-transform duration-300 group-open:rotate-180 shrink-0 ml-4" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="12" cy="12" r="12" fill="#0b5b3a"/>
+            <path d="M8 10L12 14L16 10" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </summary>
+        <div class="mx-6 border-t border-[#0b5b3a]/30 transition-opacity duration-300"></div>
+        <div class="px-6 md:px-[86px] pb-8 pt-6 text-[#3a3939] text-[16px] leading-relaxed bg-white">
+           <p>Construction (opérationnelle) : résidentiel, tertiaire, industriel, agricole. Énergie (lancement 2026) : installations solaires C&I. Sécurité (lancement 2027) : coffres-forts, chambres fortes, panic rooms. Préfabrication (lancement 2027-2028) : briques en terre compressée, éléments en béton précontraint.</p>
+        </div>
+      </details>
+    </div>
+  </section>
+
+  <!-- ================= RÉSEAUX SOCIAUX ================= -->
+  <section class="w-full">
+    <div class="bg-[#0b4a2b] text-white py-6">
+      <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-center gap-6">
+        <div class="flex items-center gap-6">
+          <a href="#" aria-label="TikTok">
+            <img src="Images/TiktokLogo.svg" alt="TikTok" class="h-16 w-16" />
+          </a>
+          <a href="#" aria-label="Instagram">
+            <img src="Images/InstagramLogo.svg" alt="Instagram" class="h-16 w-16" />
+          </a>
+          <a href="#" aria-label="Facebook">
+            <img src="Images/FacebookLogo.svg" alt="Facebook" class="h-16 w-16" />
+          </a>
+          <a href="#" aria-label="YouTube">
+            <img src="Images/YoutubeLogo.svg" alt="YouTube" class="h-16 w-16" />
+          </a>
+        </div>
+        <div class="flex flex-col items-start">
+          <p class="text-4xl font-bold">@Afrika_AIAE</p>
+          <p class="text-sm opacity-80">
+            Suivez nous, <span class="font-bold">Abonnez vous</span> &
+            <span class="font-bold">Likez nos post</span>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="bg-[#f4f5f7] py-6">
+      <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-center gap-4 text-[#0b4a2b]">
+        <img src="Images/WhatsappLogo.svg" alt="" class="h-12 w-12" />
+        <p class="text-3xl">
+          +228 <span class="font-bold">9X 8X 7X 6X</span>
+        </p>
+        <p class="text-sm">
+          <span class="font-extrabold">Écrivez nous</span> pour toutes<br />
+          <span class="font-extrabold">informations</span> supplémentaires
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="bg-[#e6e6e6] pt-20">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid grid-cols-1 md:grid-cols-[1.6fr_1fr_1fr_1fr] gap-16">
+        <div>
+          <img src="Images/logos/LOGO AIAE FINAL - Copie.png" class="w-64 pb-5" alt="AIAE Logo">
+          <p class="text-[#1a1f4d] text-[22px] leading-relaxed max-w-md">
+            <strong>AIAE : Afrika Infrastructures And Equipments.</strong>
+            De la conception à la réalisation.
+          </p>
+        </div>
+
+        <div>
+          <h3 class="text-[22px] font-semibold mb-6 text-[#1a1f4d]">
+            Nos divisions
+          </h3>
+          <ul class="space-y-2 text-gray-600 text-[24px]">
+            <li>Construction</li>
+            <li>Énergie</li>
+            <li>Sécurité</li>
+            <li>Préfabrication</li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="text-[22px] font-semibold mb-6 text-[#1a1f4d]">
+            Contact
+          </h3>
+          <ul class="space-y-2 text-gray-600 text-[24px]">
+            <li>Lomé, Togo</li>
+            <li>Interventions sur tout le territoire</li>
+            <li>+228 XX XX XX XX</li>
+            <li>contact@aiae.services</li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="text-[22px] font-semibold mb-6 text-[#1a1f4d]">
+            Accéder à
+          </h3>
+          <ul class="space-y-2 text-gray-600 text-[24px]">
+            <li>
+              <a href="#" class="hover:text-[#1a1f4d] transition">
+                Demander un devis
+              </a>
+            </li>
+            <li>
+              <a href="#" class="hover:text-[#1a1f4d] transition">
+                Prendre rendez-vous
+              </a>
+            </li>
+            <li>
+              <a href="#" class="hover:text-[#1a1f4d] transition">
+                FAQ
+              </a>
+            </li>
+            <li>
+              <a href="#" class="hover:text-[#1a1f4d] transition">
+                Mentions légales
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="bg-[#1a1f4d] text-white text-center mt-20 py-2 text-sm">
+      Copyright — © 2025-2026 AIAE SARL. Tous Droits Réservés.
+    </div>
+  </footer>
+
+  <!-- ================= JS ================= -->
+  <script>
+    // Menu burger en mobile
+    const burger = document.getElementById("burger");
+    const mobileMenu = document.getElementById("mobileMenu");
+    if (burger && mobileMenu) {
+      burger.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+      });
+    }
+    const closeMobile = document.getElementById("closeMobile");
+    if (closeMobile && mobileMenu) {
+      closeMobile.addEventListener("click", () => {
+        mobileMenu.classList.add("hidden");
+      });
+    }
+
+    // Navbar scroll effect
+    const navBar = document.getElementById("navBar");
+    if (navBar) {
+      window.addEventListener("scroll", () => {
+        if (window.scrollY > 30) {
+          navBar.classList.add("nav-scrolled");
+        } else {
+          navBar.classList.remove("nav-scrolled");
+        }
+      });
+    }
+
+    // Intersection Observer for animations
+    const observerOptions = {
+      root: null,
+      rootMargin: '0px',
+      threshold: 0.1
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity = '1';
+          
+          // Counter animation
+          if (entry.target.querySelector('[data-count]')) {
+            const counter = entry.target.querySelector('[data-count]');
+            const target = parseInt(counter.dataset.count);
+            animateCounter(counter, target);
+          }
+        }
+      });
+    }, observerOptions);
+
+    document.querySelectorAll('[data-animate]').forEach(el => {
+      observer.observe(el);
+    });
+
+    // Counter animation function
+    function animateCounter(element, target) {
+      let current = 0;
+      const increment = target / 50;
+      const timer = setInterval(() => {
+        current += increment;
+        if (current >= target) {
+          element.textContent = target + '+';
+          clearInterval(timer);
+        } else {
+          element.textContent = Math.floor(current);
+        }
+      }, 30);
+    }
+
+    // Parallax effect for hero
+    window.addEventListener('scroll', () => {
+      const hero = document.querySelector('section:first-of-type');
+      if (hero) {
+        const scrolled = window.scrollY;
+        hero.style.backgroundPositionY = scrolled * 0.5 + 'px';
+      }
+    });
+// plus de details 
+  const btn = document.getElementById("toggleDetails");
+  const panel = document.getElementById("details-panel");
+  const icon = document.getElementById("details-icon");
+
+  if (btn && panel && icon) {
+    btn.addEventListener("click", () => {
+      panel.classList.toggle("hidden");
+      icon.classList.toggle("rotate");
+    });
+  }
+
+  // plus de details pour les étapes
+  const btnSteps = document.getElementById("toggleStepsDetails");
+  const panelSteps = document.getElementById("steps-panel");
+  const iconSteps = document.getElementById("steps-icon");
+
+  if (btnSteps && panelSteps && iconSteps) {
+    btnSteps.addEventListener("click", () => {
+      panelSteps.classList.toggle("hidden");
+      iconSteps.classList.toggle("rotate-180");
+    });
+  }
+  </script>
+</body>
+
+</html>
