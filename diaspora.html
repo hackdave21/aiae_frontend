@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Diaspora - AIAE</title>
   <link rel="icon" type="image/png" href="Images/logos/Symbole AIAE FINAL.png">
+  <link rel="stylesheet" href="css/responsive.css">
 
   <!-- Tailwind CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -251,39 +252,8 @@ strong {
 
 <body class="font-futura bg-gray-100 overflow-x-hidden">
 
-  <!-- ================= NAVBAR ================= -->
- <header class="fixed top-0 left-0 w-full z-50 bg-[#05482c]">
-  <nav class="max-w-7xl mx-auto flex items-center justify-between px-6 py-auto">
-
-    <!-- LOGO -->
-    <a href="index.html">
-      <img src="Images/logos/LOGO AIAE BLANC.png" class="h-10 sm:h-20 w-auto" />
-    </a>
-
-    <!-- MENU -->
-    <ul class="hidden lg:flex items-center gap-2 text-sm font-medium font-FuturaStdLight">
-
-      <li><a href="index.html" class="px-4 py-2 rounded-full bg-glassDark text-white block whitespace-nowrap hover:bg-white hover:text-[#0b5b3a] transition-colors">Accueil</a></li>
-      <li><a href="about.html" class="px-4 py-2 rounded-full bg-glassDark text-white block whitespace-nowrap hover:bg-white hover:text-[#0b5b3a] transition-colors">À propos</a></li>
-      <li><a href="division.html" class="px-4 py-2 rounded-full bg-glassDark text-white block whitespace-nowrap hover:bg-white hover:text-[#0b5b3a] transition-colors">Nos Divisions</a></li>
-      <li><a href="simulator.html" class="px-4 py-2 rounded-full bg-glassDark text-white block whitespace-nowrap hover:bg-white hover:text-[#0b5b3a] transition-colors">Simulateurs</a></li>
-      <li><a href="diaspora.html" class="px-4 py-2 rounded-full bg-white text-[#05482c] block whitespace-nowrap shadow">Diaspora</a></li>
-      <li><a href="faq.html" class="px-4 py-2 rounded-full bg-glassDark text-white block whitespace-nowrap hover:bg-white hover:text-[#0b5b3a] transition-colors">FAQ</a></li>
-
-    </ul>
-
-    <!-- CONTACT -->
-    <div class="flex items-center gap-3">
-      <button class="w-10 h-10 rounded-full bg-glassDark flex items-center justify-center">
-         <img src="Images/Contact blanc.svg" alt="" class="h-5 w-5" />
-      </button>
-      <a href="contact.html" class="px-5 py-2 rounded-full bg-white text-[#05482c] shadow">
-        Contact
-      </a>
-    </div>
-
-  </nav>
-</header>
+  <!-- ================= NAVBAR (injected by js/header.js) ================= -->
+  <div id="header-placeholder"></div>
 
 <!-- ================= HERO DIASPORA ================= -->
 <section class="pt-24 pb-5 bg-[#e6e6e6]">
@@ -929,33 +899,8 @@ strong {
   </footer>
 
   <!-- ================= JS ================= -->
+  <script src="js/header.js"></script>
   <script>
-    // Menu burger en mobile
-    const burger = document.getElementById("burger");
-    const mobileMenu = document.getElementById("mobileMenu");
-    if (burger && mobileMenu) {
-      burger.addEventListener("click", () => {
-        mobileMenu.classList.toggle("hidden");
-      });
-    }
-    const closeMobile = document.getElementById("closeMobile");
-    if (closeMobile && mobileMenu) {
-      closeMobile.addEventListener("click", () => {
-        mobileMenu.classList.add("hidden");
-      });
-    }
-
-    // Navbar scroll effect
-    const navBar = document.getElementById("navBar");
-    if (navBar) {
-      window.addEventListener("scroll", () => {
-        if (window.scrollY > 30) {
-          navBar.classList.add("nav-scrolled");
-        } else {
-          navBar.classList.remove("nav-scrolled");
-        }
-      });
-    }
 
     // Intersection Observer for animations
     const observerOptions = {

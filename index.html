@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>AIAE</title>
   <link rel="icon" type="image/png" href="Images/logos/Symbole AIAE FINAL.png">
+  <link rel="stylesheet" href="css/responsive.css">
 
   <!-- Tailwind CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -91,73 +92,8 @@
 </head>
 
 <body class="font-futura bg-gray-100 overflow-x-hidden">
-  <!-- ================= NAVBAR ================= -->
-  <header id="navBar"
-    class="fixed top-4 left-1/2 -translate-x-1/2 z-50 w-[95%] max-w-7xl rounded-[28px] overflow-hidden transition-all duration-300">
-    <nav class="flex items-center justify-between px-4 sm:px-6 py-3">
-      <img src="Images/logos/LOGO AIAE BLANC.png" alt="logo"
-        class="h-10 sm:h-12 md:h-14 lg:h-16 w-auto object-contain" />
-      <ul class="hidden lg:flex items-center gap-2 text-sm font-medium font-FuturaStdLight">
-        <li>
-          <a href="index.html" class="px-4 py-2 rounded-full bg-white text-[#1a1f4d] shadow block whitespace-nowrap font-semibold">Accueil</a>
-        </li>
-
-        <li>
-          <a href="about.html" class="px-4 py-2 rounded-full bg-glassDark text-white block whitespace-nowrap hover:bg-white hover:text-[#1a1f4d] transition-colors">À propos</a>
-        </li>
-
-        <li>
-          <a href="division.html" class="px-4 py-2 rounded-full bg-glassDark text-white block whitespace-nowrap hover:bg-white hover:text-[#1a1f4d] transition-colors">Nos divisions</a>
-        </li>
-
-        <li>
-          <a href="simulator.html"
-            class="px-4 py-2 rounded-full bg-glassDark text-white block whitespace-nowrap hover:bg-white hover:text-[#1a1f4d] transition-colors">Simulateurs</a>
-        </li>
-
-        <li>
-          <a href="clients.html" class="px-4 py-2 rounded-full bg-glassDark text-white block whitespace-nowrap hover:bg-white hover:text-[#1a1f4d] transition-colors">Diaspora</a>
-        </li>
-
-        <li>
-          <a href="faq.html" class="px-4 py-2 rounded-full bg-glassDark text-white block whitespace-nowrap hover:bg-white hover:text-[#1a1f4d] transition-colors">FAQ</a>
-        </li>
-      </ul>
-
-      <div class="flex items-center gap-2">
-        <button class="w-11 h-11 rounded-full bg-glassDark flex items-center justify-center">
-          <img src="Images/Contact blanc.svg" alt="" height="25" width="25" />
-        </button>
-        <a href="contact.html" class="hidden sm:block px-5 py-2 rounded-full bg-white text-black">
-          Contact
-        </a>
-        <button id="burger" class="lg:hidden text-2xl rounded-full bg-glassDark p-2">
-          <svg class="w-6 h-6 text-white dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
-            width="24" height="24" fill="none" viewBox="0 0 24 24">
-            <path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="M5 7h14M5 12h14M5 17h10" />
-          </svg>
-        </button>
-      </div>
-    </nav>
-
-    <!-- Menu mobile -->
-    <div id="mobileMenu" class="hidden lg:hidden mt-3 bg-glass backdrop-blur-xl rounded-2xl p-4 space-y-2 shadow-xl">
-      <button id="closeMobile" class="w-full text-right text-lg font-bold px-2 mb-2">
-        <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
-          width="24" height="24" fill="none" viewBox="0 0 24 24">
-          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-            d="M6 18 17.94 6M18 18 6.06 6" />
-        </svg>
-      </button>
-
-      <a href="index.html" class="block px-4 py-2 rounded-lg bg-white">Accueil</a>
-      <a href="about.html" class="block px-4 py-2 rounded-lg bg-glassDark">À propos</a>
-      <a href="division.html" class="block px-4 py-2 rounded-lg bg-glassDark">Nos divisions</a>
-      <a href="simulator.html" class="block px-4 py-2 rounded-lg bg-glassDark">Simulateurs</a>
-      <a href="diaspora.html" class="block px-4 py-2 rounded-lg bg-glassDark">Diaspora</a>
-      <a href="faq.html" class="block px-4 py-2 rounded-lg bg-glassDark">FAQ</a>
-    </div>
-  </header>
+  <!-- ================= NAVBAR (injected by js/header.js) ================= -->
+  <div id="header-placeholder"></div>
 
   <!-- ================= HERO ================= -->
   <section class="relative px-1 sm:px-1 pt-1">
@@ -1882,18 +1818,8 @@
 
   </footer>
   <!-- ================= JS ================= -->
+  <script src="js/header.js"></script>
   <script>
-    // Menu burger en mobile
-    const burger = document.getElementById("burger");
-    const mobileMenu = document.getElementById("mobileMenu");
-    burger.addEventListener("click", () => {
-      mobileMenu.classList.toggle("hidden");
-    });
-    const closeMobile = document.getElementById("closeMobile");
-
-    closeMobile.addEventListener("click", () => {
-      mobileMenu.classList.add("hidden");
-    });
 
     // changement d'image dans le hero
     const buttons = document.querySelectorAll(".tabBtn");
@@ -1933,15 +1859,7 @@
       if (Number(bedCount.textContent) > 0)
         bedCount.textContent = Number(bedCount.textContent) - 1;
     };
-    const navBar = document.getElementById("navBar");
 
-    window.addEventListener("scroll", () => {
-      if (window.scrollY > 30) {
-        navBar.classList.add("nav-scrolled");
-      } else {
-        navBar.classList.remove("nav-scrolled");
-      }
-    });
     function togglePanel(button, panel) {
       panel.classList.toggle("hidden");
       const arrow = button.querySelector(".arrow");

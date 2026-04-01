@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Foire Aux Questions - AIAE</title>
   <link rel="icon" type="image/png" href="Images/logos/Symbole AIAE FINAL.png">
+  <link rel="stylesheet" href="css/responsive.css">
 
   <!-- Tailwind CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -251,39 +252,8 @@ strong {
 
 <body class="font-futura bg-gray-100 overflow-x-hidden">
 
-  <!-- ================= NAVBAR ================= -->
- <header class="fixed top-0 left-0 w-full z-50 bg-[#161c42] shadow-sm">
-  <nav class="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
-
-    <!-- LOGO -->
-    <a href="index.html">
-      <img src="Images/logos/LOGO AIAE BLANC.png" class="h-8 sm:h-12 w-auto" />
-    </a>
-
-    <!-- MENU -->
-    <ul class="hidden lg:flex items-center gap-2 text-[15px] font-medium font-futura">
-
-      <li><a href="index.html" class="px-5 py-2 rounded-full bg-white/20 text-white block whitespace-nowrap hover:bg-white hover:text-[#1a1f4d] transition-colors shadow-sm">Accueil</a></li>
-      <li><a href="about.html" class="px-5 py-2 rounded-full bg-white/20 text-white block whitespace-nowrap hover:bg-white hover:text-[#1a1f4d] transition-colors shadow-sm">À Propos</a></li>
-      <li><a href="division.html" class="px-5 py-2 rounded-full bg-white/20 text-white block whitespace-nowrap hover:bg-white hover:text-[#1a1f4d] transition-colors shadow-sm">Nos Divisions</a></li>
-      <li><a href="simulator.html" class="px-5 py-2 rounded-full bg-white/20 text-white block whitespace-nowrap hover:bg-white hover:text-[#1a1f4d] transition-colors shadow-sm">Simulateurs</a></li>
-      <li><a href="diaspora.html" class="px-5 py-2 rounded-full bg-white/20 text-white block whitespace-nowrap hover:bg-white hover:text-[#1a1f4d] transition-colors shadow-sm">Diaspora</a></li>
-      <li><a href="faq.html" class="px-5 py-2 rounded-full bg-white text-[#1a1f4d] block whitespace-nowrap shadow-md">FAQ</a></li>
-
-    </ul>
-
-    <!-- CONTACT -->
-    <div class="flex items-center gap-4">
-      <button class="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center hover:bg-white/30 transition-colors">
-         <img src="Images/Contact blanc.svg" alt="" class="h-5 w-5" />
-      </button>
-      <a href="contact.html" class="px-7 py-2.5 rounded-full bg-white text-[#1a1f4d] shadow-lg hover:bg-gray-100 transition-colors">
-        Contact
-      </a>
-    </div>
-
-  </nav>
-</header>
+  <!-- ================= NAVBAR (injected by js/header.js) ================= -->
+  <div id="header-placeholder"></div>
 
     <!-- ================= SECTION TITRE HERO ================= -->
   <section class="bg-[#161c42] pt-20 pb-5 w-full text-center">
@@ -1146,33 +1116,8 @@ strong {
   </footer>
 
   <!-- ================= JS ================= -->
+  <script src="js/header.js"></script>
   <script>
-    // Menu burger en mobile
-    const burger = document.getElementById("burger");
-    const mobileMenu = document.getElementById("mobileMenu");
-    if (burger && mobileMenu) {
-      burger.addEventListener("click", () => {
-        mobileMenu.classList.toggle("hidden");
-      });
-    }
-    const closeMobile = document.getElementById("closeMobile");
-    if (closeMobile && mobileMenu) {
-      closeMobile.addEventListener("click", () => {
-        mobileMenu.classList.add("hidden");
-      });
-    }
-
-    // Navbar scroll effect
-    const navBar = document.getElementById("navBar");
-    if (navBar) {
-      window.addEventListener("scroll", () => {
-        if (window.scrollY > 30) {
-          navBar.classList.add("nav-scrolled");
-        } else {
-          navBar.classList.remove("nav-scrolled");
-        }
-      });
-    }
 
     // Intersection Observer for animations
     const observerOptions = {
