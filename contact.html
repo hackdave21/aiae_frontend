@@ -21,8 +21,8 @@
             futuraCondensed: ["Futura Condensed", "sans-serif"],
           },
           colors: {
-            primary: "#0b5b3a",
-            secondary: "#d97706",
+            primary: "#05482C",
+            secondary: "#FF8400",
             glass: "rgba(255,255,255,0.55)",
             glassDark: "rgba(255,255,255,0.35)",
           },
@@ -205,13 +205,13 @@ strong {
     .divider-green {
       width: 80px;
       height: 4px;
-      background: linear-gradient(90deg, #0b5b3a, #0a4f2c);
+      background: linear-gradient(90deg, #05482C, #05482C);
     }
 
     .divider-orange {
       width: 80px;
       height: 4px;
-      background: linear-gradient(90deg, #d97706, #f59e0b);
+      background: linear-gradient(90deg, #FF8400, #f59e0b);
     }
   /* Animation du panneau */
   #details-panel {
@@ -243,11 +243,12 @@ strong {
 
   /* Bouton actif */
   .standing-btn.active {
-    background: #1a1f4d !important;
+    background: #162064 !important;
     color: white !important;
-    border-color: #1a1f4d !important;
+    border-color: #162064 !important;
   }
   </style>
+  <script src="js/tailwind-config.js"></script>
 </head>
 
 <body class="font-futura bg-gray-100 overflow-x-hidden">
@@ -261,11 +262,11 @@ strong {
   <!-- ================= SECTION HERO ================= -->
   <section class="bg-[#e6e6e6] pt-10 pb-10">
     <div class="max-w-[900px] mx-auto text-center px-6">
-      <h1 class="text-[40px] md:text-[60px] font-extrabold text-[#1a1f4d] mb-4 leading-tight">
-        Demandez <span class="text-[#d97706]">Un Devis</span> Gratuit
+      <h1 class="text-[40px] md:text-[60px] font-extrabold text-[#162064] mb-4 leading-tight">
+        Demandez <span class="text-[#FF8400]">Un Devis</span> Gratuit
       </h1>
       <p class="text-[47px] md:text-[24px] text-[#4a4a4a] font-light">
-        Réponse <strong class="font-bold text-[#1a1f4d]">personnalisée</strong> sous <strong class="font-bold text-[#1a1f4d]">48h</strong> ouvrées.
+        Réponse <strong class="font-bold text-[#162064]">personnalisée</strong> sous <strong class="font-bold text-[#162064]">48h</strong> ouvrées.
       </p>
     </div>
   </section>
@@ -278,19 +279,19 @@ strong {
         <!-- Nom complet -->
         <div>
           <label class="block text-[14px] font-extrabold text-[#4a4a4a] mb-2">Nom complet</label>
-          <input type="text" placeholder="Votre nom complet" class="w-full bg-transparent border border-gray-400 rounded-xl px-5 py-3 outline-none focus:border-[#d97706] text-gray-700 placeholder-gray-400">
+          <input type="text" placeholder="Votre nom complet" class="w-full bg-transparent border border-gray-400 rounded-xl px-5 py-3 outline-none focus:border-[#FF8400] text-gray-700 placeholder-gray-400">
         </div>
 
         <!-- Adresse e-mail -->
         <div>
           <label class="block text-[14px] font-extrabold text-[#4a4a4a] mb-2">Adresse e-mail</label>
-          <input type="email" placeholder="nomprenom@gmail.com" class="w-full bg-transparent border border-gray-400 rounded-xl px-5 py-3 outline-none focus:border-[#d97706] text-gray-700 placeholder-gray-400">
+          <input type="email" placeholder="nomprenom@gmail.com" class="w-full bg-transparent border border-gray-400 rounded-xl px-5 py-3 outline-none focus:border-[#FF8400] text-gray-700 placeholder-gray-400">
         </div>
 
         <!-- Téléphone -->
         <div>
           <label class="block text-[14px] font-extrabold text-[#4a4a4a] mb-2">Téléphone</label>
-          <div class="flex items-center w-full border border-gray-400 rounded-xl px-4 py-3 bg-transparent focus-within:border-[#d97706]">
+          <div class="flex items-center w-full border border-gray-400 rounded-xl px-4 py-3 bg-transparent focus-within:border-[#FF8400]">
             <span class="text-gray-400 font-light pr-3 border-r border-[#d4d4d4]">+228</span>
             <input type="tel" placeholder="XX XX XX XX" class="bg-transparent pl-4 w-full outline-none text-gray-700 placeholder-gray-400">
             <div class="flex items-center gap-2 pl-3 ml-auto cursor-pointer border-l border-[#d4d4d4]">
@@ -312,7 +313,7 @@ strong {
         <div>
           <label class="block text-[14px] font-extrabold text-[#4a4a4a] mb-2">Pays de résidence</label>
           <div class="relative">
-            <select class="w-full bg-transparent border border-gray-400 rounded-xl px-5 py-4 outline-none focus:border-[#d97706] text-gray-400 appearance-none cursor-pointer">
+            <select class="w-full bg-transparent border border-gray-400 rounded-xl px-5 py-4 outline-none focus:border-[#FF8400] text-gray-400 appearance-none cursor-pointer">
               <option value="" disabled selected>Sélectionnez votre pays de résidence</option>
               <option value="tg">Togo</option>
               <option value="fr">France</option>
@@ -327,7 +328,7 @@ strong {
         <div>
           <label class="block text-[14px] font-extrabold text-[#4a4a4a] mb-2">Type de projet</label>
           <div class="relative">
-            <select class="w-full bg-transparent border border-gray-400 rounded-xl px-5 py-4 outline-none focus:border-[#d97706] text-gray-400 appearance-none cursor-pointer">
+            <select class="w-full bg-transparent border border-gray-400 rounded-xl px-5 py-4 outline-none focus:border-[#FF8400] text-gray-400 appearance-none cursor-pointer">
               <option value="" disabled selected>Sélectionnez le type de projet</option>
               <option value="residentiel">Résidentiel</option>
               <option value="commercial">Commercial</option>
@@ -342,7 +343,7 @@ strong {
         <div>
           <label class="block text-[14px] font-extrabold text-[#4a4a4a] mb-2">Sélectionnez un délai</label>
           <div class="relative">
-            <select class="w-full bg-transparent border border-gray-400 rounded-xl px-5 py-4 outline-none focus:border-[#d97706] text-gray-400 appearance-none cursor-pointer">
+            <select class="w-full bg-transparent border border-gray-400 rounded-xl px-5 py-4 outline-none focus:border-[#FF8400] text-gray-400 appearance-none cursor-pointer">
               <option value="" disabled selected>Quel délai souhaitez vous pour finaliser votre projet ? Sélectionnez.</option>
               <option value="urgent">Urgent</option>
               <option value="3mois">Dans les 3 mois</option>
@@ -357,14 +358,14 @@ strong {
         <!-- Votre projet -->
         <div>
           <label class="block text-[14px] font-extrabold text-[#4a4a4a] mb-2">Votre projet</label>
-          <textarea rows="4" placeholder="Décrivez brièvement votre projet..." class="w-full bg-transparent border border-gray-400 rounded-xl px-5 py-4 outline-none focus:border-[#d97706] text-gray-700 placeholder-gray-400 resize-none"></textarea>
+          <textarea rows="4" placeholder="Décrivez brièvement votre projet..." class="w-full bg-transparent border border-gray-400 rounded-xl px-5 py-4 outline-none focus:border-[#FF8400] text-gray-700 placeholder-gray-400 resize-none"></textarea>
         </div>
 
         <!-- Localisation du projet -->
         <div>
           <label class="block text-[14px] font-extrabold text-[#4a4a4a] mb-2">Localisation du projet</label>
           <div class="relative">
-            <input type="text" placeholder="Quel est le lieu de votre projet ?" class="w-full bg-transparent border border-gray-400 rounded-xl px-5 py-4 outline-none focus:border-[#d97706] text-gray-700 placeholder-gray-400 pr-12">
+            <input type="text" placeholder="Quel est le lieu de votre projet ?" class="w-full bg-transparent border border-gray-400 rounded-xl px-5 py-4 outline-none focus:border-[#FF8400] text-gray-700 placeholder-gray-400 pr-12">
             <div class="absolute right-5 top-1/2 -translate-y-1/2 pointer-events-none text-gray-500 font-light text-2xl">
               +
             </div>
@@ -375,7 +376,7 @@ strong {
         <div>
           <label class="block text-[14px] font-extrabold text-[#4a4a4a] mb-2">Budget estimé</label>
           <div class="relative">
-            <input type="text" placeholder="Quel budget envisagez-vous ?" class="w-full bg-transparent border border-gray-400 rounded-xl px-5 py-4 outline-none focus:border-[#d97706] text-gray-700 placeholder-gray-400 pr-12">
+            <input type="text" placeholder="Quel budget envisagez-vous ?" class="w-full bg-transparent border border-gray-400 rounded-xl px-5 py-4 outline-none focus:border-[#FF8400] text-gray-700 placeholder-gray-400 pr-12">
             <div class="absolute right-5 top-1/2 -translate-y-1/2 pointer-events-none text-gray-500 font-light text-2xl">
               +
             </div>
@@ -386,7 +387,7 @@ strong {
         <div>
           <label class="block text-[14px] font-extrabold text-[#4a4a4a] mb-2">Comment avez-vous connu AIAE ?</label>
           <div class="relative">
-            <select class="w-full bg-transparent border border-gray-400 rounded-xl px-5 py-4 outline-none focus:border-[#d97706] text-gray-400 appearance-none cursor-pointer">
+            <select class="w-full bg-transparent border border-gray-400 rounded-xl px-5 py-4 outline-none focus:border-[#FF8400] text-gray-400 appearance-none cursor-pointer">
               <option value="" disabled selected>Par quel moyen avez vous entendu parler de nous ? Sélectionnez.</option>
               <option value="reseaux">Réseaux Sociaux</option>
               <option value="recherche">Recherche Google</option>
@@ -400,7 +401,7 @@ strong {
         <!-- Pièce jointe -->
         <div>
           <label class="block text-[14px] font-extrabold text-[#4a4a4a] mb-2">Pièce jointe</label>
-          <div class="relative flex items-center justify-between border border-gray-400 rounded-xl px-5 py-4 bg-transparent cursor-pointer hover:border-[#d97706] focus-within:border-[#d97706] transition-colors overflow-hidden">
+          <div class="relative flex items-center justify-between border border-gray-400 rounded-xl px-5 py-4 bg-transparent cursor-pointer hover:border-[#FF8400] focus-within:border-[#FF8400] transition-colors overflow-hidden">
             <input type="file" id="file_upload" class="absolute inset-0 w-full h-full opacity-0 cursor-pointer z-10">
             <span class="text-gray-400 pointer-events-none">
               Ajoutez vos plans, photos terrain ou croquis (PDF, JPG, PNG). <span class="italic text-gray-300">Facultatif</span>
@@ -420,7 +421,7 @@ strong {
             <input type="checkbox" class="absolute inset-0 opacity-0 cursor-pointer peer" checked>
             <svg class="w-5 h-5 text-[#3a3939] opacity-0 peer-checked:opacity-100 pointer-events-none" fill="none" stroke="currentColor" stroke-width="4" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg>
           </div>
-          <p class="text-[14px] md:text-[16px] text-[#1a1f4d] font-bold leading-snug">
+          <p class="text-[14px] md:text-[16px] text-[#162064] font-bold leading-snug">
             J'accepte que mes données soient traitées par AIAE SARL<br class="hidden md:block">
             dans le cadre de ma demande (voir politique de<br class="hidden md:block">
             confidentialité).
@@ -429,7 +430,7 @@ strong {
 
         <!-- Bouton Envoyer -->
         <div class="pt-4 pb-12">
-          <button type="submit" class="w-full bg-[#111736] text-white py-4 font-bold text-[16px] md:text-[18px] tracking-wide hover:bg-[#1a1f4d] transition-colors outline-none cursor-pointer">
+          <button type="submit" class="w-full bg-[#111736] text-white py-4 font-bold text-[16px] md:text-[18px] tracking-wide hover:bg-[#162064] transition-colors outline-none cursor-pointer">
             ENVOYER MA DEMANDE
           </button>
         </div>
@@ -521,7 +522,7 @@ strong {
   <section class="bg-[#f2f3f5] py-10 w-full">
     <div class="max-w-[1000px] mx-auto text-center px-6">
       
-      <h2 class="text-[40px] md:text-[55px] font-bold text-[#1a1f4d] mb-4 leading-tight">
+      <h2 class="text-[40px] md:text-[55px] font-bold text-[#162064] mb-4 leading-tight">
         Prenez Rendez-Vous
       </h2>
       <p class="text-[20px] md:text-[24px] text-[#4a4a4a] font-light mb-12">
@@ -531,7 +532,7 @@ strong {
       <div class="flex flex-col md:flex-row justify-center w-full max-w-[950px] mx-auto shadow-lg">
         
         <!-- Bloc Gauche (Orange) -->
-        <a href="#" class="flex-1 bg-[#d97706] text-white px-6 md:px-8 py-4 md:py-5 text-center transition-colors duration-300 hover:bg-[#c96c05]">
+        <a href="#" class="flex-1 bg-[#FF8400] text-white px-6 md:px-8 py-4 md:py-5 text-center transition-colors duration-300 hover:bg-[#c96c05]">
           <span class="block text-[20px] md:text-[22px] font-bold tracking-wide mb-1 uppercase">
             Rendez-vous sur place
           </span>
@@ -570,9 +571,7 @@ strong {
           <a href="#" aria-label="Facebook">
             <img src="Images/FacebookLogo.svg" alt="Facebook" class="h-16 w-16" />
           </a>
-          <a href="#" aria-label="YouTube">
-            <img src="Images/YoutubeLogo.svg" alt="YouTube" class="h-16 w-16" />
-          </a>
+          
         </div>
         <div class="flex flex-col items-start">
           <p class="text-4xl font-bold">@Afrika_AIAE</p>
@@ -604,14 +603,14 @@ strong {
       <div class="grid grid-cols-1 md:grid-cols-[1.6fr_1fr_1fr_1fr] gap-16">
         <div>
           <img src="Images/logos/LOGO AIAE FINAL - Copie.png" class="w-64 pb-5" alt="AIAE Logo">
-          <p class="text-[#1a1f4d] text-[22px] leading-relaxed max-w-md">
+          <p class="text-[#162064] text-[22px] leading-relaxed max-w-md">
             <strong>AIAE : Afrika Infrastructures And Equipments.</strong>
             De la conception à la réalisation.
           </p>
         </div>
 
         <div>
-          <h3 class="text-[22px] font-semibold mb-6 text-[#1a1f4d]">
+          <h3 class="text-[22px] font-semibold mb-6 text-[#162064]">
             Nos divisions
           </h3>
           <ul class="space-y-2 text-gray-600 text-[24px]">
@@ -623,7 +622,7 @@ strong {
         </div>
 
         <div>
-          <h3 class="text-[22px] font-semibold mb-6 text-[#1a1f4d]">
+          <h3 class="text-[22px] font-semibold mb-6 text-[#162064]">
             Contact
           </h3>
           <ul class="space-y-2 text-gray-600 text-[24px]">
@@ -635,27 +634,27 @@ strong {
         </div>
 
         <div>
-          <h3 class="text-[22px] font-semibold mb-6 text-[#1a1f4d]">
+          <h3 class="text-[22px] font-semibold mb-6 text-[#162064]">
             Accéder à
           </h3>
           <ul class="space-y-2 text-gray-600 text-[24px]">
             <li>
-              <a href="#" class="hover:text-[#1a1f4d] transition">
+              <a href="#" class="hover:text-[#162064] transition">
                 Demander un devis
               </a>
             </li>
             <li>
-              <a href="#" class="hover:text-[#1a1f4d] transition">
+              <a href="#" class="hover:text-[#162064] transition">
                 Prendre rendez-vous
               </a>
             </li>
             <li>
-              <a href="#" class="hover:text-[#1a1f4d] transition">
+              <a href="#" class="hover:text-[#162064] transition">
                 FAQ
               </a>
             </li>
             <li>
-              <a href="#" class="hover:text-[#1a1f4d] transition">
+              <a href="#" class="hover:text-[#162064] transition">
                 Mentions légales
               </a>
             </li>
@@ -664,7 +663,7 @@ strong {
       </div>
     </div>
 
-    <div class="bg-[#1a1f4d] text-white text-center mt-20 py-2 text-sm">
+    <div class="bg-[#162064] text-white text-center mt-20 py-2 text-sm">
       Copyright — © 2025-2026 AIAE SARL. Tous Droits Réservés.
     </div>
   </footer>
