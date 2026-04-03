@@ -23,7 +23,7 @@
     simulator: { mode: "floating", bg: "", color: "#1a1f4d" },
     about:     { mode: "fullwidth", bg: "bg-[#1a1f4d]", color: "#1a1f4d" },
     division:  { mode: "fullwidth", bg: "bg-[#1a1f4d]", color: "#1a1f4d" },
-    diaspora:  { mode: "fullwidth", bg: "bg-[#05482c]", color: "#05482c" },
+    diaspora:  { mode: "fullwidth", bg: "bg-primary", color: "#05482c" },
     faq:       { mode: "fullwidth", bg: "bg-[#161c42]", color: "#161c42" },
     contact:   { mode: "fullwidth", bg: "bg-[#0b5b3a]", color: "#0b5b3a" },
   };

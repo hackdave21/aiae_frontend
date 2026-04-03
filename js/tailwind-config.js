@@ -14,8 +14,8 @@ window.tailwind = {
         colors: {
           // Branding Colors
           primary: "#05482C",    // Brand Green
-          secondary: "#FF8400",  // Brand Orange
-          darkBlue: "#162064",   // Brand Blue (accent/bg)
+          secondary: "#CC6A00",  // Brand Orange
+          darkBlue: "#0E1540",   // Brand Blue (accent/bg)
           
           // UI Helpers
           glass: "rgba(255, 255, 255, 0.55)",
