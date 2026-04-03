@@ -71,10 +71,12 @@
     }
 
     @media (max-width: 640px) {
+
       body,
       html {
         overflow-x: hidden !important;
       }
+
       section,
       div,
       img {
@@ -93,6 +95,7 @@
         opacity: 0;
         transform: translateY(40px);
       }
+
       to {
         opacity: 1;
         transform: translateY(0);
@@ -104,6 +107,7 @@
         opacity: 0;
         transform: translateX(-40px);
       }
+
       to {
         opacity: 1;
         transform: translateX(0);
@@ -115,6 +119,7 @@
         opacity: 0;
         transform: translateX(40px);
       }
+
       to {
         opacity: 1;
         transform: translateX(0);
@@ -126,6 +131,7 @@
         opacity: 0;
         transform: scale(0.9);
       }
+
       to {
         opacity: 1;
         transform: scale(1);
@@ -133,9 +139,12 @@
     }
 
     @keyframes float {
-      0%, 100% {
+
+      0%,
+      100% {
         transform: translateY(0);
       }
+
       50% {
         transform: translateY(-10px);
       }
@@ -161,14 +170,37 @@
       animation: float 4s ease-in-out infinite;
     }
 
-    .delay-100 { animation-delay: 0.1s; }
-    .delay-200 { animation-delay: 0.2s; }
-    .delay-300 { animation-delay: 0.3s; }
-    .delay-400 { animation-delay: 0.4s; }
-    .delay-500 { animation-delay: 0.5s; }
-    .delay-600 { animation-delay: 0.6s; }
-    .delay-700 { animation-delay: 0.7s; }
-    .delay-800 { animation-delay: 0.8s; }
+    .delay-100 {
+      animation-delay: 0.1s;
+    }
+
+    .delay-200 {
+      animation-delay: 0.2s;
+    }
+
+    .delay-300 {
+      animation-delay: 0.3s;
+    }
+
+    .delay-400 {
+      animation-delay: 0.4s;
+    }
+
+    .delay-500 {
+      animation-delay: 0.5s;
+    }
+
+    .delay-600 {
+      animation-delay: 0.6s;
+    }
+
+    .delay-700 {
+      animation-delay: 0.7s;
+    }
+
+    .delay-800 {
+      animation-delay: 0.8s;
+    }
 
     .opacity-0-init {
       opacity: 0;
@@ -195,12 +227,14 @@
     /* Background pattern */
     .pattern-bg {
       background-image: radial-gradient(circle at 20% 80%, rgba(11, 91, 58, 0.05) 0%, transparent 50%),
-                        radial-gradient(circle at 80% 20%, rgba(26, 31, 77, 0.05) 0%, transparent 50%);
+        radial-gradient(circle at 80% 20%, rgba(26, 31, 77, 0.05) 0%, transparent 50%);
     }
-strong {
-  font-weight: 600;
-  color: #1d1d1b;
-}
+
+    strong {
+      font-weight: 600;
+      color: #1d1d1b;
+    }
+
     /* Divider */
     .divider-green {
       width: 80px;
@@ -213,40 +247,42 @@ strong {
       height: 4px;
       background: linear-gradient(90deg, #FF8400, #f59e0b);
     }
-  /* Animation du panneau */
-  #details-panel {
-    animation: slideDown 0.4s ease-out;
-  }
-  
-  @keyframes slideDown {
-    from {
-      opacity: 0;
-      transform: translateY(-20px);
+
+    /* Animation du panneau */
+    #details-panel {
+      animation: slideDown 0.4s ease-out;
     }
-    to {
-      opacity: 1;
-      transform: translateY(0);
+
+    @keyframes slideDown {
+      from {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
-  }
 
-  /* Carte active */
-  .standing-card.active {
-    opacity: 1 !important;
-    transform: scale(1.02);
-    box-shadow: 0 10px 30px rgba(17, 29, 74, 0.2);
-  }
+    /* Carte active */
+    .standing-card.active {
+      opacity: 1 !important;
+      transform: scale(1.02);
+      box-shadow: 0 10px 30px rgba(17, 29, 74, 0.2);
+    }
 
-  /* Rotation icône */
-  #details-icon.rotate {
-    transform: rotate(180deg);
-  }
+    /* Rotation icône */
+    #details-icon.rotate {
+      transform: rotate(180deg);
+    }
 
-  /* Bouton actif */
-  .standing-btn.active {
-    background: #162064 !important;
-    color: white !important;
-    border-color: #162064 !important;
-  }
+    /* Bouton actif */
+    .standing-btn.active {
+      background: #162064 !important;
+      color: white !important;
+      border-color: #162064 !important;
+    }
   </style>
   <script src="js/tailwind-config.js"></script>
 </head>
@@ -256,7 +292,7 @@ strong {
   <!-- ================= NAVBAR (injected by js/header.js) ================= -->
   <div id="header-placeholder"></div>
 
-    <!-- ================= SECTION TITRE HERO ================= -->
+  <!-- ================= SECTION TITRE HERO ================= -->
   <section class="bg-[#161c42] pt-20 pb-5 w-full text-center">
     <h1 class="text-white text-[45px] md:text-[65px] font-extrabold tracking-wide uppercase">
       Construction & Prix
@@ -266,156 +302,212 @@ strong {
   <!-- ================= SECTION FAQ ACCORDIONS ================= -->
   <section class="bg-[#f2f3f5] py-10 pb-20 w-full">
     <div class="max-w-[1100px] mx-auto px-6 space-y-4">
-      
+
       <!-- QUESTION 01 -->
       <details class="group bg-white border border-[#162064]/40 rounded-xl overflow-hidden shadow-sm" open>
         <summary class="flex items-center justify-between p-5 md:p-6 cursor-pointer list-none !outline-none">
           <div class="flex items-center gap-5">
-            <span class="bg-[#162064] text-white w-[42px] h-[42px] flex items-center justify-center rounded-full text-[17px] font-bold shrink-0">
+            <span
+              class="bg-[#162064] text-white w-[42px] h-[42px] flex items-center justify-center rounded-full text-[17px] font-bold shrink-0">
               01
             </span>
             <p class="font-bold text-[#162064] text-[18px] md:text-[20px] select-none text-left">
               Combien coûte la construction d'une maison au Togo ?
             </p>
           </div>
-          <img src="Images/bfaq.png" alt="icon" class="w-7 h-7 transition-transform duration-300 group-open:rotate-180 shrink-0 ml-4" />
+          <img src="Images/bfaq.png" alt="icon"
+            class="w-7 h-7 transition-transform duration-300 group-open:rotate-180 shrink-0 ml-4" />
         </summary>
         <div class="mx-6 border-t border-[#162064]/20 transition-opacity duration-300"></div>
         <div class="px-6 md:px-[86px] pb-8 pt-6 text-[#3a3939] text-[16px] leading-relaxed">
-<p class="mb-6">Le coût dépend du standing choisi et de la surface. Nos fourchettes de prix de base au mètre carré sont :</p><ul class="space-y-1 mb-6"><li><strong class="font-bold text-[#162064]">Standard : </strong> 180 000 - 250 000 FCFA</li><li><strong class="font-bold text-[#162064]">Confort : </strong> 280 000 - 380 000 FCFA</li><li><strong class="font-bold text-[#162064]">Premium : </strong> 420 000 - 550 000 FCFA</li><li><strong class="font-bold text-[#162064]">Prestige : </strong> 600 000 - 900 000 FCFA</li></ul><p class="text-[12px] italic text-gray-500 mb-6">* Prix de base hors coefficients géographiques, géotechniques et hors frais d'études. L'estimation réelle de votre projet est obtenue via le simulateur en ligne ou par devis détaillé.</p><p><strong class="font-bold text-[#162064]">Ces prix couvrent le bâtiment</strong> (gros œuvre + finitions). <strong class="font-bold text-[#162064]">Les équipements</strong> (solaire, forage, piscine, etc.) <strong class="font-bold text-[#162064]">sont chiffrés séparément</strong>. Utilisez notre simulateur en ligne pour une estimation personnalisée, ou demandez un devis gratuit.</p>
+          <p class="mb-6">Le coût dépend du standing choisi et de la surface. Nos fourchettes de prix de base au mètre
+            carré sont :</p>
+          <ul class="space-y-1 mb-6">
+            <li><strong class="font-bold text-[#162064]">Standard : </strong> 180 000 - 250 000 FCFA</li>
+            <li><strong class="font-bold text-[#162064]">Confort : </strong> 280 000 - 380 000 FCFA</li>
+            <li><strong class="font-bold text-[#162064]">Premium : </strong> 420 000 - 550 000 FCFA</li>
+            <li><strong class="font-bold text-[#162064]">Prestige : </strong> 600 000 - 900 000 FCFA</li>
+          </ul>
+          <p class="text-[12px] italic text-gray-500 mb-6">* Prix de base hors coefficients géographiques, géotechniques
+            et hors frais d'études. L'estimation réelle de votre projet est obtenue via le simulateur en ligne ou par
+            devis détaillé.</p>
+          <p><strong class="font-bold text-[#162064]">Ces prix couvrent le bâtiment</strong> (gros œuvre + finitions).
+            <strong class="font-bold text-[#162064]">Les équipements</strong> (solaire, forage, piscine, etc.) <strong
+              class="font-bold text-[#162064]">sont chiffrés séparément</strong>. Utilisez notre simulateur en ligne
+            pour une estimation personnalisée, ou demandez un devis gratuit.</p>
         </div>
       </details>
-      
+
       <!-- QUESTION 02 -->
       <details class="group bg-white border border-[#162064]/40 rounded-xl overflow-hidden shadow-sm">
         <summary class="flex items-center justify-between p-5 md:p-6 cursor-pointer list-none !outline-none">
           <div class="flex items-center gap-5">
-            <span class="bg-[#162064] text-white w-[42px] h-[42px] flex items-center justify-center rounded-full text-[17px] font-bold shrink-0">
+            <span
+              class="bg-[#162064] text-white w-[42px] h-[42px] flex items-center justify-center rounded-full text-[17px] font-bold shrink-0">
               02
             </span>
             <p class="font-bold text-[#162064] text-[18px] md:text-[20px] select-none text-left">
               Quels sont les délais de construction ?
             </p>
           </div>
-          <img src="Images/bfaq.png" alt="icon" class="w-7 h-7 transition-transform duration-300 group-open:rotate-180 shrink-0 ml-4" />
+          <img src="Images/bfaq.png" alt="icon"
+            class="w-7 h-7 transition-transform duration-300 group-open:rotate-180 shrink-0 ml-4" />
         </summary>
         <div class="mx-6 border-t border-[#162064]/20 transition-opacity duration-300 hidden group-open:block"></div>
         <div class="px-6 md:px-[86px] pb-8 pt-6 text-[#3a3939] text-[16px] leading-relaxed hidden group-open:block">
-<p class="mb-4">Les délais dépendent de la surface et du standing :</p><ul class="list-disc pl-5 space-y-1 mb-4"><li><strong class="font-bold text-[#162064]">Villa Standard 100-150 m² :</strong> 8-12 mois.</li><li><strong class="font-bold text-[#162064]">Villa Confort/Premium 200-400 m² :</strong> 12-18 mois.</li><li><strong class="font-bold text-[#162064]">Villa Prestige 400 m²+ :</strong> 16-22 mois.</li></ul><p>Les délais sont contractuels et inscrits au contrat.</p>
+          <p class="mb-4">Les délais dépendent de la surface et du standing :</p>
+          <ul class="list-disc pl-5 space-y-1 mb-4">
+            <li><strong class="font-bold text-[#162064]">Villa Standard 100-150 m² :</strong> 8-12 mois.</li>
+            <li><strong class="font-bold text-[#162064]">Villa Confort/Premium 200-400 m² :</strong> 12-18 mois.</li>
+            <li><strong class="font-bold text-[#162064]">Villa Prestige 400 m²+ :</strong> 16-22 mois.</li>
+          </ul>
+          <p>Les délais sont contractuels et inscrits au contrat.</p>
         </div>
       </details>
-      
+
       <!-- QUESTION 03 -->
       <details class="group bg-white border border-[#162064]/40 rounded-xl overflow-hidden shadow-sm">
         <summary class="flex items-center justify-between p-5 md:p-6 cursor-pointer list-none !outline-none">
           <div class="flex items-center gap-5">
-            <span class="bg-[#162064] text-white w-[42px] h-[42px] flex items-center justify-center rounded-full text-[17px] font-bold shrink-0">
+            <span
+              class="bg-[#162064] text-white w-[42px] h-[42px] flex items-center justify-center rounded-full text-[17px] font-bold shrink-0">
               03
             </span>
             <p class="font-bold text-[#162064] text-[18px] md:text-[20px] select-none text-left">
               Intervenez-vous en dehors de Lomé ?
             </p>
           </div>
-          <img src="Images/bfaq.png" alt="icon" class="w-7 h-7 transition-transform duration-300 group-open:rotate-180 shrink-0 ml-4" />
+          <img src="Images/bfaq.png" alt="icon"
+            class="w-7 h-7 transition-transform duration-300 group-open:rotate-180 shrink-0 ml-4" />
         </summary>
         <div class="mx-6 border-t border-[#162064]/20 transition-opacity duration-300 hidden group-open:block"></div>
         <div class="px-6 md:px-[86px] pb-8 pt-6 text-[#3a3939] text-[16px] leading-relaxed hidden group-open:block">
-<p>Oui. Nous intervenons sur tout le territoire togolais : Grand Lomé, Maritime, Plateaux, Centrale, Kara et Savanes. Un coefficient géographique est appliqué pour refléter les coûts logistiques spécifiques à chaque zone.</p>
+          <p>Oui. Nous intervenons sur tout le territoire togolais : Grand Lomé, Maritime, Plateaux, Centrale, Kara et
+            Savanes. Un coefficient géographique est appliqué pour refléter les coûts logistiques spécifiques à chaque
+            zone.</p>
         </div>
       </details>
-      
+
       <!-- QUESTION 04 -->
       <details class="group bg-white border border-[#162064]/40 rounded-xl overflow-hidden shadow-sm">
         <summary class="flex items-center justify-between p-5 md:p-6 cursor-pointer list-none !outline-none">
           <div class="flex items-center gap-5">
-            <span class="bg-[#162064] text-white w-[42px] h-[42px] flex items-center justify-center rounded-full text-[17px] font-bold shrink-0">
+            <span
+              class="bg-[#162064] text-white w-[42px] h-[42px] flex items-center justify-center rounded-full text-[17px] font-bold shrink-0">
               04
             </span>
             <p class="font-bold text-[#162064] text-[18px] md:text-[20px] select-none text-left">
               Quelle est la différence entre les standings ?
             </p>
           </div>
-          <img src="Images/bfaq.png" alt="icon" class="w-7 h-7 transition-transform duration-300 group-open:rotate-180 shrink-0 ml-4" />
+          <img src="Images/bfaq.png" alt="icon"
+            class="w-7 h-7 transition-transform duration-300 group-open:rotate-180 shrink-0 ml-4" />
         </summary>
         <div class="mx-6 border-t border-[#162064]/20 transition-opacity duration-300 hidden group-open:block"></div>
         <div class="px-6 md:px-[86px] pb-8 pt-6 text-[#3a3939] text-[16px] leading-relaxed hidden group-open:block">
-<p class="mb-4">Chaque standing correspond à un niveau de finition et de confort :</p><ul class="space-y-3"><li><strong class="font-bold text-[#162064]">Standard :</strong> fonctionnel et solide. Carrelage local, menuiseries alu standard, peinture vinylique. Idéal pour primo-accédants.</li><li><strong class="font-bold text-[#162064]">Confort :</strong> qualité supérieure. Carrelage grès cérame, menuiseries alu renforcées, peinture acrylique, meilleure isolation. Notre cœur de gamme.</li><li><strong class="font-bold text-[#162064]">Premium :</strong> haut de gamme. Faïence importée, baies vitrées, domotique partielle, hauteur sous plafond 3m. Pour les exigeants.</li><li><strong class="font-bold text-[#162064]">Prestige :</strong> sur-mesure, matériaux nobles. Architecture personnalisée, domotique complète, finitions exceptionnelles. Chaque projet est unique.</li></ul>
+          <p class="mb-4">Chaque standing correspond à un niveau de finition et de confort :</p>
+          <ul class="space-y-3">
+            <li><strong class="font-bold text-[#162064]">Standard :</strong> fonctionnel et solide. Carrelage local,
+              menuiseries alu standard, peinture vinylique. Idéal pour primo-accédants.</li>
+            <li><strong class="font-bold text-[#162064]">Confort :</strong> qualité supérieure. Carrelage grès cérame,
+              menuiseries alu renforcées, peinture acrylique, meilleure isolation. Notre cœur de gamme.</li>
+            <li><strong class="font-bold text-[#162064]">Premium :</strong> haut de gamme. Faïence importée, baies
+              vitrées, domotique partielle, hauteur sous plafond 3m. Pour les exigeants.</li>
+            <li><strong class="font-bold text-[#162064]">Prestige :</strong> sur-mesure, matériaux nobles. Architecture
+              personnalisée, domotique complète, finitions exceptionnelles. Chaque projet est unique.</li>
+          </ul>
         </div>
       </details>
-      
+
       <!-- QUESTION 05 -->
       <details class="group bg-white border border-[#162064]/40 rounded-xl overflow-hidden shadow-sm">
         <summary class="flex items-center justify-between p-5 md:p-6 cursor-pointer list-none !outline-none">
           <div class="flex items-center gap-5">
-            <span class="bg-[#162064] text-white w-[42px] h-[42px] flex items-center justify-center rounded-full text-[17px] font-bold shrink-0">
+            <span
+              class="bg-[#162064] text-white w-[42px] h-[42px] flex items-center justify-center rounded-full text-[17px] font-bold shrink-0">
               05
             </span>
             <p class="font-bold text-[#162064] text-[18px] md:text-[20px] select-none text-left">
               Proposez-vous des facilités de paiement ?
             </p>
           </div>
-          <img src="Images/bfaq.png" alt="icon" class="w-7 h-7 transition-transform duration-300 group-open:rotate-180 shrink-0 ml-4" />
+          <img src="Images/bfaq.png" alt="icon"
+            class="w-7 h-7 transition-transform duration-300 group-open:rotate-180 shrink-0 ml-4" />
         </summary>
         <div class="mx-6 border-t border-[#162064]/20 transition-opacity duration-300 hidden group-open:block"></div>
         <div class="px-6 md:px-[86px] pb-8 pt-6 text-[#3a3939] text-[16px] leading-relaxed hidden group-open:block">
-<p>Oui. Le paiement se fait par étapes, au fur et à mesure de l'avancement des travaux. L'échéancier est défini ensemble avant le démarrage. Vous ne payez que sur constat d'avancement, validé par des preuves visuelles (photos/vidéos). Jamais d'intégralité en avance.</p>
+          <p>Oui. Le paiement se fait par étapes, au fur et à mesure de l'avancement des travaux. L'échéancier est
+            défini ensemble avant le démarrage. Vous ne payez que sur constat d'avancement, validé par des preuves
+            visuelles (photos/vidéos). Jamais d'intégralité en avance.</p>
         </div>
       </details>
-      
+
       <!-- QUESTION 06 -->
       <details class="group bg-white border border-[#162064]/40 rounded-xl overflow-hidden shadow-sm">
         <summary class="flex items-center justify-between p-5 md:p-6 cursor-pointer list-none !outline-none">
           <div class="flex items-center gap-5">
-            <span class="bg-[#162064] text-white w-[42px] h-[42px] flex items-center justify-center rounded-full text-[17px] font-bold shrink-0">
+            <span
+              class="bg-[#162064] text-white w-[42px] h-[42px] flex items-center justify-center rounded-full text-[17px] font-bold shrink-0">
               06
             </span>
             <p class="font-bold text-[#162064] text-[18px] md:text-[20px] select-none text-left">
               Quelles garanties offrez-vous ?
             </p>
           </div>
-          <img src="Images/bfaq.png" alt="icon" class="w-7 h-7 transition-transform duration-300 group-open:rotate-180 shrink-0 ml-4" />
+          <img src="Images/bfaq.png" alt="icon"
+            class="w-7 h-7 transition-transform duration-300 group-open:rotate-180 shrink-0 ml-4" />
         </summary>
         <div class="mx-6 border-t border-[#162064]/20 transition-opacity duration-300 hidden group-open:block"></div>
         <div class="px-6 md:px-[86px] pb-8 pt-6 text-[#3a3939] text-[16px] leading-relaxed hidden group-open:block">
-<p>Garantie décennale (10 ans) sur la structure portante, garantie de parfait achèvement (1 an) sur l'ensemble des travaux, assurance responsabilité civile professionnelle. Tous nos engagements sont formalisés dans le contrat.</p>
+          <p>Garantie décennale (10 ans) sur la structure portante, garantie de parfait achèvement (1 an) sur l'ensemble
+            des travaux, assurance responsabilité civile professionnelle. Tous nos engagements sont formalisés dans le
+            contrat.</p>
         </div>
       </details>
-      
+
       <!-- QUESTION 07 -->
       <details class="group bg-white border border-[#162064]/40 rounded-xl overflow-hidden shadow-sm">
         <summary class="flex items-center justify-between p-5 md:p-6 cursor-pointer list-none !outline-none">
           <div class="flex items-center gap-5">
-            <span class="bg-[#162064] text-white w-[42px] h-[42px] flex items-center justify-center rounded-full text-[17px] font-bold shrink-0">
+            <span
+              class="bg-[#162064] text-white w-[42px] h-[42px] flex items-center justify-center rounded-full text-[17px] font-bold shrink-0">
               07
             </span>
             <p class="font-bold text-[#162064] text-[18px] md:text-[20px] select-none text-left">
               Le terrain est-il inclus dans le prix ?
             </p>
           </div>
-          <img src="Images/bfaq.png" alt="icon" class="w-7 h-7 transition-transform duration-300 group-open:rotate-180 shrink-0 ml-4" />
+          <img src="Images/bfaq.png" alt="icon"
+            class="w-7 h-7 transition-transform duration-300 group-open:rotate-180 shrink-0 ml-4" />
         </summary>
         <div class="mx-6 border-t border-[#162064]/20 transition-opacity duration-300 hidden group-open:block"></div>
         <div class="px-6 md:px-[86px] pb-8 pt-6 text-[#3a3939] text-[16px] leading-relaxed hidden group-open:block">
-<p>Non. Nos prix au mètre carré concernent la construction uniquement (hors terrain). Le coût du terrain dépend de la localité et n'est pas estimé par le simulateur. Contactez-nous pour un accompagnement dans votre recherche foncière.</p>
+          <p>Non. Nos prix au mètre carré concernent la construction uniquement (hors terrain). Le coût du terrain
+            dépend de la localité et n'est pas estimé par le simulateur. Contactez-nous pour un accompagnement dans
+            votre recherche foncière.</p>
         </div>
       </details>
-      
+
       <!-- QUESTION 08 -->
       <details class="group bg-white border border-[#162064]/40 rounded-xl overflow-hidden shadow-sm">
         <summary class="flex items-center justify-between p-5 md:p-6 cursor-pointer list-none !outline-none">
           <div class="flex items-center gap-5">
-            <span class="bg-[#162064] text-white w-[42px] h-[42px] flex items-center justify-center rounded-full text-[17px] font-bold shrink-0">
+            <span
+              class="bg-[#162064] text-white w-[42px] h-[42px] flex items-center justify-center rounded-full text-[17px] font-bold shrink-0">
               08
             </span>
             <p class="font-bold text-[#162064] text-[18px] md:text-[20px] select-none text-left">
               Construisez-vous aussi des bâtiments commerciaux ou industriels ?
             </p>
           </div>
-          <img src="Images/bfaq.png" alt="icon" class="w-7 h-7 transition-transform duration-300 group-open:rotate-180 shrink-0 ml-4" />
+          <img src="Images/bfaq.png" alt="icon"
+            class="w-7 h-7 transition-transform duration-300 group-open:rotate-180 shrink-0 ml-4" />
         </summary>
         <div class="mx-6 border-t border-[#162064]/20 transition-opacity duration-300 hidden group-open:block"></div>
         <div class="px-6 md:px-[86px] pb-8 pt-6 text-[#3a3939] text-[16px] leading-relaxed hidden group-open:block">
-<p>Oui. AIAE intervient dans 4 secteurs : résidentiel (villas, immeubles), tertiaire (bureaux, commerces, hôtels), industriel (entrepôts, ateliers, usines) et agricole (fermes avicoles, exploitations intégrées). Chaque secteur dispose de ses propres grilles tarifaires.</p>
+          <p>Oui. AIAE intervient dans 4 secteurs : résidentiel (villas, immeubles), tertiaire (bureaux, commerces,
+            hôtels), industriel (entrepôts, ateliers, usines) et agricole (fermes avicoles, exploitations intégrées).
+            Chaque secteur dispose de ses propres grilles tarifaires.</p>
         </div>
       </details>
     </div>
@@ -431,118 +523,150 @@ strong {
   <!-- ================= SECTION FAQ DIASPORA ================= -->
   <section class="bg-[#f2f3f5] py-10 pb-20 w-full">
     <div class="max-w-[1100px] mx-auto px-6 space-y-4">
-      
+
       <!-- QUESTION 01 -->
       <details class="group bg-[#f8f8f8] border border-[#FF8400]/40 rounded-xl overflow-hidden shadow-sm">
         <summary class="flex items-center justify-between p-5 md:p-6 cursor-pointer list-none !outline-none">
           <div class="flex items-center gap-5">
-            <span class="bg-[#FF8400] text-white w-[42px] h-[42px] flex items-center justify-center rounded-full text-[17px] font-bold shrink-0">
+            <span
+              class="bg-[#FF8400] text-white w-[42px] h-[42px] flex items-center justify-center rounded-full text-[17px] font-bold shrink-0">
               01
             </span>
             <p class="font-bold text-[#FF8400] text-[18px] md:text-[20px] select-none text-left">
               Puis-je lancer un projet sans être au Togo ?
             </p>
           </div>
-          <img src="Images/bfaqorange.png" alt="icon" class="w-7 h-7 transition-transform duration-300 group-open:rotate-180 shrink-0 ml-4" />
+          <img src="Images/bfaqorange.png" alt="icon"
+            class="w-7 h-7 transition-transform duration-300 group-open:rotate-180 shrink-0 ml-4" />
         </summary>
         <div class="mx-6 border-t border-[#FF8400]/20 transition-opacity duration-300 hidden group-open:block"></div>
-        <div class="px-6 md:px-[86px] pb-8 pt-6 text-[#3a3939] text-[16px] leading-relaxed hidden group-open:block bg-white">
-<p>Oui, absolument. Tout le processus est conçu pour être géré à distance : études, contrat, paiements, suivi. Votre présence est souhaitable uniquement pour la réception finale, et même cette étape peut se faire par vidéoconférence.</p>
+        <div
+          class="px-6 md:px-[86px] pb-8 pt-6 text-[#3a3939] text-[16px] leading-relaxed hidden group-open:block bg-white">
+          <p>Oui, absolument. Tout le processus est conçu pour être géré à distance : études, contrat, paiements, suivi.
+            Votre présence est souhaitable uniquement pour la réception finale, et même cette étape peut se faire par
+            vidéoconférence.</p>
         </div>
       </details>
-      
+
       <!-- QUESTION 02 -->
       <details class="group bg-[#f8f8f8] border border-[#FF8400]/40 rounded-xl overflow-hidden shadow-sm">
         <summary class="flex items-center justify-between p-5 md:p-6 cursor-pointer list-none !outline-none">
           <div class="flex items-center gap-5">
-            <span class="bg-[#FF8400] text-white w-[42px] h-[42px] flex items-center justify-center rounded-full text-[17px] font-bold shrink-0">
+            <span
+              class="bg-[#FF8400] text-white w-[42px] h-[42px] flex items-center justify-center rounded-full text-[17px] font-bold shrink-0">
               02
             </span>
             <p class="font-bold text-[#FF8400] text-[18px] md:text-[20px] select-none text-left">
               Comment suivre mon chantier depuis l'étranger ?
             </p>
           </div>
-          <img src="Images/bfaqorange.png" alt="icon" class="w-7 h-7 transition-transform duration-300 group-open:rotate-180 shrink-0 ml-4" />
+          <img src="Images/bfaqorange.png" alt="icon"
+            class="w-7 h-7 transition-transform duration-300 group-open:rotate-180 shrink-0 ml-4" />
         </summary>
         <div class="mx-6 border-t border-[#FF8400]/20 transition-opacity duration-300 hidden group-open:block"></div>
-        <div class="px-6 md:px-[86px] pb-8 pt-6 text-[#3a3939] text-[16px] leading-relaxed hidden group-open:block bg-white">
-<p>Rapports photos/vidéos hebdomadaires, visioconférences de suivi selon vos disponibilités et votre fuseau horaire. Un chef de projet dédié est votre interlocuteur unique. Alertes instantanées quand une décision est nécessaire.</p>
+        <div
+          class="px-6 md:px-[86px] pb-8 pt-6 text-[#3a3939] text-[16px] leading-relaxed hidden group-open:block bg-white">
+          <p>Rapports photos/vidéos hebdomadaires, visioconférences de suivi selon vos disponibilités et votre fuseau
+            horaire. Un chef de projet dédié est votre interlocuteur unique. Alertes instantanées quand une décision est
+            nécessaire.</p>
         </div>
       </details>
-      
+
       <!-- QUESTION 03 -->
       <details class="group bg-[#f8f8f8] border border-[#FF8400]/40 rounded-xl overflow-hidden shadow-sm">
         <summary class="flex items-center justify-between p-5 md:p-6 cursor-pointer list-none !outline-none">
           <div class="flex items-center gap-5">
-            <span class="bg-[#FF8400] text-white w-[42px] h-[42px] flex items-center justify-center rounded-full text-[17px] font-bold shrink-0">
+            <span
+              class="bg-[#FF8400] text-white w-[42px] h-[42px] flex items-center justify-center rounded-full text-[17px] font-bold shrink-0">
               03
             </span>
             <p class="font-bold text-[#FF8400] text-[18px] md:text-[20px] select-none text-left">
               Quel budget minimum pour un projet diaspora ?
             </p>
           </div>
-          <img src="Images/bfaqorange.png" alt="icon" class="w-7 h-7 transition-transform duration-300 group-open:rotate-180 shrink-0 ml-4" />
+          <img src="Images/bfaqorange.png" alt="icon"
+            class="w-7 h-7 transition-transform duration-300 group-open:rotate-180 shrink-0 ml-4" />
         </summary>
         <div class="mx-6 border-t border-[#FF8400]/20 transition-opacity duration-300 hidden group-open:block"></div>
-        <div class="px-6 md:px-[86px] pb-8 pt-6 text-[#3a3939] text-[16px] leading-relaxed hidden group-open:block bg-white">
-<p class="mb-4">Le budget dépend du standing, de la surface et de la zone géographique. À titre indicatif, pour une villa Standard de 100 m² en Grand Lomé, comptez à partir de 25 millions FCFA (environ 38 000 €) pour la construction seule, hors équipements optionnels.</p><p>Ce montant inclut les coefficients géographiques et géotechniques, les frais d'études et la marge de gestion. Il peut varier significativement selon les spécificités de votre projet. Notre simulateur en ligne vous donne une estimation personnalisée en 2 minutes.</p>
+        <div
+          class="px-6 md:px-[86px] pb-8 pt-6 text-[#3a3939] text-[16px] leading-relaxed hidden group-open:block bg-white">
+          <p class="mb-4">Le budget dépend du standing, de la surface et de la zone géographique. À titre indicatif,
+            pour une villa Standard de 100 m² en Grand Lomé, comptez à partir de 25 millions FCFA (environ 38 000 €)
+            pour la construction seule, hors équipements optionnels.</p>
+          <p>Ce montant inclut les coefficients géographiques et géotechniques, les frais d'études et la marge de
+            gestion. Il peut varier significativement selon les spécificités de votre projet. Notre simulateur en ligne
+            vous donne une estimation personnalisée en 2 minutes.</p>
         </div>
       </details>
-      
+
       <!-- QUESTION 04 -->
       <details class="group bg-[#f8f8f8] border border-[#FF8400]/40 rounded-xl overflow-hidden shadow-sm" open>
         <summary class="flex items-center justify-between p-5 md:p-6 cursor-pointer list-none !outline-none">
           <div class="flex items-center gap-5">
-            <span class="bg-[#FF8400] text-white w-[42px] h-[42px] flex items-center justify-center rounded-full text-[17px] font-bold shrink-0">
+            <span
+              class="bg-[#FF8400] text-white w-[42px] h-[42px] flex items-center justify-center rounded-full text-[17px] font-bold shrink-0">
               04
             </span>
             <p class="font-bold text-[#FF8400] text-[18px] md:text-[20px] select-none text-left">
               Les paiements sont-ils sécurisés ?
             </p>
           </div>
-          <img src="Images/bfaqorange.png" alt="icon" class="w-7 h-7 transition-transform duration-300 group-open:rotate-180 shrink-0 ml-4" />
+          <img src="Images/bfaqorange.png" alt="icon"
+            class="w-7 h-7 transition-transform duration-300 group-open:rotate-180 shrink-0 ml-4" />
         </summary>
         <div class="mx-6 border-t border-[#FF8400]/20 transition-opacity duration-300"></div>
         <div class="px-6 md:px-[86px] pb-8 pt-6 text-[#3a3939] text-[16px] leading-relaxed bg-white">
-<p>Oui. Virements internationaux vers le compte bancaire vérifié de AIAE SARL. Reçu émis pour chaque versement. Paiement par étapes sur constat d'avancement. Contrat signable devant notaire pour une sécurité juridique maximale.</p>
+          <p>Oui. Virements internationaux vers le compte bancaire vérifié de AIAE SARL. Reçu émis pour chaque
+            versement. Paiement par étapes sur constat d'avancement. Contrat signable devant notaire pour une sécurité
+            juridique maximale.</p>
         </div>
       </details>
-      
+
       <!-- QUESTION 05 -->
       <details class="group bg-[#f8f8f8] border border-[#FF8400]/40 rounded-xl overflow-hidden shadow-sm">
         <summary class="flex items-center justify-between p-5 md:p-6 cursor-pointer list-none !outline-none">
           <div class="flex items-center gap-5">
-            <span class="bg-[#FF8400] text-white w-[42px] h-[42px] flex items-center justify-center rounded-full text-[17px] font-bold shrink-0">
+            <span
+              class="bg-[#FF8400] text-white w-[42px] h-[42px] flex items-center justify-center rounded-full text-[17px] font-bold shrink-0">
               05
             </span>
             <p class="font-bold text-[#FF8400] text-[18px] md:text-[20px] select-none text-left">
               Puis-je combiner construction et énergie solaire ?
             </p>
           </div>
-          <img src="Images/bfaqorange.png" alt="icon" class="w-7 h-7 transition-transform duration-300 group-open:rotate-180 shrink-0 ml-4" />
+          <img src="Images/bfaqorange.png" alt="icon"
+            class="w-7 h-7 transition-transform duration-300 group-open:rotate-180 shrink-0 ml-4" />
         </summary>
         <div class="mx-6 border-t border-[#FF8400]/20 transition-opacity duration-300 hidden group-open:block"></div>
-        <div class="px-6 md:px-[86px] pb-8 pt-6 text-[#3a3939] text-[16px] leading-relaxed hidden group-open:block bg-white">
-<p>Oui, c'est l'un de nos atouts majeurs. Notre Division Énergie (opérationnelle en 2026) intègre une installation solaire dès la conception de votre bâtiment. Un seul interlocuteur, un seul contrat, une maison autonome en énergie.</p>
+        <div
+          class="px-6 md:px-[86px] pb-8 pt-6 text-[#3a3939] text-[16px] leading-relaxed hidden group-open:block bg-white">
+          <p>Oui, c'est l'un de nos atouts majeurs. Notre Division Énergie (opérationnelle en 2026) intègre une
+            installation solaire dès la conception de votre bâtiment. Un seul interlocuteur, un seul contrat, une maison
+            autonome en énergie.</p>
         </div>
       </details>
-      
+
       <!-- QUESTION 06 -->
       <details class="group bg-[#f8f8f8] border border-[#FF8400]/40 rounded-xl overflow-hidden shadow-sm">
         <summary class="flex items-center justify-between p-5 md:p-6 cursor-pointer list-none !outline-none">
           <div class="flex items-center gap-5">
-            <span class="bg-[#FF8400] text-white w-[42px] h-[42px] flex items-center justify-center rounded-full text-[17px] font-bold shrink-0">
+            <span
+              class="bg-[#FF8400] text-white w-[42px] h-[42px] flex items-center justify-center rounded-full text-[17px] font-bold shrink-0">
               06
             </span>
             <p class="font-bold text-[#FF8400] text-[18px] md:text-[20px] select-none text-left">
               Avez-vous un bureau en France / Europe ?
             </p>
           </div>
-          <img src="Images/bfaqorange.png" alt="icon" class="w-7 h-7 transition-transform duration-300 group-open:rotate-180 shrink-0 ml-4" />
+          <img src="Images/bfaqorange.png" alt="icon"
+            class="w-7 h-7 transition-transform duration-300 group-open:rotate-180 shrink-0 ml-4" />
         </summary>
         <div class="mx-6 border-t border-[#FF8400]/20 transition-opacity duration-300 hidden group-open:block"></div>
-        <div class="px-6 md:px-[86px] pb-8 pt-6 text-[#3a3939] text-[16px] leading-relaxed hidden group-open:block bg-white">
-<p>Nous n'avons pas de bureau physique en Europe, mais des rendez-vous en personne peuvent être organisés lors de déplacements de notre équipe. La visioconférence reste notre mode principal, adaptée à votre fuseau horaire.</p>
+        <div
+          class="px-6 md:px-[86px] pb-8 pt-6 text-[#3a3939] text-[16px] leading-relaxed hidden group-open:block bg-white">
+          <p>Nous n'avons pas de bureau physique en Europe, mais des rendez-vous en personne peuvent être organisés lors
+            de déplacements de notre équipe. La visioconférence reste notre mode principal, adaptée à votre fuseau
+            horaire.</p>
         </div>
       </details>
     </div>
@@ -558,99 +682,122 @@ strong {
   <!-- ================= SECTION FAQ SIMULATEUR EN LIGNE ================= -->
   <section class="bg-[#f2f3f5] py-10 pb-20 w-full">
     <div class="max-w-[1100px] mx-auto px-6 space-y-4">
-      
+
       <!-- QUESTION 01 -->
       <details class="group bg-[#f8f8f8] border border-[#05482C]/40 rounded-xl overflow-hidden shadow-sm">
         <summary class="flex items-center justify-between p-5 md:p-6 cursor-pointer list-none !outline-none">
           <div class="flex items-center gap-5">
-            <span class="bg-[#05482C] text-white w-[42px] h-[42px] flex items-center justify-center rounded-full text-[17px] font-bold shrink-0">
+            <span
+              class="bg-[#05482C] text-white w-[42px] h-[42px] flex items-center justify-center rounded-full text-[17px] font-bold shrink-0">
               01
             </span>
             <p class="font-bold text-[#05482C] text-[18px] md:text-[20px] select-none text-left">
               Le résultat du simulateur est-il un devis ?
             </p>
           </div>
-        <img src="Images/bfaqvert.png" alt="icon" class="w-7 h-7 transition-transform duration-300 group-open:rotate-180 shrink-0 ml-4" />
+          <img src="Images/bfaqvert.png" alt="icon"
+            class="w-7 h-7 transition-transform duration-300 group-open:rotate-180 shrink-0 ml-4" />
         </summary>
         <div class="mx-6 border-t border-[#05482C]/20 transition-opacity duration-300 hidden group-open:block"></div>
-        <div class="px-6 md:px-[86px] pb-8 pt-6 text-[#3a3939] text-[16px] leading-relaxed hidden group-open:block bg-white">
-<p>Non. Le simulateur fournit une estimation budgétaire indicative sous forme de fourchette (montant minimum — montant maximum). Il ne remplace pas un devis détaillé établi après étude technique sur site. Pour obtenir un devis engageant, contactez-nous.</p>
+        <div
+          class="px-6 md:px-[86px] pb-8 pt-6 text-[#3a3939] text-[16px] leading-relaxed hidden group-open:block bg-white">
+          <p>Non. Le simulateur fournit une estimation budgétaire indicative sous forme de fourchette (montant minimum —
+            montant maximum). Il ne remplace pas un devis détaillé établi après étude technique sur site. Pour obtenir
+            un devis engageant, contactez-nous.</p>
         </div>
       </details>
-      
+
       <!-- QUESTION 02 -->
       <details class="group bg-[#f8f8f8] border border-[#05482C]/40 rounded-xl overflow-hidden shadow-sm">
         <summary class="flex items-center justify-between p-5 md:p-6 cursor-pointer list-none !outline-none">
           <div class="flex items-center gap-5">
-            <span class="bg-[#05482C] text-white w-[42px] h-[42px] flex items-center justify-center rounded-full text-[17px] font-bold shrink-0">
+            <span
+              class="bg-[#05482C] text-white w-[42px] h-[42px] flex items-center justify-center rounded-full text-[17px] font-bold shrink-0">
               02
             </span>
             <p class="font-bold text-[#05482C] text-[18px] md:text-[20px] select-none text-left">
               Comment est calculée l'estimation ?
             </p>
           </div>
-        <img src="Images/bfaqvert.png" alt="icon" class="w-7 h-7 transition-transform duration-300 group-open:rotate-180 shrink-0 ml-4" />
+          <img src="Images/bfaqvert.png" alt="icon"
+            class="w-7 h-7 transition-transform duration-300 group-open:rotate-180 shrink-0 ml-4" />
         </summary>
         <div class="mx-6 border-t border-[#05482C]/20 transition-opacity duration-300 hidden group-open:block"></div>
-        <div class="px-6 md:px-[86px] pb-8 pt-6 text-[#3a3939] text-[16px] leading-relaxed hidden group-open:block bg-white">
-<p>L'estimation est basée sur nos prix de référence au m² par standing, ajustés par des coefficients géographiques (logistique) et géotechniques (type de sol). Les équipements optionnels (solaire, forage, piscine, etc.) sont ajoutés avec leurs propres fourchettes de prix.</p>
+        <div
+          class="px-6 md:px-[86px] pb-8 pt-6 text-[#3a3939] text-[16px] leading-relaxed hidden group-open:block bg-white">
+          <p>L'estimation est basée sur nos prix de référence au m² par standing, ajustés par des coefficients
+            géographiques (logistique) et géotechniques (type de sol). Les équipements optionnels (solaire, forage,
+            piscine, etc.) sont ajoutés avec leurs propres fourchettes de prix.</p>
         </div>
       </details>
-      
+
       <!-- QUESTION 03 -->
       <details class="group bg-[#f8f8f8] border border-[#05482C]/40 rounded-xl overflow-hidden shadow-sm">
         <summary class="flex items-center justify-between p-5 md:p-6 cursor-pointer list-none !outline-none">
           <div class="flex items-center gap-5">
-            <span class="bg-[#05482C] text-white w-[42px] h-[42px] flex items-center justify-center rounded-full text-[17px] font-bold shrink-0">
+            <span
+              class="bg-[#05482C] text-white w-[42px] h-[42px] flex items-center justify-center rounded-full text-[17px] font-bold shrink-0">
               03
             </span>
             <p class="font-bold text-[#05482C] text-[18px] md:text-[20px] select-none text-left">
               Puis-je sauvegarder ma simulation ?
             </p>
           </div>
-        <img src="Images/bfaqvert.png" alt="icon" class="w-7 h-7 transition-transform duration-300 group-open:rotate-180 shrink-0 ml-4" />
+          <img src="Images/bfaqvert.png" alt="icon"
+            class="w-7 h-7 transition-transform duration-300 group-open:rotate-180 shrink-0 ml-4" />
         </summary>
         <div class="mx-6 border-t border-[#05482C]/20 transition-opacity duration-300 hidden group-open:block"></div>
-        <div class="px-6 md:px-[86px] pb-8 pt-6 text-[#3a3939] text-[16px] leading-relaxed hidden group-open:block bg-white">
-<p>Oui. En créant un compte gratuit, vous pouvez sauvegarder vos simulations, les comparer entre elles et les reprendre plus tard. Vous pourrez également télécharger un PDF récapitulatif (fonctionnalité en cours de déploiement).</p>
+        <div
+          class="px-6 md:px-[86px] pb-8 pt-6 text-[#3a3939] text-[16px] leading-relaxed hidden group-open:block bg-white">
+          <p>Oui. En créant un compte gratuit, vous pouvez sauvegarder vos simulations, les comparer entre elles et les
+            reprendre plus tard. Vous pourrez également télécharger un PDF récapitulatif (fonctionnalité en cours de
+            déploiement).</p>
         </div>
       </details>
-      
+
       <!-- QUESTION 04 -->
       <details class="group bg-[#f8f8f8] border border-[#05482C]/40 rounded-xl overflow-hidden shadow-sm" open>
         <summary class="flex items-center justify-between p-5 md:p-6 cursor-pointer list-none !outline-none">
           <div class="flex items-center gap-5">
-            <span class="bg-[#05482C] text-white w-[42px] h-[42px] flex items-center justify-center rounded-full text-[17px] font-bold shrink-0">
+            <span
+              class="bg-[#05482C] text-white w-[42px] h-[42px] flex items-center justify-center rounded-full text-[17px] font-bold shrink-0">
               04
             </span>
             <p class="font-bold text-[#05482C] text-[18px] md:text-[20px] select-none text-left">
               Pourquoi le résultat est-il une fourchette et non un prix fixe ?
             </p>
           </div>
-        <img src="Images/bfaqvert.png" alt="icon" class="w-7 h-7 transition-transform duration-300 group-open:rotate-180 shrink-0 ml-4" />
+          <img src="Images/bfaqvert.png" alt="icon"
+            class="w-7 h-7 transition-transform duration-300 group-open:rotate-180 shrink-0 ml-4" />
         </summary>
         <div class="mx-6 border-t border-[#05482C]/20 transition-opacity duration-300"></div>
         <div class="px-6 md:px-[86px] pb-8 pt-6 text-[#3a3939] text-[16px] leading-relaxed bg-white">
-<p>Parce que le coût réel dépend de choix de matériaux, de la complexité architecturale et des conditions du marché. La fourchette vous donne un cadre budgétaire réaliste : le minimum correspond à des choix économiques, le maximum à des choix haut de gamme au sein du standing choisi.</p>
+          <p>Parce que le coût réel dépend de choix de matériaux, de la complexité architecturale et des conditions du
+            marché. La fourchette vous donne un cadre budgétaire réaliste : le minimum correspond à des choix
+            économiques, le maximum à des choix haut de gamme au sein du standing choisi.</p>
         </div>
       </details>
-      
+
       <!-- QUESTION 05 -->
       <details class="group bg-[#f8f8f8] border border-[#05482C]/40 rounded-xl overflow-hidden shadow-sm">
         <summary class="flex items-center justify-between p-5 md:p-6 cursor-pointer list-none !outline-none">
           <div class="flex items-center gap-5">
-            <span class="bg-[#05482C] text-white w-[42px] h-[42px] flex items-center justify-center rounded-full text-[17px] font-bold shrink-0">
+            <span
+              class="bg-[#05482C] text-white w-[42px] h-[42px] flex items-center justify-center rounded-full text-[17px] font-bold shrink-0">
               05
             </span>
             <p class="font-bold text-[#05482C] text-[18px] md:text-[20px] select-none text-left">
               Le simulateur couvre-t-il les bâtiments non résidentiels ?
             </p>
           </div>
-        <img src="Images/bfaqvert.png" alt="icon" class="w-7 h-7 transition-transform duration-300 group-open:rotate-180 shrink-0 ml-4" />
+          <img src="Images/bfaqvert.png" alt="icon"
+            class="w-7 h-7 transition-transform duration-300 group-open:rotate-180 shrink-0 ml-4" />
         </summary>
         <div class="mx-6 border-t border-[#05482C]/20 transition-opacity duration-300 hidden group-open:block"></div>
-        <div class="px-6 md:px-[86px] pb-8 pt-6 text-[#3a3939] text-[16px] leading-relaxed hidden group-open:block bg-white">
-<p>Oui. Le simulateur propose 4 secteurs : résidentiel (villas), tertiaire (bureaux, commerces), industriel (entrepôts, ateliers) et agricole (fermes). Chaque secteur a ses propres paramètres et grilles de prix.</p>
+        <div
+          class="px-6 md:px-[86px] pb-8 pt-6 text-[#3a3939] text-[16px] leading-relaxed hidden group-open:block bg-white">
+          <p>Oui. Le simulateur propose 4 secteurs : résidentiel (villas), tertiaire (bureaux, commerces), industriel
+            (entrepôts, ateliers) et agricole (fermes). Chaque secteur a ses propres paramètres et grilles de prix.</p>
         </div>
       </details>
     </div>
@@ -666,80 +813,100 @@ strong {
   <!-- ================= SECTION FAQ ÉNERGIE & ÉQUIPEMENTS ================= -->
   <section class="bg-[#f2f3f5] py-10 pb-20 w-full">
     <div class="max-w-[1100px] mx-auto px-6 space-y-4">
-      
+
       <!-- QUESTION 01 -->
       <details class="group bg-[#f8f8f8] border border-[#162064]/40 rounded-xl overflow-hidden shadow-sm">
         <summary class="flex items-center justify-between p-5 md:p-6 cursor-pointer list-none !outline-none">
           <div class="flex items-center gap-5">
-            <span class="bg-[#162064] text-white w-[42px] h-[42px] flex items-center justify-center rounded-full text-[17px] font-bold shrink-0">
+            <span
+              class="bg-[#162064] text-white w-[42px] h-[42px] flex items-center justify-center rounded-full text-[17px] font-bold shrink-0">
               01
             </span>
             <p class="font-bold text-[#162064] text-[18px] md:text-[20px] select-none text-left">
               Proposez-vous des installations solaires ?
             </p>
           </div>
-         <img src="Images/bfaq.png" alt="icon" class="w-7 h-7 transition-transform duration-300 group-open:rotate-180 shrink-0 ml-4" />
+          <img src="Images/bfaq.png" alt="icon"
+            class="w-7 h-7 transition-transform duration-300 group-open:rotate-180 shrink-0 ml-4" />
         </summary>
         <div class="mx-6 border-t border-[#162064]/20 transition-opacity duration-300 hidden group-open:block"></div>
-        <div class="px-6 md:px-[86px] pb-8 pt-6 text-[#3a3939] text-[16px] leading-relaxed hidden group-open:block bg-white">
-<p>Oui. Notre Division Énergie (opérationnelle en 2026) propose des kits solaires hybrides de 3 kWc à 50 kWc pour les entreprises et les bâtiments à usage professionnel (C&I — Commercial & Industrial). Des solutions résidentielles peuvent être intégrées dans le cadre d'un projet de construction. Chaque installation comprend panneaux, onduleur hybride, batteries LiFePO4, câblage complet et mise en service.</p>
+        <div
+          class="px-6 md:px-[86px] pb-8 pt-6 text-[#3a3939] text-[16px] leading-relaxed hidden group-open:block bg-white">
+          <p>Oui. Notre Division Énergie (opérationnelle en 2026) propose des kits solaires hybrides de 3 kWc à 50 kWc
+            pour les entreprises et les bâtiments à usage professionnel (C&I — Commercial & Industrial). Des solutions
+            résidentielles peuvent être intégrées dans le cadre d'un projet de construction. Chaque installation
+            comprend panneaux, onduleur hybride, batteries LiFePO4, câblage complet et mise en service.</p>
         </div>
       </details>
-      
+
       <!-- QUESTION 02 -->
       <details class="group bg-[#f8f8f8] border border-[#162064]/40 rounded-xl overflow-hidden shadow-sm">
         <summary class="flex items-center justify-between p-5 md:p-6 cursor-pointer list-none !outline-none">
           <div class="flex items-center gap-5">
-            <span class="bg-[#162064] text-white w-[42px] h-[42px] flex items-center justify-center rounded-full text-[17px] font-bold shrink-0">
+            <span
+              class="bg-[#162064] text-white w-[42px] h-[42px] flex items-center justify-center rounded-full text-[17px] font-bold shrink-0">
               02
             </span>
             <p class="font-bold text-[#162064] text-[18px] md:text-[20px] select-none text-left">
               Pouvez-vous installer un forage ?
             </p>
           </div>
-         <img src="Images/bfaq.png" alt="icon" class="w-7 h-7 transition-transform duration-300 group-open:rotate-180 shrink-0 ml-4" />
+          <img src="Images/bfaq.png" alt="icon"
+            class="w-7 h-7 transition-transform duration-300 group-open:rotate-180 shrink-0 ml-4" />
         </summary>
         <div class="mx-6 border-t border-[#162064]/20 transition-opacity duration-300 hidden group-open:block"></div>
-        <div class="px-6 md:px-[86px] pb-8 pt-6 text-[#3a3939] text-[16px] leading-relaxed hidden group-open:block bg-white">
-<p>Oui. Nous proposons des forages de 30 à 120 mètres selon la profondeur de la nappe dans votre zone. Le forfait comprend le forage, le tubage, la pompe immergée, le tableau de commande et un château d'eau de 2 m³. Le simulateur recommande automatiquement la profondeur adaptée à votre zone géographique.</p>
+        <div
+          class="px-6 md:px-[86px] pb-8 pt-6 text-[#3a3939] text-[16px] leading-relaxed hidden group-open:block bg-white">
+          <p>Oui. Nous proposons des forages de 30 à 120 mètres selon la profondeur de la nappe dans votre zone. Le
+            forfait comprend le forage, le tubage, la pompe immergée, le tableau de commande et un château d'eau de 2
+            m³. Le simulateur recommande automatiquement la profondeur adaptée à votre zone géographique.</p>
         </div>
       </details>
-      
+
       <!-- QUESTION 03 -->
       <details class="group bg-[#f8f8f8] border border-[#162064]/40 rounded-xl overflow-hidden shadow-sm">
         <summary class="flex items-center justify-between p-5 md:p-6 cursor-pointer list-none !outline-none">
           <div class="flex items-center gap-5">
-            <span class="bg-[#162064] text-white w-[42px] h-[42px] flex items-center justify-center rounded-full text-[17px] font-bold shrink-0">
+            <span
+              class="bg-[#162064] text-white w-[42px] h-[42px] flex items-center justify-center rounded-full text-[17px] font-bold shrink-0">
               03
             </span>
             <p class="font-bold text-[#162064] text-[18px] md:text-[20px] select-none text-left">
               Quels équipements optionnels proposez-vous ?
             </p>
           </div>
-         <img src="Images/bfaq.png" alt="icon" class="w-7 h-7 transition-transform duration-300 group-open:rotate-180 shrink-0 ml-4" />
+          <img src="Images/bfaq.png" alt="icon"
+            class="w-7 h-7 transition-transform duration-300 group-open:rotate-180 shrink-0 ml-4" />
         </summary>
         <div class="mx-6 border-t border-[#162064]/20 transition-opacity duration-300 hidden group-open:block"></div>
-        <div class="px-6 md:px-[86px] pb-8 pt-6 text-[#3a3939] text-[16px] leading-relaxed hidden group-open:block bg-white">
-<p>Énergie (solaire, groupes électrogènes), sécurité (alarme, vidéosurveillance, contrôle d'accès), extérieurs (clôture, portail, forage, piscine, aménagement paysager), confort (domotique, volets roulants, citerne eau de pluie). Tous les prix sont en fourchette min-max et consultables dans le simulateur.</p>
+        <div
+          class="px-6 md:px-[86px] pb-8 pt-6 text-[#3a3939] text-[16px] leading-relaxed hidden group-open:block bg-white">
+          <p>Énergie (solaire, groupes électrogènes), sécurité (alarme, vidéosurveillance, contrôle d'accès), extérieurs
+            (clôture, portail, forage, piscine, aménagement paysager), confort (domotique, volets roulants, citerne eau
+            de pluie). Tous les prix sont en fourchette min-max et consultables dans le simulateur.</p>
         </div>
       </details>
-      
+
       <!-- QUESTION 04 -->
       <details class="group bg-[#f8f8f8] border border-[#162064]/40 rounded-xl overflow-hidden shadow-sm" open>
         <summary class="flex items-center justify-between p-5 md:p-6 cursor-pointer list-none !outline-none">
           <div class="flex items-center gap-5">
-            <span class="bg-[#162064] text-white w-[42px] h-[42px] flex items-center justify-center rounded-full text-[17px] font-bold shrink-0">
+            <span
+              class="bg-[#162064] text-white w-[42px] h-[42px] flex items-center justify-center rounded-full text-[17px] font-bold shrink-0">
               04
             </span>
             <p class="font-bold text-[#162064] text-[18px] md:text-[20px] select-none text-left">
               Les équipements sont-ils inclus dans le prix au m² ?
             </p>
           </div>
-         <img src="Images/bfaq.png" alt="icon" class="w-7 h-7 transition-transform duration-300 group-open:rotate-180 shrink-0 ml-4" />
+          <img src="Images/bfaq.png" alt="icon"
+            class="w-7 h-7 transition-transform duration-300 group-open:rotate-180 shrink-0 ml-4" />
         </summary>
         <div class="mx-6 border-t border-[#162064]/20 transition-opacity duration-300"></div>
         <div class="px-6 md:px-[86px] pb-8 pt-6 text-[#3a3939] text-[16px] leading-relaxed bg-white">
-<p>Non. Le prix au m² couvre la construction du bâtiment (gros œuvre + second œuvre + finitions). Tous les équipements sont des options chiffrées séparément avec des fourchettes de prix transparentes. Vous composez votre projet à la carte.</p>
+          <p>Non. Le prix au m² couvre la construction du bâtiment (gros œuvre + second œuvre + finitions). Tous les
+            équipements sont des options chiffrées séparément avec des fourchettes de prix transparentes. Vous composez
+            votre projet à la carte.</p>
         </div>
       </details>
     </div>
@@ -755,118 +922,145 @@ strong {
   <!-- ================= SECTION FAQ PROCESSUS & CONTRAT ================= -->
   <section class="bg-[#f2f3f5] py-10 pb-20 w-full">
     <div class="max-w-[1100px] mx-auto px-6 space-y-4">
-      
+
       <!-- QUESTION 01 -->
       <details class="group bg-[#f8f8f8] border border-[#FF8400]/40 rounded-xl overflow-hidden shadow-sm">
         <summary class="flex items-center justify-between p-5 md:p-6 cursor-pointer list-none !outline-none">
           <div class="flex items-center gap-5">
-            <span class="bg-[#FF8400] text-white w-[42px] h-[42px] flex items-center justify-center rounded-full text-[17px] font-bold shrink-0">
+            <span
+              class="bg-[#FF8400] text-white w-[42px] h-[42px] flex items-center justify-center rounded-full text-[17px] font-bold shrink-0">
               01
             </span>
             <p class="font-bold text-[#FF8400] text-[18px] md:text-[20px] select-none text-left">
               Comment se déroule un projet avec AIAE ?
             </p>
           </div>
-          <img src="Images/bfaqorange.png" alt="icon" class="w-7 h-7 transition-transform duration-300 group-open:rotate-180 shrink-0 ml-4" />
+          <img src="Images/bfaqorange.png" alt="icon"
+            class="w-7 h-7 transition-transform duration-300 group-open:rotate-180 shrink-0 ml-4" />
         </summary>
         <div class="mx-6 border-t border-[#FF8400]/20 transition-opacity duration-300 hidden group-open:block"></div>
-        <div class="px-6 md:px-[86px] pb-8 pt-6 text-[#3a3939] text-[16px] leading-relaxed hidden group-open:block bg-white">
-<p>6 étapes : (1) Premier contact et recueil de vos besoins. (2) Étude technique et devis détaillé. (3) Signature du contrat et de l'échéancier de paiement. (4) Construction avec suivi régulier. (5) Réception et remise des clés avec procès-verbal. (6) Suivi post-livraison (garanties).</p>
+        <div
+          class="px-6 md:px-[86px] pb-8 pt-6 text-[#3a3939] text-[16px] leading-relaxed hidden group-open:block bg-white">
+          <p>6 étapes : (1) Premier contact et recueil de vos besoins. (2) Étude technique et devis détaillé. (3)
+            Signature du contrat et de l'échéancier de paiement. (4) Construction avec suivi régulier. (5) Réception et
+            remise des clés avec procès-verbal. (6) Suivi post-livraison (garanties).</p>
         </div>
       </details>
-      
+
       <!-- QUESTION 02 -->
       <details class="group bg-[#f8f8f8] border border-[#FF8400]/40 rounded-xl overflow-hidden shadow-sm">
         <summary class="flex items-center justify-between p-5 md:p-6 cursor-pointer list-none !outline-none">
           <div class="flex items-center gap-5">
-            <span class="bg-[#FF8400] text-white w-[42px] h-[42px] flex items-center justify-center rounded-full text-[17px] font-bold shrink-0">
+            <span
+              class="bg-[#FF8400] text-white w-[42px] h-[42px] flex items-center justify-center rounded-full text-[17px] font-bold shrink-0">
               02
             </span>
             <p class="font-bold text-[#FF8400] text-[18px] md:text-[20px] select-none text-left">
               Puis-je voir des exemples de vos réalisations ?
             </p>
           </div>
-          <img src="Images/bfaqorange.png" alt="icon" class="w-7 h-7 transition-transform duration-300 group-open:rotate-180 shrink-0 ml-4" />
+          <img src="Images/bfaqorange.png" alt="icon"
+            class="w-7 h-7 transition-transform duration-300 group-open:rotate-180 shrink-0 ml-4" />
         </summary>
         <div class="mx-6 border-t border-[#FF8400]/20 transition-opacity duration-300 hidden group-open:block"></div>
-        <div class="px-6 md:px-[86px] pb-8 pt-6 text-[#3a3939] text-[16px] leading-relaxed hidden group-open:block bg-white">
-<p>Par respect pour la confidentialité de nos clients, nous ne publions pas de photos de nos chantiers. Nous pouvons cependant fournir des références vérifiables sur demande lors d'un rendez-vous.</p>
+        <div
+          class="px-6 md:px-[86px] pb-8 pt-6 text-[#3a3939] text-[16px] leading-relaxed hidden group-open:block bg-white">
+          <p>Par respect pour la confidentialité de nos clients, nous ne publions pas de photos de nos chantiers. Nous
+            pouvons cependant fournir des références vérifiables sur demande lors d'un rendez-vous.</p>
         </div>
       </details>
-      
+
       <!-- QUESTION 03 -->
       <details class="group bg-[#f8f8f8] border border-[#FF8400]/40 rounded-xl overflow-hidden shadow-sm">
         <summary class="flex items-center justify-between p-5 md:p-6 cursor-pointer list-none !outline-none">
           <div class="flex items-center gap-5">
-            <span class="bg-[#FF8400] text-white w-[42px] h-[42px] flex items-center justify-center rounded-full text-[17px] font-bold shrink-0">
+            <span
+              class="bg-[#FF8400] text-white w-[42px] h-[42px] flex items-center justify-center rounded-full text-[17px] font-bold shrink-0">
               03
             </span>
             <p class="font-bold text-[#FF8400] text-[18px] md:text-[20px] select-none text-left">
               Fournissez-vous les plans architecturaux ?
             </p>
           </div>
-          <img src="Images/bfaqorange.png" alt="icon" class="w-7 h-7 transition-transform duration-300 group-open:rotate-180 shrink-0 ml-4" />
+          <img src="Images/bfaqorange.png" alt="icon"
+            class="w-7 h-7 transition-transform duration-300 group-open:rotate-180 shrink-0 ml-4" />
         </summary>
         <div class="mx-6 border-t border-[#FF8400]/20 transition-opacity duration-300 hidden group-open:block"></div>
-        <div class="px-6 md:px-[86px] pb-8 pt-6 text-[#3a3939] text-[16px] leading-relaxed hidden group-open:block bg-white">
-<p>Oui. Le devis inclut la conception architecturale (plans, coupes, façades) et les études techniques nécessaires. Vous recevez un dossier complet à la livraison : plans d'exécution, rapports techniques, certificats de garantie.</p>
+        <div
+          class="px-6 md:px-[86px] pb-8 pt-6 text-[#3a3939] text-[16px] leading-relaxed hidden group-open:block bg-white">
+          <p>Oui. Le devis inclut la conception architecturale (plans, coupes, façades) et les études techniques
+            nécessaires. Vous recevez un dossier complet à la livraison : plans d'exécution, rapports techniques,
+            certificats de garantie.</p>
         </div>
       </details>
-      
+
       <!-- QUESTION 04 -->
       <details class="group bg-[#f8f8f8] border border-[#FF8400]/40 rounded-xl overflow-hidden shadow-sm" open>
         <summary class="flex items-center justify-between p-5 md:p-6 cursor-pointer list-none !outline-none">
           <div class="flex items-center gap-5">
-            <span class="bg-[#FF8400] text-white w-[42px] h-[42px] flex items-center justify-center rounded-full text-[17px] font-bold shrink-0">
+            <span
+              class="bg-[#FF8400] text-white w-[42px] h-[42px] flex items-center justify-center rounded-full text-[17px] font-bold shrink-0">
               04
             </span>
             <p class="font-bold text-[#FF8400] text-[18px] md:text-[20px] select-none text-left">
               Le contrat peut-il être signé devant notaire ?
             </p>
           </div>
-          <img src="Images/bfaqorange.png" alt="icon" class="w-7 h-7 transition-transform duration-300 group-open:rotate-180 shrink-0 ml-4" />
+          <img src="Images/bfaqorange.png" alt="icon"
+            class="w-7 h-7 transition-transform duration-300 group-open:rotate-180 shrink-0 ml-4" />
         </summary>
         <div class="mx-6 border-t border-[#FF8400]/20 transition-opacity duration-300"></div>
         <div class="px-6 md:px-[86px] pb-8 pt-6 text-[#3a3939] text-[16px] leading-relaxed bg-white">
-<p>Oui. Pour une sécurité juridique maximale, le contrat peut être signé devant un notaire togolais. Un mandataire peut agir en votre nom si vous n'êtes pas au Togo.</p>
+          <p>Oui. Pour une sécurité juridique maximale, le contrat peut être signé devant un notaire togolais. Un
+            mandataire peut agir en votre nom si vous n'êtes pas au Togo.</p>
         </div>
       </details>
-      
+
       <!-- QUESTION 05 -->
       <details class="group bg-[#f8f8f8] border border-[#FF8400]/40 rounded-xl overflow-hidden shadow-sm">
         <summary class="flex items-center justify-between p-5 md:p-6 cursor-pointer list-none !outline-none">
           <div class="flex items-center gap-5">
-            <span class="bg-[#FF8400] text-white w-[42px] h-[42px] flex items-center justify-center rounded-full text-[17px] font-bold shrink-0">
+            <span
+              class="bg-[#FF8400] text-white w-[42px] h-[42px] flex items-center justify-center rounded-full text-[17px] font-bold shrink-0">
               05
             </span>
             <p class="font-bold text-[#FF8400] text-[18px] md:text-[20px] select-none text-left">
               Que se passe-t-il en cas de retard ?
             </p>
           </div>
-          <img src="Images/bfaqorange.png" alt="icon" class="w-7 h-7 transition-transform duration-300 group-open:rotate-180 shrink-0 ml-4" />
+          <img src="Images/bfaqorange.png" alt="icon"
+            class="w-7 h-7 transition-transform duration-300 group-open:rotate-180 shrink-0 ml-4" />
         </summary>
         <div class="mx-6 border-t border-[#FF8400]/20 transition-opacity duration-300 hidden group-open:block"></div>
-        <div class="px-6 md:px-[86px] pb-8 pt-6 text-[#3a3939] text-[16px] leading-relaxed hidden group-open:block bg-white">
-<p>Les délais sont contractuels. En cas de retard imputable à AIAE, des pénalités sont prévues au contrat. En cas de force majeure (intempéries exceptionnelles, pénurie de matériaux), le délai est prolongé d'une durée équivalente, documentée et communiquée.</p>
+        <div
+          class="px-6 md:px-[86px] pb-8 pt-6 text-[#3a3939] text-[16px] leading-relaxed hidden group-open:block bg-white">
+          <p>Les délais sont contractuels. En cas de retard imputable à AIAE, des pénalités sont prévues au contrat. En
+            cas de force majeure (intempéries exceptionnelles, pénurie de matériaux), le délai est prolongé d'une durée
+            équivalente, documentée et communiquée.</p>
         </div>
       </details>
-      
+
       <!-- QUESTION 06 -->
       <details class="group bg-[#f8f8f8] border border-[#FF8400]/40 rounded-xl overflow-hidden shadow-sm">
         <summary class="flex items-center justify-between p-5 md:p-6 cursor-pointer list-none !outline-none">
           <div class="flex items-center gap-5">
-            <span class="bg-[#FF8400] text-white w-[42px] h-[42px] flex items-center justify-center rounded-full text-[17px] font-bold shrink-0">
+            <span
+              class="bg-[#FF8400] text-white w-[42px] h-[42px] flex items-center justify-center rounded-full text-[17px] font-bold shrink-0">
               06
             </span>
             <p class="font-bold text-[#FF8400] text-[18px] md:text-[20px] select-none text-left">
               AIAE est-elle assurée ?
             </p>
           </div>
-          <img src="Images/bfaqorange.png" alt="icon" class="w-7 h-7 transition-transform duration-300 group-open:rotate-180 shrink-0 ml-4" />
+          <img src="Images/bfaqorange.png" alt="icon"
+            class="w-7 h-7 transition-transform duration-300 group-open:rotate-180 shrink-0 ml-4" />
         </summary>
         <div class="mx-6 border-t border-[#FF8400]/20 transition-opacity duration-300 hidden group-open:block"></div>
-        <div class="px-6 md:px-[86px] pb-8 pt-6 text-[#3a3939] text-[16px] leading-relaxed hidden group-open:block bg-white">
-<p>Oui. AIAE SARL dispose d'une assurance responsabilité civile professionnelle couvrant les dommages éventuels liés à nos activités, et d'une garantie décennale couvrant la structure portante pendant 10 ans après réception. Les attestations d'assurance sont disponibles sur demande lors d'un rendez-vous.</p>
+        <div
+          class="px-6 md:px-[86px] pb-8 pt-6 text-[#3a3939] text-[16px] leading-relaxed hidden group-open:block bg-white">
+          <p>Oui. AIAE SARL dispose d'une assurance responsabilité civile professionnelle couvrant les dommages
+            éventuels liés à nos activités, et d'une garantie décennale couvrant la structure portante pendant 10 ans
+            après réception. Les attestations d'assurance sont disponibles sur demande lors d'un rendez-vous.</p>
         </div>
       </details>
     </div>
@@ -882,80 +1076,101 @@ strong {
   <!-- ================= SECTION FAQ À PROPOS D'AIAE ================= -->
   <section class="bg-[#f2f3f5] py-10 pb-20 w-full">
     <div class="max-w-[1100px] mx-auto px-6 space-y-4">
-      
+
       <!-- QUESTION 01 -->
       <details class="group bg-[#f8f8f8] border border-[#05482C]/40 rounded-xl overflow-hidden shadow-sm">
         <summary class="flex items-center justify-between p-5 md:p-6 cursor-pointer list-none !outline-none">
           <div class="flex items-center gap-5">
-            <span class="bg-[#05482C] text-white w-[42px] h-[42px] flex items-center justify-center rounded-full text-[17px] font-bold shrink-0">
+            <span
+              class="bg-[#05482C] text-white w-[42px] h-[42px] flex items-center justify-center rounded-full text-[17px] font-bold shrink-0">
               01
             </span>
             <p class="font-bold text-[#05482C] text-[18px] md:text-[20px] select-none text-left">
               Comment AIAE se compare-t-elle aux grandes entreprises étrangères ?
             </p>
           </div>
-        <img src="Images/bfaqvert.png" alt="icon" class="w-7 h-7 transition-transform duration-300 group-open:rotate-180 shrink-0 ml-4" />
+          <img src="Images/bfaqvert.png" alt="icon"
+            class="w-7 h-7 transition-transform duration-300 group-open:rotate-180 shrink-0 ml-4" />
         </summary>
         <div class="mx-6 border-t border-[#05482C]/20 transition-opacity duration-300 hidden group-open:block"></div>
-        <div class="px-6 md:px-[86px] pb-8 pt-6 text-[#3a3939] text-[16px] leading-relaxed hidden group-open:block bg-white">
-<p>Nous offrons une expertise technique de niveau international avec un ancrage local fort. Réactivité, connaissance approfondie du terrain togolais (géologie, climat, logistique régionale), et des prix justes sans les surcoûts liés aux équipes expatriées. Notre fondateur cumule plus de 18 ans d'expérience en génie civil, formé aux standards européens tout en maîtrisant parfaitement les réalités du terrain en Afrique de l'Ouest.</p>
+        <div
+          class="px-6 md:px-[86px] pb-8 pt-6 text-[#3a3939] text-[16px] leading-relaxed hidden group-open:block bg-white">
+          <p>Nous offrons une expertise technique de niveau international avec un ancrage local fort. Réactivité,
+            connaissance approfondie du terrain togolais (géologie, climat, logistique régionale), et des prix justes
+            sans les surcoûts liés aux équipes expatriées. Notre fondateur cumule plus de 18 ans d'expérience en génie
+            civil, formé aux standards européens tout en maîtrisant parfaitement les réalités du terrain en Afrique de
+            l'Ouest.</p>
         </div>
       </details>
-      
+
       <!-- QUESTION 02 -->
       <details class="group bg-[#f8f8f8] border border-[#05482C]/40 rounded-xl overflow-hidden shadow-sm">
         <summary class="flex items-center justify-between p-5 md:p-6 cursor-pointer list-none !outline-none">
           <div class="flex items-center gap-5">
-            <span class="bg-[#05482C] text-white w-[42px] h-[42px] flex items-center justify-center rounded-full text-[17px] font-bold shrink-0">
+            <span
+              class="bg-[#05482C] text-white w-[42px] h-[42px] flex items-center justify-center rounded-full text-[17px] font-bold shrink-0">
               02
             </span>
             <p class="font-bold text-[#05482C] text-[18px] md:text-[20px] select-none text-left">
               AIAE est-elle une entreprise récente ?
             </p>
           </div>
-        <img src="Images/bfaqvert.png" alt="icon" class="w-7 h-7 transition-transform duration-300 group-open:rotate-180 shrink-0 ml-4" />
+          <img src="Images/bfaqvert.png" alt="icon"
+            class="w-7 h-7 transition-transform duration-300 group-open:rotate-180 shrink-0 ml-4" />
         </summary>
         <div class="mx-6 border-t border-[#05482C]/20 transition-opacity duration-300 hidden group-open:block"></div>
-        <div class="px-6 md:px-[86px] pb-8 pt-6 text-[#3a3939] text-[16px] leading-relaxed hidden group-open:block bg-white">
-<p>AIAE SARL a été créée en 2025, mais l'expertise de son fondateur remonte à 2007. Plus de 18 ans d'expérience en conception et réalisation d'ouvrages de génie civil, dont de nombreux projets complexes. L'entreprise est le fruit d'un parcours professionnel solide, pas une aventure improvisée.</p>
+        <div
+          class="px-6 md:px-[86px] pb-8 pt-6 text-[#3a3939] text-[16px] leading-relaxed hidden group-open:block bg-white">
+          <p>AIAE SARL a été créée en 2025, mais l'expertise de son fondateur remonte à 2007. Plus de 18 ans
+            d'expérience en conception et réalisation d'ouvrages de génie civil, dont de nombreux projets complexes.
+            L'entreprise est le fruit d'un parcours professionnel solide, pas une aventure improvisée.</p>
         </div>
       </details>
-      
+
       <!-- QUESTION 03 -->
       <details class="group bg-[#f8f8f8] border border-[#05482C]/40 rounded-xl overflow-hidden shadow-sm">
         <summary class="flex items-center justify-between p-5 md:p-6 cursor-pointer list-none !outline-none">
           <div class="flex items-center gap-5">
-            <span class="bg-[#05482C] text-white w-[42px] h-[42px] flex items-center justify-center rounded-full text-[17px] font-bold shrink-0">
+            <span
+              class="bg-[#05482C] text-white w-[42px] h-[42px] flex items-center justify-center rounded-full text-[17px] font-bold shrink-0">
               03
             </span>
             <p class="font-bold text-[#05482C] text-[18px] md:text-[20px] select-none text-left">
               Quelles sont vos valeurs ?
             </p>
           </div>
-        <img src="Images/bfaqvert.png" alt="icon" class="w-7 h-7 transition-transform duration-300 group-open:rotate-180 shrink-0 ml-4" />
+          <img src="Images/bfaqvert.png" alt="icon"
+            class="w-7 h-7 transition-transform duration-300 group-open:rotate-180 shrink-0 ml-4" />
         </summary>
         <div class="mx-6 border-t border-[#05482C]/20 transition-opacity duration-300 hidden group-open:block"></div>
-        <div class="px-6 md:px-[86px] pb-8 pt-6 text-[#3a3939] text-[16px] leading-relaxed hidden group-open:block bg-white">
-<p>Cinq valeurs non négociables : (1) La qualité est primordiale — nous construisons pour des générations. (2) La parole donnée est sacrée. (3) L'honnêteté envers le client. (4) Le respect des sous-traitants et ouvriers. (5) Le respect des délais et des coûts.</p>
+        <div
+          class="px-6 md:px-[86px] pb-8 pt-6 text-[#3a3939] text-[16px] leading-relaxed hidden group-open:block bg-white">
+          <p>Cinq valeurs non négociables : (1) La qualité est primordiale — nous construisons pour des générations. (2)
+            La parole donnée est sacrée. (3) L'honnêteté envers le client. (4) Le respect des sous-traitants et
+            ouvriers. (5) Le respect des délais et des coûts.</p>
         </div>
       </details>
-      
+
       <!-- QUESTION 04 -->
       <details class="group bg-[#f8f8f8] border border-[#05482C]/40 rounded-xl overflow-hidden shadow-sm" open>
         <summary class="flex items-center justify-between p-5 md:p-6 cursor-pointer list-none !outline-none">
           <div class="flex items-center gap-5">
-            <span class="bg-[#05482C] text-white w-[42px] h-[42px] flex items-center justify-center rounded-full text-[17px] font-bold shrink-0">
+            <span
+              class="bg-[#05482C] text-white w-[42px] h-[42px] flex items-center justify-center rounded-full text-[17px] font-bold shrink-0">
               04
             </span>
             <p class="font-bold text-[#05482C] text-[18px] md:text-[20px] select-none text-left">
               Quelles sont les divisions de AIAE ?
             </p>
           </div>
-        <img src="Images/bfaqvert.png" alt="icon" class="w-7 h-7 transition-transform duration-300 group-open:rotate-180 shrink-0 ml-4" />
+          <img src="Images/bfaqvert.png" alt="icon"
+            class="w-7 h-7 transition-transform duration-300 group-open:rotate-180 shrink-0 ml-4" />
         </summary>
         <div class="mx-6 border-t border-[#05482C]/20 transition-opacity duration-300"></div>
         <div class="px-6 md:px-[86px] pb-8 pt-6 text-[#3a3939] text-[16px] leading-relaxed bg-white">
-<p>Construction (opérationnelle) : résidentiel, tertiaire, industriel, agricole. Énergie (lancement 2026) : installations solaires C&I. Sécurité (lancement 2027) : coffres-forts, chambres fortes, panic rooms. Préfabrication (lancement 2027-2028) : briques en terre compressée, éléments en béton précontraint.</p>
+          <p>Construction (opérationnelle) : résidentiel, tertiaire, industriel, agricole. Énergie (lancement 2026) :
+            installations solaires C&I. Sécurité (lancement 2027) : coffres-forts, chambres fortes, panic rooms.
+            Préfabrication (lancement 2027-2028) : briques en terre compressée, éléments en béton précontraint.</p>
         </div>
       </details>
     </div>
@@ -964,22 +1179,24 @@ strong {
   <!-- ================= SECTION CTA FINAL ================= -->
   <section class="bg-[#e6e6e6] py-10 md:py-24">
     <div class="max-w-[1100px] mx-auto text-center px-6">
-      
+
       <!-- TITRE -->
       <h2 class="text-[#1d1d1b] text-[35px] md:text-[60px] font-bold leading-[1.1] mb-6">
         Vous ne trouvez pas la réponse à<br class="hidden md:block"> votre question ?
       </h2>
-      
+
       <!-- SOUS-TITRE -->
       <p class="text-gray-600 text-[18px] md:text-[26px] font-light mb-12 max-w-3xl mx-auto leading-relaxed">
-        Notre équipe est à votre écoute. Contactez-nous<br class="hidden md:block"> directement ou demandez un devis gratuit.
+        Notre équipe est à votre écoute. Contactez-nous<br class="hidden md:block"> directement ou demandez un devis
+        gratuit.
       </p>
 
       <!-- BLOC BOUTONS -->
       <div class="flex flex-col md:flex-row justify-center max-w-4xl mx-auto shadow-2xl rounded-sm overflow-hidden">
-        
+
         <!-- BOUTON ORANGE -->
-        <a href="contact.html" class="flex-1 bg-[#d37105] hover:bg-[#c26b05] text-white px-10 py-2 transition-colors duration-300">
+        <a href="contact.html"
+          class="flex-1 bg-[#d37105] hover:bg-[#c26b05] text-white px-10 py-2 transition-colors duration-300">
           <span class="block text-[18px] md:text-[22px] font-bold uppercase tracking-wider mb-auto whitespace-nowrap">
             Demander un devis gratuit
           </span>
@@ -989,7 +1206,8 @@ strong {
         </a>
 
         <!-- BOUTON VERT -->
-        <a href="contact.html" class="flex-1 bg-[#054329] hover:bg-[#043b24] text-white px-10 py-2 transition-colors duration-300">
+        <a href="contact.html"
+          class="flex-1 bg-[#054329] hover:bg-[#043b24] text-white px-10 py-2 transition-colors duration-300">
           <span class="block text-[18px] md:text-[22px] font-bold uppercase tracking-wider mb-auto">
             Prendre rendez-vous
           </span>
@@ -1017,7 +1235,7 @@ strong {
           <a href="#" aria-label="Facebook">
             <img src="Images/FacebookLogo.svg" alt="Facebook" class="h-16 w-16" />
           </a>
-          
+
         </div>
         <div class="flex flex-col items-start">
           <p class="text-4xl font-bold">@Afrika_AIAE</p>
@@ -1050,7 +1268,7 @@ strong {
         <div>
           <img src="Images/logos/LOGO AIAE FINAL - Copie.png" class="w-64 pb-5" alt="AIAE Logo">
           <p class="text-[#162064] text-[22px] leading-relaxed max-w-md">
-            <strong>AIAE : Afrika Infrastructures And Equipments.</strong>
+            <strong>AIAE : Afrika Infrastructures And Equipements.</strong>
             De la conception à la réalisation.
           </p>
         </div>
@@ -1129,7 +1347,7 @@ strong {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           entry.target.style.opacity = '1';
-          
+
           // Counter animation
           if (entry.target.querySelector('[data-count]')) {
             const counter = entry.target.querySelector('[data-count]');
@@ -1167,29 +1385,29 @@ strong {
         hero.style.backgroundPositionY = scrolled * 0.5 + 'px';
       }
     });
-// plus de details 
-  const btn = document.getElementById("toggleDetails");
-  const panel = document.getElementById("details-panel");
-  const icon = document.getElementById("details-icon");
+    // plus de details 
+    const btn = document.getElementById("toggleDetails");
+    const panel = document.getElementById("details-panel");
+    const icon = document.getElementById("details-icon");
 
-  if (btn && panel && icon) {
-    btn.addEventListener("click", () => {
-      panel.classList.toggle("hidden");
-      icon.classList.toggle("rotate");
-    });
-  }
+    if (btn && panel && icon) {
+      btn.addEventListener("click", () => {
+        panel.classList.toggle("hidden");
+        icon.classList.toggle("rotate");
+      });
+    }
 
-  // plus de details pour les étapes
-  const btnSteps = document.getElementById("toggleStepsDetails");
-  const panelSteps = document.getElementById("steps-panel");
-  const iconSteps = document.getElementById("steps-icon");
+    // plus de details pour les étapes
+    const btnSteps = document.getElementById("toggleStepsDetails");
+    const panelSteps = document.getElementById("steps-panel");
+    const iconSteps = document.getElementById("steps-icon");
 
-  if (btnSteps && panelSteps && iconSteps) {
-    btnSteps.addEventListener("click", () => {
-      panelSteps.classList.toggle("hidden");
-      iconSteps.classList.toggle("rotate-180");
-    });
-  }
+    if (btnSteps && panelSteps && iconSteps) {
+      btnSteps.addEventListener("click", () => {
+        panelSteps.classList.toggle("hidden");
+        iconSteps.classList.toggle("rotate-180");
+      });
+    }
   </script>
 </body>
 

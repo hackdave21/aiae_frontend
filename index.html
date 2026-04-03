@@ -102,47 +102,47 @@
       <img id="heroImage" src="Images/home.png" class="w-full h-[75vh] md:h-[90vh] object-cover" />
 
       <!-- overlay -->
+      <div class="absolute inset-0 bg-black/30"></div>
       <div class="absolute inset-0 bg-gradient-to-r from-black/70 via-black/40 to-transparent"></div>
 
       <!-- contenu -->
       <div class="absolute inset-x-0 top-1/2 -translate-y-1/2 px-10 md:px-16 max-w-7xl text-white">
         <!-- TITRE -->
-        <h1 class="text-2xl sm:text-3xl md:text-4xl lg:text-[44px] font-bold mb-6">
+        <h1 class="text-xl sm:text-3xl md:text-4xl lg:text-[44px] font-bold mb-6">
           De La Conception À La Réalisation
         </h1>
 
         <!-- TEXTE -->
         <p class="text-sm sm:text-base md:text-lg leading-relaxed mb-8 max-w-xl">
-          Construction, énergie solaire, sécurité haute performance et
-          préfabrication industrielle :<br />
-          AIAE réunit toutes les compétences pour mener votre projet de A à Z.
+          <span class="whitespace-nowrap font-medium">Construction, énergie solaire, sécurité haute performance et préfabrication industrielle :</span><br />
+          AIAE réunit toutes les compétences pour <span class="font-medium">mener votre projet de A à Z.</span>
           <br /><br />
-          <span class="font-semibold">
+          <span class="font-medium">
             Un interlocuteur unique, des engagements tenus.
           </span>
         </p>
 
         <!-- BOUTONS -->
-        <div class="flex flex-col sm:flex-row items-center gap-4 w-full mt-8">
+        <div class="flex flex-col lg:flex-row items-center justify-between gap-4 lg:gap-0 w-full mt-16">
           <!-- BOUTON GAUCHE -->
-          <button
-            class="bg-primary text-white px-6 py-3 rounded-lg text-sm shadow-lg whitespace-nowrap w-full sm:w-auto">
-            Prendre rendez-vous maintenant
-          </button>
+          <div class="flex items-center bg-primary rounded-full shadow-lg p-1 w-full lg:w-fit">
+            <span class="px-6 py-2 text-white text-sm whitespace-nowrap flex-1 text-center lg:text-left">
+              Prendre rendez-vous maintenant
+            </span>
+            <img src="Images/envoiblanc.png" class="h-7 w-7" />
+          </div>
 
           <!-- BOUTON MILIEU -->
-          <div class="flex items-center bg-white rounded-full shadow-lg p-1 w-full sm:w-auto">
-            <span class="px-6 py-2 text-black text-sm whitespace-nowrap flex-1 text-center sm:text-left">
+          <div class="flex items-center bg-secondary rounded-full shadow-lg p-1 w-full lg:w-fit">
+            <span class="px-6 py-2 text-white text-sm whitespace-nowrap flex-1 text-center lg:text-left">
               Demander un devis gratuit
             </span>
-            <div class="w-10 h-10 flex items-center justify-center bg-white rounded-full shrink-0">
-              <img src="Images/envoi.png" class="w-5" />
-            </div>
+            <img src="Images/envoiblanc.png" class="h-7 w-7" />
           </div>
 
           <!-- TEXTE DROITE -->
-          <div class="flex items-start text-white sm:ml-auto">
-            <img src="Images/Arrow4Expertises.svg" class="w-6 mt-[2px] mr-2 shrink-0" />
+          <div class="flex items-center text-white w-full lg:w-fit lg:justify-end">
+            <img src="Images/Arrow4Expertises.svg" class="w-6 mt-[2px] lg:mt-0 mr-2 shrink-0" />
             <p class="text-sm md:text-base font-medium leading-[1.2]">
               Un partenaire. Quatre<br />
               expertises. Zéro compromis.
@@ -154,43 +154,48 @@
   </section>
 
   <!-- ================= PANNEAU SIMULATEUR ================= -->
-  <section class="relative -mt-16 md:-mt-20 z-10 px-2 sm:px-4">
-    +
+  <section class="relative -mt-20 md:-mt-20 z-10 px-2 sm:px-4">
     <div
-      class="w-full max-w-[92%] sm:max-w-[640px] md:max-w-[820px] lg:max-w-[900px] xl:max-w-[990px] mx-auto bg-glass backdrop-blur-xl rounded-2xl shadow-xl p-4 sm:p-5">
+      class="w-full max-w-[95%] sm:max-w-[640px] md:max-w-[820px] lg:max-w-[1000px] xl:max-w-[1240px] 2xl:max-w-[1360px] mx-auto bg-glass backdrop-blur-xl rounded-2xl shadow-xl p-4 sm:p-5">
       <!-- Onglets -->
       <div class="flex flex-col sm:flex-row sm:flex-wrap items-stretch sm:items-center gap-2 mb-4" id="categoryButtons">
         <div class="flex flex-wrap gap-2">
-          <button data-img="Images/residentiel.png"
-            class="tabBtn px-3 py-2 rounded-lg bg-white text-xs sm:text-sm shadow">
+          <button data-img="Images/home.png" class="tabBtn px-3 py-2 rounded-lg bg-white text-xs sm:text-sm shadow">
             Résidentiel
           </button>
 
-          <button data-img="Images/tertiaire.png" class="tabBtn px-3 py-2 rounded-lg bg-glassDark text-xs sm:text-sm">
+          <button data-img="Images/home.png" class="tabBtn px-3 py-2 rounded-lg bg-glassDark text-xs sm:text-sm">
             Tertiaire
           </button>
 
-          <button data-img="Images/industriel.png" class="tabBtn px-3 py-2 rounded-lg bg-glassDark text-xs sm:text-sm">
+          <button data-img="Images/home.png" class="tabBtn px-3 py-2 rounded-lg bg-glassDark text-xs sm:text-sm">
             Industriel
           </button>
 
-          <button data-img="Images/agricole.png" class="tabBtn px-3 py-2 rounded-lg bg-glassDark text-xs sm:text-sm">
+          <button data-img="Images/home.png" class="tabBtn px-3 py-2 rounded-lg bg-glassDark text-xs sm:text-sm">
             Agricole
           </button>
         </div>
 
         <button class="w-full sm:w-auto sm:ml-auto px-4 py-2 bg-secondary text-white rounded-lg text-xs sm:text-sm">
-          Ouvrir le Calculateur d'Énergies Renouvelables
+          Calculateur Énergies
         </button>
       </div>
 
       <!-- Formulaire -->
       <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-12 gap-3">
-        <input class="col-span-1 sm:col-span-1 md:col-span-2 h-10 px-3 rounded-lg text-xs sm:text-sm"
-          placeholder="Surface dispo (m²)" />
+        <!-- Surface Dispo -->
+        <div class="relative col-span-1 sm:col-span-1 md:col-span-2">
+          <img src="Images/PencilSimpleLine.png" class="absolute left-3 top-1/2 -translate-y-1/2 w-[16px] opacity-70" />
+          <input class="w-full h-10 pl-9 pr-3 rounded-lg text-xs sm:text-sm" placeholder="Surface Disponible (m²)" />
+        </div>
 
-        <input class="col-span-1 sm:col-span-1 md:col-span-2 h-10 px-3 rounded-lg text-xs sm:text-sm"
-          placeholder="Surface bâtie (m²)" />
+        <!-- Surface Bâtie -->
+        <div class="relative col-span-1 sm:col-span-1 md:col-span-2">
+          <img src="Images/PencilSimpleLine.png" class="absolute left-3 top-1/2 -translate-y-1/2 w-[16px] opacity-70" />
+          <input class="w-full h-10 pl-9 pr-3 rounded-lg text-xs sm:text-sm"
+            placeholder="Surface Bâtie Souhaitée (m²)" />
+        </div>
 
         <!-- CONFIGURATION -->
         <div class="relative col-span-1 sm:col-span-2 md:col-span-2">
@@ -289,90 +294,91 @@
 
         <!-- BOUTON FINAL -->
         <button
-          class="col-span-1 sm:col-span-2 md:col-span-2 h-10 bg-[#05482C] text-white rounded-lg text-xs sm:text-sm whitespace-nowrap">
-          Poursuivre la simulation
+          class="col-span-1 sm:col-span-2 md:col-span-2 w-full h-10 px-4 flex items-center justify-center bg-[#05482C] text-white rounded-lg text-xs sm:text-sm whitespace-nowrap hover:bg-opacity-90">
+          Poursuivre La Simulation
         </button>
+
       </div>
     </div>
   </section>
 
   <!-- ================= SECTION QUI SOMMES NOUS ================= -->
- <section class="relative py-20">
+  <section class="relative py-20">
 
-  <!-- fond bleu -->
-<div class="absolute bottom-0 left-0 w-full h-[300px] bg-[#162064]"></div>
+    <!-- fond bleu -->
+    <div class="absolute bottom-0 left-0 w-full h-[300px] bg-[#162064]"></div>
 
-  <div class="relative max-w-[1200px] mx-auto px-6">
+    <div class="relative max-w-[1200px] mx-auto px-6">
 
-    <!-- CARTE GRISE -->
-    <div class="bg-[#f2f2f2] rounded-xl shadow-[0_30px_70px_rgba(0,0,0,0.35)] p-12 relative z-10">
-      
-      <div class="grid md:grid-cols-2 gap-10 items-start">
+      <!-- CARTE GRISE -->
+      <div class="bg-[#f2f2f2] rounded-xl shadow-[0_30px_70px_rgba(0,0,0,0.35)] p-12 relative z-10">
 
-        <!-- TEXTE -->
-        <div>
-          <h2 class="text-[#162064] font-bold text-2xl md:text-3xl mb-6">
-            QUI SOMMES-NOUS ?
-          </h2>
+        <div class="grid md:grid-cols-2 gap-10 items-start">
 
-          <p class="text-gray-700 text-lg leading-relaxed mb-4">
-            AIAE (<span class="font-semibold">Afrika Infrastructures And Equipments</span>)<br />
-            est une entreprise togolaise
-            <span class="font-semibold">fondée par des experts avec plus de 15 ans d'expérience en génie civil</span>,
-            avec une ambition claire :
-            <span class="font-semibold">transformer le secteur de la construction en Afrique de l'Ouest.</span>
-          </p>
+          <!-- TEXTE -->
+          <div>
+            <h2 class="text-[#162064] font-bold text-2xl md:text-3xl mb-6">
+              QUI SOMMES-NOUS ?
+            </h2>
 
-          <p class="text-gray-600 leading-relaxed mb-4">
-            AIAE propose un modèle intégré : de la conception jusqu'à la remise des clés,
-            en passant par l'autonomie énergétique et la sécurisation des installations.
-          </p>
+            <p class="text-gray-700 text-lg leading-relaxed mb-4">
+              AIAE (<span class="font-semibold">Afrika Infrastructures And Equipements</span>)<br />
+              est une entreprise togolaise
+              <span class="font-semibold">fondée par des experts avec plus de 15 ans d'expérience en génie civil</span>,
+              avec une ambition claire :
+              <span class="font-semibold">transformer le secteur de la construction en Afrique de l'Ouest.</span>
+            </p>
 
-          <button class="bg-[#05482C] text-white px-5 py-2 mt-6 rounded-lg text-sm flex items-center gap-2">
-            En savoir plus
-          </button>
-        </div>
+            <p class="text-gray-600 leading-relaxed mb-4">
+              AIAE propose un modèle intégré : de la conception jusqu'à la remise des clés,
+              en passant par l'autonomie énergétique et la sécurisation des installations.
+            </p>
 
-        <!-- IMAGES -->
-        <div class="space-y-4 flex flex-col items-center md:items-end">
-          <img src="Images/Expertise.png" class="w-full max-w-[460px] rounded-lg" />
-          <img src="Images/Siège.png" class="w-full max-w-[460px] rounded-lg" />
-          <img src="Images/Ambition.png" class="w-full max-w-[460px] rounded-lg" />
-        </div>
+            <button class="bg-[#05482C] text-white px-5 py-2 mt-6 rounded-lg text-sm flex items-center gap-2">
+              En savoir plus
+            </button>
+          </div>
 
-      </div>
+          <!-- IMAGES -->
+          <div class="space-y-4 flex flex-col items-center md:items-end">
+            <img src="Images/Expertise.png" class="w-full max-w-[460px] rounded-lg" />
+            <img src="Images/Siège.png" class="w-full max-w-[460px] rounded-lg" />
+            <img src="Images/Ambition.png" class="w-full max-w-[460px] rounded-lg" />
+          </div>
 
-    </div>
-
-    <!-- STATS (EN DEHORS DE LA CARTE) -->
-    <div class="relative z-20 mt-5">
-      <div class="grid grid-cols-2 md:grid-cols-4 text-center text-white gap-6">
-
-        <div>
-          <p class="text-5xl font-bold">+18</p>
-          <p class="text-sm mt-2">Années d'expertise</p>
-        </div>
-
-        <div>
-          <p class="text-5xl font-bold">04</p>
-          <p class="text-sm mt-2">Divisions complémentaires</p>
-        </div>
-
-        <div>
-          <p class="text-5xl font-bold">05</p>
-          <p class="text-sm mt-2">Zones d’intervention</p>
-        </div>
-
-        <div>
-          <p class="text-5xl font-bold">04</p>
-          <p class="text-sm mt-2">Niveaux de standing</p>
         </div>
 
       </div>
-    </div>
 
-  </div>
-</section>
+      <!-- STATS (EN DEHORS DE LA CARTE) -->
+      <div class="relative z-20 mt-5">
+        <div class="grid grid-cols-2 md:grid-cols-4 text-center text-white gap-6">
+
+          <div>
+            <p class="text-5xl font-bold">+18</p>
+            <p class="text-sm mt-2">Années d'expertise</p>
+          </div>
+
+          <div>
+            <p class="text-5xl font-bold">04</p>
+            <p class="text-sm mt-2">Divisions complémentaires</p>
+          </div>
+
+          <div>
+            <p class="text-5xl font-bold">05</p>
+            <p class="text-sm mt-2">Zones d’intervention</p>
+          </div>
+
+          <div>
+            <p class="text-5xl font-bold">04</p>
+            <p class="text-sm mt-2">Niveaux de standing</p>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
 
   <!-- ================= SECTION CIBLES ================= -->
   <section class="relative pt-16 bg-[#f2f2f2] overflow-hidden">
@@ -1395,7 +1401,9 @@
         </summary>
 
         <div class="px-16 pb-6 text-gray-600">
-          Le coût dépend du standing et de la surface. À titre indicatif, nos prix démarrent à <strong>330 000 FCFA/m²</strong> pour un standing Standard et peuvent atteindre <strong>1 200 000 FCFA/m²</strong> pour du Prestige. Demandez un devis personnalisé gratuit pour une estimation précise.
+          Le coût dépend du standing et de la surface. À titre indicatif, nos prix démarrent à <strong>330 000
+            FCFA/m²</strong> pour un standing Standard et peuvent atteindre <strong>1 200 000 FCFA/m²</strong> pour du
+          Prestige. Demandez un devis personnalisé gratuit pour une estimation précise.
         </div>
 
       </details>
@@ -1424,7 +1432,8 @@
         </summary>
 
         <div class="px-16 pb-6 text-gray-600">
-          Une villa standard de 150 m² prend généralement <strong>8 à 12 mois</strong>, selon le standing et les finitions. Les délais exacts sont définis ensemble et inscrits au contrat.
+          Une villa standard de 150 m² prend généralement <strong>8 à 12 mois</strong>, selon le standing et les
+          finitions. Les délais exacts sont définis ensemble et inscrits au contrat.
         </div>
 
       </details>
@@ -1453,7 +1462,8 @@
         </summary>
 
         <div class="px-16 pb-6 text-gray-600">
-          Nous proposons un suivi à distance avec rapports photos/vidéos réguliers et visioconférences selon vos disponibilités. Un chef de projet dédié est votre interlocuteur unique.
+          Nous proposons un suivi à distance avec rapports photos/vidéos réguliers et visioconférences selon vos
+          disponibilités. Un chef de projet dédié est votre interlocuteur unique.
         </div>
 
       </details>
@@ -1482,7 +1492,8 @@
         </summary>
 
         <div class="px-16 pb-6 text-gray-600">
-          Oui. Le paiement se fait par étapes, au fur et à mesure de l’avancement des travaux. L’échéancier est défini ensemble avant le démarrage du chantier.
+          Oui. Le paiement se fait par étapes, au fur et à mesure de l’avancement des travaux. L’échéancier est défini
+          ensemble avant le démarrage du chantier.
         </div>
 
       </details>
@@ -1511,7 +1522,8 @@
         </summary>
 
         <div class="px-16 pb-6 text-gray-600">
-          Oui. Nous intervenons sur tout le territoire togolais : Grand Lomé, région Maritime, Plateaux, Centrale, Kara et Savanes. Un coefficient géographique est appliqué selon la zone.
+          Oui. Nous intervenons sur tout le territoire togolais : Grand Lomé, région Maritime, Plateaux, Centrale, Kara
+          et Savanes. Un coefficient géographique est appliqué selon la zone.
         </div>
 
       </details>
@@ -1541,7 +1553,8 @@
         </summary>
 
         <div class="px-16 pb-6 text-gray-600">
-          Garantie décennale sur la structure, garantie de parfait achèvement (1 an), assurance responsabilité civile professionnelle. Tous nos engagements sont contractualisés.
+          Garantie décennale sur la structure, garantie de parfait achèvement (1 an), assurance responsabilité civile
+          professionnelle. Tous nos engagements sont contractualisés.
         </div>
 
       </details>
@@ -1570,7 +1583,8 @@
         </summary>
 
         <div class="px-16 pb-6 text-gray-600">
-          Par respect pour la confidentialité de nos clients, nous ne publions pas de photos de nos chantiers. Nous pouvons cependant vous fournir des références vérifiables sur demande lors d’un rendez-vous.
+          Par respect pour la confidentialité de nos clients, nous ne publions pas de photos de nos chantiers. Nous
+          pouvons cependant vous fournir des références vérifiables sur demande lors d’un rendez-vous.
         </div>
 
       </details>
@@ -1600,7 +1614,10 @@
         </summary>
 
         <div class="px-16 pb-6 text-gray-600">
-          Nous offrons une expertise technique de niveau international avec un ancrage local. Cela signifie : réactivité, connaissance approfondie du terrain togolais, et des prix justes sans les surcoûts liés aux équipes expatriées. Notre fondateur a été formé aux standards européens tout en maîtrisant parfaitement les réalités locales.
+          Nous offrons une expertise technique de niveau international avec un ancrage local. Cela signifie :
+          réactivité, connaissance approfondie du terrain togolais, et des prix justes sans les surcoûts liés aux
+          équipes expatriées. Notre fondateur a été formé aux standards européens tout en maîtrisant parfaitement les
+          réalités locales.
         </div>
 
       </details>
@@ -1678,7 +1695,7 @@
           </a>
 
           <!-- YouTube -->
-          
+
         </div>
 
         <!-- TEXTE DROIT -->
@@ -1723,7 +1740,7 @@
           <img src="Images/logos/LOGO AIAE FINAL - Copie.png" class="w-64 pb-5" alt="AIAE Logo">
 
           <p class="text-[#162064] text-[22px] leading-relaxed max-w-md">
-            <strong>AIAE : Afrika Infrastructures And Equipments.</strong>
+            <strong>AIAE : Afrika Infrastructures And Equipements.</strong>
             De la conception à la réalisation.
           </p>
 

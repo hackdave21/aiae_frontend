@@ -71,10 +71,12 @@
     }
 
     @media (max-width: 640px) {
+
       body,
       html {
         overflow-x: hidden !important;
       }
+
       section,
       div,
       img {
@@ -93,6 +95,7 @@
         opacity: 0;
         transform: translateY(40px);
       }
+
       to {
         opacity: 1;
         transform: translateY(0);
@@ -104,6 +107,7 @@
         opacity: 0;
         transform: translateX(-40px);
       }
+
       to {
         opacity: 1;
         transform: translateX(0);
@@ -115,6 +119,7 @@
         opacity: 0;
         transform: translateX(40px);
       }
+
       to {
         opacity: 1;
         transform: translateX(0);
@@ -126,6 +131,7 @@
         opacity: 0;
         transform: scale(0.9);
       }
+
       to {
         opacity: 1;
         transform: scale(1);
@@ -133,9 +139,12 @@
     }
 
     @keyframes float {
-      0%, 100% {
+
+      0%,
+      100% {
         transform: translateY(0);
       }
+
       50% {
         transform: translateY(-10px);
       }
@@ -161,14 +170,37 @@
       animation: float 4s ease-in-out infinite;
     }
 
-    .delay-100 { animation-delay: 0.1s; }
-    .delay-200 { animation-delay: 0.2s; }
-    .delay-300 { animation-delay: 0.3s; }
-    .delay-400 { animation-delay: 0.4s; }
-    .delay-500 { animation-delay: 0.5s; }
-    .delay-600 { animation-delay: 0.6s; }
-    .delay-700 { animation-delay: 0.7s; }
-    .delay-800 { animation-delay: 0.8s; }
+    .delay-100 {
+      animation-delay: 0.1s;
+    }
+
+    .delay-200 {
+      animation-delay: 0.2s;
+    }
+
+    .delay-300 {
+      animation-delay: 0.3s;
+    }
+
+    .delay-400 {
+      animation-delay: 0.4s;
+    }
+
+    .delay-500 {
+      animation-delay: 0.5s;
+    }
+
+    .delay-600 {
+      animation-delay: 0.6s;
+    }
+
+    .delay-700 {
+      animation-delay: 0.7s;
+    }
+
+    .delay-800 {
+      animation-delay: 0.8s;
+    }
 
     .opacity-0-init {
       opacity: 0;
@@ -195,12 +227,14 @@
     /* Background pattern */
     .pattern-bg {
       background-image: radial-gradient(circle at 20% 80%, rgba(11, 91, 58, 0.05) 0%, transparent 50%),
-                        radial-gradient(circle at 80% 20%, rgba(26, 31, 77, 0.05) 0%, transparent 50%);
+        radial-gradient(circle at 80% 20%, rgba(26, 31, 77, 0.05) 0%, transparent 50%);
     }
-strong {
-  font-weight: 600;
-  color: #1d1d1b;
-}
+
+    strong {
+      font-weight: 600;
+      color: #1d1d1b;
+    }
+
     /* Divider */
     .divider-green {
       width: 80px;
@@ -213,40 +247,42 @@ strong {
       height: 4px;
       background: linear-gradient(90deg, #FF8400, #f59e0b);
     }
-  /* Animation du panneau */
-  #details-panel {
-    animation: slideDown 0.4s ease-out;
-  }
-  
-  @keyframes slideDown {
-    from {
-      opacity: 0;
-      transform: translateY(-20px);
+
+    /* Animation du panneau */
+    #details-panel {
+      animation: slideDown 0.4s ease-out;
     }
-    to {
-      opacity: 1;
-      transform: translateY(0);
+
+    @keyframes slideDown {
+      from {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
-  }
 
-  /* Carte active */
-  .standing-card.active {
-    opacity: 1 !important;
-    transform: scale(1.02);
-    box-shadow: 0 10px 30px rgba(17, 29, 74, 0.2);
-  }
+    /* Carte active */
+    .standing-card.active {
+      opacity: 1 !important;
+      transform: scale(1.02);
+      box-shadow: 0 10px 30px rgba(17, 29, 74, 0.2);
+    }
 
-  /* Rotation icône */
-  #details-icon.rotate {
-    transform: rotate(180deg);
-  }
+    /* Rotation icône */
+    #details-icon.rotate {
+      transform: rotate(180deg);
+    }
 
-  /* Bouton actif */
-  .standing-btn.active {
-    background: #162064 !important;
-    color: white !important;
-    border-color: #162064 !important;
-  }
+    /* Bouton actif */
+    .standing-btn.active {
+      background: #162064 !important;
+      color: white !important;
+      border-color: #162064 !important;
+    }
   </style>
   <script src="js/tailwind-config.js"></script>
 </head>
@@ -256,55 +292,63 @@ strong {
   <!-- ================= NAVBAR (injected by js/header.js) ================= -->
   <div id="header-placeholder"></div>
 
-<!-- ================= HERO DIASPORA ================= -->
-<section class="pt-24 pb-5 bg-[#e6e6e6]">
+  <!-- ================= HERO DIASPORA ================= -->
+  <section class="pt-24 pb-5 bg-[#e6e6e6]">
 
-  <div class="max-w-[99%] mx-auto px-2">
+    <div class="max-w-[99%] mx-auto px-2">
 
-    <div class="relative rounded-[25px] overflow-hidden ">
+      <div class="relative rounded-[25px] overflow-hidden ">
 
-      <!-- IMAGE -->
-      <img src="Images/home.png"
-        class="w-full h-[380px] md:h-[480px] object-cover">
+        <!-- IMAGE -->
+        <img src="Images/home.png" class="w-full h-[380px] md:h-[480px] object-cover">
 
-      <!-- OVERLAY -->
-      <div class="absolute inset-0 bg-black/70"></div>
+        <!-- OVERLAY -->
+        <div class="absolute inset-0 bg-black/70"></div>
 
-      <!-- CONTENU WRAPPER -->
-      <div class="absolute inset-0 z-10 flex flex-col md:flex-row items-center justify-between p-4 md:p-6 md:px-12 gap-8">
+        <!-- CONTENU WRAPPER -->
+        <div
+          class="absolute inset-0 z-10 flex flex-col md:flex-row items-center justify-between p-4 md:p-6 md:px-12 gap-8">
 
-        <!-- TEXTE (GAUCHE) -->
-        <div class="max-w-[850px] text-white self-center">
-          <h1 class="mb-4 uppercase text-[32px] md:text-[55px] leading-tight font-light">
+          <!-- TEXTE (GAUCHE) -->
+          <div class="max-w-[850px] text-white self-center">
+            <h1 class="mb-4 uppercase text-[32px] md:text-[55px] leading-tight font-light">
               CONSTRUIRE AU TOGO DEPUIS <br class="hidden md:block">
               <span class="font-bold text-white">L'ÉTRANGER</span>, C’EST POSSIBLE.
-          </h1>
+            </h1>
 
-          <p class="text-[18px] md:text-[25px] font-medium mb-6 opacity-95">
-            Et c’est serein avec AIAE.
-          </p>
-
-          <div class="text-[14px] md:text-[16px] leading-relaxed font-light max-w-2xl">
-            <p>
-              Vous vivez en France, au Canada, aux États-Unis, en Allemagne ou ailleurs ? <br class="hidden md:block">
-              Vous rêvez de <strong class="font-bold text-white">construire votre maison</strong>, votre <strong class="font-bold text-white">résidence secondaire</strong> ou un <br class="hidden md:block">
-              <strong class="font-bold text-white">investissement locatif au Togo</strong> ? AIAE a été conçue pour vous accompagner à <br class="hidden md:block">
-              chaque étape, <strong class="font-bold text-white">de la première visioconférence à la remise de vos clés.</strong>
+            <p class="text-[18px] md:text-[25px] font-medium mb-6 opacity-95">
+              Et c’est serein avec AIAE.
             </p>
+
+            <div class="text-[14px] md:text-[16px] leading-relaxed font-light max-w-2xl">
+              <p>
+                Vous vivez en France, au Canada, aux États-Unis, en Allemagne ou ailleurs ? <br class="hidden md:block">
+                Vous rêvez de <strong class="font-bold text-white">construire votre maison</strong>, votre <strong
+                  class="font-bold text-white">résidence secondaire</strong> ou un <br class="hidden md:block">
+                <strong class="font-bold text-white">investissement locatif au Togo</strong> ? AIAE a été conçue pour
+                vous accompagner à <br class="hidden md:block">
+                chaque étape, <strong class="font-bold text-white">de la première visioconférence à la remise de vos
+                  clés.</strong>
+              </p>
+            </div>
           </div>
-        </div>
 
-        <!-- BOUTONS (DROITE) -->
-        <div class="flex flex-col gap-7 w-full md:w-auto self-end">
-          
-          <a href="contact.html" class="bg-[#05482c] hover:bg-[#043b24] text-white px-10 py-2 rounded-full flex flex-col items-center text-center transition-all hover:scale-105 shadow-xl">
-            <span class="text-[15px] md:text-[19px]">Prendre rdv en visio <span class="text-[13px]">(fuseau adapté)</span></span>
-          </a>
+          <!-- BOUTONS (DROITE) -->
+          <div class="flex flex-col gap-7 w-full md:w-auto self-end">
 
-          <a href="contact.html" class="bg-[#05482c] hover:bg-[#043b24] text-white px-10 py-2 rounded-full flex items-center justify-between gap-4 transition-all hover:scale-105 shadow-xl min-w-[300px]">
-            <span class="text-[15px] md:text-[19px] text-left leading-tight">Prendre rendez-vous maintenant</span>
-            <img src="Images/envoiblanc.png" alt="icon" class="w-7 h-7 object-contain" />
-          </a>
+            <a href="contact.html"
+              class="bg-[#05482c] hover:bg-[#043b24] text-white px-10 py-2 rounded-full flex flex-col items-center text-center transition-all hover:scale-105 shadow-xl">
+              <span class="text-[15px] md:text-[19px]">Prendre rdv en visio <span class="text-[13px]">(fuseau
+                  adapté)</span></span>
+            </a>
+
+            <a href="contact.html"
+              class="bg-[#05482c] hover:bg-[#043b24] text-white px-10 py-2 rounded-full flex items-center justify-between gap-4 transition-all hover:scale-105 shadow-xl min-w-[300px]">
+              <span class="text-[15px] md:text-[19px] text-left leading-tight">Prendre rendez-vous maintenant</span>
+              <img src="Images/envoiblanc.png" alt="icon" class="w-7 h-7 object-contain" />
+            </a>
+
+          </div>
 
         </div>
 
@@ -312,19 +356,17 @@ strong {
 
     </div>
 
-  </div>
-
-</section>
-<section class="pt-5 pb-5 bg-[#e6e6e6]">
-      <div class="text-center">
-        <h2 class="text-[32px] md:text-[50px] font-bold uppercase leading-[1.1]">
-          <span class="text-[#162064]">ON SAIT CE QUI VOUS</span> <br>
-          <span class="text-[#162064]">INQUIÈTE.</span> 
-          <span class="text-[#05482C]">VOICI NOS</span> <br>
-          <span class="text-[#05482C]">RÉPONSES.</span>
-        </h2>
-      </div>
-</section>
+  </section>
+  <section class="pt-5 pb-5 bg-[#e6e6e6]">
+    <div class="text-center">
+      <h2 class="text-[32px] md:text-[50px] font-bold uppercase leading-[1.1]">
+        <span class="text-[#162064]">ON SAIT CE QUI VOUS</span> <br>
+        <span class="text-[#162064]">INQUIÈTE.</span>
+        <span class="text-[#05482C]">VOICI NOS</span> <br>
+        <span class="text-[#05482C]">RÉPONSES.</span>
+      </h2>
+    </div>
+  </section>
   <!-- ================= SECTION INQUIÉTUDES ================= -->
   <section class="bg-[#f2f3f5] py-5 w-full">
     <div class="max-w-[1100px] mx-auto px-6">
@@ -336,13 +378,19 @@ strong {
         <details class="group bg-white rounded-[15px] border border-gray-100 shadow-sm overflow-hidden" open>
           <summary class="flex items-center justify-between p-5 md:p-7 cursor-pointer list-none">
             <div class="flex items-center gap-5">
-              <span class="flex-shrink-0 flex items-center justify-center w-10 h-10 md:w-12 md:h-12 rounded-full bg-[#162064] text-white font-bold text-lg">01</span>
-              <h3 class="text-[17px] md:text-[22px] font-bold text-[#162064]">« Mon argent sera-t-il bien utilisé ? »</h3>
+              <span
+                class="flex-shrink-0 flex items-center justify-center w-10 h-10 md:w-12 md:h-12 rounded-full bg-[#162064] text-white font-bold text-lg">01</span>
+              <h3 class="text-[17px] md:text-[22px] font-bold text-[#162064]">« Mon argent sera-t-il bien utilisé ? »
+              </h3>
             </div>
-            <img src="Images/bfaq.png" alt="icon" class="w-7 h-7 transition-transform duration-300 group-open:rotate-180 shrink-0 ml-4" />
+            <img src="Images/bfaq.png" alt="icon"
+              class="w-7 h-7 transition-transform duration-300 group-open:rotate-180 shrink-0 ml-4" />
           </summary>
-          <div class="px-5 md:px-[88px] pb-7 text-gray-600 text-[15px] md:text-[18px] leading-relaxed font-light border-t border-gray-50 pt-6">
-            Chaque franc est tracé. Vous recevez un devis ligne par ligne basé sur notre Bordereau des Prix Unitaires (BPU). Le paiement se fait par étapes, uniquement sur constat d’avancement validé par photos et vidéos. Aucun paiement intégral n’est demandé avant le démarrage.
+          <div
+            class="px-5 md:px-[88px] pb-7 text-gray-600 text-[15px] md:text-[18px] leading-relaxed font-light border-t border-gray-50 pt-6">
+            Chaque franc est tracé. Vous recevez un devis ligne par ligne basé sur notre Bordereau des Prix Unitaires
+            (BPU). Le paiement se fait par étapes, uniquement sur constat d’avancement validé par photos et vidéos.
+            Aucun paiement intégral n’est demandé avant le démarrage.
           </div>
         </details>
 
@@ -350,13 +398,19 @@ strong {
         <details class="group bg-white rounded-[15px] border border-gray-100 shadow-sm overflow-hidden">
           <summary class="flex items-center justify-between p-5 md:p-7 cursor-pointer list-none">
             <div class="flex items-center gap-5">
-              <span class="flex-shrink-0 flex items-center justify-center w-10 h-10 md:w-12 md:h-12 rounded-full bg-[#162064] text-white font-bold text-lg">02</span>
-              <h3 class="text-[17px] md:text-[22px] font-bold text-[#162064]">Comment suivre mon chantier à 10 000 km ?</h3>
+              <span
+                class="flex-shrink-0 flex items-center justify-center w-10 h-10 md:w-12 md:h-12 rounded-full bg-[#162064] text-white font-bold text-lg">02</span>
+              <h3 class="text-[17px] md:text-[22px] font-bold text-[#162064]">Comment suivre mon chantier à 10 000 km ?
+              </h3>
             </div>
-            <img src="Images/bfaq.png" alt="icon" class="w-7 h-7 transition-transform duration-300 group-open:rotate-180 shrink-0 ml-4" />
+            <img src="Images/bfaq.png" alt="icon"
+              class="w-7 h-7 transition-transform duration-300 group-open:rotate-180 shrink-0 ml-4" />
           </summary>
-          <div class="px-5 md:px-[88px] pb-7 text-gray-600 text-[15px] md:text-[18px] leading-relaxed font-light border-t border-gray-50 pt-6">
-            Rapports photos et vidéos hebdomadaires envoyés par WhatsApp ou email. Visioconférences de suivi bimensuelles adaptées à votre fuseau horaire (soirées et week-ends disponibles). Un chef de projet dédié, joignable par téléphone et WhatsApp.
+          <div
+            class="px-5 md:px-[88px] pb-7 text-gray-600 text-[15px] md:text-[18px] leading-relaxed font-light border-t border-gray-50 pt-6">
+            Rapports photos et vidéos hebdomadaires envoyés par WhatsApp ou email. Visioconférences de suivi
+            bimensuelles adaptées à votre fuseau horaire (soirées et week-ends disponibles). Un chef de projet dédié,
+            joignable par téléphone et WhatsApp.
           </div>
         </details>
 
@@ -364,13 +418,19 @@ strong {
         <details class="group bg-white rounded-[15px] border border-gray-100 shadow-sm overflow-hidden">
           <summary class="flex items-center justify-between p-5 md:p-7 cursor-pointer list-none">
             <div class="flex items-center gap-5">
-              <span class="flex-shrink-0 flex items-center justify-center w-10 h-10 md:w-12 md:h-12 rounded-full bg-[#162064] text-white font-bold text-lg">03</span>
-              <h3 class="text-[17px] md:text-[22px] font-bold text-[#162064]">Comment payer en toute sécurité depuis l’étranger ?</h3>
+              <span
+                class="flex-shrink-0 flex items-center justify-center w-10 h-10 md:w-12 md:h-12 rounded-full bg-[#162064] text-white font-bold text-lg">03</span>
+              <h3 class="text-[17px] md:text-[22px] font-bold text-[#162064]">Comment payer en toute sécurité depuis
+                l’étranger ?</h3>
             </div>
-            <img src="Images/bfaq.png" alt="icon" class="w-7 h-7 transition-transform duration-300 group-open:rotate-180 shrink-0 ml-4" />
+            <img src="Images/bfaq.png" alt="icon"
+              class="w-7 h-7 transition-transform duration-300 group-open:rotate-180 shrink-0 ml-4" />
           </summary>
-          <div class="px-5 md:px-[88px] pb-7 text-gray-600 text-[15px] md:text-[18px] leading-relaxed font-light border-t border-gray-50 pt-6">
-            Virement international vers un compte bancaire togolais vérifié, au nom de l’entreprise AIAE SARL. Échéancier de paiement clair défini au contrat. Aucun paiement en espèces demandé. Reçu émis pour chaque versement.
+          <div
+            class="px-5 md:px-[88px] pb-7 text-gray-600 text-[15px] md:text-[18px] leading-relaxed font-light border-t border-gray-50 pt-6">
+            Virement international vers un compte bancaire togolais vérifié, au nom de l’entreprise AIAE SARL.
+            Échéancier de paiement clair défini au contrat. Aucun paiement en espèces demandé. Reçu émis pour chaque
+            versement.
           </div>
         </details>
 
@@ -378,13 +438,18 @@ strong {
         <details class="group bg-white rounded-[15px] border border-gray-100 shadow-sm overflow-hidden">
           <summary class="flex items-center justify-between p-5 md:p-7 cursor-pointer list-none">
             <div class="flex items-center gap-5">
-              <span class="flex-shrink-0 flex items-center justify-center w-10 h-10 md:w-12 md:h-12 rounded-full bg-[#162064] text-white font-bold text-lg">04</span>
-              <h3 class="text-[17px] md:text-[22px] font-bold text-[#162064]">Et les démarches administratives au Togo ?</h3>
+              <span
+                class="flex-shrink-0 flex items-center justify-center w-10 h-10 md:w-12 md:h-12 rounded-full bg-[#162064] text-white font-bold text-lg">04</span>
+              <h3 class="text-[17px] md:text-[22px] font-bold text-[#162064]">Et les démarches administratives au Togo ?
+              </h3>
             </div>
-            <img src="Images/bfaq.png" alt="icon" class="w-7 h-7 transition-transform duration-300 group-open:rotate-180 shrink-0 ml-4" />
+            <img src="Images/bfaq.png" alt="icon"
+              class="w-7 h-7 transition-transform duration-300 group-open:rotate-180 shrink-0 ml-4" />
           </summary>
-          <div class="px-5 md:px-[88px] pb-7 text-gray-600 text-[15px] md:text-[18px] leading-relaxed font-light border-t border-gray-50 pt-6">
-            Nous gérons tout pour vous : permis de construire, raccordements (eau, électricité, télécom), formalités foncières si nécessaire. Vous n’avez rien à gérer sur place.
+          <div
+            class="px-5 md:px-[88px] pb-7 text-gray-600 text-[15px] md:text-[18px] leading-relaxed font-light border-t border-gray-50 pt-6">
+            Nous gérons tout pour vous : permis de construire, raccordements (eau, électricité, télécom), formalités
+            foncières si nécessaire. Vous n’avez rien à gérer sur place.
           </div>
         </details>
 
@@ -392,13 +457,19 @@ strong {
         <details class="group bg-white rounded-[15px] border border-gray-100 shadow-sm overflow-hidden">
           <summary class="flex items-center justify-between p-5 md:p-7 cursor-pointer list-none">
             <div class="flex items-center gap-5">
-              <span class="flex-shrink-0 flex items-center justify-center w-10 h-10 md:w-12 md:h-12 rounded-full bg-[#162064] text-white font-bold text-lg">05</span>
-              <h3 class="text-[17px] md:text-[22px] font-bold text-[#162064]">Quelle garantie ai-je que le travail sera bien fait ?</h3>
+              <span
+                class="flex-shrink-0 flex items-center justify-center w-10 h-10 md:w-12 md:h-12 rounded-full bg-[#162064] text-white font-bold text-lg">05</span>
+              <h3 class="text-[17px] md:text-[22px] font-bold text-[#162064]">Quelle garantie ai-je que le travail sera
+                bien fait ?</h3>
             </div>
-            <img src="Images/bfaq.png" alt="icon" class="w-7 h-7 transition-transform duration-300 group-open:rotate-180 shrink-0 ml-4" />
+            <img src="Images/bfaq.png" alt="icon"
+              class="w-7 h-7 transition-transform duration-300 group-open:rotate-180 shrink-0 ml-4" />
           </summary>
-          <div class="px-5 md:px-[88px] pb-7 text-gray-600 text-[15px] md:text-[18px] leading-relaxed font-light border-t border-gray-50 pt-6">
-            Garantie décennale contractuelle sur la structure (10 ans). Garantie de parfait achèvement (1 an). Contrat détaillé avec spécifications techniques, signable devant notaire au Togo pour une sécurité juridique maximale. Références vérifiables fournies sur demande lors d’un rendez-vous.
+          <div
+            class="px-5 md:px-[88px] pb-7 text-gray-600 text-[15px] md:text-[18px] leading-relaxed font-light border-t border-gray-50 pt-6">
+            Garantie décennale contractuelle sur la structure (10 ans). Garantie de parfait achèvement (1 an). Contrat
+            détaillé avec spécifications techniques, signable devant notaire au Togo pour une sécurité juridique
+            maximale. Références vérifiables fournies sur demande lors d’un rendez-vous.
           </div>
         </details>
 
@@ -406,13 +477,19 @@ strong {
         <details class="group bg-white rounded-[15px] border border-gray-100 shadow-sm overflow-hidden">
           <summary class="flex items-center justify-between p-5 md:p-7 cursor-pointer list-none">
             <div class="flex items-center gap-5">
-              <span class="flex-shrink-0 flex items-center justify-center w-10 h-10 md:w-12 md:h-12 rounded-full bg-[#162064] text-white font-bold text-lg">06</span>
-              <h3 class="text-[17px] md:text-[22px] font-bold text-[#162064]">Je n’ai pas encore de terrain, pouvez-vous m’aider ?</h3>
+              <span
+                class="flex-shrink-0 flex items-center justify-center w-10 h-10 md:w-12 md:h-12 rounded-full bg-[#162064] text-white font-bold text-lg">06</span>
+              <h3 class="text-[17px] md:text-[22px] font-bold text-[#162064]">Je n’ai pas encore de terrain, pouvez-vous
+                m’aider ?</h3>
             </div>
-            <img src="Images/bfaq.png" alt="icon" class="w-7 h-7 transition-transform duration-300 group-open:rotate-180 shrink-0 ml-4" />
+            <img src="Images/bfaq.png" alt="icon"
+              class="w-7 h-7 transition-transform duration-300 group-open:rotate-180 shrink-0 ml-4" />
           </summary>
-          <div class="px-5 md:px-[88px] pb-7 text-gray-600 text-[15px] md:text-[18px] leading-relaxed font-light border-t border-gray-50 pt-6">
-            Nous pouvons vous conseiller sur le choix du terrain en fonction de votre projet (zone, type de sol, accessibilité). Nous ne sommes pas agent immobilier, mais notre expertise technique vous évitera les mauvaises surprises.
+          <div
+            class="px-5 md:px-[88px] pb-7 text-gray-600 text-[15px] md:text-[18px] leading-relaxed font-light border-t border-gray-50 pt-6">
+            Nous pouvons vous conseiller sur le choix du terrain en fonction de votre projet (zone, type de sol,
+            accessibilité). Nous ne sommes pas agent immobilier, mais notre expertise technique vous évitera les
+            mauvaises surprises.
           </div>
         </details>
 
@@ -420,19 +497,19 @@ strong {
     </div>
   </section>
 
-<section class="pt-5 pb-5 bg-[#05482c]">
-      <!-- TITRE -->
-      <div class="text-center">
-        <h2 class="text-[32px] md:text-[55px] font-black uppercase mb-4 tracking-tight">
-          <span class="text-white">VOTRE</span> 
-          <span class="text-[#FF8400]">PARCOURS</span> 
-          <span class="text-white">AVEC AIAE</span>
-        </h2>
-        <p class="text-white text-[18px] md:text-[26px] font-light opacity-90 italic">
-          De votre premier appel à la remise des clés
-        </p>
-      </div>
-</section>
+  <section class="pt-5 pb-5 bg-[#05482c]">
+    <!-- TITRE -->
+    <div class="text-center">
+      <h2 class="text-[32px] md:text-[55px] font-black uppercase mb-4 tracking-tight">
+        <span class="text-white">VOTRE</span>
+        <span class="text-[#FF8400]">PARCOURS</span>
+        <span class="text-white">AVEC AIAE</span>
+      </h2>
+      <p class="text-white text-[18px] md:text-[26px] font-light opacity-90 italic">
+        De votre premier appel à la remise des clés
+      </p>
+    </div>
+  </section>
   <!-- ================= SECTION PARCOURS ================= -->
   <section class="bg-[#f2f3f5] py-20 w-full relative overflow-hidden font-FuturaStdLight">
     <!-- Cercles décoratifs (Subtils) -->
@@ -443,84 +520,108 @@ strong {
 
       <!-- GRID DES ÉTAPES (2X2) -->
       <div class="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-16">
-        
+
         <!-- ÉTAPE 01 -->
         <div class="flex gap-6 items-start">
-          <div class="flex-shrink-0 w-12 h-12 md:w-16 md:h-16 rounded-full bg-[#05482c] flex items-center justify-center text-white text-[20px] md:text-[28px] font-black shadow-lg">01</div>
+          <div
+            class="flex-shrink-0 w-12 h-12 md:w-16 md:h-16 rounded-full bg-[#05482c] flex items-center justify-center text-white text-[20px] md:text-[28px] font-black shadow-lg">
+            01</div>
           <div class="">
             <h3 class="text-[18px] text-[#05482c] md:text-[22px] font-bold uppercase mb-3 leading-tight tracking-wide">
               PREMIER CONTACT <br>
               VISIOCONFÉRENCE GRATUITE
             </h3>
             <p class="text-[#4a4a4a] text-[15px] md:text-[17px] leading-relaxed font-light">
-              Échange en visioconférence adapté à votre <strong>fuseau horaire</strong>. Nous écoutons votre projet, vos besoins, votre budget. <strong>Gratuit et sans engagement</strong>. Durée : 30 à 45 minutes.
+              Échange en visioconférence adapté à votre <strong>fuseau horaire</strong>. Nous écoutons votre projet, vos
+              besoins, votre budget. <strong>Gratuit et sans engagement</strong>. Durée : 30 à 45 minutes.
             </p>
           </div>
         </div>
 
         <!-- ÉTAPE 02 -->
         <div class="flex gap-6 items-start">
-          <div class="flex-shrink-0 w-12 h-12 md:w-16 md:h-16 rounded-full bg-[#05482c] flex items-center justify-center text-white text-[20px] md:text-[28px] font-black shadow-lg">02</div>
+          <div
+            class="flex-shrink-0 w-12 h-12 md:w-16 md:h-16 rounded-full bg-[#05482c] flex items-center justify-center text-white text-[20px] md:text-[28px] font-black shadow-lg">
+            02</div>
           <div class="">
             <h3 class="text-[18px] text-[#05482c] md:text-[22px] font-bold uppercase mb-3 leading-tight tracking-wide">
               ÉTUDE ET DEVIS À DISTANCE
             </h3>
             <p class="text-[#4a4a4a] text-[15px] md:text-[17px] leading-relaxed font-light">
-              Nous réalisons les études préliminaires : faisabilité technique, esquisse architecturale, devis détaillé basé sur le BPU avec décomposition par postes. <strong>Tout est transmis par email pour votre validation</strong>. Délai : 2 à 4 semaines.
+              Nous réalisons les études préliminaires : faisabilité technique, esquisse architecturale, devis détaillé
+              basé sur le BPU avec décomposition par postes. <strong>Tout est transmis par email pour votre
+                validation</strong>. Délai : 2 à 4 semaines.
             </p>
           </div>
         </div>
 
         <!-- ÉTAPE 03 -->
         <div class="flex gap-6 items-start">
-          <div class="flex-shrink-0 w-12 h-12 md:w-16 md:h-16 rounded-full bg-[#05482c] flex items-center justify-center text-white text-[20px] md:text-[28px] font-black shadow-lg">03</div>
+          <div
+            class="flex-shrink-0 w-12 h-12 md:w-16 md:h-16 rounded-full bg-[#05482c] flex items-center justify-center text-white text-[20px] md:text-[28px] font-black shadow-lg">
+            03</div>
           <div class="">
             <h3 class="text-[18px] text-[#05482c] md:text-[22px] font-bold uppercase mb-3 leading-tight tracking-wide">
               CONTRAT + ÉCHÉANCIER <br>
               DE PAIEMENT
             </h3>
             <p class="text-[#4a4a4a] text-[15px] md:text-[17px] leading-relaxed font-light">
-              Contrat détaillé envoyé par email. <strong>Deux options de signature</strong> : signature électronique à distance ou signature devant notaire au Togo pour une sécurité juridique maximale (un mandataire peut signer en votre nom si vous ne pouvez pas vous déplacer). <strong>Échéancier de paiement clair</strong>, lié à des jalons d'avancement <strong>vérifiables</strong> (fondations terminées, dalle coulée, toiture posée, etc.). Premier versement pour démarrage du chantier.
+              Contrat détaillé envoyé par email. <strong>Deux options de signature</strong> : signature électronique à
+              distance ou signature devant notaire au Togo pour une sécurité juridique maximale (un mandataire peut
+              signer en votre nom si vous ne pouvez pas vous déplacer). <strong>Échéancier de paiement clair</strong>,
+              lié à des jalons d'avancement <strong>vérifiables</strong> (fondations terminées, dalle coulée, toiture
+              posée, etc.). Premier versement pour démarrage du chantier.
             </p>
           </div>
         </div>
 
         <!-- ÉTAPE 04 -->
         <div class="flex gap-6 items-start">
-          <div class="flex-shrink-0 w-12 h-12 md:w-16 md:h-16 rounded-full bg-[#05482c] flex items-center justify-center text-white text-[20px] md:text-[28px] font-black shadow-lg">04</div>
+          <div
+            class="flex-shrink-0 w-12 h-12 md:w-16 md:h-16 rounded-full bg-[#05482c] flex items-center justify-center text-white text-[20px] md:text-[28px] font-black shadow-lg">
+            04</div>
           <div class="">
             <h3 class="text-[18px] text-[#05482c] md:text-[22px] font-bold uppercase mb-3 leading-tight tracking-wide">
               CONSTRUCTION + SUIVI <br>
               EN TEMPS RÉEL
             </h3>
             <p class="text-[#4a4a4a] text-[15px] md:text-[17px] leading-relaxed font-light">
-              Pendant toute la durée du chantier : rapports photos et vidéos hebdomadaires, visioconférences de suivi bimensuelles, alertes immédiates en cas de décision à prendre. Votre chef de projet est joignable par téléphone et WhatsApp.
+              Pendant toute la durée du chantier : rapports photos et vidéos hebdomadaires, visioconférences de suivi
+              bimensuelles, alertes immédiates en cas de décision à prendre. Votre chef de projet est joignable par
+              téléphone et WhatsApp.
             </p>
           </div>
         </div>
 
         <!-- ÉTAPE 05 -->
         <div class="flex gap-6 items-start">
-          <div class="flex-shrink-0 w-12 h-12 md:w-16 md:h-16 rounded-full bg-[#05482c] flex items-center justify-center text-white text-[20px] md:text-[28px] font-black shadow-lg">05</div>
+          <div
+            class="flex-shrink-0 w-12 h-12 md:w-16 md:h-16 rounded-full bg-[#05482c] flex items-center justify-center text-white text-[20px] md:text-[28px] font-black shadow-lg">
+            05</div>
           <div class="">
             <h3 class="text-[18px] text-[#05482c] md:text-[22px] font-bold uppercase mb-3 leading-tight tracking-wide">
               RÉCEPTION ET REMISE DES CLÉS
             </h3>
             <p class="text-[#4a4a4a] text-[15px] md:text-[17px] leading-relaxed font-light">
-              Procès-verbal de réception établi lors de votre visite au Togo ou par visioconférence détaillée. Réserves notées et corrigées. Remise des clés et de la documentation technique complète (plans d’exécution, PV, garanties).
+              Procès-verbal de réception établi lors de votre visite au Togo ou par visioconférence détaillée. Réserves
+              notées et corrigées. Remise des clés et de la documentation technique complète (plans d’exécution, PV,
+              garanties).
             </p>
           </div>
         </div>
 
         <!-- ÉTAPE 06 -->
         <div class="flex gap-6 items-start">
-          <div class="flex-shrink-0 w-12 h-12 md:w-16 md:h-16 rounded-full bg-[#05482c] flex items-center justify-center text-white text-[20px] md:text-[28px] font-black shadow-lg">06</div>
+          <div
+            class="flex-shrink-0 w-12 h-12 md:w-16 md:h-16 rounded-full bg-[#05482c] flex items-center justify-center text-white text-[20px] md:text-[28px] font-black shadow-lg">
+            06</div>
           <div class="">
             <h3 class="text-[18px] text-[#05482c] md:text-[22px] font-bold uppercase mb-3 leading-tight tracking-wide">
               SUIVI POST-LIVRAISON
             </h3>
             <p class="text-[#4a4a4a] text-[15px] md:text-[17px] leading-relaxed font-light">
-              Garantie de parfait achèvement pendant 1 an : tout défaut constaté est réparé gratuitement. Garantie décennale sur la structure. Votre interlocuteur AIAE reste disponible après la livraison.
+              Garantie de parfait achèvement pendant 1 an : tout défaut constaté est réparé gratuitement. Garantie
+              décennale sur la structure. Votre interlocuteur AIAE reste disponible après la livraison.
             </p>
           </div>
         </div>
@@ -550,13 +651,19 @@ strong {
           <details class="group">
             <summary class="flex items-center justify-between p-5 md:p-8 cursor-pointer list-none">
               <div class="flex items-center gap-6">
-                <span class="flex-shrink-0 flex items-center justify-center w-10 h-10 md:w-12 md:h-12 rounded-full bg-[#05482c] text-white font-bold text-lg">01</span>
-                <h3 class="text-[17px] md:text-[22px] font-bold text-[#05482c] leading-tight">Puis-je lancer un projet sans être physiquement au Togo ?</h3>
+                <span
+                  class="flex-shrink-0 flex items-center justify-center w-10 h-10 md:w-12 md:h-12 rounded-full bg-[#05482c] text-white font-bold text-lg">01</span>
+                <h3 class="text-[17px] md:text-[22px] font-bold text-[#05482c] leading-tight">Puis-je lancer un projet
+                  sans être physiquement au Togo ?</h3>
               </div>
-              <img src="Images/bfaqvert.png" alt="icon" class="w-6 h-6 md:w-8 md:h-8 transition-transform duration-300 group-open:rotate-180 shrink-0 ml-4" />
+              <img src="Images/bfaqvert.png" alt="icon"
+                class="w-6 h-6 md:w-8 md:h-8 transition-transform duration-300 group-open:rotate-180 shrink-0 ml-4" />
             </summary>
-            <div class="px-5 md:px-[100px] pb-8 text-[#4a4a4a] text-[15px] md:text-[18px] leading-relaxed font-light border-t border-gray-50 pt-6">
-              Oui, absolument. Tout le processus est conçu pour être géré à distance : études, contrat, paiements, suivi. Votre présence est souhaitable uniquement pour la réception finale, et même cette étape peut se faire par vidéo.
+            <div
+              class="px-5 md:px-[100px] pb-8 text-[#4a4a4a] text-[15px] md:text-[18px] leading-relaxed font-light border-t border-gray-50 pt-6">
+              Oui, absolument. Tout le processus est conçu pour être géré à distance : études, contrat, paiements,
+              suivi. Votre présence est souhaitable uniquement pour la réception finale, et même cette étape peut se
+              faire par vidéo.
             </div>
           </details>
         </div>
@@ -566,13 +673,18 @@ strong {
           <details class="group">
             <summary class="flex items-center justify-between p-5 md:p-8 cursor-pointer list-none">
               <div class="flex items-center gap-6">
-                <span class="flex-shrink-0 flex items-center justify-center w-10 h-10 md:w-12 md:h-12 rounded-full bg-[#05482c] text-white font-bold text-lg">02</span>
-                <h3 class="text-[17px] md:text-[22px] font-bold text-[#05482c] leading-tight">Dans quels pays avez-vous des clients de la diaspora ?</h3>
+                <span
+                  class="flex-shrink-0 flex items-center justify-center w-10 h-10 md:w-12 md:h-12 rounded-full bg-[#05482c] text-white font-bold text-lg">02</span>
+                <h3 class="text-[17px] md:text-[22px] font-bold text-[#05482c] leading-tight">Dans quels pays avez-vous
+                  des clients de la diaspora ?</h3>
               </div>
-              <img src="Images/bfaqvert.png" alt="icon" class="w-6 h-6 md:w-8 md:h-8 transition-transform duration-300 group-open:rotate-180 shrink-0 ml-4" />
+              <img src="Images/bfaqvert.png" alt="icon"
+                class="w-6 h-6 md:w-8 md:h-8 transition-transform duration-300 group-open:rotate-180 shrink-0 ml-4" />
             </summary>
-            <div class="px-5 md:px-[100px] pb-8 text-[#4a4a4a] text-[15px] md:text-[18px] leading-relaxed font-light border-t border-gray-50 pt-6">
-              Nous accompagnons des clients résidant en France, au Canada, aux États-Unis, en Allemagne, en Belgique, en Suisse, au Royaume-Uni et dans d’autres pays. Notre organisation est adaptée à tous les fuseaux horaires.
+            <div
+              class="px-5 md:px-[100px] pb-8 text-[#4a4a4a] text-[15px] md:text-[18px] leading-relaxed font-light border-t border-gray-50 pt-6">
+              Nous accompagnons des clients résidant en France, au Canada, aux États-Unis, en Allemagne, en Belgique, en
+              Suisse, au Royaume-Uni et dans d’autres pays. Notre organisation est adaptée à tous les fuseaux horaires.
             </div>
           </details>
         </div>
@@ -582,13 +694,19 @@ strong {
           <details class="group">
             <summary class="flex items-center justify-between p-5 md:p-8 cursor-pointer list-none">
               <div class="flex items-center gap-6">
-                <span class="flex-shrink-0 flex items-center justify-center w-10 h-10 md:w-12 md:h-12 rounded-full bg-[#05482c] text-white font-bold text-lg">03</span>
-                <h3 class="text-[17px] md:text-[22px] font-bold text-[#05482c] leading-tight">Quel est le budget minimum pour un projet ?</h3>
+                <span
+                  class="flex-shrink-0 flex items-center justify-center w-10 h-10 md:w-12 md:h-12 rounded-full bg-[#05482c] text-white font-bold text-lg">03</span>
+                <h3 class="text-[17px] md:text-[22px] font-bold text-[#05482c] leading-tight">Quel est le budget minimum
+                  pour un projet ?</h3>
               </div>
-              <img src="Images/bfaqvert.png" alt="icon" class="w-6 h-6 md:w-8 md:h-8 transition-transform duration-300 group-open:rotate-180 shrink-0 ml-4" />
+              <img src="Images/bfaqvert.png" alt="icon"
+                class="w-6 h-6 md:w-8 md:h-8 transition-transform duration-300 group-open:rotate-180 shrink-0 ml-4" />
             </summary>
-            <div class="px-5 md:px-[100px] pb-8 text-[#4a4a4a] text-[15px] md:text-[18px] leading-relaxed font-light border-t border-gray-50 pt-6">
-              Pour une villa Standard de 100 m² en zone Grand Lomé, comptez à partir de 33 millions FCFA (environ 50 000 €) pour la construction seule. Ce montant varie selon le standing, la surface et la localisation. Utilisez notre simulateur en ligne pour une estimation personnalisée.
+            <div
+              class="px-5 md:px-[100px] pb-8 text-[#4a4a4a] text-[15px] md:text-[18px] leading-relaxed font-light border-t border-gray-50 pt-6">
+              Pour une villa Standard de 100 m² en zone Grand Lomé, comptez à partir de 33 millions FCFA (environ 50 000
+              €) pour la construction seule. Ce montant varie selon le standing, la surface et la localisation. Utilisez
+              notre simulateur en ligne pour une estimation personnalisée.
             </div>
           </details>
         </div>
@@ -598,13 +716,18 @@ strong {
           <details class="group" open>
             <summary class="flex items-center justify-between p-5 md:p-8 cursor-pointer list-none">
               <div class="flex items-center gap-6">
-                <span class="flex-shrink-0 flex items-center justify-center w-10 h-10 md:w-12 md:h-12 rounded-full bg-[#05482c] text-white font-bold text-lg">04</span>
-                <h3 class="text-[17px] md:text-[22px] font-bold text-[#05482c] leading-tight">Combien de temps dure la construction ?</h3>
+                <span
+                  class="flex-shrink-0 flex items-center justify-center w-10 h-10 md:w-12 md:h-12 rounded-full bg-[#05482c] text-white font-bold text-lg">04</span>
+                <h3 class="text-[17px] md:text-[22px] font-bold text-[#05482c] leading-tight">Combien de temps dure la
+                  construction ?</h3>
               </div>
-              <img src="Images/bfaqvert.png" alt="icon" class="w-6 h-6 md:w-8 md:h-8 transition-transform duration-300 group-open:rotate-180 shrink-0 ml-4" />
+              <img src="Images/bfaqvert.png" alt="icon"
+                class="w-6 h-6 md:w-8 md:h-8 transition-transform duration-300 group-open:rotate-180 shrink-0 ml-4" />
             </summary>
-            <div class="px-5 md:px-[100px] pb-8 text-[#4a4a4a] text-[15px] md:text-[18px] leading-relaxed font-light border-t border-gray-50 pt-6">
-              De 8 à 18 mois selon la surface et le standing. Une villa Standard de 150 m² prend environ 8-12 mois. Les délais sont contractuels.
+            <div
+              class="px-5 md:px-[100px] pb-8 text-[#4a4a4a] text-[15px] md:text-[18px] leading-relaxed font-light border-t border-gray-50 pt-6">
+              De 8 à 18 mois selon la surface et le standing. Une villa Standard de 150 m² prend environ 8-12 mois. Les
+              délais sont contractuels.
             </div>
           </details>
         </div>
@@ -614,13 +737,19 @@ strong {
           <details class="group">
             <summary class="flex items-center justify-between p-5 md:p-8 cursor-pointer list-none">
               <div class="flex items-center gap-6">
-                <span class="flex-shrink-0 flex items-center justify-center w-10 h-10 md:w-12 md:h-12 rounded-full bg-[#05482c] text-white font-bold text-lg">05</span>
-                <h3 class="text-[17px] md:text-[22px] font-bold text-[#05482c] leading-tight">Puis-je combiner construction et énergie solaire ?</h3>
+                <span
+                  class="flex-shrink-0 flex items-center justify-center w-10 h-10 md:w-12 md:h-12 rounded-full bg-[#05482c] text-white font-bold text-lg">05</span>
+                <h3 class="text-[17px] md:text-[22px] font-bold text-[#05482c] leading-tight">Puis-je combiner
+                  construction et énergie solaire ?</h3>
               </div>
-              <img src="Images/bfaqvert.png" alt="icon" class="w-6 h-6 md:w-8 md:h-8 transition-transform duration-300 group-open:rotate-180 shrink-0 ml-4" />
+              <img src="Images/bfaqvert.png" alt="icon"
+                class="w-6 h-6 md:w-8 md:h-8 transition-transform duration-300 group-open:rotate-180 shrink-0 ml-4" />
             </summary>
-            <div class="px-5 md:px-[100px] pb-8 text-[#4a4a4a] text-[15px] md:text-[18px] leading-relaxed font-light border-t border-gray-50 pt-6">
-              Oui, c’est même l’un de nos atouts majeurs. Notre Division Énergie (lancement 2026) permet d’intégrer une installation solaire dès la conception de votre bâtiment. Un seul interlocuteur, un seul contrat, une maison autonome en énergie.
+            <div
+              class="px-5 md:px-[100px] pb-8 text-[#4a4a4a] text-[15px] md:text-[18px] leading-relaxed font-light border-t border-gray-50 pt-6">
+              Oui, c’est même l’un de nos atouts majeurs. Notre Division Énergie (lancement 2026) permet d’intégrer une
+              installation solaire dès la conception de votre bâtiment. Un seul interlocuteur, un seul contrat, une
+              maison autonome en énergie.
             </div>
           </details>
         </div>
@@ -630,13 +759,19 @@ strong {
           <details class="group">
             <summary class="flex items-center justify-between p-5 md:p-8 cursor-pointer list-none">
               <div class="flex items-center gap-6">
-                <span class="flex-shrink-0 flex items-center justify-center w-10 h-10 md:w-12 md:h-12 rounded-full bg-[#05482c] text-white font-bold text-lg">06</span>
-                <h3 class="text-[17px] md:text-[22px] font-bold text-[#05482c] leading-tight">Avez-vous un représentant en France / Europe ?</h3>
+                <span
+                  class="flex-shrink-0 flex items-center justify-center w-10 h-10 md:w-12 md:h-12 rounded-full bg-[#05482c] text-white font-bold text-lg">06</span>
+                <h3 class="text-[17px] md:text-[22px] font-bold text-[#05482c] leading-tight">Avez-vous un représentant
+                  en France / Europe ?</h3>
               </div>
-              <img src="Images/bfaqvert.png" alt="icon" class="w-6 h-6 md:w-8 md:h-8 transition-transform duration-300 group-open:rotate-180 shrink-0 ml-4" />
+              <img src="Images/bfaqvert.png" alt="icon"
+                class="w-6 h-6 md:w-8 md:h-8 transition-transform duration-300 group-open:rotate-180 shrink-0 ml-4" />
             </summary>
-            <div class="px-5 md:px-[100px] pb-8 text-[#4a4a4a] text-[15px] md:text-[18px] leading-relaxed font-light border-t border-gray-50 pt-6">
-              Nous n’avons pas de bureau physique en Europe, mais des rendez-vous en personne peuvent être organisés ponctuellement lors de déplacements de notre équipe en Europe. En dehors de ces périodes, la visioconférence reste notre mode de communication principal
+            <div
+              class="px-5 md:px-[100px] pb-8 text-[#4a4a4a] text-[15px] md:text-[18px] leading-relaxed font-light border-t border-gray-50 pt-6">
+              Nous n’avons pas de bureau physique en Europe, mais des rendez-vous en personne peuvent être organisés
+              ponctuellement lors de déplacements de notre équipe en Europe. En dehors de ces périodes, la
+              visioconférence reste notre mode de communication principal
             </div>
           </details>
         </div>
@@ -662,12 +797,15 @@ strong {
   <section class="bg-[#f2f3f5] py-20 w-full font-FuturaStdLight">
     <div class="max-w-[1200px] mx-auto px-6">
       <div class="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-12">
-        
+
         <!-- POINT 01 -->
         <div class="flex gap-6 items-start">
-          <div class="flex-shrink-0 w-12 h-12 md:w-14 md:h-14 rounded-full bg-[#162064] flex items-center justify-center text-white text-[20px] md:text-[24px] font-black shadow-lg">01</div>
+          <div
+            class="flex-shrink-0 w-12 h-12 md:w-14 md:h-14 rounded-full bg-[#162064] flex items-center justify-center text-white text-[20px] md:text-[24px] font-black shadow-lg">
+            01</div>
           <div class="">
-            <h3 class="text-[18px] text-[#162064] md:text-[20px] font-black uppercase mb-2 leading-tight">ENTREPRISE ENREGISTRÉE</h3>
+            <h3 class="text-[18px] text-[#162064] md:text-[20px] font-black uppercase mb-2 leading-tight">ENTREPRISE
+              ENREGISTRÉE</h3>
             <p class="text-[#4a4a4a] text-[15px] md:text-[17px] leading-relaxed font-light">
               AIAE SARL, immatriculée au Togo, avec siège social à Lomé. Statuts disponibles sur demande.
             </p>
@@ -676,20 +814,27 @@ strong {
 
         <!-- POINT 02 -->
         <div class="flex gap-6 items-start">
-          <div class="flex-shrink-0 w-12 h-12 md:w-14 md:h-14 rounded-full bg-[#162064] flex items-center justify-center text-white text-[20px] md:text-[24px] font-black shadow-lg">02</div>
+          <div
+            class="flex-shrink-0 w-12 h-12 md:w-14 md:h-14 rounded-full bg-[#162064] flex items-center justify-center text-white text-[20px] md:text-[24px] font-black shadow-lg">
+            02</div>
           <div class="">
-            <h3 class="text-[18px] text-[#162064] md:text-[20px] font-black uppercase mb-2 leading-tight">CONTRAT SIGNABLE DEVANT NOTAIRE</h3>
+            <h3 class="text-[18px] text-[#162064] md:text-[20px] font-black uppercase mb-2 leading-tight">CONTRAT
+              SIGNABLE DEVANT NOTAIRE</h3>
             <p class="text-[#4a4a4a] text-[15px] md:text-[17px] leading-relaxed font-light">
-              Pour une sécurité juridique maximale, votre contrat peut être signé devant un notaire togolais. Un mandataire peut agir en votre nom.
+              Pour une sécurité juridique maximale, votre contrat peut être signé devant un notaire togolais. Un
+              mandataire peut agir en votre nom.
             </p>
           </div>
         </div>
 
         <!-- POINT 03 -->
         <div class="flex gap-6 items-start">
-          <div class="flex-shrink-0 w-12 h-12 md:w-14 md:h-14 rounded-full bg-[#162064] flex items-center justify-center text-white text-[20px] md:text-[24px] font-black shadow-lg">03</div>
+          <div
+            class="flex-shrink-0 w-12 h-12 md:w-14 md:h-14 rounded-full bg-[#162064] flex items-center justify-center text-white text-[20px] md:text-[24px] font-black shadow-lg">
+            03</div>
           <div class="">
-            <h3 class="text-[18px] text-[#162064] md:text-[20px] font-black uppercase mb-2 leading-tight">DEVIS TRANSPARENT (BPU)</h3>
+            <h3 class="text-[18px] text-[#162064] md:text-[20px] font-black uppercase mb-2 leading-tight">DEVIS
+              TRANSPARENT (BPU)</h3>
             <p class="text-[#4a4a4a] text-[15px] md:text-[17px] leading-relaxed font-light">
               Chaque franc est justifié, ligne par ligne. Pas de forfait opaque.
             </p>
@@ -698,9 +843,12 @@ strong {
 
         <!-- POINT 04 -->
         <div class="flex gap-6 items-start">
-          <div class="flex-shrink-0 w-12 h-12 md:w-14 md:h-14 rounded-full bg-[#162064] flex items-center justify-center text-white text-[20px] md:text-[24px] font-black shadow-lg">04</div>
+          <div
+            class="flex-shrink-0 w-12 h-12 md:w-14 md:h-14 rounded-full bg-[#162064] flex items-center justify-center text-white text-[20px] md:text-[24px] font-black shadow-lg">
+            04</div>
           <div class="">
-            <h3 class="text-[18px] text-[#162064] md:text-[20px] font-black uppercase mb-2 leading-tight">PAIEMENT PAR ÉTAPES</h3>
+            <h3 class="text-[18px] text-[#162064] md:text-[20px] font-black uppercase mb-2 leading-tight">PAIEMENT PAR
+              ÉTAPES</h3>
             <p class="text-[#4a4a4a] text-[15px] md:text-[17px] leading-relaxed font-light">
               Vous ne payez que sur constat d’avancement, validé par preuves visuelles. Jamais d’intégralité en avance.
             </p>
@@ -709,9 +857,12 @@ strong {
 
         <!-- POINT 05 -->
         <div class="flex gap-6 items-start">
-          <div class="flex-shrink-0 w-12 h-12 md:w-14 md:h-14 rounded-full bg-[#162064] flex items-center justify-center text-white text-[20px] md:text-[24px] font-black shadow-lg">05</div>
+          <div
+            class="flex-shrink-0 w-12 h-12 md:w-14 md:h-14 rounded-full bg-[#162064] flex items-center justify-center text-white text-[20px] md:text-[24px] font-black shadow-lg">
+            05</div>
           <div class="">
-            <h3 class="text-[18px] text-[#162064] md:text-[20px] font-black uppercase mb-2 leading-tight">GARANTIE DÉCENNALE</h3>
+            <h3 class="text-[18px] text-[#162064] md:text-[20px] font-black uppercase mb-2 leading-tight">GARANTIE
+              DÉCENNALE</h3>
             <p class="text-[#4a4a4a] text-[15px] md:text-[17px] leading-relaxed font-light">
               10 ans sur la structure, 1 an de parfait achèvement. Inscrites au contrat.
             </p>
@@ -720,9 +871,12 @@ strong {
 
         <!-- POINT 06 -->
         <div class="flex gap-6 items-start">
-          <div class="flex-shrink-0 w-12 h-12 md:w-14 md:h-14 rounded-full bg-[#162064] flex items-center justify-center text-white text-[20px] md:text-[24px] font-black shadow-lg">06</div>
+          <div
+            class="flex-shrink-0 w-12 h-12 md:w-14 md:h-14 rounded-full bg-[#162064] flex items-center justify-center text-white text-[20px] md:text-[24px] font-black shadow-lg">
+            06</div>
           <div class="">
-            <h3 class="text-[18px] text-[#162064] md:text-[20px] font-black uppercase mb-2 leading-tight">SUIVI VÉRIFIABLE</h3>
+            <h3 class="text-[18px] text-[#162064] md:text-[20px] font-black uppercase mb-2 leading-tight">SUIVI
+              VÉRIFIABLE</h3>
             <p class="text-[#4a4a4a] text-[15px] md:text-[17px] leading-relaxed font-light">
               Rapports photos/vidéos hebdomadaires, visioconférences de suivi. Vous voyez votre chantier en temps réel.
             </p>
@@ -731,9 +885,12 @@ strong {
 
         <!-- POINT 07 -->
         <div class="flex gap-6 items-start">
-          <div class="flex-shrink-0 w-12 h-12 md:w-14 md:h-14 rounded-full bg-[#162064] flex items-center justify-center text-white text-[20px] md:text-[24px] font-black shadow-lg">07</div>
+          <div
+            class="flex-shrink-0 w-12 h-12 md:w-14 md:h-14 rounded-full bg-[#162064] flex items-center justify-center text-white text-[20px] md:text-[24px] font-black shadow-lg">
+            07</div>
           <div class="">
-            <h3 class="text-[18px] text-[#162064] md:text-[20px] font-black uppercase mb-2 leading-tight">COMPTE BANCAIRE VÉRIFIÉ</h3>
+            <h3 class="text-[18px] text-[#162064] md:text-[20px] font-black uppercase mb-2 leading-tight">COMPTE
+              BANCAIRE VÉRIFIÉ</h3>
             <p class="text-[#4a4a4a] text-[15px] md:text-[17px] leading-relaxed font-light">
               Virement international vers le compte de l’entreprise AIAE SARL. Reçu émis pour chaque versement.
             </p>
@@ -742,9 +899,12 @@ strong {
 
         <!-- POINT 08 -->
         <div class="flex gap-6 items-start">
-          <div class="flex-shrink-0 w-12 h-12 md:w-14 md:h-14 rounded-full bg-[#162064] flex items-center justify-center text-white text-[20px] md:text-[24px] font-black shadow-lg">08</div>
+          <div
+            class="flex-shrink-0 w-12 h-12 md:w-14 md:h-14 rounded-full bg-[#162064] flex items-center justify-center text-white text-[20px] md:text-[24px] font-black shadow-lg">
+            08</div>
           <div class="">
-            <h3 class="text-[18px] text-[#162064] md:text-[20px] font-black uppercase mb-2 leading-tight">RÉFÉRENCES SUR DEMANDE</h3>
+            <h3 class="text-[18px] text-[#162064] md:text-[20px] font-black uppercase mb-2 leading-tight">RÉFÉRENCES SUR
+              DEMANDE</h3>
             <p class="text-[#4a4a4a] text-[15px] md:text-[17px] leading-relaxed font-light">
               Lors de votre premier rendez-vous, nous partageons des références vérifiables de projets réalisés.
             </p>
@@ -758,7 +918,7 @@ strong {
   <!-- ================= SECTION CTA (Prenez Rendez-Vous) ================= -->
   <section class="bg-[#e6e6e6] py-5 w-full font-FuturaStdLight">
     <div class="max-w-[1000px] mx-auto text-center px-6">
-      
+
       <h2 class="text-[40px] md:text-[65px] font-black text-[#162064] mb-6 leading-tight">
         Prêt À Lancer Votre Projet <br class="hidden md:block">
         Depuis L’étranger ?
@@ -768,21 +928,24 @@ strong {
         engagement. Nous nous adaptons à votre fuseau horaire.
       </p>
 
-      <div class="flex flex-col md:flex-row justify-center items-stretch gap-0 w-full max-w-[1000px] mx-auto overflow-hidden shadow-sm">
-        
+      <div
+        class="flex flex-col md:flex-row justify-center items-stretch gap-0 w-full max-w-[1000px] mx-auto overflow-hidden shadow-sm">
+
         <!-- Bouton Orange -->
-        <a href="contact.html" class="flex-1 bg-[#FF8400] text-white px-6 py-6 text-center transition-all duration-300 hover:bg-[#FF8400] font-bold text-[15px] md:text-[22px] uppercase tracking-wide flex flex-col items-center justify-center min-h-[100px]">
+        <a href="contact.html"
+          class="flex-1 bg-[#FF8400] text-white px-6 py-6 text-center transition-all duration-300 hover:bg-[#FF8400] font-bold text-[15px] md:text-[22px] uppercase tracking-wide flex flex-col items-center justify-center min-h-[100px]">
           <span>PRENDRE RDV EN VISIO</span>
           <span class="block">(GRATUIT)</span>
         </a>
 
         <!-- Bouton Vert -->
-        <a href="contact.html" class="flex-1 bg-[#05482C] text-white px-6 py-6 text-center transition-all duration-300 hover:bg-[#043b24] font-bold text-[15px] md:text-[22px] uppercase tracking-wide flex items-center justify-center min-h-[100px]">
+        <a href="contact.html"
+          class="flex-1 bg-[#05482C] text-white px-6 py-6 text-center transition-all duration-300 hover:bg-[#043b24] font-bold text-[15px] md:text-[22px] uppercase tracking-wide flex items-center justify-center min-h-[100px]">
           DEMANDER UN DEVIS GRATUIT
         </a>
 
       </div>
-      
+
     </div>
   </section>
 
@@ -800,7 +963,7 @@ strong {
           <a href="#" aria-label="Facebook">
             <img src="Images/FacebookLogo.svg" alt="Facebook" class="h-16 w-16" />
           </a>
-          
+
         </div>
         <div class="flex flex-col items-start">
           <p class="text-4xl font-bold">@Afrika_AIAE</p>
@@ -833,7 +996,7 @@ strong {
         <div>
           <img src="Images/logos/LOGO AIAE FINAL - Copie.png" class="w-64 pb-5" alt="AIAE Logo">
           <p class="text-[#162064] text-[22px] leading-relaxed max-w-md">
-            <strong>AIAE : Afrika Infrastructures And Equipments.</strong>
+            <strong>AIAE : Afrika Infrastructures And Equipements.</strong>
             De la conception à la réalisation.
           </p>
         </div>
@@ -912,7 +1075,7 @@ strong {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           entry.target.style.opacity = '1';
-          
+
           // Counter animation
           if (entry.target.querySelector('[data-count]')) {
             const counter = entry.target.querySelector('[data-count]');
@@ -950,29 +1113,29 @@ strong {
         hero.style.backgroundPositionY = scrolled * 0.5 + 'px';
       }
     });
-// plus de details 
-  const btn = document.getElementById("toggleDetails");
-  const panel = document.getElementById("details-panel");
-  const icon = document.getElementById("details-icon");
+    // plus de details 
+    const btn = document.getElementById("toggleDetails");
+    const panel = document.getElementById("details-panel");
+    const icon = document.getElementById("details-icon");
 
-  if (btn && panel && icon) {
-    btn.addEventListener("click", () => {
-      panel.classList.toggle("hidden");
-      icon.classList.toggle("rotate");
-    });
-  }
+    if (btn && panel && icon) {
+      btn.addEventListener("click", () => {
+        panel.classList.toggle("hidden");
+        icon.classList.toggle("rotate");
+      });
+    }
 
-  // plus de details pour les étapes
-  const btnSteps = document.getElementById("toggleStepsDetails");
-  const panelSteps = document.getElementById("steps-panel");
-  const iconSteps = document.getElementById("steps-icon");
+    // plus de details pour les étapes
+    const btnSteps = document.getElementById("toggleStepsDetails");
+    const panelSteps = document.getElementById("steps-panel");
+    const iconSteps = document.getElementById("steps-icon");
 
-  if (btnSteps && panelSteps && iconSteps) {
-    btnSteps.addEventListener("click", () => {
-      panelSteps.classList.toggle("hidden");
-      iconSteps.classList.toggle("rotate-180");
-    });
-  }
+    if (btnSteps && panelSteps && iconSteps) {
+      btnSteps.addEventListener("click", () => {
+        panelSteps.classList.toggle("hidden");
+        iconSteps.classList.toggle("rotate-180");
+      });
+    }
   </script>
 </body>
 

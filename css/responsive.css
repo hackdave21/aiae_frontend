@@ -15,7 +15,7 @@ html, body {
 
 /* ---------- CONSISTENT LOGO ---------- */
 .aiae-header-logo {
-  height: 3.5rem;   /* 56px — base for lg+ */
+  height: 5rem;   /* 80px — base for lg+ */
   width: auto;
   object-fit: contain;
 }
@@ -23,14 +23,14 @@ html, body {
 /* ---------- TABLET (≤1024px) ---------- */
 @media (max-width: 1024px) {
   .aiae-header-logo {
-    height: 2.75rem; /* 44px */
+    height: 4rem; /* 64px */
   }
 }
 
 /* ---------- MOBILE (≤640px) ---------- */
 @media (max-width: 640px) {
   .aiae-header-logo {
-    height: 2.25rem; /* 36px — never "too small" */
+    height: 3.25rem; /* 52px */
   }
 
   /* Prevent ANY child from breaking the viewport */

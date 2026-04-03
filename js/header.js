@@ -45,7 +45,7 @@
     return MENU_ITEMS.map(function (item) {
       var isActive = item.key === page;
       var cls = isActive
-        ? 'px-4 py-2 rounded-full bg-white text-[' + config.color + '] shadow block whitespace-nowrap font-semibold'
+        ? 'px-4 py-2 rounded-full bg-white text-[' + config.color + '] shadow block whitespace-nowrap'
         : 'px-4 py-2 rounded-full bg-glassDark text-white block whitespace-nowrap hover:bg-white hover:text-[' + config.color + '] transition-colors';
       return '<li><a href="' + item.href + '" class="' + cls + '">' + item.label + '</a></li>';
     }).join("\n");
@@ -56,7 +56,7 @@
     return MENU_ITEMS.map(function (item) {
       var isActive = item.key === page;
       var cls = isActive
-        ? 'block px-4 py-3 rounded-lg bg-white text-[' + config.color + '] font-semibold'
+        ? 'block px-4 py-3 rounded-lg bg-white text-[' + config.color + ']'
         : 'block px-4 py-3 rounded-lg bg-white/20 text-white hover:bg-white/30 transition-colors';
       return '<a href="' + item.href + '" class="' + cls + '">' + item.label + '</a>';
     }).join("\n");
@@ -96,7 +96,7 @@
       </svg>\
     </button>\
     ' + buildMobileLinks() + '\
-    <a href="contact.html" class="block px-4 py-3 rounded-lg bg-white text-center font-semibold text-[' + config.color + '] sm:hidden">Contact</a>\
+    <a href="contact.html" class="block px-4 py-3 rounded-lg bg-white text-center text-[' + config.color + '] sm:hidden">Contact</a>\
   </div>\
 </header>';
 
@@ -131,7 +131,7 @@
       </svg>\
     </button>\
     ' + buildMobileLinks() + '\
-    <a href="contact.html" class="block px-4 py-3 rounded-lg bg-white text-center font-semibold text-[' + config.color + '] sm:hidden">Contact</a>\
+    <a href="contact.html" class="block px-4 py-3 rounded-lg bg-white text-center text-[' + config.color + '] sm:hidden">Contact</a>\
   </div>\
 </header>';
   }

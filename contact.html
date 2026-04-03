@@ -71,10 +71,12 @@
     }
 
     @media (max-width: 640px) {
+
       body,
       html {
         overflow-x: hidden !important;
       }
+
       section,
       div,
       img {
@@ -93,6 +95,7 @@
         opacity: 0;
         transform: translateY(40px);
       }
+
       to {
         opacity: 1;
         transform: translateY(0);
@@ -104,6 +107,7 @@
         opacity: 0;
         transform: translateX(-40px);
       }
+
       to {
         opacity: 1;
         transform: translateX(0);
@@ -115,6 +119,7 @@
         opacity: 0;
         transform: translateX(40px);
       }
+
       to {
         opacity: 1;
         transform: translateX(0);
@@ -126,6 +131,7 @@
         opacity: 0;
         transform: scale(0.9);
       }
+
       to {
         opacity: 1;
         transform: scale(1);
@@ -133,9 +139,12 @@
     }
 
     @keyframes float {
-      0%, 100% {
+
+      0%,
+      100% {
         transform: translateY(0);
       }
+
       50% {
         transform: translateY(-10px);
       }
@@ -161,14 +170,37 @@
       animation: float 4s ease-in-out infinite;
     }
 
-    .delay-100 { animation-delay: 0.1s; }
-    .delay-200 { animation-delay: 0.2s; }
-    .delay-300 { animation-delay: 0.3s; }
-    .delay-400 { animation-delay: 0.4s; }
-    .delay-500 { animation-delay: 0.5s; }
-    .delay-600 { animation-delay: 0.6s; }
-    .delay-700 { animation-delay: 0.7s; }
-    .delay-800 { animation-delay: 0.8s; }
+    .delay-100 {
+      animation-delay: 0.1s;
+    }
+
+    .delay-200 {
+      animation-delay: 0.2s;
+    }
+
+    .delay-300 {
+      animation-delay: 0.3s;
+    }
+
+    .delay-400 {
+      animation-delay: 0.4s;
+    }
+
+    .delay-500 {
+      animation-delay: 0.5s;
+    }
+
+    .delay-600 {
+      animation-delay: 0.6s;
+    }
+
+    .delay-700 {
+      animation-delay: 0.7s;
+    }
+
+    .delay-800 {
+      animation-delay: 0.8s;
+    }
 
     .opacity-0-init {
       opacity: 0;
@@ -195,12 +227,14 @@
     /* Background pattern */
     .pattern-bg {
       background-image: radial-gradient(circle at 20% 80%, rgba(11, 91, 58, 0.05) 0%, transparent 50%),
-                        radial-gradient(circle at 80% 20%, rgba(26, 31, 77, 0.05) 0%, transparent 50%);
+        radial-gradient(circle at 80% 20%, rgba(26, 31, 77, 0.05) 0%, transparent 50%);
     }
-strong {
-  font-weight: 600;
-  color: #1d1d1b;
-}
+
+    strong {
+      font-weight: 600;
+      color: #1d1d1b;
+    }
+
     /* Divider */
     .divider-green {
       width: 80px;
@@ -213,40 +247,42 @@ strong {
       height: 4px;
       background: linear-gradient(90deg, #FF8400, #f59e0b);
     }
-  /* Animation du panneau */
-  #details-panel {
-    animation: slideDown 0.4s ease-out;
-  }
-  
-  @keyframes slideDown {
-    from {
-      opacity: 0;
-      transform: translateY(-20px);
+
+    /* Animation du panneau */
+    #details-panel {
+      animation: slideDown 0.4s ease-out;
     }
-    to {
-      opacity: 1;
-      transform: translateY(0);
+
+    @keyframes slideDown {
+      from {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
-  }
 
-  /* Carte active */
-  .standing-card.active {
-    opacity: 1 !important;
-    transform: scale(1.02);
-    box-shadow: 0 10px 30px rgba(17, 29, 74, 0.2);
-  }
+    /* Carte active */
+    .standing-card.active {
+      opacity: 1 !important;
+      transform: scale(1.02);
+      box-shadow: 0 10px 30px rgba(17, 29, 74, 0.2);
+    }
 
-  /* Rotation icône */
-  #details-icon.rotate {
-    transform: rotate(180deg);
-  }
+    /* Rotation icône */
+    #details-icon.rotate {
+      transform: rotate(180deg);
+    }
 
-  /* Bouton actif */
-  .standing-btn.active {
-    background: #162064 !important;
-    color: white !important;
-    border-color: #162064 !important;
-  }
+    /* Bouton actif */
+    .standing-btn.active {
+      background: #162064 !important;
+      color: white !important;
+      border-color: #162064 !important;
+    }
   </style>
   <script src="js/tailwind-config.js"></script>
 </head>
@@ -255,7 +291,7 @@ strong {
 
   <!-- ================= NAVBAR (injected by js/header.js) ================= -->
   <div id="header-placeholder"></div>
-  
+
   <!-- ================= PETITE SECTION BLANCHE ================= -->
   <section class="w-full bg-[#f4f5f7] pt-20 pb-4"></section>
 
@@ -266,7 +302,8 @@ strong {
         Demandez <span class="text-[#FF8400]">Un Devis</span> Gratuit
       </h1>
       <p class="text-[47px] md:text-[24px] text-[#4a4a4a] font-light">
-        Réponse <strong class="font-bold text-[#162064]">personnalisée</strong> sous <strong class="font-bold text-[#162064]">48h</strong> ouvrées.
+        Réponse <strong class="font-bold text-[#162064]">personnalisée</strong> sous <strong
+          class="font-bold text-[#162064]">48h</strong> ouvrées.
       </p>
     </div>
   </section>
@@ -279,31 +316,40 @@ strong {
         <!-- Nom complet -->
         <div>
           <label class="block text-[14px] font-extrabold text-[#4a4a4a] mb-2">Nom complet</label>
-          <input type="text" placeholder="Votre nom complet" class="w-full bg-transparent border border-gray-400 rounded-xl px-5 py-3 outline-none focus:border-[#FF8400] text-gray-700 placeholder-gray-400">
+          <input type="text" placeholder="Votre nom complet"
+            class="w-full bg-transparent border border-gray-400 rounded-xl px-5 py-3 outline-none focus:border-[#FF8400] text-gray-700 placeholder-gray-400">
         </div>
 
         <!-- Adresse e-mail -->
         <div>
           <label class="block text-[14px] font-extrabold text-[#4a4a4a] mb-2">Adresse e-mail</label>
-          <input type="email" placeholder="nomprenom@gmail.com" class="w-full bg-transparent border border-gray-400 rounded-xl px-5 py-3 outline-none focus:border-[#FF8400] text-gray-700 placeholder-gray-400">
+          <input type="email" placeholder="nomprenom@gmail.com"
+            class="w-full bg-transparent border border-gray-400 rounded-xl px-5 py-3 outline-none focus:border-[#FF8400] text-gray-700 placeholder-gray-400">
         </div>
 
         <!-- Téléphone -->
         <div>
           <label class="block text-[14px] font-extrabold text-[#4a4a4a] mb-2">Téléphone</label>
-          <div class="flex items-center w-full border border-gray-400 rounded-xl px-4 py-3 bg-transparent focus-within:border-[#FF8400]">
+          <div
+            class="flex items-center w-full border border-gray-400 rounded-xl px-4 py-3 bg-transparent focus-within:border-[#FF8400]">
             <span class="text-gray-400 font-light pr-3 border-r border-[#d4d4d4]">+228</span>
-            <input type="tel" placeholder="XX XX XX XX" class="bg-transparent pl-4 w-full outline-none text-gray-700 placeholder-gray-400">
+            <input type="tel" placeholder="XX XX XX XX"
+              class="bg-transparent pl-4 w-full outline-none text-gray-700 placeholder-gray-400">
             <div class="flex items-center gap-2 pl-3 ml-auto cursor-pointer border-l border-[#d4d4d4]">
               <!-- Chevron icon -->
-              <svg class="w-4 h-4 text-[#4a4a4a] ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+              <svg class="w-4 h-4 text-[#4a4a4a] ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+              </svg>
               <!-- Togo flag SVG representation -->
-              <svg width="24" height="16" viewBox="0 0 24 16" fill="none" xmlns="http://www.w3.org/2000/svg" class="rounded-[2px] shadow-sm">
-                <rect width="24" height="16" fill="#006a4e"/>
-                <rect y="3.2" width="24" height="3.2" fill="#ffce00"/>
-                <rect y="9.6" width="24" height="3.2" fill="#ffce00"/>
-                <rect width="8" height="9.6" fill="#d21034"/>
-                <path d="M4 1L4.8541 3.628H7.61803L5.38197 5.244L6.23607 7.872L4 6.256L1.76393 7.872L2.61803 5.244L0.381966 3.628H3.1459L4 1Z" fill="white"/>
+              <svg width="24" height="16" viewBox="0 0 24 16" fill="none" xmlns="http://www.w3.org/2000/svg"
+                class="rounded-[2px] shadow-sm">
+                <rect width="24" height="16" fill="#006a4e" />
+                <rect y="3.2" width="24" height="3.2" fill="#ffce00" />
+                <rect y="9.6" width="24" height="3.2" fill="#ffce00" />
+                <rect width="8" height="9.6" fill="#d21034" />
+                <path
+                  d="M4 1L4.8541 3.628H7.61803L5.38197 5.244L6.23607 7.872L4 6.256L1.76393 7.872L2.61803 5.244L0.381966 3.628H3.1459L4 1Z"
+                  fill="white" />
               </svg>
             </div>
           </div>
@@ -313,12 +359,14 @@ strong {
         <div>
           <label class="block text-[14px] font-extrabold text-[#4a4a4a] mb-2">Pays de résidence</label>
           <div class="relative">
-            <select class="w-full bg-transparent border border-gray-400 rounded-xl px-5 py-4 outline-none focus:border-[#FF8400] text-gray-400 appearance-none cursor-pointer">
+            <select
+              class="w-full bg-transparent border border-gray-400 rounded-xl px-5 py-4 outline-none focus:border-[#FF8400] text-gray-400 appearance-none cursor-pointer">
               <option value="" disabled selected>Sélectionnez votre pays de résidence</option>
               <option value="tg">Togo</option>
               <option value="fr">France</option>
             </select>
-            <div class="absolute right-5 top-1/2 -translate-y-1/2 pointer-events-none text-gray-500 font-light text-2xl">
+            <div
+              class="absolute right-5 top-1/2 -translate-y-1/2 pointer-events-none text-gray-500 font-light text-2xl">
               +
             </div>
           </div>
@@ -328,12 +376,14 @@ strong {
         <div>
           <label class="block text-[14px] font-extrabold text-[#4a4a4a] mb-2">Type de projet</label>
           <div class="relative">
-            <select class="w-full bg-transparent border border-gray-400 rounded-xl px-5 py-4 outline-none focus:border-[#FF8400] text-gray-400 appearance-none cursor-pointer">
+            <select
+              class="w-full bg-transparent border border-gray-400 rounded-xl px-5 py-4 outline-none focus:border-[#FF8400] text-gray-400 appearance-none cursor-pointer">
               <option value="" disabled selected>Sélectionnez le type de projet</option>
               <option value="residentiel">Résidentiel</option>
               <option value="commercial">Commercial</option>
             </select>
-            <div class="absolute right-5 top-1/2 -translate-y-1/2 pointer-events-none text-gray-500 font-light text-2xl">
+            <div
+              class="absolute right-5 top-1/2 -translate-y-1/2 pointer-events-none text-gray-500 font-light text-2xl">
               +
             </div>
           </div>
@@ -343,13 +393,16 @@ strong {
         <div>
           <label class="block text-[14px] font-extrabold text-[#4a4a4a] mb-2">Sélectionnez un délai</label>
           <div class="relative">
-            <select class="w-full bg-transparent border border-gray-400 rounded-xl px-5 py-4 outline-none focus:border-[#FF8400] text-gray-400 appearance-none cursor-pointer">
-              <option value="" disabled selected>Quel délai souhaitez vous pour finaliser votre projet ? Sélectionnez.</option>
+            <select
+              class="w-full bg-transparent border border-gray-400 rounded-xl px-5 py-4 outline-none focus:border-[#FF8400] text-gray-400 appearance-none cursor-pointer">
+              <option value="" disabled selected>Quel délai souhaitez vous pour finaliser votre projet ? Sélectionnez.
+              </option>
               <option value="urgent">Urgent</option>
               <option value="3mois">Dans les 3 mois</option>
               <option value="6mois">Dans les 6 mois</option>
             </select>
-            <div class="absolute right-5 top-1/2 -translate-y-1/2 pointer-events-none text-gray-500 font-light text-2xl">
+            <div
+              class="absolute right-5 top-1/2 -translate-y-1/2 pointer-events-none text-gray-500 font-light text-2xl">
               +
             </div>
           </div>
@@ -358,15 +411,18 @@ strong {
         <!-- Votre projet -->
         <div>
           <label class="block text-[14px] font-extrabold text-[#4a4a4a] mb-2">Votre projet</label>
-          <textarea rows="4" placeholder="Décrivez brièvement votre projet..." class="w-full bg-transparent border border-gray-400 rounded-xl px-5 py-4 outline-none focus:border-[#FF8400] text-gray-700 placeholder-gray-400 resize-none"></textarea>
+          <textarea rows="4" placeholder="Décrivez brièvement votre projet..."
+            class="w-full bg-transparent border border-gray-400 rounded-xl px-5 py-4 outline-none focus:border-[#FF8400] text-gray-700 placeholder-gray-400 resize-none"></textarea>
         </div>
 
         <!-- Localisation du projet -->
         <div>
           <label class="block text-[14px] font-extrabold text-[#4a4a4a] mb-2">Localisation du projet</label>
           <div class="relative">
-            <input type="text" placeholder="Quel est le lieu de votre projet ?" class="w-full bg-transparent border border-gray-400 rounded-xl px-5 py-4 outline-none focus:border-[#FF8400] text-gray-700 placeholder-gray-400 pr-12">
-            <div class="absolute right-5 top-1/2 -translate-y-1/2 pointer-events-none text-gray-500 font-light text-2xl">
+            <input type="text" placeholder="Quel est le lieu de votre projet ?"
+              class="w-full bg-transparent border border-gray-400 rounded-xl px-5 py-4 outline-none focus:border-[#FF8400] text-gray-700 placeholder-gray-400 pr-12">
+            <div
+              class="absolute right-5 top-1/2 -translate-y-1/2 pointer-events-none text-gray-500 font-light text-2xl">
               +
             </div>
           </div>
@@ -376,8 +432,10 @@ strong {
         <div>
           <label class="block text-[14px] font-extrabold text-[#4a4a4a] mb-2">Budget estimé</label>
           <div class="relative">
-            <input type="text" placeholder="Quel budget envisagez-vous ?" class="w-full bg-transparent border border-gray-400 rounded-xl px-5 py-4 outline-none focus:border-[#FF8400] text-gray-700 placeholder-gray-400 pr-12">
-            <div class="absolute right-5 top-1/2 -translate-y-1/2 pointer-events-none text-gray-500 font-light text-2xl">
+            <input type="text" placeholder="Quel budget envisagez-vous ?"
+              class="w-full bg-transparent border border-gray-400 rounded-xl px-5 py-4 outline-none focus:border-[#FF8400] text-gray-700 placeholder-gray-400 pr-12">
+            <div
+              class="absolute right-5 top-1/2 -translate-y-1/2 pointer-events-none text-gray-500 font-light text-2xl">
               +
             </div>
           </div>
@@ -387,12 +445,15 @@ strong {
         <div>
           <label class="block text-[14px] font-extrabold text-[#4a4a4a] mb-2">Comment avez-vous connu AIAE ?</label>
           <div class="relative">
-            <select class="w-full bg-transparent border border-gray-400 rounded-xl px-5 py-4 outline-none focus:border-[#FF8400] text-gray-400 appearance-none cursor-pointer">
-              <option value="" disabled selected>Par quel moyen avez vous entendu parler de nous ? Sélectionnez.</option>
+            <select
+              class="w-full bg-transparent border border-gray-400 rounded-xl px-5 py-4 outline-none focus:border-[#FF8400] text-gray-400 appearance-none cursor-pointer">
+              <option value="" disabled selected>Par quel moyen avez vous entendu parler de nous ? Sélectionnez.
+              </option>
               <option value="reseaux">Réseaux Sociaux</option>
               <option value="recherche">Recherche Google</option>
             </select>
-            <div class="absolute right-5 top-1/2 -translate-y-1/2 pointer-events-none text-gray-500 font-light text-2xl">
+            <div
+              class="absolute right-5 top-1/2 -translate-y-1/2 pointer-events-none text-gray-500 font-light text-2xl">
               +
             </div>
           </div>
@@ -401,15 +462,18 @@ strong {
         <!-- Pièce jointe -->
         <div>
           <label class="block text-[14px] font-extrabold text-[#4a4a4a] mb-2">Pièce jointe</label>
-          <div class="relative flex items-center justify-between border border-gray-400 rounded-xl px-5 py-4 bg-transparent cursor-pointer hover:border-[#FF8400] focus-within:border-[#FF8400] transition-colors overflow-hidden">
+          <div
+            class="relative flex items-center justify-between border border-gray-400 rounded-xl px-5 py-4 bg-transparent cursor-pointer hover:border-[#FF8400] focus-within:border-[#FF8400] transition-colors overflow-hidden">
             <input type="file" id="file_upload" class="absolute inset-0 w-full h-full opacity-0 cursor-pointer z-10">
             <span class="text-gray-400 pointer-events-none">
-              Ajoutez vos plans, photos terrain ou croquis (PDF, JPG, PNG). <span class="italic text-gray-300">Facultatif</span>
+              Ajoutez vos plans, photos terrain ou croquis (PDF, JPG, PNG). <span
+                class="italic text-gray-300">Facultatif</span>
             </span>
             <div class="text-[#4a4a4a] pointer-events-none shrink-0 border-l border-gray-400 pl-4 ml-4">
               <!-- Paperclip SVG -->
               <svg class="h-5 w-5 rotate-45" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.172 7l-6.586 6.586a2 2 0 102.828 2.828l6.414-6.586a4 4 0 00-5.656-5.656l-6.415 6.585a6 6 0 108.486 8.486L20.5 13" />
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M15.172 7l-6.586 6.586a2 2 0 102.828 2.828l6.414-6.586a4 4 0 00-5.656-5.656l-6.415 6.585a6 6 0 108.486 8.486L20.5 13" />
               </svg>
             </div>
           </div>
@@ -417,9 +481,13 @@ strong {
 
         <!-- Checkbox acceptation -->
         <div class="flex items-start gap-4 mt-8 pb-6">
-          <div class="relative flex items-center justify-center shrink-0 w-[30px] h-[30px] rounded bg-white border-4 border-[#3a3939] overflow-hidden mt-1 cursor-pointer">
+          <div
+            class="relative flex items-center justify-center shrink-0 w-[30px] h-[30px] rounded bg-white border-4 border-[#3a3939] overflow-hidden mt-1 cursor-pointer">
             <input type="checkbox" class="absolute inset-0 opacity-0 cursor-pointer peer" checked>
-            <svg class="w-5 h-5 text-[#3a3939] opacity-0 peer-checked:opacity-100 pointer-events-none" fill="none" stroke="currentColor" stroke-width="4" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg>
+            <svg class="w-5 h-5 text-[#3a3939] opacity-0 peer-checked:opacity-100 pointer-events-none" fill="none"
+              stroke="currentColor" stroke-width="4" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path>
+            </svg>
           </div>
           <p class="text-[14px] md:text-[16px] text-[#162064] font-bold leading-snug">
             J'accepte que mes données soient traitées par AIAE SARL<br class="hidden md:block">
@@ -430,7 +498,8 @@ strong {
 
         <!-- Bouton Envoyer -->
         <div class="pt-4 pb-12">
-          <button type="submit" class="w-full bg-[#111736] text-white py-4 font-bold text-[16px] md:text-[18px] tracking-wide hover:bg-[#162064] transition-colors outline-none cursor-pointer">
+          <button type="submit"
+            class="w-full bg-[#111736] text-white py-4 font-bold text-[16px] md:text-[18px] tracking-wide hover:bg-[#162064] transition-colors outline-none cursor-pointer">
             ENVOYER MA DEMANDE
           </button>
         </div>
@@ -443,18 +512,20 @@ strong {
   <!-- ================= SECTION COORDONNÉES ================= -->
   <section class="bg-white py-20 w-full">
     <div class="max-w-[1150px] mx-auto px-6 relative">
-      
+
       <!-- Badge Titre -->
-      <div class="absolute -top-7 left-1/2 -translate-x-1/2 bg-[#f28c06] text-[#0b4a2b] px-12 py-2.5 rounded-2xl text-[28px] md:text-[32px] font-bold border-4 border-[#0b4a2b] shadow-lg z-10 text-center uppercase tracking-wide">
+      <div
+        class="absolute -top-7 left-1/2 -translate-x-1/2 bg-[#f28c06] text-[#0b4a2b] px-12 py-2.5 rounded-2xl text-[28px] md:text-[32px] font-bold border-4 border-[#0b4a2b] shadow-lg z-10 text-center uppercase tracking-wide">
         Nos Coordonnées
       </div>
 
       <!-- Encadré vert -->
-      <div class="bg-[#0e4e32] rounded-[24px] pt-16 pb-12 px-6 sm:px-16 text-white text-[18px] md:text-[22px] shadow-2xl relative">
-        
+      <div
+        class="bg-[#0e4e32] rounded-[24px] pt-16 pb-12 px-6 sm:px-16 text-white text-[18px] md:text-[22px] shadow-2xl relative">
+
         <!-- Ligne du haut : Siège/Email VS Tél/WhatsApp -->
         <div class="grid md:grid-cols-2 gap-8 md:gap-4 mb-14 text-center md:text-left">
-          
+
           <div class="flex flex-col gap-6 md:pl-10">
             <div class="flex items-center justify-center md:justify-start gap-4">
               <img src="Images/localisation.png" alt="Localisation" class="w-6 h-8 object-contain" />
@@ -485,15 +556,17 @@ strong {
             <img src="Images/heure.png" alt="Horaires" class="w-7 h-7 object-contain" />
             <h3 class="font-bold text-[24px] tracking-wide">Horaires :</h3>
           </div>
-          
+
           <p><strong class="font-bold tracking-wide text-white">Lundi à Vendredi :</strong> 8h00 — 18h00 (GMT+0)</p>
           <p><strong class="font-bold tracking-wide text-white">Samedi :</strong> 8h00 — 13h00</p>
-          <p><strong class="font-bold tracking-wide text-white">Dimanche :</strong> Fermé (urgences par téléphone uniquement)</p>
-          <p><strong class="font-bold tracking-wide text-white">Diaspora :</strong> RDV en soirée et week-end sur demande (visioconférence)</p>
+          <p><strong class="font-bold tracking-wide text-white">Dimanche :</strong> Fermé (urgences par téléphone
+            uniquement)</p>
+          <p><strong class="font-bold tracking-wide text-white">Diaspora :</strong> RDV en soirée et week-end sur
+            demande (visioconférence)</p>
         </div>
 
       </div>
-      
+
     </div>
   </section>
 
@@ -504,13 +577,9 @@ strong {
       <div class="w-full bg-[#f4f5f7] p-3 md:p-4 rounded-[28px]">
         <div class="w-full h-[350px] md:h-[450px] rounded-2xl overflow-hidden">
           <!-- TODO : Remplacer l'URL dans 'src' par votre lien d'intégration Google Maps ('Intégrer une carte' -> src="...") -->
-          <iframe 
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15865.114755106674!2d1.218559092496791!3d6.136014230182603!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1023e1fc8cf441ef%3A0xe5a228c2c7f8a7!2zTG9tw6ksIFRvZ28!5e0!3m2!1sfr!2sfr!4v1700000000000!5m2!1sfr!2sfr" 
-            width="100%" 
-            height="100%" 
-            style="border:0;" 
-            allowfullscreen="" 
-            loading="lazy" 
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15865.114755106674!2d1.218559092496791!3d6.136014230182603!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1023e1fc8cf441ef%3A0xe5a228c2c7f8a7!2zTG9tw6ksIFRvZ28!5e0!3m2!1sfr!2sfr!4v1700000000000!5m2!1sfr!2sfr"
+            width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
             referrerpolicy="no-referrer-when-downgrade">
           </iframe>
         </div>
@@ -521,7 +590,7 @@ strong {
   <!-- ================= SECTION CTA (Prenez Rendez-Vous) ================= -->
   <section class="bg-[#f2f3f5] py-10 w-full">
     <div class="max-w-[1000px] mx-auto text-center px-6">
-      
+
       <h2 class="text-[40px] md:text-[55px] font-bold text-[#162064] mb-4 leading-tight">
         Prenez Rendez-Vous
       </h2>
@@ -530,9 +599,10 @@ strong {
       </p>
 
       <div class="flex flex-col md:flex-row justify-center w-full max-w-[950px] mx-auto shadow-lg">
-        
+
         <!-- Bloc Gauche (Orange) -->
-        <a href="#" class="flex-1 bg-[#FF8400] text-white px-6 md:px-8 py-4 md:py-5 text-center transition-colors duration-300 hover:bg-[#c96c05]">
+        <a href="#"
+          class="flex-1 bg-[#FF8400] text-white px-6 md:px-8 py-4 md:py-5 text-center transition-colors duration-300 hover:bg-[#c96c05]">
           <span class="block text-[20px] md:text-[22px] font-bold tracking-wide mb-1 uppercase">
             Rendez-vous sur place
           </span>
@@ -542,7 +612,8 @@ strong {
         </a>
 
         <!-- Bloc Droit (Vert) -->
-        <a href="#" class="flex-1 bg-[#0b4a2b] text-white px-6 md:px-8 py-4 md:py-5 text-center transition-colors duration-300 hover:bg-[#093c23]">
+        <a href="#"
+          class="flex-1 bg-[#0b4a2b] text-white px-6 md:px-8 py-4 md:py-5 text-center transition-colors duration-300 hover:bg-[#093c23]">
           <span class="block text-[20px] md:text-[22px] font-bold tracking-wide mb-1 uppercase">
             Rendez-vous en ligne
           </span>
@@ -553,7 +624,7 @@ strong {
         </a>
 
       </div>
-      
+
     </div>
   </section>
 
@@ -571,7 +642,7 @@ strong {
           <a href="#" aria-label="Facebook">
             <img src="Images/FacebookLogo.svg" alt="Facebook" class="h-16 w-16" />
           </a>
-          
+
         </div>
         <div class="flex flex-col items-start">
           <p class="text-4xl font-bold">@Afrika_AIAE</p>
@@ -604,7 +675,7 @@ strong {
         <div>
           <img src="Images/logos/LOGO AIAE FINAL - Copie.png" class="w-64 pb-5" alt="AIAE Logo">
           <p class="text-[#162064] text-[22px] leading-relaxed max-w-md">
-            <strong>AIAE : Afrika Infrastructures And Equipments.</strong>
+            <strong>AIAE : Afrika Infrastructures And Equipements.</strong>
             De la conception à la réalisation.
           </p>
         </div>
@@ -683,7 +754,7 @@ strong {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           entry.target.style.opacity = '1';
-          
+
           // Counter animation
           if (entry.target.querySelector('[data-count]')) {
             const counter = entry.target.querySelector('[data-count]');
@@ -721,29 +792,29 @@ strong {
         hero.style.backgroundPositionY = scrolled * 0.5 + 'px';
       }
     });
-// plus de details 
-  const btn = document.getElementById("toggleDetails");
-  const panel = document.getElementById("details-panel");
-  const icon = document.getElementById("details-icon");
+    // plus de details 
+    const btn = document.getElementById("toggleDetails");
+    const panel = document.getElementById("details-panel");
+    const icon = document.getElementById("details-icon");
 
-  if (btn && panel && icon) {
-    btn.addEventListener("click", () => {
-      panel.classList.toggle("hidden");
-      icon.classList.toggle("rotate");
-    });
-  }
+    if (btn && panel && icon) {
+      btn.addEventListener("click", () => {
+        panel.classList.toggle("hidden");
+        icon.classList.toggle("rotate");
+      });
+    }
 
-  // plus de details pour les étapes
-  const btnSteps = document.getElementById("toggleStepsDetails");
-  const panelSteps = document.getElementById("steps-panel");
-  const iconSteps = document.getElementById("steps-icon");
+    // plus de details pour les étapes
+    const btnSteps = document.getElementById("toggleStepsDetails");
+    const panelSteps = document.getElementById("steps-panel");
+    const iconSteps = document.getElementById("steps-icon");
 
-  if (btnSteps && panelSteps && iconSteps) {
-    btnSteps.addEventListener("click", () => {
-      panelSteps.classList.toggle("hidden");
-      iconSteps.classList.toggle("rotate-180");
-    });
-  }
+    if (btnSteps && panelSteps && iconSteps) {
+      btnSteps.addEventListener("click", () => {
+        panelSteps.classList.toggle("hidden");
+        iconSteps.classList.toggle("rotate-180");
+      });
+    }
   </script>
 </body>
 
