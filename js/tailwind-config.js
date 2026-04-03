@@ -21,6 +21,16 @@ window.tailwind = {
           glass: "rgba(255, 255, 255, 0.55)",
           glassDark: "rgba(255, 255, 255, 0.35)",
         },
+        fontWeight: {
+          light: "300",
+          book: "400",
+          normal: "400",
+          medium: "500",
+          bold: "700",
+          heavy: "800",
+          extrabold: "900",
+          black: "1000",
+        },
       },
     },
   }

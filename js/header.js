@@ -45,8 +45,8 @@
     return MENU_ITEMS.map(function (item) {
       var isActive = item.key === page;
       var cls = isActive
-        ? 'px-4 py-2 rounded-full bg-white text-[' + config.color + '] shadow block whitespace-nowrap'
-        : 'px-4 py-2 rounded-full bg-glassDark text-white block whitespace-nowrap hover:bg-white hover:text-[' + config.color + '] transition-colors';
+        ? 'px-4 py-2 rounded-full bg-white text-[' + config.color + '] shadow block whitespace-nowrap font-light'
+        : 'px-4 py-2 rounded-full bg-glassDark text-white block whitespace-nowrap hover:bg-white hover:text-[' + config.color + '] transition-colors font-light';
       return '<li><a href="' + item.href + '" class="' + cls + '">' + item.label + '</a></li>';
     }).join("\n");
   }

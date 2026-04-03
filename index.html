@@ -23,8 +23,16 @@
           colors: {
             primary: "#05482C",
             secondary: "#FF8400",
-            glass: "rgba(255,255,255,0.55)",
-            glassDark: "rgba(255,255,255,0.35)",
+          },
+          fontWeight: {
+            light: "300",
+            book: "400",
+            normal: "400",
+            medium: "500",
+            bold: "700",
+            heavy: "800",
+            extrabold: "800",
+            black: "900",
           },
         },
       },
@@ -37,6 +45,12 @@
       font-family: "Futura";
       src: url("/fonts/FuturaStdLight.otf");
       font-weight: 300;
+    }
+
+    @font-face {
+      font-family: "Futura";
+      src: url("/fonts/FuturaStdBook.otf");
+      font-weight: 400;
     }
 
     @font-face {
@@ -57,17 +71,35 @@
       font-weight: 800;
     }
 
-    /* Condensed */
+    @font-face {
+      font-family: "Futura";
+      src: url("/fonts/FuturaStdExtraBold.otf");
+      font-weight: 900;
+    }
+
+    /* Condensed Family */
+    @font-face {
+      font-family: "Futura Condensed";
+      src: url("/fonts/FuturaStdCondensedLight.otf");
+      font-weight: 300;
+    }
+
     @font-face {
       font-family: "Futura Condensed";
       src: url("/fonts/FuturaStdCondensed.otf");
-      font-weight: 500;
+      font-weight: 400;
     }
 
     @font-face {
       font-family: "Futura Condensed";
       src: url("/fonts/FuturaStdCondensedBold.otf");
       font-weight: 700;
+    }
+
+    @font-face {
+      font-family: "Futura Condensed";
+      src: url("/fonts/FuturaStdCondensedExtraBd.otf");
+      font-weight: 800;
     }
 
     @media (max-width: 640px) {
@@ -102,18 +134,17 @@
       <img id="heroImage" src="Images/home.png" class="w-full h-[75vh] md:h-[90vh] object-cover" />
 
       <!-- overlay -->
-      <div class="absolute inset-0 bg-black/30"></div>
-      <div class="absolute inset-0 bg-gradient-to-r from-black/70 via-black/40 to-transparent"></div>
+      <div class="absolute inset-0 bg-black/40"></div>
 
       <!-- contenu -->
-      <div class="absolute inset-x-0 top-1/2 -translate-y-1/2 px-10 md:px-16 max-w-7xl text-white">
+      <div class="absolute inset-x-0 top-1/2 -translate-y-1/2 px-10 md:px-16 max-w-7xl text-white drop-shadow-xl">
         <!-- TITRE -->
-        <h1 class="text-xl sm:text-3xl md:text-4xl lg:text-[44px] font-bold mb-6">
+        <h1 class="text-2xl sm:text-3xl md:text-4xl lg:text-[44px] font-heavy mb-6">
           De La Conception À La Réalisation
         </h1>
 
         <!-- TEXTE -->
-        <p class="text-sm sm:text-base md:text-lg leading-relaxed mb-8 max-w-xl">
+        <p class="text-lg md:text-xl font-light sm:text-base md:text-lg leading-relaxed mb-8 max-w-xl">
           <span class="whitespace-nowrap font-medium">Construction, énergie solaire, sécurité haute performance et préfabrication industrielle :</span><br />
           AIAE réunit toutes les compétences pour <span class="font-medium">mener votre projet de A à Z.</span>
           <br /><br />
@@ -126,7 +157,7 @@
         <div class="flex flex-col lg:flex-row items-center justify-between gap-4 lg:gap-0 w-full mt-16">
           <!-- BOUTON GAUCHE -->
           <div class="flex items-center bg-primary rounded-full shadow-lg p-1 w-full lg:w-fit">
-            <span class="px-6 py-2 text-white text-sm whitespace-nowrap flex-1 text-center lg:text-left">
+            <span class="px-6 py-2 text-white whitespace-nowrap flex-1 text-center lg:text-left font-light">
               Prendre rendez-vous maintenant
             </span>
             <img src="Images/envoiblanc.png" class="h-7 w-7" />
@@ -134,16 +165,16 @@
 
           <!-- BOUTON MILIEU -->
           <div class="flex items-center bg-secondary rounded-full shadow-lg p-1 w-full lg:w-fit">
-            <span class="px-6 py-2 text-white text-sm whitespace-nowrap flex-1 text-center lg:text-left">
+            <span class="px-6 py-2 text-white whitespace-nowrap flex-1 text-center lg:text-left font-light">
               Demander un devis gratuit
             </span>
             <img src="Images/envoiblanc.png" class="h-7 w-7" />
           </div>
 
           <!-- TEXTE DROITE -->
-          <div class="flex items-center text-white w-full lg:w-fit lg:justify-end">
-            <img src="Images/Arrow4Expertises.svg" class="w-6 mt-[2px] lg:mt-0 mr-2 shrink-0" />
-            <p class="text-sm md:text-base font-medium leading-[1.2]">
+          <div class="flex items-start text-white w-full lg:w-fit lg:justify-end drop-shadow-xl">
+            <img src="Images/Arrow4Expertises.svg" class="h-9 w-9 mt-[6px] mr-3 shrink-0" />
+            <p class="text-lg md:text-xl font-medium leading-[1.1] md:leading-[1.2]">
               Un partenaire. Quatre<br />
               expertises. Zéro compromis.
             </p>
@@ -303,10 +334,10 @@
   </section>
 
   <!-- ================= SECTION QUI SOMMES NOUS ================= -->
-  <section class="relative py-20">
+  <section class="relative pt-20 pb-12">
 
     <!-- fond bleu -->
-    <div class="absolute bottom-0 left-0 w-full h-[300px] bg-[#162064]"></div>
+    <div class="absolute bottom-0 left-0 w-full h-[480px] bg-[#162064]"></div>
 
     <div class="relative max-w-[1200px] mx-auto px-6">
 
@@ -317,26 +348,31 @@
 
           <!-- TEXTE -->
           <div>
-            <h2 class="text-[#162064] font-bold text-2xl md:text-3xl mb-6">
+            <h2 class="text-[#162064] font-extrabold text-2xl md:text-[32px] tracking-tight mb-6">
               QUI SOMMES-NOUS ?
             </h2>
 
-            <p class="text-gray-700 text-lg leading-relaxed mb-4">
-              AIAE (<span class="font-semibold">Afrika Infrastructures And Equipements</span>)<br />
-              est une entreprise togolaise
-              <span class="font-semibold">fondée par des experts avec plus de 15 ans d'expérience en génie civil</span>,
-              avec une ambition claire :
-              <span class="font-semibold">transformer le secteur de la construction en Afrique de l'Ouest.</span>
+            <p class="text-[24px] text-[#162064] leading-relaxed mb-6 font-light">
+              AIAE (<span class="font-medium text-[#162064]">Afrika Infrastructures And Equipements</span>) est<br> une entreprise togolaise 
+              <span class="font-medium text-[#162064]">fondée par des<br> experts avec plus de 18 ans d'expérience en<br> génie civil</span>, 
+              avec une ambition claire :<br> <span class="font-medium text-[#162064]">transformer le secteur de la construction en<br> Afrique de l'Ouest</span>.
             </p>
 
-            <p class="text-gray-600 leading-relaxed mb-4">
-              AIAE propose un modèle intégré : de la conception jusqu'à la remise des clés,
-              en passant par l'autonomie énergétique et la sécurisation des installations.
+            <p class="text-[18px] text-[#162064] leading-relaxed mb-6 font-book">
+              Face à un marché où le client doit coordonner lui-même architecte, bureau d'études, constructeur et installateurs,<br> 
+              <span class="font-medium text-[#05482C]">AIAE propose un modèle intégré : de la conception<br> jusqu'à la remise des clés, en passant par l'autonomie<br> énergétique et la sécurisation des installations</span>
             </p>
 
-            <button class="bg-[#05482C] text-white px-5 py-2 mt-6 rounded-lg text-sm flex items-center gap-2">
-              En savoir plus
+            <button class="bg-[#05482C] text-white px-6 py-2.5 rounded-lg flex items-center gap-3 hover:bg-opacity-90 transition-all font-book">
+              En savoir plus sur nous
+              <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
             </button>
+
+            <p class="mt-8 text-[#162064] font-light text-[17px]">
+              Cliquez <a href="simulator.html" class="font-heavy underline text-[#162064] hover:opacity-80 transition-opacity">Simulation</a> & simulez votre projet en 2 minutes !
+            </p>
           </div>
 
           <!-- IMAGES -->
@@ -355,23 +391,23 @@
         <div class="grid grid-cols-2 md:grid-cols-4 text-center text-white gap-6">
 
           <div>
-            <p class="text-5xl font-bold">+18</p>
-            <p class="text-sm mt-2">Années d'expertise</p>
+            <p class="text-5xl font-heavy">+18</p>
+            <p class="text-2xl mt-1 leading-tight">Années<br> d'expertise</p>
           </div>
 
           <div>
-            <p class="text-5xl font-bold">04</p>
-            <p class="text-sm mt-2">Divisions complémentaires</p>
+            <p class="text-5xl font-heavy">04</p>
+            <p class="text-2xl mt-1 leading-tight">Divisions<br> complémentaires</p>
           </div>
 
           <div>
-            <p class="text-5xl font-bold">05</p>
-            <p class="text-sm mt-2">Zones d’intervention</p>
+            <p class="text-5xl font-heavy">05</p>
+            <p class="text-2xl mt-1 leading-tight">Zones<br> d’intervention</p>
           </div>
 
           <div>
-            <p class="text-5xl font-bold">04</p>
-            <p class="text-sm mt-2">Niveaux de standing</p>
+            <p class="text-5xl font-heavy">04</p>
+            <p class="text-2xl mt-1 leading-tight">Niveaux<br> de standing</p>
           </div>
 
         </div>
