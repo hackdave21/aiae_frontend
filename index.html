@@ -652,21 +652,19 @@
     <div class="max-w-[1100px] mx-auto flex flex-col sm:flex-row items-center justify-between px-6 sm:px-16 gap-4">
 
       <!-- Bouton RDV -->
-      <button
-        class="bg-[#05482C] text-white px-10 py-3 rounded-lg text-[16px] font-medium hover:opacity-90 transition w-full sm:w-auto">
-        Prendre rendez-vous maintenant
+      <button class="flex items-center bg-primary rounded-full shadow-lg p-1 w-full sm:w-fit hover:opacity-90 transition">
+        <span class="px-6 py-2 text-white whitespace-nowrap flex-1 text-center sm:text-left font-light">
+          Prendre rendez-vous maintenant
+        </span>
+        <img src="Images/envoiblanc.png" class="h-7 w-7" />
       </button>
 
       <!-- Bouton devis -->
-      <button
-        class="flex items-center justify-center text-[16px] bg-[#ffffff] gap-3 border border-black px-10 py-3 rounded-full text-sm font-medium hover:bg-gray-100 transition w-full sm:w-auto">
-
-        Demander un devis gratuit
-
-        <span class="flex items-center justify-center w-7 h-7 border border-black rounded-full shrink-0">
-          <img src="Images/envoi.png" class="w-3">
+      <button class="flex items-center bg-secondary rounded-full shadow-lg p-1 w-full sm:w-fit hover:opacity-90 transition">
+        <span class="px-6 py-2 text-white whitespace-nowrap flex-1 text-center sm:text-left font-light">
+          Demander un devis gratuit
         </span>
-
+        <img src="Images/envoiblanc.png" class="h-7 w-7" />
       </button>
 
     </div>
@@ -676,14 +674,14 @@
   <!-- ================= SECTION POURQUOI AIAE ================= -->
   <section class="relative w-full bg-[#05482C] overflow-hidden">
 
-    <div class="max-w-[1600px] mx-auto px-6 pt-10">
+    <div class="max-w-[1600px] mx-auto px-16 pt-10">
 
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center text-center lg:text-left">
 
         <!-- GAUCHE : TEXTE -->
-        <div class="text-white relative mx-auto lg:ml-20 max-w-xl">
+        <div class="text-white relative flex justify-center lg:justify-end">
 
-          <h2 class="text-5xl md:text-5xl lg:text-6xl font-extrabold leading-tight mb-10 text-center lg:text-left">
+          <h2 class="text-5xl md:text-6xl lg:text-[80px] font-heavy leading-[1.1] mb-10 text-center lg:text-left lg:translate-x-10 z-10">
             Pourquoi<br>
             Choisir AIAE ?
           </h2>
@@ -691,9 +689,9 @@
         </div>
 
         <!-- DROITE : IMAGE -->
-        <div class="relative lg:mr-20 flex justify-center">
+        <div class="relative flex justify-center lg:justify-start">
 
-          <img src="Images/Défile.png" alt="bloc glass" class="ml-20">
+          <img src="Images/Défile.png" alt="bloc glass" class="w-full max-w-[450px]">
 
         </div>
 
@@ -706,7 +704,7 @@
   <!-- ================= SECTION AVANTAGES ================= -->
   <section class="bg-[#f3f3f3] py-20">
 
-    <div class="max-w-[1200px] mx-auto px-6">
+    <div class="max-w-[1200px] mx-auto px-12">
 
       <div class="grid md:grid-cols-2 gap-x-16 gap-y-14">
 
@@ -714,7 +712,7 @@
         <div class="flex gap-6">
 
           <div
-            class="flex items-start justify-center w-12 h-12 rounded-full bg-[#05482C] text-white font-bold text-lg shrink-0">
+            class="flex items-center justify-center w-[60px] h-[60px] rounded-full bg-[#05482C] text-white font-heavy text-xl shrink-0 pt-1">
             01
           </div>
 
@@ -723,9 +721,9 @@
               UN INTERLOCUTEUR UNIQUE
             </h3>
 
-            <p class="text-gray-700 text-[24px] leading-relaxed">
+            <p class="text-gray-700 text-[24px] leading-relaxed font-medium">
               Fini la coordination entre architecte, bureau d’études, constructeur
-              et installateurs. <strong>AIAE prend en charge l’intégralité de votre projet</strong>,
+              et installateurs. <span class="font-heavy">AIAE prend en charge l’intégralité de votre projet</span>,
               de la première esquisse à la remise des clés.
             </p>
           </div>
@@ -737,7 +735,7 @@
         <div class="flex gap-6">
 
           <div
-            class="flex items-start justify-center w-12 h-12 rounded-full bg-[#05482C] text-white font-bold text-lg shrink-0">
+            class="flex items-center justify-center w-[60px] h-[60px] rounded-full bg-[#05482C] text-white font-heavy text-xl shrink-0 pt-1">
             02
           </div>
 
@@ -746,9 +744,9 @@
               EXPERTISE TECHNIQUE AVANCÉE
             </h3>
 
-            <p class="text-gray-700 text-[24px] leading-relaxed">
-              <strong>Forte de plus de 15 ans d’expérience en génie civil</strong>, AIAE dispose
-              de compétences rares pour traiter des projets complexes :
+            <p class="text-gray-700 text-[24px] leading-relaxed font-medium">
+              <span class="font-heavy">Forte de plus de 18 ans d’expérience en génie civil</span>, AIAE dispose
+              de <span class="font-heavy">compétences rares pour traiter des projets complexes</span> :
               ouvrages d’art, béton précontraint, structures spéciales.
             </p>
           </div>
@@ -760,7 +758,7 @@
         <div class="flex gap-6">
 
           <div
-            class="flex items-start justify-center w-12 h-12 rounded-full bg-[#05482C] text-white font-bold text-lg shrink-0">
+            class="flex items-center justify-center w-[60px] h-[60px] rounded-full bg-[#05482C] text-white font-heavy text-xl shrink-0 pt-1">
             03
           </div>
 
@@ -769,9 +767,9 @@
               DES ENGAGEMENTS TENUS
             </h3>
 
-            <p class="text-gray-700 text-[24px] leading-relaxed">
+            <p class="text-gray-700 text-[24px] leading-relaxed font-medium">
               Dans un secteur où la parole ne vaut souvent rien,
-              <strong>nous faisons de la fiabilité notre marque de fabrique.</strong>
+              <span class="font-heavy">nous faisons de la fiabilité notre marque de fabrique.</span>
               Délais respectés, budgets maîtrisés, qualité garantie.
             </p>
           </div>
@@ -783,7 +781,7 @@
         <div class="flex gap-6">
 
           <div
-            class="flex items-start justify-center w-12 h-12 rounded-full bg-[#05482C] text-white font-bold text-lg shrink-0">
+            class="flex items-center justify-center w-[60px] h-[60px] rounded-full bg-[#05482C] text-white font-heavy text-xl shrink-0 pt-1">
             04
           </div>
 
@@ -792,10 +790,10 @@
               TRANSPARENCE TOTALE
             </h3>
 
-            <p class="text-gray-700 text-[24px] leading-relaxed">
-              <strong>Devis détaillés basés sur notre Bordereau des Prix Unitaires (BPU)</strong>,
+            <p class="text-gray-700 text-[24px] leading-relaxed font-medium">
+              <span class="font-heavy">Devis détaillés basés sur notre Bordereau des Prix Unitaires (BPU)</span>,
               suivi de chantier accessible, facturation claire.
-              Vous savez exactement ce que vous payez et pourquoi.
+              <span class="font-heavy">Vous savez exactement ce que vous payez et pourquoi.</span>
             </p>
           </div>
 
@@ -806,7 +804,7 @@
         <div class="flex gap-6">
 
           <div
-            class="flex items-start justify-center w-12 h-12 rounded-full bg-[#05482C] text-white font-bold text-lg shrink-0">
+            class="flex items-center justify-center w-[60px] h-[60px] rounded-full bg-[#05482C] text-white font-heavy text-xl shrink-0 pt-1">
             05
           </div>
 
@@ -815,10 +813,10 @@
               SOLUTIONS INTÉGRÉES UNIQUES
             </h3>
 
-            <p class="text-gray-700 text-[24px] leading-relaxed">
+            <p class="text-gray-700 text-[24px] leading-relaxed font-medium">
               Construction + Énergie + Sécurité :
-              <strong>nous pouvons livrer un bâtiment autonome en énergie et sécurisé
-                dès la conception.</strong> Une combinaison rare sur le marché togolais.
+              <span class="font-heavy">nous pouvons livrer un bâtiment autonome en énergie et sécurisé
+                dès la conception.</span> Une combinaison rare sur le marché togolais.
             </p>
           </div>
 
@@ -826,22 +824,22 @@
 
 
         <!-- BOUTONS -->
-        <div class="flex flex-col gap-6 justify-center">
+        <div class="flex flex-col justify-center gap-14">
 
           <!-- bouton RDV -->
-          <button class="bg-[#05482C] text-white px-8 py-3 rounded-lg text-sm font-medium w-fit">
-            Prendre rendez-vous maintenant
+          <button class="flex items-center bg-primary rounded-full shadow-lg p-1 w-full sm:w-[350px] hover:opacity-90 transition">
+            <span class="px-6 py-2 text-white whitespace-nowrap flex-1 text-center sm:text-left font-light">
+              Prendre rendez-vous maintenant
+            </span>
+            <img src="Images/envoiblanc.png" class="h-7 w-7" />
           </button>
 
           <!-- bouton devis -->
-          <button class="flex items-center gap-3 border border-black px-8 py-3 rounded-full text-sm font-medium w-fit">
-
-            Demander un devis gratuit
-
-            <span class="flex items-center justify-center w-7 h-7 border border-black rounded-full">
-              <img src="Images/envoi.png" class="w-3">
+          <button class="flex items-center bg-secondary rounded-full shadow-lg p-1 w-full sm:w-[350px] hover:opacity-90 transition">
+            <span class="px-6 py-2 text-white whitespace-nowrap flex-1 text-center sm:text-left font-light">
+              Demander un devis gratuit
             </span>
-
+            <img src="Images/envoiblanc.png" class="h-7 w-7" />
           </button>
 
         </div>
@@ -855,14 +853,14 @@
   <!-- ================= SECTION ENGAGEMENTS================= -->
   <section class="relative w-full bg-[#0E1540] overflow-hidden">
 
-    <div class="max-w-[1600px] mx-auto px-6 pt-10">
+    <div class="max-w-[1200px] mx-auto px-12 pt-10">
 
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center text-center lg:text-left">
 
         <!-- GAUCHE : TEXTE -->
         <div class="text-white relative mx-auto lg:ml-20 max-w-xl">
 
-          <h2 class="text-5xl md:text-5xl lg:text-6xl font-extrabold leading-tight mb-10 text-center lg:text-left">
+          <h2 class="text-5xl md:text-5xl lg:text-6xl font-heavy leading-tight mb-10 text-center lg:text-left">
             Nos<br> Engagements<br> Concrets
           </h2>
 
@@ -884,7 +882,7 @@
   <!-- ================= SECTION GARANTIES ================= -->
   <section class="bg-[#f3f3f3] py-20">
 
-    <div class="max-w-[1200px] mx-auto px-6">
+    <div class="max-w-[1200px] mx-auto px-12">
 
       <div class="grid md:grid-cols-2 gap-x-16 gap-y-14">
 
@@ -892,18 +890,18 @@
         <div class="flex gap-6">
 
           <div
-            class="flex items-center justify-center w-12 h-12 rounded-full bg-[#162064] text-white font-bold text-lg shrink-0">
+            class="flex items-center justify-center w-[60px] h-[60px] rounded-full bg-[#162064] text-white font-heavy text-xl shrink-0 pt-1">
             01
           </div>
 
           <div>
-            <h3 class="text-[#162064] font-extrabold text-xl mb-2">
+            <h3 class="text-[#162064] font-extrabold text-2xl mb-2">
               DEVIS GRATUIT DÉTAILLÉ
             </h3>
 
-            <p class="text-gray-700 text-[24px] leading-relaxed">
+            <p class="text-gray-700 text-[24px] leading-relaxed font-medium">
               Vous recevez un devis ligne par ligne,
-              <strong>basé sur notre BPU.</strong> Pas de mauvaises surprises.
+              <span class="font-heavy">basé sur notre BPU.</span> Pas de mauvaises surprises.
             </p>
           </div>
 
@@ -914,18 +912,18 @@
         <div class="flex gap-6">
 
           <div
-            class="flex items-center justify-center w-12 h-12 rounded-full bg-[#162064] text-white font-bold text-lg shrink-0">
+            class="flex items-center justify-center w-[60px] h-[60px] rounded-full bg-[#162064] text-white font-heavy text-xl shrink-0 pt-1">
             02
           </div>
 
           <div>
-            <h3 class="text-[#162064] font-extrabold text-xl mb-2">
+            <h3 class="text-[#162064] font-extrabold text-2xl mb-2">
               PLANNING CONTRACTUEL
             </h3>
 
-            <p class="text-gray-700 text-[24px] leading-relaxed">
+            <p class="text-gray-700 text-[24px] leading-relaxed font-medium">
               Les délais sont inscrits au contrat. En cas de retard de notre fait,
-              <strong>des pénalités s’appliquent.</strong>
+              <span class="font-heavy">des pénalités s’appliquent.</span>
             </p>
           </div>
 
@@ -936,18 +934,18 @@
         <div class="flex gap-6">
 
           <div
-            class="flex items-center justify-center w-12 h-12 rounded-full bg-[#162064] text-white font-bold text-lg shrink-0">
+            class="flex items-center justify-center w-[60px] h-[60px] rounded-full bg-[#162064] text-white font-heavy text-xl shrink-0 pt-1">
             03
           </div>
 
           <div>
-            <h3 class="text-[#162064] font-extrabold text-xl mb-2">
+            <h3 class="text-[#162064] font-extrabold text-2xl mb-2">
               GARANTIE DÉCENNALE
             </h3>
 
-            <p class="text-gray-700 text-[24px] leading-relaxed">
-              Conformément à la loi, <strong>nous garantissons la solidité
-                de l’ouvrage pendant 10 ans.</strong>
+            <p class="text-gray-700 text-[24px] leading-relaxed font-medium">
+              Conformément à la loi, <span class="font-heavy">nous garantissons la solidité
+                de l’ouvrage pendant 10 ans.</span>
             </p>
           </div>
 
@@ -958,18 +956,18 @@
         <div class="flex gap-6">
 
           <div
-            class="flex items-center justify-center w-12 h-12 rounded-full bg-[#162064] text-white font-bold text-lg shrink-0">
+            class="flex items-center justify-center w-[60px] h-[60px] rounded-full bg-[#162064] text-white font-heavy text-xl shrink-0 pt-1">
             04
           </div>
 
           <div>
-            <h3 class="text-[#162064] font-extrabold text-xl mb-2">
+            <h3 class="text-[#162064] font-extrabold text-2xl mb-2">
               ASSURANCE RC PRO
             </h3>
 
-            <p class="text-gray-700 text-[24px] leading-relaxed">
+            <p class="text-gray-700 text-[24px] leading-relaxed font-medium">
               Notre responsabilité civile professionnelle couvre
-              <strong>les dommages éventuels sur le chantier.</strong>
+              <span class="font-heavy">les dommages éventuels sur le chantier.</span>
             </p>
           </div>
 
@@ -980,16 +978,16 @@
         <div class="flex gap-6">
 
           <div
-            class="flex items-center justify-center w-12 h-12 rounded-full bg-[#162064] text-white font-bold text-lg shrink-0">
+            class="flex items-center justify-center w-[60px] h-[60px] rounded-full bg-[#162064] text-white font-heavy text-xl shrink-0 pt-1">
             05
           </div>
 
           <div>
-            <h3 class="text-[#162064] font-extrabold text-xl mb-2">
+            <h3 class="text-[#162064] font-extrabold text-2xl mb-2">
               PAIEMENT PAR ÉTAPES
             </h3>
 
-            <p class="text-gray-700 text-[24px] leading-relaxed">
+            <p class="text-gray-700 text-[24px] leading-relaxed font-medium">
               Vous payez au fur et à mesure de l’avancement,
               selon un échéancier défini ensemble.
             </p>
@@ -1002,18 +1000,18 @@
         <div class="flex gap-6">
 
           <div
-            class="flex items-center justify-center w-12 h-12 rounded-full bg-[#162064] text-white font-bold text-lg shrink-0">
+            class="flex items-center justify-center w-[60px] h-[60px] rounded-full bg-[#162064] text-white font-heavy text-xl shrink-0 pt-1">
             06
           </div>
 
           <div>
-            <h3 class="text-[#162064] font-extrabold text-xl mb-2">
+            <h3 class="text-[#162064] font-extrabold text-2xl mb-2">
               CONFIDENTIALITÉ
             </h3>
 
-            <p class="text-gray-700 text-[24px] leading-relaxed">
+            <p class="text-gray-700 text-[24px] leading-relaxed font-medium">
               Tous nos projets sont traités avec discrétion.
-              <strong>Secret professionnel contractualisé.</strong>
+              <span class="font-heavy">Secret professionnel contractualisé.</span>
             </p>
           </div>
 
@@ -1024,16 +1022,16 @@
         <div class="flex gap-6">
 
           <div
-            class="flex items-center justify-center w-12 h-12 rounded-full bg-[#162064] text-white font-bold text-lg shrink-0">
+            class="flex items-center justify-center w-[60px] h-[60px] rounded-full bg-[#162064] text-white font-heavy text-xl shrink-0 pt-1">
             07
           </div>
 
           <div>
-            <h3 class="text-[#162064] font-extrabold text-xl mb-2">
+            <h3 class="text-[#162064] font-extrabold text-2xl mb-2">
               ACCOMPAGNEMENT FINANCEMENT
             </h3>
 
-            <p class="text-gray-700 text-[24px] leading-relaxed">
+            <p class="text-gray-700 text-[24px] leading-relaxed font-medium">
               Nous pouvons vous orienter dans vos démarches
               de crédit auprès des banques partenaires.
             </p>
@@ -1043,22 +1041,22 @@
 
 
         <!-- BOUTONS -->
-        <div class="flex flex-col gap-6 justify-center">
+        <div class="flex flex-col justify-center gap-14">
 
           <!-- bouton RDV -->
-          <button class="bg-[#05482C] text-white px-8 py-3 rounded-lg text-sm font-medium w-fit">
-            Prendre rendez-vous maintenant
+          <button class="flex items-center bg-primary rounded-full shadow-lg p-1 w-full sm:w-[350px] hover:opacity-90 transition">
+            <span class="px-6 py-2 text-white whitespace-nowrap flex-1 text-center sm:text-left font-light">
+              Prendre rendez-vous maintenant
+            </span>
+            <img src="Images/envoiblanc.png" class="h-7 w-7" />
           </button>
 
           <!-- bouton devis -->
-          <button class="flex items-center gap-3 border border-black px-8 py-3 rounded-full text-sm font-medium w-fit">
-
-            Demander un devis gratuit
-
-            <span class="flex items-center justify-center w-7 h-7 border border-black rounded-full">
-              <img src="Images/envoi.png" class="w-3">
+          <button class="flex items-center bg-secondary rounded-full shadow-lg p-1 w-full sm:w-[350px] hover:opacity-90 transition">
+            <span class="px-6 py-2 text-white whitespace-nowrap flex-1 text-center sm:text-left font-light">
+              Demander un devis gratuit
             </span>
-
+            <img src="Images/envoiblanc.png" class="h-7 w-7" />
           </button>
 
         </div>
@@ -1072,14 +1070,14 @@
   <!-- ================= SECTION VALEURS ================= -->
   <section class="relative w-full bg-[#FF8400] overflow-hidden pt-10">
 
-    <div class="max-w-[1600px] mx-auto px-6">
+    <div class="max-w-[1200px] mx-auto px-12">
 
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
 
         <!-- GAUCHE : TEXTE -->
         <div class="text-white lg:ml-20 max-w-xl">
 
-          <h2 class="text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight mb-8">
+          <h2 class="text-5xl md:text-6xl lg:text-7xl font-heavy leading-tight mb-8">
             Nos Valeurs
           </h2>
 
@@ -1107,7 +1105,7 @@
   <!-- ================= SECTION VALEURS DETAILS ================= -->
   <section class="bg-[#f3f3f3] py-20">
 
-    <div class="max-w-[1200px] mx-auto px-6">
+    <div class="max-w-[1200px] mx-auto px-12">
 
       <div class="grid md:grid-cols-2 gap-x-20 gap-y-14">
 
@@ -1115,18 +1113,18 @@
         <div class="flex gap-6">
 
           <div
-            class="flex items-center justify-center w-12 h-12 rounded-full bg-[#FF8400] text-white font-bold text-lg shrink-0">
+            class="flex items-center justify-center w-[60px] h-[60px] rounded-full bg-[#FF8400] text-white font-heavy text-xl shrink-0 pt-1">
             01
           </div>
 
           <div>
-            <h3 class="text-[#FF8400] font-extrabold text-xl mb-2">
+            <h3 class="text-[#FF8400] font-extrabold text-2xl mb-2">
               LA QUALITÉ EST PRIMORDIALE
             </h3>
 
-            <p class="text-gray-700 text-[24px] leading-relaxed">
+            <p class="text-gray-700 text-[24px] leading-relaxed font-medium">
               Nous ne construisons pas pour aujourd’hui,
-              <strong>nous construisons pour des générations.</strong>
+              <span class="font-heavy">nous construisons pour des générations.</span>
             </p>
           </div>
 
@@ -1137,17 +1135,17 @@
         <div class="flex gap-6">
 
           <div
-            class="flex items-center justify-center w-12 h-12 rounded-full bg-[#FF8400] text-white font-bold text-lg shrink-0">
+            class="flex items-center justify-center w-[60px] h-[60px] rounded-full bg-[#FF8400] text-white font-heavy text-xl shrink-0 pt-1">
             02
           </div>
 
           <div>
-            <h3 class="text-[#FF8400] font-extrabold text-xl mb-2">
+            <h3 class="text-[#FF8400] font-extrabold text-2xl mb-2">
               LA PAROLE DONNÉE EST SACRÉE
             </h3>
 
-            <p class="text-gray-700 text-[24px] leading-relaxed">
-              <strong>Un engagement pris est un engagement tenu.</strong>
+            <p class="text-gray-700 text-[24px] leading-relaxed font-medium">
+              <span class="font-heavy">Un engagement pris est un engagement tenu.</span>
               Sans exception.
             </p>
           </div>
@@ -1159,17 +1157,17 @@
         <div class="flex gap-6">
 
           <div
-            class="flex items-center justify-center w-12 h-12 rounded-full bg-[#FF8400] text-white font-bold text-lg shrink-0">
+            class="flex items-center justify-center w-[60px] h-[60px] rounded-full bg-[#FF8400] text-white font-heavy text-xl shrink-0 pt-1">
             03
           </div>
 
           <div>
-            <h3 class="text-[#FF8400] font-extrabold text-xl mb-2">
+            <h3 class="text-[#FF8400] font-extrabold text-2xl mb-2">
               HONNÊTETÉ ENVERS LES CLIENTS
             </h3>
 
-            <p class="text-gray-700 text-[24px] leading-relaxed">
-              <strong>Un client bien informé</strong> est un client satisfait.
+            <p class="text-gray-700 text-[24px] leading-relaxed font-medium">
+              <span class="font-heavy">Un client bien informé</span> est un client satisfait.
             </p>
           </div>
 
@@ -1180,17 +1178,17 @@
         <div class="flex gap-6">
 
           <div
-            class="flex items-center justify-center w-12 h-12 rounded-full bg-[#FF8400] text-white font-bold text-lg shrink-0">
+            class="flex items-center justify-center w-[60px] h-[60px] rounded-full bg-[#FF8400] text-white font-heavy text-xl shrink-0 pt-1">
             04
           </div>
 
           <div>
-            <h3 class="text-[#FF8400] font-extrabold text-xl mb-2">
+            <h3 class="text-[#FF8400] font-extrabold text-2xl mb-2">
               RESPECT DES ÉQUIPES
             </h3>
 
-            <p class="text-gray-700 text-[24px] leading-relaxed">
-              La qualité dépend du <strong>respect accordé à ceux qui réalisent.</strong>
+            <p class="text-gray-700 text-[24px] leading-relaxed font-medium">
+              La qualité dépend du <span class="font-heavy">respect accordé à ceux qui réalisent.</span>
             </p>
           </div>
 
@@ -1201,17 +1199,17 @@
         <div class="flex gap-6">
 
           <div
-            class="flex items-center justify-center w-12 h-12 rounded-full bg-[#FF8400] text-white font-bold text-lg shrink-0">
+            class="flex items-center justify-center w-[60px] h-[60px] rounded-full bg-[#FF8400] text-white font-heavy text-xl shrink-0 pt-1">
             05
           </div>
 
           <div>
-            <h3 class="text-[#FF8400] font-extrabold text-xl mb-2">
+            <h3 class="text-[#FF8400] font-extrabold text-2xl mb-2">
               RESPECT DES DÉLAIS ET DES COÛTS
             </h3>
 
-            <p class="text-gray-700 text-[24px] leading-relaxed">
-              <strong>Un projet en retard ou hors budget est un échec</strong>,
+            <p class="text-gray-700 text-[24px] leading-relaxed font-medium">
+              <span class="font-heavy">Un projet en retard ou hors budget est un échec</span>,
               même s’il est techniquement parfait.
             </p>
           </div>
@@ -1220,22 +1218,22 @@
 
 
         <!-- BOUTONS -->
-        <div class="flex flex-col gap-6 justify-center">
+        <div class="flex flex-col justify-center gap-14">
 
           <!-- bouton RDV -->
-          <button class="bg-[#05482C] text-white px-8 py-3 rounded-lg text-sm font-medium w-fit">
-            Prendre rendez-vous maintenant
+          <button class="flex items-center bg-primary rounded-full shadow-lg p-1 w-full sm:w-[350px] hover:opacity-90 transition">
+            <span class="px-6 py-2 text-white whitespace-nowrap flex-1 text-center sm:text-left font-light">
+              Prendre rendez-vous maintenant
+            </span>
+            <img src="Images/envoiblanc.png" class="h-7 w-7" />
           </button>
 
           <!-- bouton devis -->
-          <button class="flex items-center gap-3 border border-black px-8 py-3 rounded-full text-sm font-medium w-fit">
-
-            Demander un devis gratuit
-
-            <span class="flex items-center justify-center w-7 h-7 border border-black rounded-full">
-              <img src="Images/envoi.png" class="w-3">
+          <button class="flex items-center bg-secondary rounded-full shadow-lg p-1 w-full sm:w-[350px] hover:opacity-90 transition">
+            <span class="px-6 py-2 text-white whitespace-nowrap flex-1 text-center sm:text-left font-light">
+              Demander un devis gratuit
             </span>
-
+            <img src="Images/envoiblanc.png" class="h-7 w-7" />
           </button>
 
         </div>
@@ -1248,9 +1246,9 @@
 
   <!-- ================= SECTION DIASPORA ================= -->
 
-  <section class="bg-[#f3f3f3] py-24">
+  <section class="bg-[#f3f3f3] py-10">
 
-    <div class="max-w-[1200px] mx-auto px-6">
+    <div class="max-w-[1200px] mx-auto px-12">
 
       <!-- Bloc vert -->
       <div class="bg-[#05482C] rounded-[30px] p-12">
@@ -1358,18 +1356,20 @@
               nous<br> nous adaptons à votre<br> fuseau horaire.
             </p>
 
-            <button class="bg-[#b7ff00] text-black px-6 py-3 rounded-lg w-fit mb-4">
-              Prendre rendez-vous maintenant
+            <!-- bouton RDV -->
+            <button class="flex items-center bg-primary rounded-full shadow-lg p-1 w-full sm:w-fit hover:opacity-90 transition mb-4">
+              <span class="px-6 py-2 text-white whitespace-nowrap flex-1 text-center sm:text-left font-light">
+                Prendre rendez-vous maintenant
+              </span>
+              <img src="Images/envoiblanc.png" class="h-7 w-7" />
             </button>
 
-            <button class="flex items-center gap-3 border border-white px-6 py-3 rounded-full text-sm w-fit">
-
-              Demander un devis gratuit
-
-              <span class="flex items-center justify-center w-7 h-7 border border-white rounded-full">
-                <img src="Images/envoi.png" class="w-3">
+            <!-- bouton devis -->
+            <button class="flex items-center bg-secondary rounded-full shadow-lg p-1 w-full sm:w-fit hover:opacity-90 transition">
+              <span class="px-6 py-2 text-white whitespace-nowrap flex-1 text-center sm:text-left font-light">
+                Demander un devis gratuit
               </span>
-
+              <img src="Images/envoiblanc.png" class="h-7 w-7" />
             </button>
 
           </div>
@@ -1385,7 +1385,7 @@
   <!-- ================= SECTION FAQ ================= -->
   <section class="bg-[#111a4b] py-10">
 
-    <div class="max-w-[1000px] mx-auto px-6 text-center">
+    <div class="max-w-[1200px] mx-auto px-12 text-center">
 
       <!-- TITRE -->
       <h2 class="text-white text-5xl font-extrabold mb-6">
