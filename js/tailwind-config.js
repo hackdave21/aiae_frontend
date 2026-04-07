@@ -30,6 +30,7 @@ window.tailwind = {
           heavy: "800",
           extrabold: "900",
           black: "1000",
+          ultra: "950",
         },
       },
     },
