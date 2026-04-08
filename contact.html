@@ -283,6 +283,63 @@
       color: white !important;
       border-color: #0E1540 !important;
     }
+
+    /* Country Select Dropdown Styles */
+    .country-dropdown {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      background: white;
+      border: 1px solid #d1d5db;
+      border-top: none;
+      border-radius: 0 0 0.75rem 0.75rem;
+      z-index: 50;
+      max-height: 300px;
+      overflow-y: auto;
+      box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+      display: none;
+    }
+
+    .country-dropdown.active {
+      display: block;
+    }
+
+    .country-item {
+      display: flex;
+      align-items: center;
+      padding: 0.75rem 1rem;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+
+    .country-item:hover {
+      background: #f3f4f6;
+    }
+
+    .country-flag {
+      width: 24px;
+      height: 16px;
+      margin-right: 12px;
+      object-fit: cover;
+      border-radius: 2px;
+      box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+    }
+
+    /* Custom scrollbar for dropdown */
+    .country-dropdown::-webkit-scrollbar {
+      width: 8px;
+    }
+    .country-dropdown::-webkit-scrollbar-track {
+      background: #f1f1f1;
+    }
+    .country-dropdown::-webkit-scrollbar-thumb {
+      background: #cbd5e1;
+      border-radius: 4px;
+    }
+    .country-dropdown::-webkit-scrollbar-thumb:hover {
+      background: #94a3b8;
+    }
   </style>
   <script src="js/tailwind-config.js"></script>
 </head>
@@ -293,77 +350,78 @@
   <div id="header-placeholder"></div>
 
   <!-- ================= PETITE SECTION BLANCHE ================= -->
-  <section class="w-full bg-[#f4f5f7] pt-20 pb-4"></section>
+  <section class="w-full bg-[#f4f5f7] pt-36 pb-4"></section>
 
   <!-- ================= SECTION HERO ================= -->
   <section class="bg-[#e6e6e6] pt-10 pb-10">
     <div class="max-w-[900px] mx-auto text-center px-6">
-      <h1 class="text-[40px] md:text-[60px] font-extrabold text-darkBlue mb-4 leading-tight">
+      <h1 class="text-[55px] md:text-[70px] font-extrabold text-darkBlue mb-4 leading-tight">
         Demandez <span class="text-secondary">Un Devis</span> Gratuit
       </h1>
-      <p class="text-[47px] md:text-[24px] text-[#4a4a4a] font-light">
-        Réponse <strong class="font-bold text-darkBlue">personnalisée</strong> sous <strong
-          class="font-bold text-darkBlue">48h</strong> ouvrées.
+      <p class="text-[65px] md:text-[40px] text-[#4a4a4a] font-light">
+        Réponse <strong class="text-darkBlue">personnalisée</strong> sous <strong
+          class="text-darkBlue">48h</strong> ouvrées.
       </p>
     </div>
   </section>
 
   <!-- ================= SECTION FORMULAIRE ================= -->
   <section class="bg-[#f4f5f7] py-5 w-full">
-    <div class="max-w-[750px] mx-auto px-6">
+    <div class="max-w-[950px] mx-auto px-6">
       <form class="space-y-6">
 
         <!-- Nom complet -->
         <div>
-          <label class="block text-[14px] font-extrabold text-[#4a4a4a] mb-2">Nom complet</label>
+          <label class="block text-[20px] font-heavy text-[#4a4a4a] mb-2">Nom complet</label>
           <input type="text" placeholder="Votre nom complet"
             class="w-full bg-transparent border border-gray-400 rounded-xl px-5 py-3 outline-none focus:border-secondary text-gray-700 placeholder-gray-400">
         </div>
 
         <!-- Adresse e-mail -->
         <div>
-          <label class="block text-[14px] font-extrabold text-[#4a4a4a] mb-2">Adresse e-mail</label>
+          <label class="block text-[20px] font-heavy text-[#4a4a4a] mb-2">Adresse e-mail</label>
           <input type="email" placeholder="nomprenom@gmail.com"
             class="w-full bg-transparent border border-gray-400 rounded-xl px-5 py-3 outline-none focus:border-secondary text-gray-700 placeholder-gray-400">
         </div>
 
         <!-- Téléphone -->
-        <div>
-          <label class="block text-[14px] font-extrabold text-[#4a4a4a] mb-2">Téléphone</label>
+        <div class="relative" id="phoneContainer">
+          <label class="block text-[20px] font-heavy text-[#4a4a4a] mb-2">Téléphone</label>
           <div
-            class="flex items-center w-full border border-gray-400 rounded-xl px-4 py-3 bg-transparent focus-within:border-secondary">
-            <span class="text-gray-400 font-light pr-3 border-r border-[#d4d4d4]">+228</span>
-            <input type="tel" placeholder="XX XX XX XX"
-              class="bg-transparent pl-4 w-full outline-none text-gray-700 placeholder-gray-400">
-            <div class="flex items-center gap-2 pl-3 ml-auto cursor-pointer border-l border-[#d4d4d4]">
-              <!-- Chevron icon -->
-              <svg class="w-4 h-4 text-[#4a4a4a] ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            class="flex items-center w-full border border-gray-400 rounded-xl px-4 py-3 bg-transparent focus-within:border-secondary overflow-hidden">
+            
+            <!-- Selected Country Display -->
+            <div id="selectedCountry" class="flex items-center gap-2 pr-3 cursor-pointer border-r border-[#d4d4d4] shrink-0">
+              <img id="currentFlag" src="https://flagcdn.com/w20/tg.png" alt="TG" class="w-6 h-4 object-contain shadow-sm rounded-sm">
+              <span id="dialCodeText" class="text-gray-700 font-medium">+228</span>
+              <svg class="w-4 h-4 text-[#4a4a4a]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
               </svg>
-              <!-- Togo flag SVG representation -->
-              <svg width="24" height="16" viewBox="0 0 24 16" fill="none" xmlns="http://www.w3.org/2000/svg"
-                class="rounded-[2px] shadow-sm">
-                <rect width="24" height="16" fill="#006a4e" />
-                <rect y="3.2" width="24" height="3.2" fill="#ffce00" />
-                <rect y="9.6" width="24" height="3.2" fill="#ffce00" />
-                <rect width="8" height="9.6" fill="#d21034" />
-                <path
-                  d="M4 1L4.8541 3.628H7.61803L5.38197 5.244L6.23607 7.872L4 6.256L1.76393 7.872L2.61803 5.244L0.381966 3.628H3.1459L4 1Z"
-                  fill="white" />
-              </svg>
+            </div>
+
+            <input type="tel" id="phoneInput" placeholder="XX XX XX XX"
+              class="bg-transparent pl-4 w-full outline-none text-gray-700 placeholder-gray-400">
+          </div>
+
+          <!-- Country Dropdown -->
+          <div id="countryDropdown" class="country-dropdown">
+            <div class="p-2 sticky top-0 bg-white border-b">
+              <input type="text" id="countrySearch" placeholder="Rechercher un pays..." 
+                class="w-full px-3 py-2 text-sm border rounded-lg focus:outline-none focus:border-secondary">
+            </div>
+            <div id="countryList">
+              <!-- JS Populated -->
             </div>
           </div>
         </div>
 
         <!-- Pays de résidence -->
         <div>
-          <label class="block text-[14px] font-extrabold text-[#4a4a4a] mb-2">Pays de résidence</label>
+          <label class="block text-[20px] font-heavy text-[#4a4a4a] mb-2">Pays de résidence</label>
           <div class="relative">
-            <select
+            <select id="countryResidenceSelect"
               class="w-full bg-transparent border border-gray-400 rounded-xl px-5 py-4 outline-none focus:border-secondary text-gray-400 appearance-none cursor-pointer">
               <option value="" disabled selected>Sélectionnez votre pays de résidence</option>
-              <option value="tg">Togo</option>
-              <option value="fr">France</option>
             </select>
             <div
               class="absolute right-5 top-1/2 -translate-y-1/2 pointer-events-none text-gray-500 font-light text-2xl">
@@ -374,13 +432,15 @@
 
         <!-- Type de projet -->
         <div>
-          <label class="block text-[14px] font-extrabold text-[#4a4a4a] mb-2">Type de projet</label>
+          <label class="block text-[20px] font-heavy text-[#4a4a4a] mb-2">Type de projet</label>
           <div class="relative">
-            <select
+            <select id="projectTypeSelect"
               class="w-full bg-transparent border border-gray-400 rounded-xl px-5 py-4 outline-none focus:border-secondary text-gray-400 appearance-none cursor-pointer">
               <option value="" disabled selected>Sélectionnez le type de projet</option>
-              <option value="residentiel">Résidentiel</option>
-              <option value="commercial">Commercial</option>
+              <option value="residentiel">Résidentiel (Villas, immeubles)</option>
+              <option value="tertiaire">Tertiaire (Bureaux, hôtels)</option>
+              <option value="industriel">Industriel (Usines, entrepôts)</option>
+              <option value="agricole">Agricole (Élevage, stockage)</option>
             </select>
             <div
               class="absolute right-5 top-1/2 -translate-y-1/2 pointer-events-none text-gray-500 font-light text-2xl">
@@ -391,7 +451,7 @@
 
         <!-- Sélectionnez un délai -->
         <div>
-          <label class="block text-[14px] font-extrabold text-[#4a4a4a] mb-2">Sélectionnez un délai</label>
+          <label class="block text-[20px] font-heavy text-[#4a4a4a] mb-2">Sélectionnez un délai</label>
           <div class="relative">
             <select
               class="w-full bg-transparent border border-gray-400 rounded-xl px-5 py-4 outline-none focus:border-secondary text-gray-400 appearance-none cursor-pointer">
@@ -410,14 +470,14 @@
 
         <!-- Votre projet -->
         <div>
-          <label class="block text-[14px] font-extrabold text-[#4a4a4a] mb-2">Votre projet</label>
+          <label class="block text-[20px] font-heavy text-[#4a4a4a] mb-2">Votre projet</label>
           <textarea rows="4" placeholder="Décrivez brièvement votre projet..."
             class="w-full bg-transparent border border-gray-400 rounded-xl px-5 py-4 outline-none focus:border-secondary text-gray-700 placeholder-gray-400 resize-none"></textarea>
         </div>
 
         <!-- Localisation du projet -->
         <div>
-          <label class="block text-[14px] font-extrabold text-[#4a4a4a] mb-2">Localisation du projet</label>
+          <label class="block text-[20px] font-heavy text-[#4a4a4a] mb-2">Localisation du projet</label>
           <div class="relative">
             <input type="text" placeholder="Quel est le lieu de votre projet ?"
               class="w-full bg-transparent border border-gray-400 rounded-xl px-5 py-4 outline-none focus:border-secondary text-gray-700 placeholder-gray-400 pr-12">
@@ -430,7 +490,7 @@
 
         <!-- Budget estimé -->
         <div>
-          <label class="block text-[14px] font-extrabold text-[#4a4a4a] mb-2">Budget estimé</label>
+          <label class="block text-[20px] font-heavy text-[#4a4a4a] mb-2">Budget estimé</label>
           <div class="relative">
             <input type="text" placeholder="Quel budget envisagez-vous ?"
               class="w-full bg-transparent border border-gray-400 rounded-xl px-5 py-4 outline-none focus:border-secondary text-gray-700 placeholder-gray-400 pr-12">
@@ -443,7 +503,7 @@
 
         <!-- Comment avez-vous connu AIAE ? -->
         <div>
-          <label class="block text-[14px] font-extrabold text-[#4a4a4a] mb-2">Comment avez-vous connu AIAE ?</label>
+          <label class="block text-[20px] font-heavy text-[#4a4a4a] mb-2">Comment avez-vous connu AIAE ?</label>
           <div class="relative">
             <select
               class="w-full bg-transparent border border-gray-400 rounded-xl px-5 py-4 outline-none focus:border-secondary text-gray-400 appearance-none cursor-pointer">
@@ -461,7 +521,7 @@
 
         <!-- Pièce jointe -->
         <div>
-          <label class="block text-[14px] font-extrabold text-[#4a4a4a] mb-2">Pièce jointe</label>
+          <label class="block text-[20px] font-heavy text-[#4a4a4a] mb-2">Pièce jointe</label>
           <div
             class="relative flex items-center justify-between border border-gray-400 rounded-xl px-5 py-4 bg-transparent cursor-pointer hover:border-secondary focus-within:border-secondary transition-colors overflow-hidden">
             <input type="file" id="file_upload" class="absolute inset-0 w-full h-full opacity-0 cursor-pointer z-10">
@@ -482,14 +542,14 @@
         <!-- Checkbox acceptation -->
         <div class="flex items-start gap-4 mt-8 pb-6">
           <div
-            class="relative flex items-center justify-center shrink-0 w-[30px] h-[30px] rounded bg-white border-4 border-[#3a3939] overflow-hidden mt-1 cursor-pointer">
+            class="relative flex items-center justify-center shrink-0 w-[24px] h-[24px] rounded bg-white border-2 border-[#3a3939] overflow-hidden mt-1 cursor-pointer">
             <input type="checkbox" class="absolute inset-0 opacity-0 cursor-pointer peer" checked>
-            <svg class="w-5 h-5 text-[#3a3939] opacity-0 peer-checked:opacity-100 pointer-events-none" fill="none"
+            <svg class="w-4 h-4 text-[#3a3939] opacity-0 peer-checked:opacity-100 pointer-events-none" fill="none"
               stroke="currentColor" stroke-width="4" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path>
             </svg>
           </div>
-          <p class="text-[14px] md:text-[16px] text-darkBlue font-bold leading-snug">
+          <p class="text-[20px] md:text-[22px] text-black font-heavy leading-snug">
             J'accepte que mes données soient traitées par AIAE SARL<br class="hidden md:block">
             dans le cadre de ma demande (voir politique de<br class="hidden md:block">
             confidentialité).
@@ -499,7 +559,7 @@
         <!-- Bouton Envoyer -->
         <div class="pt-4 pb-12">
           <button type="submit"
-            class="w-full bg-[#111736] text-white py-4 font-bold text-[16px] md:text-[18px] tracking-wide hover:bg-darkBlue transition-colors outline-none cursor-pointer">
+            class="block w-full bg-[#111736] text-white py-5 rounded-xl font-bold text-[18px] md:text-[20px] tracking-wide hover:bg-darkBlue transition-colors outline-none cursor-pointer">
             ENVOYER MA DEMANDE
           </button>
         </div>
@@ -515,36 +575,36 @@
 
       <!-- Badge Titre -->
       <div
-        class="absolute -top-7 left-1/2 -translate-x-1/2 bg-[#f28c06] text-[#0b4a2b] px-12 py-2.5 rounded-2xl text-[28px] md:text-[32px] font-bold border-4 border-[#0b4a2b] shadow-lg z-10 text-center uppercase tracking-wide">
+        class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-full bg-secondary text-primary px-10 py-2 rounded-xl text-[22px] md:text-[26px] font-heavy border-2 border-primary z-10 text-center uppercase tracking-wider mb-2">
         Nos Coordonnées
       </div>
 
       <!-- Encadré vert -->
       <div
-        class="bg-[#0e4e32] rounded-[24px] pt-16 pb-12 px-6 sm:px-16 text-white text-[18px] md:text-[22px] shadow-2xl relative">
+        class="bg-[#0e4e32] rounded-[24px] pt-16 pb-12 px-6 sm:px-16 text-white text-[22px] md:text-[26px] shadow-2xl relative">
 
         <!-- Ligne du haut : Siège/Email VS Tél/WhatsApp -->
-        <div class="grid md:grid-cols-2 gap-8 md:gap-4 mb-14 text-center md:text-left">
+        <div class="grid md:grid-cols-2 gap-8 md:gap-4 mb-10 text-center md:text-left">
 
-          <div class="flex flex-col gap-6 md:pl-10">
-            <div class="flex items-center justify-center md:justify-start gap-4">
+          <div class="flex flex-col gap-5 md:pl-10">
+            <div class="flex items-center justify-center md:justify-start gap-3">
               <img src="Images/localisation.png" alt="Localisation" class="w-6 h-8 object-contain" />
-              <p><strong class="font-bold text-white">Siège social :</strong> Lomé, Togo</p>
+              <p><strong class="font-heavy text-white">Siège social :</strong> Lomé, Togo</p>
             </div>
-            <div class="flex items-center justify-center md:justify-start gap-4">
+            <div class="flex items-center justify-center md:justify-start gap-3">
               <img src="Images/mail.png" alt="Email" class="w-7 h-5 object-contain" />
-              <p><strong class="font-bold text-white">Email :</strong> contact@aiae.tg</p>
+              <p><strong class="font-heavy text-white">Email :</strong> contact@aiae.tg</p>
             </div>
           </div>
 
-          <div class="flex flex-col gap-6 md:pl-10">
-            <div class="flex items-center justify-center md:justify-start gap-4">
+          <div class="flex flex-col gap-5 md:pl-10">
+            <div class="flex items-center justify-center md:justify-start gap-3">
               <img src="Images/telephone.png" alt="Téléphone" class="w-6 h-6 object-contain" />
-              <p><strong class="font-bold text-white">Téléphone :</strong> +228 XX XX XX XX</p>
+              <p><strong class="font-heavy text-white">Téléphone :</strong> +228 XX XX XX XX</p>
             </div>
-            <div class="flex items-center justify-center md:justify-start gap-4">
+            <div class="flex items-center justify-center md:justify-start gap-3">
               <img src="Images/Whatsapp.png" alt="WhatsApp" class="w-7 h-7 object-contain" />
-              <p><strong class="font-bold text-white">WhatsApp :</strong> +228 XX XX XX XX</p>
+              <p><strong class="font-heavy text-white">WhatsApp :</strong> +228 XX XX XX XX</p>
             </div>
           </div>
 
@@ -554,14 +614,14 @@
         <div class="text-center font-light leading-[1.8]">
           <div class="flex items-center justify-center gap-4 mb-4">
             <img src="Images/heure.png" alt="Horaires" class="w-7 h-7 object-contain" />
-            <h3 class="font-bold text-[24px] tracking-wide">Horaires :</h3>
+            <h3 class="font-heavy text-[24px] tracking-wide">Horaires :</h3>
           </div>
 
-          <p><strong class="font-bold tracking-wide text-white">Lundi à Vendredi :</strong> 8h00 — 18h00 (GMT+0)</p>
-          <p><strong class="font-bold tracking-wide text-white">Samedi :</strong> 8h00 — 13h00</p>
-          <p><strong class="font-bold tracking-wide text-white">Dimanche :</strong> Fermé (urgences par téléphone
+          <p><strong class="font-heavy tracking-wide text-white">Lundi à Vendredi :</strong> 8h00 — 18h00 (GMT+0)</p>
+          <p><strong class="font-heavy tracking-wide text-white">Samedi :</strong> 8h00 — 13h00</p>
+          <p><strong class="font-heavy tracking-wide text-white">Dimanche :</strong> Fermé (urgences par téléphone
             uniquement)</p>
-          <p><strong class="font-bold tracking-wide text-white">Diaspora :</strong> RDV en soirée et week-end sur
+          <p><strong class="font-heavy tracking-wide text-white">Diaspora :</strong> RDV en soirée et week-end sur
             demande (visioconférence)</p>
         </div>
 
@@ -588,41 +648,36 @@
   </section>
 
   <!-- ================= SECTION CTA (Prenez Rendez-Vous) ================= -->
-  <section class="bg-[#f2f3f5] py-10 w-full">
-    <div class="max-w-[1000px] mx-auto text-center px-6">
+  <section class="bg-[#e6e6e6] py-10 w-full font-FuturaStdLight">
+    <div class="max-w-[900px] mx-auto text-center px-6">
 
-      <h2 class="text-[40px] md:text-[55px] font-bold text-darkBlue mb-4 leading-tight">
+      <h2 class="text-[35px] md:text-[55px] font-heavy mb-6 leading-tight whitespace-nowrap">
         Prenez Rendez-Vous
       </h2>
-      <p class="text-[20px] md:text-[24px] text-[#4a4a4a] font-light mb-12">
+      <p class="text-gray-600 leading-relaxed font-light mb-10 text-[25px] md:text-[27px] max-w-[700px] mx-auto whitespace-nowrap">
         Deux modalités proposées au visiteur
       </p>
 
-      <div class="flex flex-col md:flex-row justify-center w-full max-w-[950px] mx-auto shadow-lg">
-
-        <!-- Bloc Gauche (Orange) -->
-        <a href="#"
-          class="flex-1 bg-secondary text-white px-6 md:px-8 py-4 md:py-5 text-center transition-colors duration-300 hover:bg-[#c96c05]">
-          <span class="block text-[20px] md:text-[22px] font-bold tracking-wide mb-1 uppercase">
-            Rendez-vous sur place
+      <div class="flex flex-col md:flex-row justify-center w-full max-w-[950px] mx-auto shadow-2xl overflow-hidden rounded-sm">
+        <!-- Bouton Orange -->
+        <a href="#" class="flex-1 bg-secondary text-white px-10 py-5 text-center transition-all duration-300 hover:brightness-110 group">
+          <span class="block text-[22px] md:text-[28px] font-heavy tracking-wide mb-3 uppercase">
+            RENDEZ-VOUS SUR PLACE
           </span>
-          <span class="block text-[14px] md:text-[15px] font-light text-white/95 leading-relaxed">
+          <span class="block text-[11px] md:text-[15px] text-white/90 leading-relaxed max-w-[320px] mx-auto whitespace-nowrap">
             Visitez notre siège à Lomé pour discuter de votre projet.
           </span>
         </a>
 
-        <!-- Bloc Droit (Vert) -->
-        <a href="#"
-          class="flex-1 bg-[#0b4a2b] text-white px-6 md:px-8 py-4 md:py-5 text-center transition-colors duration-300 hover:bg-[#093c23]">
-          <span class="block text-[20px] md:text-[22px] font-bold tracking-wide mb-1 uppercase">
-            Rendez-vous en ligne
+        <!-- Bouton Vert -->
+        <a href="#" class="flex-1 bg-primary text-white px-10 py-5 text-center transition-all duration-300 hover:brightness-110 group">
+          <span class="block text-[22px] md:text-[28px] font-heavy tracking-wide mb-3 uppercase">
+            RENDEZ-VOUS EN LIGNE
           </span>
-          <span class="block text-[14px] md:text-[15px] font-light text-white/95 leading-relaxed">
-            Pour la diaspora ou contraintes de temps, nous<br class="hidden md:block">
-            proposons des visioconférences.
+          <span class="block text-[11px] md:text-[15px]  text-white/90 leading-relaxed max-w-[350px] mx-auto whitespace-nowrap">
+            Pour la diaspora ou contraintes de temps, <span class="font-light">nous<br> proposons des visioconférences.</span>
           </span>
         </a>
-
       </div>
 
     </div>
@@ -649,24 +704,21 @@
           <a href="#" aria-label="Facebook">
             <img src="Images/FacebookLogo.svg" alt="TikTok" class="h-16 w-16" />
           </a>
-
-          <!-- YouTube -->
-
         </div>
 
         <!-- TEXTE DROIT -->
         <div class="flex flex-col items-start">
-          <p class="text-4xl font-black opacity-80">@ Afrika_AIAE</p>
-          <p class="text-lg opacity-80 font-light">
-            Suivez nous, <strong>Abonnez vous</strong> &
-            <strong>Likez nos post</strong>
+          <p class="text-4xl font-bold text-gray-300">@ Afrika_AIAE</p>
+          <p class="text-lg text-gray-300 font-light">
+            Suivez nous, <strong class="font-heavy text-gray-300">Abonnez vous</strong> &
+            <strong class="font-heavy text-gray-300">Likez nos post</strong>
           </p>
         </div>
       </div>
     </div>
 
     <!-- BARRE CLAIRE -->
-    <div class="bg-[#e6e6e6] py-6">
+    <div class="bg-[#f5f5f5] py-6">
       <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-center gap-4 text-[#0b4a2b]">
         <!-- WhatsApp Icon -->
         <img src="Images/WhatsappLogo.svg" alt="" class="h-12 w-12" />
@@ -676,8 +728,8 @@
         </p>
 
         <p class="text-sm font-book">
-          <strong class="font-heavy">Écrivez nous</strong> pour toutes<br />
-          <strong class="font-heavy">informations</strong> supplémentaires
+          <strong class="font-heavy text-primary">Écrivez nous</strong> pour toutes<br />
+          <strong class="font-heavy text-primary">informations</strong> supplémentaires
         </p>
       </div>
     </div>
@@ -866,6 +918,111 @@
         iconSteps.classList.toggle("rotate-180");
       });
     }
+
+    // --- Dynamic Country Data & Phone Picker ---
+    const countryResidenceSelect = document.getElementById('countryResidenceSelect');
+    const countryList = document.getElementById('countryList');
+    const countrySearch = document.getElementById('countrySearch');
+    const selectedCountry = document.getElementById('selectedCountry');
+    const countryDropdown = document.getElementById('countryDropdown');
+    const currentFlag = document.getElementById('currentFlag');
+    const dialCodeText = document.getElementById('dialCodeText');
+
+    let allCountries = [];
+
+    async function fetchCountries() {
+      try {
+        // Fetch all countries with specific fields
+        const response = await fetch('https://restcountries.com/v3.1/all?fields=name,cca2,idd,flags');
+        if (!response.ok) throw new Error('Network response was not ok');
+        const data = await response.json();
+        
+        allCountries = data.map(c => ({
+          name: c.name.common,
+          iso: c.cca2.toLowerCase(),
+          // Correctly format IDD code (root + first suffix)
+          code: c.idd.root ? (c.idd.root + (c.idd.suffixes ? c.idd.suffixes[0] : '')) : '',
+          flag: c.flags.png || `https://flagcdn.com/w20/${c.cca2.toLowerCase()}.png`
+        })).filter(c => c.code !== '').sort((a,b) => a.name.localeCompare(b.name));
+
+        populateSelectors(allCountries);
+      } catch (error) {
+        console.error('Error fetching countries:', error);
+        // Fallback for offline or API issues
+        const fallback = [
+          { name: 'Togo', iso: 'tg', code: '+228', flag: 'https://flagcdn.com/w20/tg.png' },
+          { name: 'Bénin', iso: 'bj', code: '+229', flag: 'https://flagcdn.com/w20/bj.png' },
+          { name: 'Côte d\'Ivoire', iso: 'ci', code: '+225', flag: 'https://flagcdn.com/w20/ci.png' },
+          { name: 'France', iso: 'fr', code: '+33', flag: 'https://flagcdn.com/w20/fr.png' },
+          { name: 'Sénégal', iso: 'sn', code: '+221', flag: 'https://flagcdn.com/w20/sn.png' },
+          { name: 'Burkina Faso', iso: 'bf', code: '+226', flag: 'https://flagcdn.com/w20/bf.png' },
+          { name: 'Gabon', iso: 'ga', code: '+241', flag: 'https://flagcdn.com/w20/ga.png' },
+          { name: 'Cameroun', iso: 'cm', code: '+237', flag: 'https://flagcdn.com/w20/cm.png' }
+        ];
+        allCountries = fallback;
+        populateSelectors(fallback);
+      }
+    }
+
+    function populateSelectors(countries) {
+      if (countryResidenceSelect) {
+        countries.forEach(c => {
+          const opt = document.createElement('option');
+          opt.value = c.iso;
+          opt.textContent = c.name;
+          countryResidenceSelect.appendChild(opt);
+        });
+      }
+      renderCountryList(countries);
+    }
+
+    function renderCountryList(countries) {
+      if (!countryList) return;
+      countryList.innerHTML = '';
+      countries.forEach(c => {
+        const item = document.createElement('div');
+        item.className = 'country-item';
+        item.innerHTML = `
+          <img src="${c.flag}" alt="${c.iso}" class="country-flag">
+          <span class="text-gray-700 font-medium mr-2">${c.code}</span>
+          <span class="text-gray-600 text-sm truncate">${c.name}</span>
+        `;
+        item.onclick = () => {
+          if (currentFlag) currentFlag.src = c.flag;
+          if (dialCodeText) dialCodeText.textContent = c.code;
+          countryDropdown.classList.remove('active');
+        };
+        countryList.appendChild(item);
+      });
+    }
+
+    if (selectedCountry && countryDropdown) {
+      selectedCountry.onclick = (e) => {
+        e.stopPropagation();
+        countryDropdown.classList.toggle('active');
+        if (countryDropdown.classList.contains('active')) {
+          countrySearch.focus();
+        }
+      };
+
+      document.addEventListener('click', () => {
+        countryDropdown.classList.remove('active');
+      });
+
+      countryDropdown.onclick = (e) => e.stopPropagation();
+    }
+
+    if (countrySearch) {
+      countrySearch.oninput = (e) => {
+        const term = e.target.value.toLowerCase();
+        const filtered = allCountries.filter(c => 
+          c.name.toLowerCase().includes(term) || c.code.includes(term)
+        );
+        renderCountryList(filtered);
+      };
+    }
+
+    fetchCountries();
   </script>
 </body>
 
