@@ -137,44 +137,44 @@
       <div class="absolute inset-0 bg-black/40"></div>
 
       <!-- contenu -->
-      <div class="absolute inset-x-0 top-1/2 -translate-y-1/2 px-10 md:px-16 max-w-7xl text-white drop-shadow-xl">
+      <div class="absolute inset-x-0 top-1/2 -translate-y-1/2 px-6 sm:px-10 md:px-16 max-w-7xl text-white drop-shadow-xl font-futura">
         <!-- TITRE -->
-        <h1 class="text-2xl sm:text-3xl md:text-4xl lg:text-[44px] font-heavy mb-6">
+        <h1 class="text-[22px] sm:text-3xl md:text-4xl lg:text-[44px] font-heavy mb-3 sm:mb-6 leading-tight lg:leading-[1.1]">
           De La Conception À La Réalisation
         </h1>
 
         <!-- TEXTE -->
-        <p class="text-lg md:text-xl font-light sm:text-base md:text-lg leading-relaxed mb-8 max-w-xl">
-          <span class="whitespace-nowrap font-medium">Construction, énergie solaire, sécurité haute performance et préfabrication industrielle :</span><br />
+        <p class="text-sm sm:text-base md:text-lg lg:text-xl font-light leading-relaxed mb-4 sm:mb-8 max-w-xl">
+          <span class="sm:whitespace-nowrap font-medium">Construction, énergie solaire, sécurité haute performance et préfabrication industrielle :</span><br class="hidden sm:block" />
           AIAE réunit toutes les compétences pour <span class="font-medium">mener votre projet de A à Z.</span>
-          <br /><br />
+          <br class="hidden sm:block" /><br class="hidden sm:block" />
           <span class="font-medium">
             Un interlocuteur unique, des engagements tenus.
           </span>
         </p>
 
         <!-- BOUTONS -->
-        <div class="flex flex-col lg:flex-row items-center justify-between gap-4 lg:gap-0 w-full mt-16">
+        <div class="flex flex-col lg:flex-row items-center justify-between gap-3 sm:gap-4 lg:gap-0 w-full mt-6 sm:mt-10 lg:mt-16">
           <!-- BOUTON GAUCHE -->
           <div class="flex items-center bg-primary rounded-full shadow-lg p-1 w-full lg:w-fit">
-            <span class="px-6 py-2 text-white whitespace-nowrap flex-1 text-center lg:text-left font-light">
+            <span class="px-4 py-1.5 sm:px-6 sm:py-2 text-white sm:whitespace-nowrap flex-1 text-center lg:text-left font-light text-xs sm:text-base">
               Prendre rendez-vous maintenant
             </span>
-            <img src="Images/envoiblanc.png" class="h-7 w-7" />
+            <img src="Images/envoiblanc.png" class="h-6 w-6 sm:h-7 sm:w-7" />
           </div>
 
           <!-- BOUTON MILIEU -->
           <div class="flex items-center bg-secondary rounded-full shadow-lg p-1 w-full lg:w-fit">
-            <span class="px-6 py-2 text-white whitespace-nowrap flex-1 text-center lg:text-left font-light">
+            <span class="px-4 py-1.5 sm:px-6 sm:py-2 text-white sm:whitespace-nowrap flex-1 text-center lg:text-left font-light text-xs sm:text-base">
               Demander un devis gratuit
             </span>
-            <img src="Images/envoiblanc.png" class="h-7 w-7" />
+            <img src="Images/envoiblanc.png" class="h-6 w-6 sm:h-7 sm:w-7" />
           </div>
 
           <!-- TEXTE DROITE -->
-          <div class="flex items-start text-white w-full lg:w-fit lg:justify-end drop-shadow-xl">
-            <img src="Images/Arrow4Expertises.svg" class="h-9 w-9 mt-[6px] mr-3 shrink-0" />
-            <p class="text-lg md:text-xl font-medium leading-[1.1] md:leading-[1.2]">
+          <div class="flex items-start text-white w-full lg:w-fit lg:justify-end drop-shadow-xl mt-4 lg:mt-0">
+            <img src="Images/Arrow4Expertises.svg" class="h-8 w-8 sm:h-9 sm:w-9 mt-[4px] sm:mt-[6px] mr-3 shrink-0" />
+            <p class="text-base sm:text-lg md:text-xl font-medium leading-[1.1] md:leading-[1.2]">
               Un partenaire. Quatre<br />
               expertises. Zéro compromis.
             </p>
@@ -428,41 +428,46 @@
       </h2>
 
       <!-- GRID -->
-      <div class="grid grid-cols-2 rounded-xl overflow-hidden">
+      <div class="grid grid-cols-1 sm:grid-cols-2 rounded-2xl overflow-hidden shadow-2xl">
+        
         <!-- PARTICULIERS -->
-        <div class="relative group">
+        <div class="relative group h-64 sm:h-[350px] md:h-[450px]">
           <img src="Images/familles.png" class="w-full h-full object-cover" />
-
-          <button class="absolute font-medium  bottom-6 right-6 bg-white/20 backdrop-blur text-white text-xs px-4 py-1 rounded-full">
-            Contactez-nous
-          </button>
+          <div class="absolute inset-x-0 bottom-6 px-6 flex justify-end">
+            <a href="contact.html" class="bg-white/20 hover:bg-white/40 backdrop-blur-md text-white text-[10px] md:text-xs font-heavy px-5 py-2 rounded-full border border-white/30 transition-all uppercase tracking-widest">
+              Contactez-nous
+            </a>
+          </div>
         </div>
 
         <!-- DIASPORA -->
-        <div class="relative group">
+        <div class="relative group h-64 sm:h-[350px] md:h-[450px]">
           <img src="Images/diaspora.png" class="w-full h-full object-cover" />
-
-          <button class="absolute font-medium  bottom-6 right-6 bg-white/20 backdrop-blur text-white text-xs px-4 py-1 rounded-full">
-            Contactez-nous
-          </button>
+          <div class="absolute inset-x-0 bottom-6 px-6 flex justify-end">
+            <a href="contact.html" class="bg-white/20 hover:bg-white/40 backdrop-blur-md text-white text-[10px] md:text-xs font-heavy px-5 py-2 rounded-full border border-white/30 transition-all uppercase tracking-widest">
+              Contactez-nous
+            </a>
+          </div>
         </div>
 
         <!-- ENTREPRISES -->
-        <div class="relative group">
+        <div class="relative group h-64 sm:h-[350px] md:h-[450px]">
           <img src="Images/entreprises.png" class="w-full h-full object-cover" />
-
-          <button class="absolute font-medium  bottom-6 right-6 bg-white/20 backdrop-blur text-white text-xs px-4 py-1 rounded-full">
-            Contactez-nous
-          </button>
+          <div class="absolute inset-x-0 bottom-6 px-6 flex justify-end">
+            <a href="contact.html" class="bg-white/20 hover:bg-white/40 backdrop-blur-md text-white text-[10px] md:text-xs font-heavy px-5 py-2 rounded-full border border-white/30 transition-all uppercase tracking-widest">
+              Contactez-nous
+            </a>
+          </div>
         </div>
 
         <!-- INSTITUTIONS -->
-        <div class="relative group">
+        <div class="relative group h-64 sm:h-[350px] md:h-[450px]">
           <img src="Images/institutions.png" class="w-full h-full object-cover" />
-
-          <button class="absolute font-medium  bottom-6 right-6 bg-white/20 backdrop-blur text-white text-xs px-4 py-1 rounded-full">
-            Contactez-nous
-          </button>
+          <div class="absolute inset-x-0 bottom-6 px-6 flex justify-end">
+            <a href="contact.html" class="bg-white/20 hover:bg-white/40 backdrop-blur-md text-white text-[10px] md:text-xs font-heavy px-5 py-2 rounded-full border border-white/30 transition-all uppercase tracking-widest">
+              Contactez-nous
+            </a>
+          </div>
         </div>
       </div>
     </div>
@@ -1868,7 +1873,7 @@
             </li>
 
             <li>
-              <a href="#" class="hover:text-darkBlue transition">
+              <a href="mentions-legales.html" class="hover:text-darkBlue transition">
                 Mentions légales
               </a>
             </li>
