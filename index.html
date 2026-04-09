@@ -325,7 +325,7 @@
 
         <!-- BOUTON FINAL -->
         <button
-          class="col-span-1 sm:col-span-2 md:col-span-2 w-full h-10 px-4 flex items-center justify-center bg-primary text-white rounded-lg text-xs sm:text-sm whitespace-nowrap hover:bg-opacity-90">
+          class="col-span-1 sm:col-span-2 md:col-span-2 w-full h-10 px-4 flex items-center justify-center bg-primary text-white rounded-lg text-xs sm:text-sm hover:bg-opacity-90">
           Poursuivre La Simulation
         </button>
 
@@ -474,21 +474,21 @@
   </section>
 
   <!-- ================= SECTION NOS DIVISIONS ================= -->
-  <section class="relative pt-24 pb-36 bg-[#f3f3f3] overflow-hidden">
+  <section class="relative pt-4 md:pt-24 pb-20 md:pb-36 bg-[#f3f3f3] overflow-hidden">
 
     <!-- forme "demi-cercle" décoratif parfait -->
     <div class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2
-              w-[900px] h-[900px] 
+              w-[200vw] sm:w-[150vw] md:w-[900px] aspect-square
               bg-gray-200 rounded-full">
     </div>
 
     <!-- image décorative gauche -->
-    <img src="Images/Gauche.png" class="absolute left-0 top-1/2 -translate-y-1/2 w-[470px]">
+    <img src="Images/Gauche.png" class="absolute left-0 top-1/2 -translate-y-1/2 w-[30vw] md:w-[40vw] lg:w-[470px]">
 
     <!-- image décorative droite -->
-    <img src="Images/Droit.png" class="absolute right-0 top-1/2 -translate-y-1/2 w-[450px]">
+    <img src="Images/Droit.png" class="absolute right-0 top-1/2 -translate-y-1/2 w-[30vw] md:w-[40vw] lg:w-[450px]">
 
-    <div class="relative max-w-[900px] mx-auto text-center px-6">
+    <div class="relative z-10 max-w-[900px] mx-auto text-center px-6">
 
       <!-- TITRE -->
       <h2 class="text-darkBlue font-black text-[40px] sm:text-[60px] md:text-[90px] leading-[1.05]">
@@ -497,7 +497,7 @@
       </h2>
 
       <!-- TEXTE -->
-      <p class="mt-6 font-normal text-sm md:text-base text-black max-w-[520px] mx-auto leading-relaxed">
+      <p class="mt-4 sm:mt-2 font-normal text-[10px] min-[400px]:text-xs sm:text-sm md:text-base text-black max-w-[520px] mx-auto leading-relaxed">
 
         AIAE STRUCTURE SON DÉVELOPPEMENT AUTOUR DE<br>
 
@@ -520,29 +520,28 @@
 
       <!-- Ligne 1 -->
 
-      <div class="grid md:grid-cols-[400px_1fr] gap-12 items-stretch">
+      <div class="grid md:grid-cols-[400px_1fr] gap-12 md:items-stretch">
 
-        <!-- Image -->
-        <img src="Images/Construction.png" class="rounded-[20px] w-full h-full object-cover">
+        <img src="Images/Construction.png" class="rounded-[20px] w-full h-auto max-h-[300px] md:h-full md:max-h-none object-contain object-center">
 
         <!-- Texte -->
-        <div>
-          <h3 class="text-primary font-extrabold text-5xl mb-4">
+        <div class="flex flex-col justify-center">
+          <h3 class="text-primary font-extrabold text-[32px] md:text-5xl mb-4 leading-tight">
             CONSTRUCTION
           </h3>
 
-          <p class="text-gray-800 leading-relaxed text-[22px] font-book">
-            <span class="font-heavy text-gray-900">Notre cœur de métier.</span> Nous concevons et<br> réalisons des
-            <span class="font-heavy text-gray-900">infrastructures durables</span> : villas<br> résidentielles,
-            bâtiments commerciaux, ouvrages<br> d’art et infrastructures techniques.
-            <span class="font-heavy text-primary">Conception<br> architecturale et structurelle.</span>
-            <span class="font-heavy text-gray-900">Construction tous<br> standings (Standard à Prestige).
-            Ouvrages<br> d’art</span> <span class="font-heavy text-primary">(ponts, murs de soutènement, etc.)</span>.<br>
-            <span class="font-heavy text-primary">Réhabilitation et extension</span> <span class="font-heavy text-gray-900">de bâtiments<br> existants.</span>
+          <p class="text-gray-800 leading-relaxed text-[16px] md:text-[22px] font-book">
+            <span class="font-heavy text-gray-900">Notre cœur de métier.</span> Nous concevons et<br class="hidden md:block"> réalisisons des
+            <span class="font-heavy text-gray-900">infrastructures durables</span> : villas<br class="hidden md:block"> résidentielles,
+            bâtiments commerciaux, ouvrages<br class="hidden md:block"> d’art et infrastructures techniques.
+            <span class="font-heavy text-primary">Conception<br class="hidden md:block"> architecturale et structurelle.</span>
+            <span class="font-heavy text-gray-900">Construction tous<br class="hidden md:block"> standings (Standard à Prestige).
+            Ouvrages<br class="hidden md:block"> d’art</span> <span class="font-heavy text-primary">(ponts, murs de soutènement, etc.)</span>.<br class="hidden md:block">
+            <span class="font-heavy text-primary">Réhabilitation et extension</span> <span class="font-heavy text-gray-900">de bâtiments<br class="hidden md:block"> existants.</span>
           </p>
 
-          <p class="text-primary mt-5 text-[22px] font-book">
-            À partir de <span class="font-black text-xl">330 000 FCFA/m²</span>
+          <p class="text-primary mt-5 text-[18px] md:text-[22px] font-book">
+            À partir de <span class="font-black text-lg md:text-xl">330 000 FCFA/m²</span>
           </p>
 
         </div>
@@ -553,32 +552,31 @@
       <div class="border-t border-gray-300 my-10 relative"></div>
 
       <!-- Ligne 2 -->
-      <div class="grid md:grid-cols-[1fr_400px] gap-12 items-stretch">
+      <div class="grid md:grid-cols-[1fr_400px] gap-12 md:items-stretch flex flex-col">
 
         <!-- Texte énergie -->
-        <div class="text-right">
-          <h3 class="text-secondary font-black text-5xl mb-4">
+        <div class="md:text-right flex flex-col justify-center order-last md:order-first">
+          <h3 class="text-secondary font-black text-[32px] md:text-5xl mb-4 leading-tight">
             ÉNERGIE
           </h3>
 
-          <p class="text-gray-800 leading-relaxed text-[22px] font-book">
-            Solutions <span class="font-heavy text-gray-900">d’autonomie énergétique</span> pour vos<br>
-            installations. Nous dimensionnons et installons des<br>
-            <span class="font-heavy text-gray-900">systèmes solaires adaptés aux besoins des entreprises<br>
-            et exploitations agricoles</span>. <span class="font-heavy text-secondary">Solaire C&I</span> (commercial et<br>
-            industriel) pour entreprises et exploitations. <span class="font-heavy text-secondary">Systèmes<br>
-            hybrides</span> avec stockage par batteries. Solutions pour<br>
-            <span class="font-heavy text-secondary">sites isolés</span> ou <span class="font-heavy text-secondary">sans raccordement</span>. <span class="font-heavy text-secondary">Maintenance et<br>
+          <p class="text-gray-800 leading-relaxed text-[16px] md:text-[22px] font-book">
+            Solutions <span class="font-heavy text-gray-900">d’autonomie énergétique</span> pour vos<br class="hidden md:block">
+            installations. Nous dimensionnons et installons des<br class="hidden md:block">
+            <span class="font-heavy text-gray-900">systèmes solaires adaptés aux besoins des entreprises<br class="hidden md:block">
+            et exploitations agricoles</span>. <span class="font-heavy text-secondary">Solaire C&I</span> (commercial et<br class="hidden md:block">
+            industriel) pour entreprises et exploitations. <span class="font-heavy text-secondary">Systèmes<br class="hidden md:block">
+            hybrides</span> avec stockage par batteries. Solutions pour<br class="hidden md:block">
+            <span class="font-heavy text-secondary">sites isolés</span> ou <span class="font-heavy text-secondary">sans raccordement</span>. <span class="font-heavy text-secondary">Maintenance et<br class="hidden md:block">
             optimisation</span> des installations
           </p>
 
-          <p class="mt-5 text-gray-600 text-2xl font-book">
-            Lancement <span class="font-black text-2xl">2026</span>
+          <p class="mt-5 text-gray-600 text-[18px] md:text-2xl font-book">
+            Lancement <span class="font-black text-[18px] md:text-2xl">2026</span>
           </p>
         </div>
 
-        <!-- Image énergie -->
-        <img src="Images/Energie.png" class="rounded-[20px] w-full h-full object-cover">
+        <img src="Images/Energie.png" class="rounded-[20px] w-full h-auto max-h-[300px] md:h-full md:max-h-none object-contain object-center order-first md:order-last">
 
       </div>
 
@@ -586,29 +584,28 @@
       <div class="border-t border-gray-300 my-10"></div>
 
       <!-- Ligne 3 -->
-      <div class="grid md:grid-cols-[400px_1fr] gap-12 items-stretch">
+      <div class="grid md:grid-cols-[400px_1fr] gap-12 md:items-stretch">
 
-        <!-- Image sécurité -->
-        <img src="Images/Sécurité.png" class="rounded-[20px] w-full h-full object-cover">
+        <img src="Images/Sécurité.png" class="rounded-[20px] w-full h-auto max-h-[300px] md:h-full md:max-h-none object-contain object-center">
 
         <!-- Texte sécurité -->
-        <div class="text-left">
-          <h3 class="text-primary font-black text-5xl mb-4">
+        <div class="text-left flex flex-col justify-center">
+          <h3 class="text-primary font-black text-[32px] md:text-5xl mb-4 leading-tight">
             SÉCURITÉ
           </h3>
 
-          <p class="text-gray-800 leading-relaxed text-[22px] font-book">
-            <span class="font-heavy text-gray-900">Protection haute performance</span> pour vos biens et vos<br>
-            personnes. Nous concevons et installons <span class="font-heavy text-gray-900">des solutions<br>
-            de sécurité physique</span> répondant aux <span class="font-heavy text-gray-900">normes<br>
-            européennes (EN 1143-1)</span>. <span class="font-heavy text-primary">Chambres fortes</span> et <span class="font-heavy text-primary">coffres<br>
-            certifiés</span> (banques, entreprises). <span class="font-heavy text-primary">Safe rooms</span>, <span class="font-heavy text-primary">salles de<br>
-            repli sécurisées</span> pour particuliers ou dirigeants.<br>
-            <span class="font-heavy text-primary">Armureries</span> et <span class="font-heavy text-primary">locaux de stockage sensible.</span> Systèmes<br>
+          <p class="text-gray-800 leading-relaxed text-[16px] md:text-[22px] font-book">
+            <span class="font-heavy text-gray-900">Protection haute performance</span> pour vos biens et vos<br class="hidden md:block">
+            personnes. Nous concevons et installons <span class="font-heavy text-gray-900">des solutions<br class="hidden md:block">
+            de sécurité physique</span> répondant aux <span class="font-heavy text-gray-900">normes<br class="hidden md:block">
+            européennes (EN 1143-1)</span>. <span class="font-heavy text-primary">Chambres fortes</span> et <span class="font-heavy text-primary">coffres<br class="hidden md:block">
+            certifiés</span> (banques, entreprises). <span class="font-heavy text-primary">Safe rooms</span>, <span class="font-heavy text-primary">salles de<br class="hidden md:block">
+            repli sécurisées</span> pour particuliers ou dirigeants.<br class="hidden md:block">
+            <span class="font-heavy text-primary">Armureries</span> et <span class="font-heavy text-primary">locaux de stockage sensible.</span> Systèmes<br class="hidden md:block">
             de <span class="font-heavy text-primary">contrôle d’accès</span>
           </p>
 
-          <p class="mt-5 text-primary text-2xl font-book">
+          <p class="mt-5 text-primary text-[18px] md:text-2xl font-book">
             Prochainement
           </p>
         </div>
@@ -619,31 +616,30 @@
       <div class="border-t border-gray-300 my-10"></div>
 
       <!-- Ligne 4 -->
-      <div class="grid md:grid-cols-[1fr_400px] gap-12 items-stretch">
+      <div class="grid md:grid-cols-[1fr_400px] gap-12 md:items-stretch flex flex-col">
 
         <!-- Texte prefabrication -->
-        <div class="text-right">
-          <h3 class="text-secondary font-black text-5xl mb-4">
+        <div class="md:text-right flex flex-col justify-center order-last md:order-first">
+          <h3 class="text-secondary font-black text-[32px] md:text-5xl mb-4 leading-tight">
             PRÉFABRICATION
           </h3>
 
-          <p class="text-gray-800 leading-relaxed text-[22px] font-book">
-            Production industrielle d’éléments de construction pour<br>
-            <span class="font-heavy text-gray-900">des chantiers plus rapides, plus économiques<br>
-            (-15 à -25% sur les coûts)</span> et de <span class="font-heavy text-gray-900">meilleure qualité.</span> <span class="font-heavy text-secondary">BTC</span><br>
-            (briques de terre compressée), <span class="font-heavy text-secondary">matériau écologique</span><br>
-            local. Éléments en <span class="font-heavy text-secondary">béton précontraint</span> (portées longues,<br>
-            résistance accrue). <span class="font-heavy text-secondary">Nervures</span> et <span class="font-heavy text-secondary">poutrelles</span> pour<br>
+          <p class="text-gray-800 leading-relaxed text-[16px] md:text-[22px] font-book">
+            Production industrielle d’éléments de construction pour<br class="hidden md:block">
+            <span class="font-heavy text-gray-900">des chantiers plus rapides, plus économiques<br class="hidden md:block">
+            (-15 à -25% sur les coûts)</span> et de <span class="font-heavy text-gray-900">meilleure qualité.</span> <span class="font-heavy text-secondary">BTC</span><br class="hidden md:block">
+            (briques de terre compressée), <span class="font-heavy text-secondary">matériau écologique</span><br class="hidden md:block">
+            local. Éléments en <span class="font-heavy text-secondary">béton précontraint</span> (portées longues,<br class="hidden md:block">
+            résistance accrue). <span class="font-heavy text-secondary">Nervures</span> et <span class="font-heavy text-secondary">poutrelles</span> pour<br class="hidden md:block">
             planchers. Éléments pour <span class="font-heavy text-secondary">ponts</span> et <span class="font-heavy text-secondary">ouvrages d’art</span>
           </p>
 
-          <p class="mt-5 text-secondary text-2xl font-book">
+          <p class="mt-5 text-secondary text-[18px] md:text-2xl font-book">
             Prochainement
           </p>
         </div>
 
-        <!-- Image prefabrication -->
-        <img src="Images/Préfabrication.png" class="rounded-[20px] w-full h-full object-cover">
+        <img src="Images/Préfabrication.png" class="rounded-[20px] w-full h-auto max-h-[300px] md:h-full md:max-h-none object-contain object-center order-first md:order-last">
 
       </div>
 
@@ -658,7 +654,7 @@
 
       <!-- Bouton RDV -->
       <button class="flex items-center justify-center bg-primary rounded-full shadow-lg p-1 w-full sm:w-fit hover:opacity-90 transition">
-        <span class="px-6 py-2 text-white whitespace-nowrap text-center font-light">
+        <span class="px-6 py-2 text-white text-center font-light">
           Prendre rendez-vous maintenant
         </span>
         <img src="Images/envoiblanc.png" class="h-7 w-7" />
@@ -666,7 +662,7 @@
 
       <!-- Bouton devis -->
       <button class="flex items-center justify-center bg-secondary rounded-full shadow-lg p-1 w-full sm:w-fit hover:opacity-90 transition">
-        <span class="px-6 py-2 text-white whitespace-nowrap text-center font-light">
+        <span class="px-6 py-2 text-white text-center font-light">
           Demander un devis gratuit
         </span>
         <img src="Images/envoiblanc.png" class="h-7 w-7" />
@@ -681,12 +677,12 @@
 
     <div class="max-w-[1600px] mx-auto px-8 lg:px-[100px] pt-10">
 
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center text-center lg:text-left">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-12 items-center text-center lg:text-left">
 
         <!-- GAUCHE : TEXTE -->
         <div class="text-white relative flex justify-center lg:justify-end">
 
-          <h2 class="text-5xl md:text-6xl lg:text-[80px] font-heavy leading-[1.1] mb-10 text-center lg:text-left lg:translate-x-10 z-10">
+          <h2 class="text-[40px] sm:text-5xl md:text-6xl lg:text-[80px] font-heavy leading-[1.1] mb-4 lg:mb-10 text-center lg:text-left lg:translate-x-10 z-10">
             Pourquoi<br>
             Choisir AIAE ?
           </h2>
@@ -726,10 +722,10 @@
               UN INTERLOCUTEUR UNIQUE
             </h3>
 
-            <p class="text-gray-700 text-[24px] leading-relaxed font-medium whitespace-nowrap">
-              Fini la coordination entre architecte, bureau<br>
-              d’études, constructeur et installateurs. <span class="font-heavy">AIAE<br>
-              prend en charge l’intégralité de votre projet</span>,<br>
+            <p class="text-gray-700 text-[18px] xl:text-[24px] leading-relaxed font-medium">
+              Fini la coordination entre architecte, bureau<br class="hidden xl:block">
+              d’études, constructeur et installateurs. <span class="font-heavy">AIAE<br class="hidden xl:block">
+              prend en charge l’intégralité de votre projet</span>,<br class="hidden xl:block">
               de la première esquisse à la remise des clés.
             </p>
           </div>
@@ -750,10 +746,10 @@
               EXPERTISE TECHNIQUE AVANCÉE
             </h3>
 
-            <p class="text-gray-700 text-[24px] leading-relaxed font-medium whitespace-nowrap">
-              <span class="font-heavy">Forte de plus de 18 ans d’expérience en génie<br>
-              civil</span>, AIAE dispose de <span class="font-heavy">compétences rares pour<br>
-              traiter des projets complexes</span> : ouvrages d’art,<br>
+            <p class="text-gray-700 text-[18px] xl:text-[24px] leading-relaxed font-medium">
+              <span class="font-heavy">Forte de plus de 18 ans d’expérience en génie<br class="hidden xl:block">
+              civil</span>, AIAE dispose de <span class="font-heavy">compétences rares pour<br class="hidden xl:block">
+              traiter des projets complexes</span> : ouvrages d’art,<br class="hidden xl:block">
               béton précontraint, structures spéciales.
             </p>
           </div>
@@ -774,10 +770,10 @@
               DES ENGAGEMENTS TENUS
             </h3>
 
-            <p class="text-gray-700 text-[24px] leading-relaxed font-medium whitespace-nowrap">
-              Dans un secteur où la parole ne vaut souvent<br>
-              rien, <span class="font-heavy">nous faisons de la fiabilité notre marque<br>
-              de fabrique.</span> Délais respectés, budgets<br>
+            <p class="text-gray-700 text-[18px] xl:text-[24px] leading-relaxed font-medium">
+              Dans un secteur où la parole ne vaut souvent<br class="hidden xl:block">
+              rien, <span class="font-heavy">nous faisons de la fiabilité notre marque<br class="hidden xl:block">
+              de fabrique.</span> Délais respectés, budgets<br class="hidden xl:block">
               maîtrisés, qualité garantie.
             </p>
           </div>
@@ -798,10 +794,10 @@
               TRANSPARENCE TOTALE
             </h3>
 
-            <p class="text-gray-700 text-[24px] leading-relaxed font-medium whitespace-nowrap">
-              <span class="font-heavy">Devis détaillés basés sur notre Bordereau<br>
-              des Prix Unitaires (BPU)</span>, suivi de chantier<br>
-              accessible, facturation claire. <span class="font-heavy">Vous savez<br>
+            <p class="text-gray-700 text-[18px] xl:text-[24px] leading-relaxed font-medium">
+              <span class="font-heavy">Devis détaillés basés sur notre Bordereau<br class="hidden xl:block">
+              des Prix Unitaires (BPU)</span>, suivi de chantier<br class="hidden xl:block">
+              accessible, facturation claire. <span class="font-heavy">Vous savez<br class="hidden xl:block">
               exactement ce que vous payez et pourquoi.</span>
             </p>
           </div>
@@ -822,10 +818,10 @@
               SOLUTIONS INTÉGRÉES UNIQUES
             </h3>
 
-            <p class="text-gray-700 text-[24px] leading-relaxed font-medium whitespace-nowrap">
-              Construction + Énergie + Sécurité : <span class="font-heavy">nous<br>
-              pouvons livrer un bâtiment autonome en<br>
-              énergie et sécurisé dès la conception.</span> Une<br>
+            <p class="text-gray-700 text-[18px] xl:text-[24px] leading-relaxed font-medium">
+              Construction + Énergie + Sécurité : <span class="font-heavy">nous<br class="hidden xl:block">
+              pouvons livrer un bâtiment autonome en<br class="hidden xl:block">
+              énergie et sécurisé dès la conception.</span> Une<br class="hidden xl:block">
               combinaison rare sur le marché togolais.
             </p>
           </div>
@@ -838,7 +834,7 @@
 
           <!-- bouton RDV -->
           <button class="flex items-center justify-center bg-primary rounded-full shadow-lg p-1 w-full sm:w-[350px] hover:opacity-90 transition">
-            <span class="px-6 py-2 text-white whitespace-nowrap text-center font-light">
+            <span class="px-6 py-2 text-white text-center font-light">
               Prendre rendez-vous maintenant
             </span>
             <img src="Images/envoiblanc.png" class="h-7 w-7" />
@@ -846,7 +842,7 @@
 
           <!-- bouton devis -->
           <button class="flex items-center justify-center bg-secondary rounded-full shadow-lg p-1 w-full sm:w-[350px] hover:opacity-90 transition">
-            <span class="px-6 py-2 text-white whitespace-nowrap text-center font-light">
+            <span class="px-6 py-2 text-white text-center font-light">
               Demander un devis gratuit
             </span>
             <img src="Images/envoiblanc.png" class="h-7 w-7" />
@@ -865,12 +861,12 @@
 
     <div class="max-w-[1200px] mx-auto px-8 lg:px-[100px] pt-10">
 
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center text-center lg:text-left">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-12 items-center text-center lg:text-left">
 
         <!-- GAUCHE : TEXTE -->
         <div class="text-white relative mx-auto lg:ml-20 max-w-xl">
 
-          <h2 class="text-5xl md:text-5xl lg:text-6xl font-heavy leading-tight mb-10 text-center lg:text-left">
+          <h2 class="text-[40px] sm:text-5xl lg:text-6xl font-heavy leading-tight mb-4 lg:mb-10 text-center lg:text-left">
             Nos<br> Engagements<br> Concrets
           </h2>
 
@@ -909,9 +905,9 @@
               DEVIS GRATUIT DÉTAILLÉ
             </h3>
 
-            <p class="text-gray-700 text-[24px] leading-relaxed font-medium whitespace-nowrap">
-              Vous recevez un <span class="font-heavy">devis ligne par<br>
-              ligne, basé sur notre BPU</span>. Pas de<br>
+            <p class="text-gray-700 text-[18px] xl:text-[24px] leading-relaxed font-medium">
+              Vous recevez un <span class="font-heavy">devis ligne par<br class="hidden xl:block">
+              ligne, basé sur notre BPU</span>. Pas de<br class="hidden xl:block">
               mauvaises surprises.
             </p>
           </div>
@@ -932,9 +928,9 @@
               PLANNING CONTRACTUEL
             </h3>
 
-            <p class="text-gray-700 text-[24px] leading-relaxed font-medium whitespace-nowrap">
-              Les délais sont inscrits au contrat. <span class="font-heavy">En<br>
-              cas de retard de notre fait, des<br>
+            <p class="text-gray-700 text-[18px] xl:text-[24px] leading-relaxed font-medium">
+              Les délais sont inscrits au contrat. <span class="font-heavy">En<br class="hidden xl:block">
+              cas de retard de notre fait, des<br class="hidden xl:block">
               pénalités s’appliquent.</span>
             </p>
           </div>
@@ -955,9 +951,9 @@
               GARANTIE DÉCENNALE
             </h3>
 
-            <p class="text-gray-700 text-[24px] leading-relaxed font-medium whitespace-nowrap">
-              Conformément à la loi, <span class="font-heavy">nous<br>
-              garantissons la solidité de<br>
+            <p class="text-gray-700 text-[18px] xl:text-[24px] leading-relaxed font-medium">
+              Conformément à la loi, <span class="font-heavy">nous<br class="hidden xl:block">
+              garantissons la solidité de<br class="hidden xl:block">
               l’ouvrage pendant 10 ans.</span>
             </p>
           </div>
@@ -978,9 +974,9 @@
               ASSURANCE RC PRO
             </h3>
 
-            <p class="text-gray-700 text-[24px] leading-relaxed font-medium whitespace-nowrap">
-              <span class="font-heavy">Notre responsabilité</span> civile<br>
-              professionnelle <span class="font-heavy">couvre les<br>
+            <p class="text-gray-700 text-[18px] xl:text-[24px] leading-relaxed font-medium">
+              <span class="font-heavy">Notre responsabilité</span> civile<br class="hidden xl:block">
+              professionnelle <span class="font-heavy">couvre les<br class="hidden xl:block">
               dommages éventuels sur chantier.</span>
             </p>
           </div>
@@ -1001,9 +997,9 @@
               PAIEMENT PAR ÉTAPES
             </h3>
 
-            <p class="text-gray-700 text-[24px] leading-relaxed font-medium whitespace-nowrap">
-              <span class="font-heavy">Vous payez au fur et à mesure de<br>
-              l’avancement</span>, selon un échéancier<br>
+            <p class="text-gray-700 text-[18px] xl:text-[24px] leading-relaxed font-medium">
+              <span class="font-heavy">Vous payez au fur et à mesure de<br class="hidden xl:block">
+              l’avancement</span>, selon un échéancier<br class="hidden xl:block">
               défini ensemble.
             </p>
           </div>
@@ -1024,9 +1020,9 @@
               CONFIDENTIALITÉ
             </h3>
 
-            <p class="text-gray-700 text-[24px] leading-relaxed font-medium whitespace-nowrap">
-              Tous nos projets sont traités avec<br>
-              discrétion. <span class="font-heavy">Secret professionnel<br>
+            <p class="text-gray-700 text-[18px] xl:text-[24px] leading-relaxed font-medium">
+              Tous nos projets sont traités avec<br class="hidden xl:block">
+              discrétion. <span class="font-heavy">Secret professionnel<br class="hidden xl:block">
               contractualisé.</span>
             </p>
           </div>
@@ -1047,9 +1043,9 @@
               ACCOMPAGNEMENT FINANCEMENT
             </h3>
 
-            <p class="text-gray-700 text-[24px] leading-relaxed font-medium whitespace-nowrap">
-              <span class="font-heavy">Nous pouvons vous orienter dans<br>
-              vos démarches de crédit</span> auprès des<br>
+            <p class="text-gray-700 text-[18px] xl:text-[24px] leading-relaxed font-medium">
+              <span class="font-heavy">Nous pouvons vous orienter dans<br class="hidden xl:block">
+              vos démarches de crédit</span> auprès des<br class="hidden xl:block">
               banques partenaires.
             </p>
           </div>
@@ -1062,7 +1058,7 @@
 
           <!-- bouton RDV -->
           <button class="flex items-center justify-center bg-primary rounded-full shadow-lg p-1 w-full sm:w-[350px] hover:opacity-90 transition">
-            <span class="px-6 py-2 text-white whitespace-nowrap text-center font-light">
+            <span class="px-6 py-2 text-white text-center font-light">
               Prendre rendez-vous maintenant
             </span>
             <img src="Images/envoiblanc.png" class="h-7 w-7" />
@@ -1070,7 +1066,7 @@
 
           <!-- bouton devis -->
           <button class="flex items-center justify-center bg-secondary rounded-full shadow-lg p-1 w-full sm:w-[350px] hover:opacity-90 transition">
-            <span class="px-6 py-2 text-white whitespace-nowrap text-center font-light">
+            <span class="px-6 py-2 text-white text-center font-light">
               Demander un devis gratuit
             </span>
             <img src="Images/envoiblanc.png" class="h-7 w-7" />
@@ -1094,7 +1090,7 @@
         <!-- GAUCHE : TEXTE -->
         <div class="text-white lg:ml-20 max-w-xl">
 
-          <h2 class="text-5xl md:text-6xl lg:text-[80px] font-heavy leading-tight mb-8 whitespace-nowrap">
+          <h2 class="text-[40px] sm:text-5xl md:text-6xl lg:text-[80px] font-heavy leading-tight mb-4 lg:mb-8">
             Nos Valeurs
           </h2>
 
@@ -1135,14 +1131,14 @@
           </div>
 
           <div>
-            <h3 class="text-secondary font-extrabold text-2xl mb-2 whitespace-nowrap">
+            <h3 class="text-secondary font-extrabold text-2xl mb-2">
               LA QUALITÉ EST<br>
               PRIMORDIALE
             </h3>
 
-            <p class="text-gray-700 text-[24px] leading-relaxed font-medium whitespace-nowrap">
-              Nous ne construisons pas pour<br>
-              aujourd’hui, <span class="font-heavy">nous construisons<br>
+            <p class="text-gray-700 text-[18px] xl:text-[24px] leading-relaxed font-medium">
+              Nous ne construisons pas pour<br class="hidden xl:block">
+              aujourd’hui, <span class="font-heavy">nous construisons<br class="hidden xl:block">
               pour des générations.</span>
             </p>
           </div>
@@ -1159,14 +1155,14 @@
           </div>
 
           <div>
-            <h3 class="text-secondary font-extrabold text-2xl mb-2 whitespace-nowrap">
+            <h3 class="text-secondary font-extrabold text-2xl mb-2">
               LA PAROLE DONNÉE<br>
               EST SACRÉE
             </h3>
 
-            <p class="text-gray-700 text-[24px] leading-relaxed font-medium whitespace-nowrap">
-              <span class="font-heavy">Un engagement pris est un<br>
-              engagement tenu.</span> Sans<br>
+            <p class="text-gray-700 text-[18px] xl:text-[24px] leading-relaxed font-medium">
+              <span class="font-heavy">Un engagement pris est un<br class="hidden xl:block">
+              engagement tenu.</span> Sans<br class="hidden xl:block">
               exception.
             </p>
           </div>
@@ -1183,13 +1179,13 @@
           </div>
 
           <div>
-            <h3 class="text-secondary font-extrabold text-2xl mb-2 whitespace-nowrap">
+            <h3 class="text-secondary font-extrabold text-2xl mb-2">
               HONNÊTETÉ ENVERS<br>
               LES CLIENTS
             </h3>
 
-            <p class="text-gray-700 text-[24px] leading-relaxed font-medium whitespace-nowrap">
-              Un <span class="font-heavy">client bien informé</span> est<br>
+            <p class="text-gray-700 text-[18px] xl:text-[24px] leading-relaxed font-medium">
+              Un <span class="font-heavy">client bien informé</span> est<br class="hidden xl:block">
               un client satisfait.
             </p>
           </div>
@@ -1210,8 +1206,8 @@
               RESPECT DES ÉQUIPES
             </h3>
 
-            <p class="text-gray-700 text-[24px] leading-relaxed font-medium whitespace-nowrap">
-              La qualité dépend du <span class="font-heavy">respect<br>
+            <p class="text-gray-700 text-[18px] xl:text-[24px] leading-relaxed font-medium">
+              La qualité dépend du <span class="font-heavy">respect<br class="hidden xl:block">
               accordé à ceux qui réalisent.</span>
             </p>
           </div>
@@ -1228,14 +1224,14 @@
           </div>
 
           <div>
-            <h3 class="text-secondary font-extrabold text-2xl mb-2 whitespace-nowrap">
+            <h3 class="text-secondary font-extrabold text-2xl mb-2">
               RESPECT DES DÉLAIS<br>
               ET DES COÛTS
             </h3>
 
-            <p class="text-gray-700 text-[24px] leading-relaxed font-medium whitespace-nowrap">
-              <span class="font-heavy">Un projet en retard ou hors<br>
-              budget est un échec</span>, même<br>
+            <p class="text-gray-700 text-[18px] xl:text-[24px] leading-relaxed font-medium">
+              <span class="font-heavy">Un projet en retard ou hors<br class="hidden xl:block">
+              budget est un échec</span>, même<br class="hidden xl:block">
               s’il est techniquement parfait.
             </p>
           </div>
@@ -1248,7 +1244,7 @@
 
           <!-- bouton RDV -->
           <button class="flex items-center justify-center bg-primary rounded-full shadow-lg p-1 w-full sm:w-[350px] hover:opacity-90 transition">
-            <span class="px-6 py-2 text-white whitespace-nowrap text-center font-light">
+            <span class="px-6 py-2 text-white text-center font-light">
               Prendre rendez-vous maintenant
             </span>
             <img src="Images/envoiblanc.png" class="h-7 w-7" />
@@ -1256,7 +1252,7 @@
 
           <!-- bouton devis -->
           <button class="flex items-center justify-center bg-secondary rounded-full shadow-lg p-1 w-full sm:w-[350px] hover:opacity-90 transition">
-            <span class="px-6 py-2 text-white whitespace-nowrap text-center font-light">
+            <span class="px-6 py-2 text-white text-center font-light">
               Demander un devis gratuit
             </span>
             <img src="Images/envoiblanc.png" class="h-7 w-7" />
@@ -1279,7 +1275,7 @@
       <div class="bg-primary rounded-[30px] p-12">
 
         <!-- TITRE -->
-        <h2 class="text-5xl text-white md:text-6xl lg:text-[60px] font-heavy leading-tight mb-3 whitespace-nowrap">
+        <h2 class="text-5xl text-white md:text-6xl lg:text-[60px] font-heavy leading-tight mb-3">
           Vous vivez à l'étranger ?
         </h2>
 
@@ -1386,7 +1382,7 @@
 
           <!-- bouton RDV -->
           <button class="flex items-center justify-center bg-primary border-2 border-white rounded-full shadow-lg p-1 mb-6 w-full sm:w-[350px] hover:opacity-90 transition">
-            <span class="px-6 py-2 text-white whitespace-nowrap text-center font-light">
+            <span class="px-6 py-2 text-white text-center font-light">
               Prendre rendez-vous maintenant
             </span>
             <img src="Images/envoiblanc.png" class="h-7 w-7" />
@@ -1394,7 +1390,7 @@
 
           <!-- bouton devis -->
           <button class="flex items-center justify-center bg-secondary rounded-full shadow-lg p-1 w-full sm:w-[350px] hover:opacity-90 transition">
-            <span class="px-6 py-2 text-white whitespace-nowrap text-center font-light">
+            <span class="px-6 py-2 text-white text-center font-light">
               Demander un devis gratuit
             </span>
             <img src="Images/envoiblanc.png" class="h-7 w-7" />
@@ -1694,12 +1690,12 @@
     <div class="max-w-[1400px] mx-auto text-center px-6">
 
       <!-- TITRE -->
-      <h2 class="text-black text-5xl md:text-[65px] lg:text-[70px] font-heavy mb-8 whitespace-nowrap">
+      <h2 class="text-black text-5xl md:text-[65px] lg:text-[70px] font-heavy mb-8">
         Prêt À Concrétiser Votre Projet ?
       </h2>
 
       <!-- TEXTE -->
-      <p class="text-black leading-relaxed mb-10 text-[24px] font-light whitespace-nowrap">
+      <p class="text-black leading-relaxed mb-10 text-[24px] font-light">
         Vous êtes un particulier souhaitant construire votre résidence ?
         Une entreprise<br> cherchant l’autonomie énergétique ?
         Une institution nécessitant des infrastructures<br> sécurisées ?
@@ -1801,7 +1797,7 @@
 
           <img src="Images/logos/LOGO AIAE FINAL - Copie.png" class="w-80 pb-5" alt="AIAE Logo">
 
-          <p class="text-black font-light text-[27px] leading-relaxed max-w-md whitespace-nowrap">
+          <p class="text-black font-light text-[27px] leading-relaxed max-w-md">
             <strong class="font-heavy">AIAE : Afrika Infrastructures And<br> Equipements.</strong>
             De la conception à<br> la réalisation.
           </p>
