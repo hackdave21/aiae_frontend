@@ -350,15 +350,15 @@
   <div id="header-placeholder"></div>
 
   <!-- ================= PETITE SECTION BLANCHE ================= -->
-  <section class="w-full bg-[#f4f5f7] pt-36 pb-4"></section>
+  <section class="w-full bg-[#f4f5f7] pt-24 md:pt-36 pb-4"></section>
 
   <!-- ================= SECTION HERO ================= -->
   <section class="bg-[#e6e6e6] pt-10 pb-10">
-    <div class="max-w-[900px] mx-auto text-center px-6">
-      <h1 class="text-[55px] md:text-[70px] font-extrabold text-darkBlue mb-4 leading-tight">
+    <div class="max-w-[1000px] mx-auto text-left md:text-center px-6">
+      <h1 class="text-[34px] sm:text-[45px] md:text-[70px] font-extrabold text-darkBlue mb-4 leading-tight whitespace-nowrap">
         Demandez <span class="text-secondary">Un Devis</span> Gratuit
       </h1>
-      <p class="text-[65px] md:text-[40px] text-[#4a4a4a] font-light">
+      <p class="text-[18px] sm:text-[22px] md:text-[40px] text-[#4a4a4a] font-light leading-snug">
         Réponse <strong class="text-darkBlue">personnalisée</strong> sous <strong
           class="text-darkBlue">48h</strong> ouvrées.
       </p>
@@ -573,48 +573,50 @@
 
       <!-- Encadré vert -->
       <div
-        class="bg-[#0e4e32] rounded-[24px] pt-16 pb-12 px-6 sm:px-16 text-white text-[22px] md:text-[26px] shadow-2xl relative">
+        class="bg-[#0e4e32] rounded-[24px] pt-12 md:pt-16 pb-12 px-6 sm:px-16 text-white text-[18px] sm:text-[22px] md:text-[26px] shadow-2xl relative">
 
         <!-- Ligne du haut : Siège/Email VS Tél/WhatsApp -->
-        <div class="grid md:grid-cols-2 gap-8 md:gap-4 mb-10 text-center md:text-left">
+        <div class="grid md:grid-cols-2 gap-8 md:gap-4 mb-10 text-left">
 
           <div class="flex flex-col gap-5 md:pl-10">
-            <div class="flex items-center justify-center md:justify-start gap-3">
-              <img src="Images/localisation.png" alt="Localisation" class="w-6 h-8 object-contain" />
-              <p><strong class="font-heavy text-white">Siège social :</strong> Lomé, Togo</p>
+            <div class="flex items-start gap-3">
+              <img src="Images/localisation.png" alt="Localisation" class="w-6 h-8 shrink-0 object-contain mt-1" />
+              <p><strong class="font-heavy text-white">Siège social :</strong> Quartier Kléme Zanguéra Rue Agoe Nyive - Lomé Togo</p>
             </div>
-            <div class="flex items-center justify-center md:justify-start gap-3">
-              <img src="Images/mail.png" alt="Email" class="w-7 h-5 object-contain" />
-              <p><strong class="font-heavy text-white">Email :</strong> contact@aiae.tg</p>
+            <div class="flex items-start gap-3">
+              <img src="Images/mail.png" alt="Email" class="w-7 h-5 shrink-0 object-contain mt-1.5" />
+              <p><strong class="font-heavy text-white">Email :</strong> contact@aiae.services</p>
             </div>
           </div>
 
           <div class="flex flex-col gap-5 md:pl-10">
-            <div class="flex items-center justify-center md:justify-start gap-3">
-              <img src="Images/telephone.png" alt="Téléphone" class="w-6 h-6 object-contain" />
-              <p><strong class="font-heavy text-white">Téléphone :</strong> +228 XX XX XX XX</p>
+            <div class="flex items-start gap-3">
+              <img src="Images/telephone.png" alt="Téléphone" class="w-6 h-6 shrink-0 object-contain mt-1" />
+              <p><strong class="font-heavy text-white">Téléphone :</strong> +228 90 03 54 16</p>
             </div>
-            <div class="flex items-center justify-center md:justify-start gap-3">
-              <img src="Images/Whatsapp.png" alt="WhatsApp" class="w-7 h-7 object-contain" />
-              <p><strong class="font-heavy text-white">WhatsApp :</strong> +228 XX XX XX XX</p>
+            <div class="flex items-start gap-3">
+              <img src="Images/Whatsapp.png" alt="WhatsApp" class="w-7 h-7 shrink-0 object-contain mt-1" />
+              <p><strong class="font-heavy text-white">WhatsApp :</strong> +228 90 03 54 16</p>
             </div>
           </div>
 
         </div>
 
         <!-- Ligne du bas : Horaires -->
-        <div class="text-center font-light leading-[1.8]">
-          <div class="flex items-center justify-center gap-4 mb-4">
+        <div class="text-left md:text-center font-light leading-[1.8] border-t border-white/20 pt-10">
+          <div class="flex items-center justify-start md:justify-center gap-4 mb-6">
             <img src="Images/heure.png" alt="Horaires" class="w-7 h-7 object-contain" />
-            <h3 class="font-heavy text-[24px] tracking-wide">Horaires :</h3>
+            <h3 class="font-heavy text-[22px] md:text-[24px] tracking-wide">Horaires :</h3>
           </div>
 
-          <p><strong class="font-heavy tracking-wide text-white">Lundi à Vendredi :</strong> 8h00 — 18h00 (GMT+0)</p>
-          <p><strong class="font-heavy tracking-wide text-white">Samedi :</strong> 8h00 — 13h00</p>
-          <p><strong class="font-heavy tracking-wide text-white">Dimanche :</strong> Fermé (urgences par téléphone
-            uniquement)</p>
-          <p><strong class="font-heavy tracking-wide text-white">Diaspora :</strong> RDV en soirée et week-end sur
-            demande (visioconférence)</p>
+          <div class="space-y-2">
+            <p><strong class="font-heavy tracking-wide text-white">Lundi à Vendredi :</strong> 8h00 — 18h00 (GMT+0)</p>
+            <p><strong class="font-heavy tracking-wide text-white">Samedi :</strong> 8h00 — 13h00</p>
+            <p><strong class="font-heavy tracking-wide text-white">Dimanche :</strong> Fermé (urgences par téléphone
+              uniquement)</p>
+            <p class="pt-2"><strong class="font-heavy tracking-wide text-white">Diaspora :</strong> RDV en soirée et week-end sur
+              demande (visioconférence)</p>
+          </div>
         </div>
 
       </div>
@@ -630,7 +632,7 @@
         <div class="w-full h-[350px] md:h-[450px] rounded-2xl overflow-hidden">
           <!-- TODO : Remplacer l'URL dans 'src' par votre lien d'intégration Google Maps ('Intégrer une carte' -> src="...") -->
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15865.114755106674!2d1.218559092496791!3d6.136014230182603!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1023e1fc8cf441ef%3A0xe5a228c2c7f8a7!2zTG9tw6ksIFRvZ28!5e0!3m2!1sfr!2sfr!4v1700000000000!5m2!1sfr!2sfr"
+            src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3966.2622704545247!2d1.1308490749904325!3d6.229112993759031!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNsKwMTMnNDQuOCJOIDHCsDA4JzAwLjMiRQ!5e0!3m2!1sfr!2stg!4v1775841080183!5m2!1sfr!2stg"
             width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
             referrerpolicy="no-referrer-when-downgrade">
           </iframe>
@@ -741,9 +743,10 @@
 
           <img src="Images/logos/LOGO AIAE FINAL - Copie.png" class="w-80 pb-5" alt="AIAE Logo">
 
-          <p class="text-black font-light text-[18px] md:text-[27px] leading-relaxed max-w-md">
-            <strong class="font-heavy">AIAE : Afrika Infrastructures And<br> Equipements.</strong>
-            De la conception à<br> la réalisation.
+          <p class="text-black font-light text-[18px] md:text-[27px] leading-relaxed max-w-lg whitespace-nowrap">
+            <strong class="font-heavy">AIAE : Afrika Infrastructures And</strong><br>
+            <strong class="font-heavy">Equipements.</strong> De La Conception<br>
+            À La Réalisation.
           </p>
 
         </div>
@@ -775,9 +778,8 @@
 
            <ul class="space-y-2 text-gray-600 text-[20px] font-light">
 
-            <li>Lomé, Togo</li>
-            <li>Interventions sur tout le territoire</li>
-            <li>+228 XX XX XX XX</li>
+            <li>Quartier Kléme Zanguéra Rue Agoe Nyive - Lomé Togo</li>
+            <li>+228 90 03 54 16</li>
             <li>contact@aiae.services</li>
 
           </ul>
