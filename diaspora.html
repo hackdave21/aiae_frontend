@@ -316,67 +316,69 @@
   <div id="header-placeholder"></div>
 
   <!-- ================= HERO DIASPORA ================= -->
-  <section class="pt-32 pb-5 bg-[#e6e6e6]">
+  <section class="pt-24 md:pt-32 pb-5 bg-[#e6e6e6]">
 
     <div class="max-w-[99%] mx-auto px-2">
 
       <div class="relative rounded-[25px] overflow-hidden shadow-3xl">
 
         <!-- IMAGE -->
-        <img src="Images/home.png" class="w-full h-[300px] md:h-[400px] object-cover">
+        <img src="Images/home.png" class="w-full h-[450px] sm:h-[400px] md:h-[400px] object-cover">
 
         <!-- OVERLAY -->
         <div class="absolute inset-0 bg-black/70"></div>
 
-        <!-- CONTENU WRAPPER -->
-        <div
-          class="absolute inset-0 z-10 flex flex-col md:flex-row items-center md:items-end justify-between p-6 md:p-8 gap-8">
+        <!-- CONTENU -->
+        <div class="absolute inset-0 flex flex-col justify-center p-10 md:p-20 text-white">
 
-          <!-- TEXTE (GAUCHE) -->
-          <div class="max-w-[850px] text-white self-center md:mb-4">
-            
-            <h1 class="leading-[0.9] mb-8">
-              <span class="block text-[30px] md:text-[50px] tracking-tight">
-                CONSTRUIRE AU TOGO <strong class="font-heavy text-white">DEPUIS L'ÉTRANGER</strong>, C'EST POSSIBLE.
-              </span>
-            </h1>
+          <h1 class="leading-[0.85] mb-4 md:mb-8">
+            <span class="block text-[30px] sm:text-[40px] md:text-[85px] font-light tracking-tight">
+              CONSTRUIRE AU TOGO
+            </span>
+            <span class="block text-[32px] sm:text-[45px] md:text-[115px] font-bold tracking-tighter">
+              DEPUIS L'ÉTRANGER
+            </span>
+          </h1>
 
-            <div class="max-w-[800px] text-[18px] md:text-[22px] leading-[1.4]">
-              <p class="mb-4 text-[30px] md:text-[35px] font-medium opacity-95">
-                Et c'est serein avec AIAE.
-              </p>
-              <div class="text-[18px] md:text-[20px] leading-relaxed mt-6 max-w-2xl">
-                <p>
-                  Vous vivez en France, au Canada, aux États-Unis, en Allemagne ou ailleurs ? <br class="hidden md:block">
-                  Vous rêvez de <strong class="font-heavy text-white">construire votre maison</strong>, votre <strong
-                    class="font-heavy text-white">résidence secondaire</strong> ou un <br class="hidden md:block">
-                  <strong class="font-heavy text-white">investissement locatif au Togo</strong> ? AIAE a été conçue pour
-                  vous accompagner à <br class="hidden md:block">
-                  chaque étape, <strong class="font-heavy text-white">de la première visioconférence à la remise de vos
-                    clés.</strong>
-                </p>
-              </div>
-            </div>
+          <div class="max-w-[1000px] text-[15px] sm:text-[18px] md:text-[22px] leading-[1.4]">
+            <p class="mb-4 whitespace-normal md:whitespace-nowrap">
+              <strong class="text-white font-heavy">Et c'est serein avec AIAE.</strong>
+            </p>
+            <p class="mt-4 md:mt-6 whitespace-normal md:whitespace-nowrap">
+              Vous vivez en France, au Canada, aux États-Unis, en Allemagne ou ailleurs ?<br class="hidden md:block">
+              Vous rêvez de <strong class="text-white font-heavy">construire votre maison, votre résidence secondaire</strong><br class="hidden md:block">
+              ou un <strong class="text-white font-heavy">investissement locatif au Togo ?</strong> AIAE vous accompagne à<br class="hidden md:block">
+              chaque étape, <strong class="text-white font-heavy">de la première visioconférence à la remise de vos clés.</strong>
+            </p>
           </div>
 
-          <!-- BOUTONS (DROITE) -->
-          <div class="flex flex-col gap-10 w-full md:w-auto self-center md:self-end pt-6 md:pt-8 pr-4">
-
+          <!-- BOUTONS (Positionnés en bas à droite sur desktop) -->
+          <div class="hidden md:flex absolute bottom-6 right-6 flex-col gap-4">
             <a href="contact.html"
-              class="bg-primary hover:bg-[#043b24] text-white px-8 py-2 rounded-full flex flex-col items-center text-center transition-all hover:scale-105 shadow-xl font-bold">
-              <p class="text-[14px] md:text-[17px] tracking-wide font-light whitespace-nowrap">Prendre rdv en visio <span class="text-[12px] font-light opacity-80">(fuseau adapté)</span></p>
+              class="bg-primary hover:bg-[#043b24] text-white px-8 py-3 rounded-full flex flex-col items-center text-center transition-all hover:scale-105 shadow-xl font-bold">
+              <p class="text-[17px] tracking-wide font-light whitespace-nowrap">Prendre rdv en visio <span class="text-[12px] font-light opacity-80">(fuseau adapté)</span></p>
             </a>
 
             <a href="contact.html"
-              class="bg-primary hover:bg-[#043b24] text-white px-8 py-2 rounded-full flex items-center justify-between gap-4 transition-all hover:scale-105 shadow-xl min-w-[280px] font-bold">
-              <p class="text-[14px] md:text-[17px] text-left font-light leading-tight tracking-wide whitespace-nowrap">Prendre rendez-vous maintenant</p>
+              class="bg-primary hover:bg-[#043b24] text-white px-8 py-3 rounded-full flex items-center justify-between gap-4 transition-all hover:scale-105 shadow-xl min-w-[280px] font-bold">
+              <p class="text-[17px] text-left font-light leading-tight tracking-wide whitespace-nowrap">Prendre rendez-vous maintenant</p>
               <img src="Images/envoiblanc.png" alt="icon" class="w-6 h-6 object-contain" />
             </a>
-
           </div>
 
         </div>
 
+        <!-- BOUTONS MOBILE (Visible uniquement sur mobile, empilé en dessous) -->
+        <div class="md:hidden absolute bottom-4 left-4 right-4 flex flex-col gap-3">
+            <a href="contact.html"
+              class="bg-primary/90 text-white px-4 py-2 rounded-full flex flex-col items-center text-center font-bold">
+              <p class="text-[13px] tracking-wide font-light">Prendre rdv en visio</p>
+            </a>
+            <a href="contact.html"
+              class="bg-primary/90 text-white px-4 py-2 rounded-full flex items-center justify-center gap-3 font-bold">
+              <p class="text-[13px] font-light">Prendre rendez-vous maintenant</p>
+              <img src="Images/envoiblanc.png" alt="icon" class="w-4 h-4 object-contain" />
+            </a>
         </div>
 
       </div>
@@ -384,18 +386,32 @@
     </div>
 
   </section>
-  
-  <section class="pt-5 pb-5 bg-[#e6e6e6]">
-    <div class="text-center">
+
+  <!-- ================= CE QUE NOUS CONSTRUISONS (FAQ HEADER) ================= -->
+  <section class="bg-[#e6e6e6] py-5">
+
+    <div class="max-w-[1000px] mx-auto px-6 text-center">
+
       <!-- TITRE STYLE DIVISION -->
-      <h2 class="text-[32px] md:text-[60px] font-black uppercase leading-tight">
-        <span class="block text-[40px] md:text-[70px] text-[#121a44] whitespace-nowrap">
-          ON SAIT CE QUI VOUS<br> INQUIÈTE <span class="text-primary">
-          VOICI NOS<br> RÉPONSES
+      <h2 class="leading-[0.9] uppercase">
+
+        <span class="block text-[32px] sm:text-[45px] font-bold md:text-[95px] text-[#121a44]">
+          ON SAIT CE QUI
         </span>
+
+        <span class="block text-[32px] sm:text-[45px] font-bold md:text-[95px] text-primary">
+          VOUS INQUIÈTE
         </span>
+
       </h2>
+
+      <!-- TEXTE -->
+      <p class="mt-6 text-[15px] sm:text-[18px] md:text-[20px] text-black uppercase tracking-[1px] leading-[1.7]">
+        CONSTRUIRE AU TOGO DEPUIS L'ÉTRANGER : <strong class="font-heavy text-black">VOICI NOS RÉPONSES</strong>
+      </p>
+
     </div>
+
   </section>
   
   <section class="bg-[#f3f3f3] py-10">
@@ -940,14 +956,14 @@
 
   <!-- ================= SECTION CTA (Prenez Rendez-Vous) ================= -->
   <section class="bg-[#e6e6e6] py-10 w-full font-FuturaStdLight">
-    <div class="max-w-[900px] mx-auto text-center px-6">
+    <div class="max-w-[900px] mx-auto text-left md:text-center px-6">
 
-      <h2 class="text-[35px] md:text-[55px] font-heavy mb-6 leading-tight whitespace-nowrap">
-        Prêt À Lancer Votre Projet <br>
+      <h2 class="text-black text-4xl md:text-[55px] font-heavy mb-6 leading-tight">
+        Prêt À Lancer Votre Projet <br class="hidden md:block">
         Depuis L’étranger ?
       </h2>
-      <p class="text-gray-600 leading-relaxed mb-10 text-[25px] md:text-[27px] max-w-[700px] mx-auto whitespace-nowrap">
-        Prenez 30 minutes pour un premier échange gratuit et sans<br>
+      <p class="text-gray-600 leading-relaxed mb-10 text-[16px] md:text-[27px] max-w-[700px] md:mx-auto">
+        Prenez 30 minutes pour un premier échange gratuit et sans<br class="hidden md:block">
         engagement. Nous nous adaptons à votre fuseau horaire.
       </p>
 
@@ -999,7 +1015,7 @@
         </div>
 
         <!-- TEXTE DROIT -->
-        <div class="flex flex-col items-start">
+        <div class="flex flex-col items-center md:items-start text-center md:text-left">
           <p class="text-4xl font-bold text-gray-300">@ Afrika_AIAE</p>
           <p class="text-lg text-gray-300 font-light">
             Suivez nous, <strong class="font-heavy text-gray-300">Abonnez vous</strong> &
@@ -1011,18 +1027,20 @@
 
     <!-- BARRE CLAIRE -->
     <div class="bg-[#f5f5f5] py-6">
-      <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-center gap-4 text-[#0b4a2b]">
+      <div class="max-w-7xl mx-auto px-6 flex flex-row items-center justify-center gap-4 md:gap-8 text-[#0b4a2b] text-center md:text-left">
         <!-- WhatsApp Icon -->
-        <img src="Images/WhatsappLogo.svg" alt="" class="h-12 w-12" />
+        <img src="Images/WhatsappLogo.svg" alt="" class="h-10 w-10 md:h-12 md:w-12 shrink-0" />
 
-        <p class="text-3xl">
-          +228 <span class="font-bold">XX XX XX XX</span>
-        </p>
+        <div class="flex flex-col md:flex-row items-start md:items-center md:gap-8">
+          <p class="text-2xl md:text-3xl text-left">
+            +228 <span class="font-bold">XX XX XX XX</span>
+          </p>
 
-        <p class="text-sm font-book">
-          <strong class="font-heavy text-primary">Écrivez nous</strong> pour toutes<br />
-          <strong class="font-heavy text-primary">informations</strong> supplémentaires
-        </p>
+          <p class="text-xs md:text-sm font-book text-left">
+            <strong class="font-heavy text-primary">Écrivez-nous</strong> pour toutes<br />
+            <strong class="font-heavy text-primary">informations</strong> supplémentaires
+          </p>
+        </div>
       </div>
     </div>
   </section>
