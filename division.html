@@ -301,14 +301,14 @@
   <div id="header-placeholder"></div>
 
   <!-- ================= HERO DIVISION ================= -->
-  <section class="pt-32 pb-5 bg-[#e6e6e6]">
+  <section class="pt-24 md:pt-32 pb-5 bg-[#e6e6e6]">
 
     <div class="max-w-[99%] mx-auto px-2">
 
       <div class="relative rounded-[25px] overflow-hidden shadow-3xl">
 
         <!-- IMAGE -->
-        <img src="Images/home.png" class="w-full h-[300px] md:h-[400px] object-cover">
+        <img src="Images/home.png" class="w-full h-[450px] sm:h-[400px] md:h-[400px] object-cover">
 
         <!-- OVERLAY -->
         <div class="absolute inset-0 bg-black/70"></div>
@@ -316,25 +316,25 @@
         <!-- CONTENU -->
         <div class="absolute inset-0 flex flex-col justify-center p-10 md:p-20 text-white">
 
-          <h1 class="leading-[0.85] mb-8">
-            <span class="block text-[55px] md:text-[85px] font-light tracking-tight">
+          <h1 class="leading-[0.85] mb-4 md:mb-8">
+            <span class="block text-[32px] sm:text-[42px] md:text-[85px] font-light tracking-tight">
               DIVISION
             </span>
-            <span class="block text-[65px] md:text-[115px] font-bold tracking-tighter">
+            <span class="block text-[35px] sm:text-[48px] md:text-[115px] font-bold tracking-tighter">
               CONSTRUCTION
             </span>
           </h1>
 
-          <div class="max-w-[1000px] text-[18px] md:text-[22px] leading-[1.4]">
-            <p class="mb-4 whitespace-nowrap">Concevoir et réaliser des infrastructures durables, c’est la raison d’être
+          <div class="max-w-[1000px] text-[15px] sm:text-[18px] md:text-[22px] leading-[1.4]">
+            <p class="mb-4 whitespace-normal md:whitespace-nowrap">Concevoir et réaliser des infrastructures durables, c’est la raison d’être
               d’AIAE.
-              <strong class="text-white font-heavy">Nous prenons en<br> charge l’intégralité de vos projets de
+              <strong class="text-white font-heavy">Nous prenons en<br class="hidden md:block"> charge l’intégralité de vos projets de
                 construction, de la première esquisse à la remise des clés.</strong>
             </p>
-            <p class="mt-6 whitespace-nowrap">
+            <p class="mt-4 md:mt-6 whitespace-normal md:whitespace-nowrap">
               <strong class="text-white font-heavy">Forte de plus de 18 ans d’expérience en génie civil,</strong> AIAE
               dispose de
-              compétences rares au Togo<br>
+              compétences rares au Togo<br class="hidden md:block">
               pour traiter aussi bien des <strong class="text-white font-heavy">villas résidentielles</strong> que des
               <strong class="text-white font-heavy">ouvrages d’art complexes.</strong>
             </p>
@@ -344,8 +344,8 @@
 
         <!-- BADGE -->
         <div
-          class="absolute bottom-6 right-6 bg-primary/60  text-white px-6 py-4 rounded-[12px] text-[18px] md:text-[20px] max-w-[260px] whitespace-nowrap">
-          Fondée en 2025, <strong class="text-white font-heavy">ancrée<br>dans 18 ans d’expertise.</strong>
+          class="absolute bottom-4 right-4 md:bottom-6 md:right-6 bg-primary/60  text-white px-4 md:px-6 py-3 md:py-4 rounded-[12px] text-[14px] sm:text-[16px] md:text-[20px] max-w-[220px] sm:max-w-[260px] md:max-w-[300px] whitespace-normal md:whitespace-nowrap">
+          Fondée en 2025, <strong class="text-white font-heavy">ancrée<br class="hidden md:block">dans 18 ans d’expertise.</strong>
         </div>
 
       </div>
@@ -362,20 +362,20 @@
       <!-- TITRE -->
       <h2 class="leading-[0.9] uppercase">
 
-        <span class="block text-[60px] font-bold md:text-[95px] text-[#121a44]">
+        <span class="block text-[32px] sm:text-[45px] font-bold md:text-[95px] text-[#121a44]">
           CE QUE NOUS
         </span>
 
-        <span class="block text-[60px] font-bold md:text-[95px] text-primary">
+        <span class="block text-[32px] sm:text-[45px] font-bold md:text-[95px] text-primary">
           CONSTRUISONS
         </span>
 
       </h2>
 
       <!-- TEXTE -->
-      <p class="mt-6 text-[18px] md:text-[20px] text-black uppercase tracking-[1px] leading-[1.7]">
+      <p class="mt-6 text-[15px] sm:text-[18px] md:text-[20px] text-black uppercase tracking-[1px] leading-[1.7]">
         <strong class="font-heavy text-black">CATÉGORIES :</strong>
-        RÉSIDENTIEL, TERTIAIRE, INDUSTRIEL,<br>
+        RÉSIDENTIEL, TERTIAIRE, INDUSTRIEL,<br class="hidden md:block">
         AGRICOLE, RÉHABILITATION ET EXTENSION
       </p>
 
@@ -390,165 +390,175 @@
 
       <!-- 01 -->
       <div class="space-y-6">
-        <div class="grid md:grid-cols-2 gap-10 items-center">
+        <div class="grid md:grid-cols-2 gap-6 md:gap-10 items-center">
           <div class="relative">
-            <img src="Images/secteur1.png" class="w-full h-[280px] md:h-auto rounded-[15px] object-cover">
+            <img src="Images/secteur1.png" class="w-full h-auto rounded-[15px] object-cover">
           </div>
-          <div>
-            <h3 class="text-primary font-bold text-[25px] md:text-[50px] uppercase tracking-tight mb-6 leading-none">
+          <div class="text-left">
+            <h3 class="text-primary font-bold text-[35px] sm:text-[40px] md:text-[50px] uppercase tracking-tight mb-4 md:mb-6 leading-tight md:leading-none">
               RÉSIDENTIEL
             </h3>
-            <p class="text-[#4a4a4a] text-[24px] leading-relaxed">
-              Villas individuelles, immeubles<br>d’habitation, duplex, résidences<br>gardées. <strong
-                class="text-[#333] font-heavy">Du standing Standard au<br>Prestige, nous adaptons chaque projet<br>à
+            <p class="text-[#4a4a4a] text-[18px] sm:text-[20px] md:text-[24px] leading-relaxed">
+              Villas individuelles, immeubles<br class="hidden md:block">d’habitation, duplex, résidences<br class="hidden md:block">gardées. <strong
+                class="text-[#333] font-heavy">Du standing Standard au<br class="hidden md:block">Prestige, nous adaptons chaque projet<br class="hidden md:block">à
                 votre budget
                 et vos exigences.</strong>
             </p>
           </div>
         </div>
-        <ul class="list-disc pl-6 text-[#4a4a4a] text-[24px] space-y-2 marker:text-gray-500 marker:text-[20px]">
-          <li><strong class="text-[#333]  font-heavy">Villas de 80 à 600 m²</strong> : tous standings (Standard,
-            Confort, Premium,
-            Prestige)</li>
-          <li><strong class="text-[#333] font-heavy">Immeubles d’habitation</strong> : R+2 à R+5 (Confort à Premium)
-          </li>
-          <li><strong class="text-[#333] font-heavy">Duplex</strong> : 150 à 400 m² (Confort à Prestige)</li>
-          <li><strong class="text-[#333] font-heavy">Résidences gardées</strong> : ensembles sécurisés (Confort à
-            Prestige)</li>
-        </ul>
+        <div class="flex justify-start">
+          <ul class="list-disc pl-6 text-[#4a4a4a] text-[18px] md:text-[24px] space-y-2 marker:text-gray-500 marker:text-[20px] text-left">
+            <li><strong class="text-[#333]  font-heavy">Villas de 80 à 600 m²</strong> : tous standings (Standard,
+              Confort, Premium,
+              Prestige)</li>
+            <li><strong class="text-[#333] font-heavy">Immeubles d’habitation</strong> : R+2 à R+5 (Confort à Premium)
+            </li>
+            <li><strong class="text-[#333] font-heavy">Duplex</strong> : 150 à 400 m² (Confort à Prestige)</li>
+            <li><strong class="text-[#333] font-heavy">Résidences gardées</strong> : ensembles sécurisés (Confort à
+              Prestige)</li>
+          </ul>
+        </div>
       </div>
 
       <hr class="border-gray-300">
 
       <!-- 02 -->
       <div class="space-y-6">
-        <div class="grid md:grid-cols-2 gap-10 items-center">
+        <div class="grid md:grid-cols-2 gap-6 md:gap-10 items-center">
           <div class="relative">
-            <img src="Images/secteur2.png" class="w-full h-[280px] md:h-auto rounded-[15px] object-cover">
+            <img src="Images/secteur2.png" class="w-full h-auto rounded-[15px] object-cover">
           </div>
-          <div>
-            <h3 class="text-secondary font-bold text-[25px] md:text-[50px] uppercase tracking-tight mb-6 leading-none">
+          <div class="text-left">
+            <h3 class="text-secondary font-bold text-[35px] sm:text-[40px] md:text-[50px] uppercase tracking-tight mb-4 md:mb-6 leading-tight md:leading-none">
               TERTIAIRE
             </h3>
-            <p class="text-[#4a4a4a] text-[24px] leading-relaxed">
-              Bureaux, commerces, hôtels, cliniques<br>et établissements recevant du public.<br><strong
-                class="text-[#333] font-heavy">Conception fonctionnelle optimisée<br>pour votre activité.</strong>
+            <p class="text-[#4a4a4a] text-[18px] sm:text-[20px] md:text-[24px] leading-relaxed">
+              Bureaux, commerces, hôtels, cliniques<br class="hidden md:block">et établissements recevant du public.<br class="hidden md:block"><strong
+                class="text-[#333] font-heavy">Conception fonctionnelle optimisée<br class="hidden md:block">pour votre activité.</strong>
             </p>
           </div>
         </div>
-        <ul class="list-disc pl-6 text-[#4a4a4a] text-[24px] space-y-2 marker:text-gray-500 marker:text-[20px]">
-          <li><strong class="text-[#333] font-heavy">Bureaux et espaces de travail</strong> : PME, sièges sociaux</li>
-          <li><strong class="text-[#333] font-heavy">Locaux commerciaux</strong> : boutiques, showrooms, centres
-            commerciaux</li>
-          <li><strong class="text-[#333] font-heavy">Hôtellerie</strong> : hôtels 2★ à 5★, résidences meublées</li>
-          <li><strong class="text-[#333] font-heavy">Santé</strong> : cliniques, cabinets médicaux, pharmacies</li>
-        </ul>
+        <div class="flex justify-start">
+          <ul class="list-disc pl-6 text-[#4a4a4a] text-[18px] md:text-[24px] space-y-2 marker:text-gray-500 marker:text-[20px] text-left">
+            <li><strong class="text-[#333] font-heavy">Bureaux et espaces de travail</strong> : PME, sièges sociaux</li>
+            <li><strong class="text-[#333] font-heavy">Locaux commerciaux</strong> : boutiques, showrooms, centres
+              commerciaux</li>
+            <li><strong class="text-[#333] font-heavy">Hôtellerie</strong> : hôtels 2★ à 5★, résidences meublées</li>
+            <li><strong class="text-[#333] font-heavy">Santé</strong> : cliniques, cabinets médicaux, pharmacies</li>
+          </ul>
+        </div>
       </div>
 
       <hr class="border-gray-300">
 
       <!-- 03 -->
       <div class="space-y-6">
-        <div class="grid md:grid-cols-2 gap-10 items-center">
+        <div class="grid md:grid-cols-2 gap-6 md:gap-10 items-center">
           <div class="relative">
-            <img src="Images/secteur3.png" class="w-full h-[280px] md:h-auto rounded-[15px] object-cover">
+            <img src="Images/secteur3.png" class="w-full h-auto rounded-[15px] object-cover">
           </div>
-          <div>
-            <h3 class="text-primary font-bold text-[25px] md:text-[50px] uppercase tracking-tight mb-6 leading-none">
+          <div class="text-left">
+            <h3 class="text-primary font-bold text-[35px] sm:text-[40px] md:text-[50px] uppercase tracking-tight mb-4 md:mb-6 leading-tight md:leading-none">
               INDUSTRIEL
             </h3>
-            <p class="text-[#4a4a4a] text-[24px] leading-relaxed">
-              Entrepôts, usines, ateliers de<br>production. <strong
-                class="text-[#333] font-heavy">Structures<br>optimisées pour la
-                logistique<br>et la production.</strong>
+            <p class="text-[#4a4a4a] text-[18px] sm:text-[20px] md:text-[24px] leading-relaxed">
+              Entrepôts, usines, ateliers de<br class="hidden md:block">production. <strong
+                class="text-[#333] font-heavy">Structures<br class="hidden md:block">optimisées pour la
+                logistique<br class="hidden md:block">et la production.</strong>
             </p>
           </div>
         </div>
-        <ul class="list-disc pl-6 text-[#4a4a4a] text-[24px] space-y-2 marker:text-gray-500 marker:text-[20px]">
-          <li><strong class="text-[#333] font-heavy">Entrepôts</strong> : de 200 à 5 000 m²</li>
-          <li><strong class="text-[#333] font-heavy">Usines et ateliers</strong> : structures métalliques ou béton</li>
-          <li><strong class="text-[#333] font-heavy">Plateformes logistiques</strong> : quais de chargement, zones de
-            stockage</li>
-        </ul>
+        <div class="flex justify-start">
+          <ul class="list-disc pl-6 text-[#4a4a4a] text-[18px] md:text-[24px] space-y-2 marker:text-gray-500 marker:text-[20px] text-left">
+            <li><strong class="text-[#333] font-heavy">Entrepôts</strong> : de 200 à 5 000 m²</li>
+            <li><strong class="text-[#333] font-heavy">Usines et ateliers</strong> : structures métalliques ou béton</li>
+            <li><strong class="text-[#333] font-heavy">Plateformes logistiques</strong> : quais de chargement, zones de
+              stockage</li>
+          </ul>
+        </div>
       </div>
 
       <hr class="border-gray-300">
 
       <!-- 04 -->
       <div class="space-y-6">
-        <div class="grid md:grid-cols-2 gap-10 items-center">
+        <div class="grid md:grid-cols-2 gap-6 md:gap-10 items-center">
           <div class="relative">
-            <img src="Images/secteur4.png" class="w-full h-[280px] md:h-auto rounded-[15px] object-contain">
+            <img src="Images/secteur4.png" class="w-full h-auto rounded-[15px] object-contain">
           </div>
-          <div>
-            <h3 class="text-secondary font-bold text-[25px] md:text-[50px] uppercase tracking-tight mb-6 leading-none">
+          <div class="text-left">
+            <h3 class="text-secondary font-bold text-[35px] sm:text-[40px] md:text-[50px] uppercase tracking-tight mb-4 md:mb-6 leading-tight md:leading-none">
               AGRICOLE
             </h3>
-            <p class="text-[#4a4a4a] text-[24px] leading-relaxed">
-              Infrastructures agricoles et d'élevage<br>adaptées aux conditions tropicales. AIAE<br>conçoit des
-              bâtiments fonctionnels,<br>durables et conformes aux normes<br>sanitaires en vigueur. <strong
-                class="text-[#333] font-heavy">Solutions intégrées<br>avec notre Division Énergie pour
-                des<br>exploitations
+            <p class="text-[#4a4a4a] text-[18px] sm:text-[20px] md:text-[24px] leading-relaxed">
+              Infrastructures agricoles et d'élevage<br class="hidden md:block">adaptées aux conditions tropicales. AIAE<br class="hidden md:block">conçoit des
+              bâtiments fonctionnels,<br class="hidden md:block">durables et conformes aux normes<br class="hidden md:block">sanitaires en vigueur. <strong
+                class="text-[#333] font-heavy">Solutions intégrées<br class="hidden md:block">avec notre Division Énergie pour
+                des<br class="hidden md:block">exploitations
                 autonomes.</strong>
             </p>
           </div>
         </div>
-        <ul class="list-disc pl-6 text-[#4a4a4a] text-[24px] space-y-2 marker:text-gray-500 marker:text-[20px]">
-          <li><strong class="text-[#333] font-heavy">Élevage avicole</strong> : Poulaillers ventilés (pondeuses, chair),
-            couvoir,
-            unités d'aliments de bétail</li>
-          <li><strong class="text-[#333] font-heavy">Élevage porcin</strong> : Porcheries avec système de gestion des
-            effluents,
-            maternité, engraissement</li>
-          <li><strong class="text-[#333] font-heavy">Élevage bovin</strong> : Parcs d'embouche, étables laitières, aires
-            d'abattage, couloirs de contention, abreuvoirs bétonnés</li>
-          <li><strong class="text-[#333] font-heavy">Pisciculture</strong> : Bassins en béton armé, étangs aménagés,
-            raceways,
-            écloseries, systèmes de recirculation (RAS)</li>
-          <li><strong class="text-[#333] font-heavy">Apiculture</strong> : Mielleries, ateliers d'extraction et de
-            conditionnement,
-            locaux de stockage aux normes</li>
-          <li><strong class="text-[#333] font-heavy">Stockage agricole</strong> : Silos, magasins ventilés, chambres
-            froides, aires
-            de séchage</li>
-          <li><strong class="text-[#333] font-heavy">Serres et pépinières</strong> : Tunnels, multi-chapelles, systèmes
-            d'irrigation intégrés</li>
-          <li><strong class="text-[#333] font-heavy">Transformation</strong> : Huileries, décortiqueries, unités de
-            séchage,
-            abattoirs aux normes</li>
-        </ul>
-        <p class="text-[#333] font-light italic text-[24px] leading-relaxed ml-6 max-w-[800px] whitespace-nowrap">
-          Nos ouvrages agricoles peuvent être couplés à des installations solaires (pompage,<br>éclairage, froid) pour
-          des exploitations autonomes en énergie, particulièrement en zones<br>rurales non raccordées.
-        </p>
+        <div class="flex flex-col items-start">
+          <ul class="list-disc pl-6 text-[#4a4a4a] text-[18px] md:text-[24px] space-y-2 marker:text-gray-500 marker:text-[20px] text-left">
+            <li><strong class="text-[#333] font-heavy">Élevage avicole</strong> : Poulaillers ventilés (pondeuses, chair),
+              couvoir,
+              unités d'aliments de bétail</li>
+            <li><strong class="text-[#333] font-heavy">Élevage porcin</strong> : Porcheries avec système de gestion des
+              effluents,
+              maternité, engraissement</li>
+            <li><strong class="text-[#333] font-heavy">Élevage bovin</strong> : Parcs d'embouche, étables laitières, aires
+              d'abattage, couloirs de contention, abreuvoirs bétonnés</li>
+            <li><strong class="text-[#333] font-heavy">Pisciculture</strong> : Bassins en béton armé, étangs aménagés,
+              raceways,
+              écloseries, systèmes de recirculation (RAS)</li>
+            <li><strong class="text-[#333] font-heavy">Apiculture</strong> : Mielleries, ateliers d'extraction et de
+              conditionnement,
+              locaux de stockage aux normes</li>
+            <li><strong class="text-[#333] font-heavy">Stockage agricole</strong> : Silos, magasins ventilés, chambres
+              froides, aires
+              de séchage</li>
+            <li><strong class="text-[#333] font-heavy">Serres et pépinières</strong> : Tunnels, multi-chapelles, systèmes
+              d'irrigation intégrés</li>
+            <li><strong class="text-[#333] font-heavy">Transformation</strong> : Huileries, décortiqueries, unités de
+              séchage,
+              abattoirs aux normes</li>
+          </ul>
+          <p class="text-[#333] font-light italic text-[16px] sm:text-[18px] md:text-[24px] leading-relaxed md:ml-6 mt-6 md:mt-4 max-w-[800px] whitespace-normal text-left">
+            Nos ouvrages agricoles peuvent être couplés à des installations solaires (pompage,<br class="hidden md:block">éclairage, froid) pour
+            des exploitations autonomes en énergie, particulièrement en zones<br class="hidden md:block">rurales non raccordées.
+          </p>
+        </div>
       </div>
 
       <hr class="border-gray-300">
 
       <!-- 05 -->
       <div class="space-y-6">
-        <div class="grid md:grid-cols-2 gap-10 items-center">
+        <div class="grid md:grid-cols-2 gap-6 md:gap-10 items-center">
           <div class="relative">
-            <img src="Images/secteur5.png" class="w-full h-[280px] md:h-auto rounded-[15px] object-cover">
+            <img src="Images/secteur5.png" class="w-full h-auto rounded-[15px] object-cover">
           </div>
-          <div>
-            <h3 class="text-primary font-bold text-[25px] md:text-[50px] uppercase tracking-tight mb-6 leading-none">
+          <div class="text-left">
+            <h3 class="text-primary font-bold text-[35px] sm:text-[40px] md:text-[50px] uppercase tracking-tight mb-4 md:mb-6 leading-tight md:leading-none">
               RÉHABILITATION ET EXTENSION
             </h3>
-            <p class="text-[#4a4a4a] text-[24px] leading-relaxed">
-              Vous disposez d’un bâtiment existant<br>à remettre en état ou à agrandir ?<br><strong
-                class="text-[#333] font-heavy">Nous réalisons des diagnostics structurels<br>et proposons des solutions
+            <p class="text-[#4a4a4a] text-[18px] sm:text-[20px] md:text-[24px] leading-relaxed">
+              Vous disposez d’un bâtiment existant<br class="hidden md:block">à remettre en état ou à agrandir ?<br class="hidden md:block"><strong
+                class="text-[#333] font-heavy">Nous réalisons des diagnostics structurels<br class="hidden md:block">et proposons des solutions
                 adaptées.</strong>
             </p>
           </div>
         </div>
-        <ul class="list-disc pl-6 text-[#4a4a4a] text-[24px] space-y-2 marker:text-gray-500 marker:text-[20px]">
-          <li><strong class="text-[#333] font-heavy">Diagnostic</strong> structurel et étude de faisabilité</li>
-          <li><strong class="text-[#333] font-heavy">Renforcement de structures</strong> (poteaux, poutres, fondations)
-          </li>
-          <li><strong class="text-[#333] font-heavy">Extension</strong> horizontale ou verticale</li>
-          <li><strong class="text-[#333] font-heavy">Rénovation complète</strong> intérieure et extérieure</li>
-        </ul>
+        <div class="flex justify-start">
+          <ul class="list-disc pl-6 text-[#4a4a4a] text-[18px] md:text-[24px] space-y-2 marker:text-gray-500 marker:text-[20px] text-left">
+            <li><strong class="text-[#333] font-heavy">Diagnostic</strong> structurel et étude de faisabilité</li>
+            <li><strong class="text-[#333] font-heavy">Renforcement de structures</strong> (poteaux, poutres, fondations)
+            </li>
+            <li><strong class="text-[#333] font-heavy">Extension</strong> horizontale ou verticale</li>
+            <li><strong class="text-[#333] font-heavy">Rénovation complète</strong> intérieure et extérieure</li>
+          </ul>
+        </div>
       </div>
 
     </div>
@@ -558,20 +568,20 @@
   <!-- ================= 04 NIVEAUX DE QUALITÉ ================= -->
   <section class="bg-[#111d4a] py-10">
 
-    <div class="max-w-[1100px] mx-auto px-6 text-center">
+    <div class="max-w-[1100px] mx-auto px-6 text-left md:text-center">
 
       <!-- HEADER : 04 + TITRE -->
-      <div class="flex items-center justify-center gap-8 mb-10">
-        <span class="text-[110px] md:text-[140px] font-heavy leading-none text-secondary">04</span>
-        <h2 class="text-white font-heavy text-[45px] md:text-[65px] leading-[1.05] text-left">
-          Niveaux De Qualité<br>Pour Votre Projet
+      <div class="flex items-center justify-start md:justify-center gap-4 md:gap-8 mb-6 md:mb-10">
+        <span class="text-[80px] md:text-[140px] font-heavy leading-none text-secondary shrink-0">04</span>
+        <h2 class="text-white font-heavy text-[32px] sm:text-[45px] md:text-[65px] leading-[1.05] text-left">
+          Niveaux De Qualité<br class="hidden md:block">Pour Votre Projet
         </h2>
       </div>
 
       <!-- PARAGRAPHE -->
-      <p class="text-white text-[20px] md:text-[28px] leading-relaxed ">
-        <span class="font-light">AIAE propose quatre niveaux de standing pour la construction résidentielle.</span><br>
-        Chaque niveau définit des caractéristiques techniques minimales garanties<br>
+      <p class="text-white text-[16px] sm:text-[20px] md:text-[28px] leading-relaxed text-left md:text-center">
+        <span class="font-light">AIAE propose quatre niveaux de standing pour la construction résidentielle.</span><br class="hidden md:block">
+        Chaque niveau définit des caractéristiques techniques minimales garanties<br class="hidden md:block">
         : matériaux, dimensions, équipements, finitions.
       </p>
 
